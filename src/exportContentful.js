@@ -1,17 +1,17 @@
 const createClients = require('contentful-batch-libs/dist/utils/create-clients')
 const getFullSourceSpace = require('contentful-batch-libs/dist/get/get-full-source-space')
 
-const requiredParams = ['exportId', 'spaceId', 'contentfulToken']
+const requiredParams = ['space', 'contentfulToken']
 
 module.exports = async opts => {
   requiredParams.forEach(param => {
     if (!opts[param]) {
-      throw new Error('`exportPath` needs to be specified')
+      throw new Error(`"${param}" needs to be specified`)
     }
   })
 
   const clients = createClients({
-    sourceSpace: opts.spaceId,
+    sourceSpace: opts.space,
     managementApplication: 'contentful.export/4.7.7',
     sourceManagementToken: opts.contentfulToken
   })
@@ -19,7 +19,7 @@ module.exports = async opts => {
   try {
     const result = await getFullSourceSpace({
       managementClient: clients.source.management,
-      spaceId: opts.spaceId,
+      spaceId: opts.space,
       skipContentModel: false,
       skipContent: false,
       skipWebhooks: true,

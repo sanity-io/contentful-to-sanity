@@ -12,8 +12,7 @@ module.exports = createSchema({
 const defaultPrettierOptions = {
   semi: false,
   singleQuote: true,
-  bracketSpacing: false,
-  printWidth: 100
+  bracketSpacing: false
 }
 
 function createSanitySchema(types, options = {}) {

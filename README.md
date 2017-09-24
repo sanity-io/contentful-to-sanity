@@ -2,31 +2,6 @@
 
 Migrate from contentful to Sanity
 
-## Wanted flow
-
-```
-contentful-to-sanity --space-id=foo
-
-> Hi, and thanks for migrating to Sanity!
-> For migration to proceed, we need to:
-  ✔ Specify the contentful Space ID
-  ☐ Specify contentful management API token
-  ☐ Create or select a Sanity project
-  ☐ Create or select a Sanity dataset
-  ☐ Select output directory
-  ☐ Select which parts you want to migrate
-
-> That's all the information we need!
-  ☐ Downloading data from Contentful
-  ☐ Bootstrapping Sanity project
-  ☐ Creating Sanity schema files
-  ☐ Migrate content to Sanity
-
-> That's it! All done.
-> To start the Sanity studio locally, run:
->   cd <some-path> && sanity start
-```
-
 ## Todo
 
 - Migrate assets first, use same label-hash logic as import in order to include metadata (title, description) for assets, which is currently lost
