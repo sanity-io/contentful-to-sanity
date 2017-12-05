@@ -1,9 +1,11 @@
 const prettier = require('prettier')
+const upperFirst = require('lodash/upperFirst')
 
 const schemaTemplate = `
-const createSchema = require('part:@sanity/base/schema-creator')
+import createSchema from 'part:@sanity/base/schema-creator'
+__IMPORTS__
 
-module.exports = createSchema({
+export default createSchema({
   name: 'default',
   types: [__TYPES__]
 })
@@ -16,18 +18,22 @@ const defaultPrettierOptions = {
 }
 
 function createSanitySchema(types, options = {}) {
-  const typeNames = types.map(type => type.name)
-  const typeRequires = typeNames.map(generateRequire).join(',\n')
+  const typeNames = types.map(type => upperFirst(type.name))
+  const typeImports = typeNames.map(generateImport).join('\n')
+  const typeArray = typeNames.join(', ')
   const prettierOptions = Object.assign({}, defaultPrettierOptions, options.prettierOptions)
+  const schemaContent = schemaTemplate
+    .replace(/__TYPES__/, typeArray)
+    .replace(/__IMPORTS__/, typeImports)
 
   return types
     .map(type => ({
-      path: `${type.name}.js`,
-      content: format(`module.exports = ${JSON.stringify(type, null, 2)}`)
+      path: `${upperFirst(type.name)}.js`,
+      content: format(`export default ${JSON.stringify(type, null, 2)}`)
     }))
     .concat({
       path: 'schema.js',
-      content: format(schemaTemplate.replace(/__TYPES__/, typeRequires))
+      content: format(schemaContent)
     })
 
   function format(content) {
@@ -35,8 +41,8 @@ function createSanitySchema(types, options = {}) {
   }
 }
 
-function generateRequire(typeName) {
-  return `require('./${typeName}')`
+function generateImport(typeName) {
+  return `import ${typeName} from './${typeName}'`
 }
 
 module.exports = createSanitySchema
