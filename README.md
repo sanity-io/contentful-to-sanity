@@ -14,6 +14,21 @@ Requires node.js version >= 7.6
 
 ## Usage
 
+1. Install the CLI tool (see _Installation_ above)
+2. Install the Sanity CLI tool (if not already done) and log in
+
+    `npm install -g @sanity/cli && sanity login`
+
+3. Open Contentful and navigate to your space: https://app.contentful.com/
+4. Find the contentful space ID of your project (under _Space settings_ → _General_)
+5. Create a content management token (under _APIs_ → _Content management tokens_  → _Generate personal token_)
+6. Run the migration tool:
+
+    `contentful-to-sanity --space <your-space-id> --contentful-token <your contentful token>`
+
+
+## Documentation
+
 ```
   Usage
     $ contentful-to-sanity
@@ -32,6 +47,9 @@ Requires node.js version >= 7.6
     --help Show this help
 
   Examples
+    # Migrate contentful space "m00p" with contentful token "d4t-t0k3n", prompt for info
+    $ contentful-to-sanity --space=m00p --contentful-token=d4t-t0k3n
+
     # Migrate contentful space "m00p" to sanity project "m33p" and dataset "staging"
     $ contentful-to-sanity --space=m00p --project=m33p --dataset=staging
 
