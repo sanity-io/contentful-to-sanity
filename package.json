@@ -1,5 +1,5 @@
 {
-  "name": "contentful-to-sanity",
+  "name": "@sanity/contentful-to-sanity",
   "version": "1.0.0",
   "description": "Migrate from Contentful to Sanity",
   "main": "src/migrate.js",

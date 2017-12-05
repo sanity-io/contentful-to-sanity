@@ -5,8 +5,12 @@ Migrate from contentful to Sanity
 ## Installation
 
 ```
-npm install -g contentful-to-sanity
+npm install -g @sanity/contentful-to-sanity
 ```
+
+## Requirements
+
+Requires node.js version >= 7.6
 
 ## Usage
 
