@@ -37,6 +37,9 @@ const cli = meow(
     --help Show this help
 
   Examples
+    # Migrate contentful space "m00p" with contentful token "d4t-t0k3n", prompt for info
+    $ contentful-to-sanity --space=m00p --contentful-token=d4t-t0k3n
+
     # Migrate contentful space "m00p" to sanity project "m33p" and dataset "staging"
     $ contentful-to-sanity --space=m00p --project=m33p --dataset=staging
 
@@ -280,7 +283,7 @@ function onProgress(opts) {
 }
 
 async function run() {
-  let {space, project, dataset, output, fromFile, locale} = flags
+  let {space, project, dataset, output, fromFile} = flags
   let contentfulToken = flags.contentfulToken || process.env.CONTENTFUL_MANAGEMENT_TOKEN
 
   // Use current work dir if empty
@@ -351,13 +354,16 @@ async function run() {
     output,
     operation,
     client,
-    locale
+    locale: flags.locale
   })
 
   const cd = path.resolve(output) === process.cwd() ? '' : `cd ${output} && `
 
   console.log('To start the Sanity studio locally, run:')
   console.log(`${cd}sanity start`)
+
+  // @todo figure out dangling spinner instance from import preventing process from exiting
+  process.exit(0)
 }
 
 run()
