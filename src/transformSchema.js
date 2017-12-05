@@ -37,7 +37,7 @@ function transformContentType(type, data) {
   }
 
   if (type.displayField) {
-    output.preview = {title: type.displayField}
+    output.preview = {select: {title: type.displayField}}
   }
 
   output.fields = type.fields.filter(field => !field.omitted).map(source =>
