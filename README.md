@@ -66,6 +66,7 @@ Requires node.js version >= 7.6
 - Only published items will be imported
 - Validations are not ported (currently)
 - Omitted fields are not included
+- Fields that accept both images and files currently only allow images
 
 ## License
 
