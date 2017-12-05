@@ -4,7 +4,7 @@ const directMap = {
   Symbol: 'string',
   Location: 'geopoint',
   Boolean: 'boolean',
-  Date: 'date', // @todo SimpleDate?
+  Date: 'datetime',
   Object: 'object' // @todo Arbitrary JSON editor?
 }
 
@@ -174,6 +174,7 @@ function determineAssetRefType(source, data) {
     return {type: 'image'}
   }
 
+  // @todo file/image?
   return {type: 'file'}
 }
 
