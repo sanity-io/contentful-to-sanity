@@ -23,7 +23,7 @@ Requires node.js version >= 7.6
     -p, --project <projectId> Sanity project ID to import to
     -d, --dataset <dataset> Sanity dataset to import to
     -o, --output <path> Path to create Sanity project in
-    -l, --locale <locale> Locale to migrate,
+    -l, --locale <locale> Locale to migrate
     -f, --from-file <file> Import from stored contentful export file
     --sanity-token <token> Sanity token to authenticate with
     --contentful-token <token> Contentful management token to authenticate with

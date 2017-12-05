@@ -28,7 +28,7 @@ const cli = meow(
     -p, --project <projectId> Sanity project ID to import to
     -d, --dataset <dataset> Sanity dataset to import to
     -o, --output <path> Path to create Sanity project in
-    -l, --locale <locale> Locale to migrate,
+    -l, --locale <locale> Locale to migrate
     -f, --from-file <file> Import from stored contentful export file
     --sanity-token <token> Sanity token to authenticate with
     --contentful-token <token> Contentful management token to authenticate with
@@ -280,7 +280,7 @@ function onProgress(opts) {
 }
 
 async function run() {
-  let {space, project, dataset, output, fromFile} = flags
+  let {space, project, dataset, output, fromFile, locale} = flags
   let contentfulToken = flags.contentfulToken || process.env.CONTENTFUL_MANAGEMENT_TOKEN
 
   // Use current work dir if empty
@@ -291,7 +291,7 @@ async function run() {
 
   if (!output) {
     output = await prompt({
-      message: 'Output path:',
+      message: 'Content studio output path:',
       default: path.join(process.cwd()),
       validate: validateEmptyPath,
       filter: absolutify
@@ -351,7 +351,7 @@ async function run() {
     output,
     operation,
     client,
-    locale: flags.locale
+    locale
   })
 
   const cd = path.resolve(output) === process.cwd() ? '' : `cd ${output} && `
