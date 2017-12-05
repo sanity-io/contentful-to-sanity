@@ -41,6 +41,7 @@ async function migrate(options) {
   onProgress({complete: true})
 
   // @todo make bootstrap silent so we can handle progress ourselves
+  console.log('Bootstrapping Sanity content studio...')
   await bootstrapStudio(options)
 
   onProgress({step: steps.writeToDisk})
@@ -49,6 +50,7 @@ async function migrate(options) {
 
   // @todo pass onprogress handling onto parent
   await importToSanity(transformed, options)
+  onProgress({complete: true})
 
   onProgress({step: steps.done, complete: true})
 }
