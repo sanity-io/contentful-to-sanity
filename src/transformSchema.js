@@ -170,7 +170,7 @@ function determineAssetRefType(source, data) {
   const mimeValidation = source.validations.find(val => val.linkMimetypeGroup) || {}
   const mimeGroups = mimeValidation.linkMimetypeGroup || []
 
-  if (mimeGroups.includes('image')) {
+  if (mimeGroups.includes('image') || ['image', 'picture'].includes(source)) {
     return {type: 'image'}
   }
 
