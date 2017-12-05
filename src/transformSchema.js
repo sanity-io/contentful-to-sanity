@@ -189,7 +189,7 @@ function determineEntryRefType(source, data) {
     return {type: 'reference', to: linkTypes.map(type => ({type}))}
   }
 
-  return {type: 'reference'}
+  return {type: 'reference', to: data.contentTypes.map(type => ({type: type.sys.id}))}
 }
 
 module.exports = transformSchema
