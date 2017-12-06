@@ -1,11 +1,11 @@
 # contentful-to-sanity
 
-Migrate from contentful to Sanity
+This package liberates Contentful spaces, creating Sanity projects and schemas as it goes.
 
 ## Installation
 
 ```
-npm install -g @sanity/contentful-to-sanity
+npm install -g contentful-to-sanity
 ```
 
 ## Requirements
