@@ -1,5 +1,6 @@
 const prettier = require('prettier')
 const upperFirst = require('lodash/upperFirst')
+const defaultsDeep = require('lodash/defaultsDeep')
 
 const schemaTemplate = `
 import createSchema from 'part:@sanity/base/schema-creator'
@@ -29,7 +30,7 @@ function createSanitySchema(types, options = {}) {
   return types
     .map(type => ({
       path: `${upperFirst(type.name)}.js`,
-      content: format(`export default ${JSON.stringify(type, null, 2)}`)
+      content: format(generateSchemaForType(type))
     }))
     .concat({
       path: 'schema.js',
@@ -39,6 +40,26 @@ function createSanitySchema(types, options = {}) {
   function format(content) {
     return prettier.format(content, prettierOptions)
   }
+}
+
+function generateSchemaForType(type) {
+  const blockPreview =
+    type.preview &&
+    type.fields.find(field => field.name === type.preview.select.title).type === 'array'
+
+  if (!blockPreview) {
+    return `export default ${JSON.stringify(type, null, 2)}`
+  }
+
+  const prepareMethod = `values => {
+    const getFirstText = block => block.children && block.children[0] && block.children[0].text
+    const block = values.title.find(getFirstText)
+    return {title: block && getFirstText(block)}
+  }`
+
+  const preparedType = defaultsDeep({preview: {prepare: '__PREPARE__'}}, type)
+  const typeContent = `export default ${JSON.stringify(preparedType, null, 2)}`
+  return typeContent.replace(/["']__PREPARE__["']/, prepareMethod)
 }
 
 function generateImport(typeName) {

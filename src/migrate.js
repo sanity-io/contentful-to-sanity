@@ -31,7 +31,7 @@ async function migrate(options) {
   }
 
   onProgress({step: steps.transformSchema})
-  const schema = await transformSchema(data)
+  const schema = await transformSchema(data, options)
 
   onProgress({step: steps.transformData})
   const transformed = await transformData(data, options)

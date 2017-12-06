@@ -10,14 +10,15 @@ const transformData = (data, options = {}) => {
   }
 
   const locale = options.locale || data.locales[0].code
-  return data.entries.filter(isPublished).map(entry => transformEntry(entry, data, locale))
+  const opts = Object.assign({}, options, {locale})
+  return data.entries.filter(isPublished).map(entry => transformEntry(entry, data, opts))
 }
 
 function isPublished(entry) {
   return typeof entry.sys.publishedAt === 'string'
 }
 
-function transformEntry(entry, data, locale) {
+function transformEntry(entry, data, options) {
   const doc = {
     _id: entry.sys.id,
     _type: entry.sys.contentType.sys.id,
@@ -26,14 +27,14 @@ function transformEntry(entry, data, locale) {
   }
 
   return Object.keys(entry.fields).reduce((acc, fieldName) => {
-    acc[fieldName] = transformField(entry, fieldName, data, locale)
+    acc[fieldName] = transformField(entry, fieldName, data, options)
     return acc
   }, doc)
 }
 
-function transformField(entry, fieldName, data, locale) {
+function transformField(entry, fieldName, data, options) {
+  const {locale, keepMarkdown} = options
   const value = entry.fields[fieldName][locale]
-
   const typeId = entry.sys.contentType.sys.id
   const editor = data.editorInterfaces.find(ed => ed.sys.contentType.sys.id === typeId)
   const widgetId = editor.controls.find(ctrl => ctrl.fieldId === fieldName).widgetId
@@ -42,7 +43,7 @@ function transformField(entry, fieldName, data, locale) {
     return undefined
   }
 
-  if (typeof value === 'string' && widgetId === 'markdown') {
+  if (!keepMarkdown && typeof value === 'string' && widgetId === 'markdown') {
     return markdownToBlocks(value)
   }
 

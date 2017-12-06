@@ -34,6 +34,7 @@ const cli = meow(
     --contentful-token <token> Contentful management token to authenticate with
     --replace Replace documents in dataset if same IDs are encountered
     --missing Skip documents that already exist
+    --keep-markdown Keeps markdown as-is. Converts to block content format by default.
     --help Show this help
 
   Examples
@@ -51,7 +52,7 @@ const cli = meow(
     --contentful-token = CONTENTFUL_MANAGEMENT_TOKEN
 `,
   {
-    boolean: ['replace', 'missing'],
+    boolean: ['replace', 'missing', 'keep-markdown'],
     alias: {
       s: 'space',
       p: 'project',
@@ -283,6 +284,7 @@ function onProgress(opts) {
 }
 
 async function run() {
+  const {keepMarkdown, locale} = flags
   let {space, project, dataset, output, fromFile} = flags
   let contentfulToken = flags.contentfulToken || process.env.CONTENTFUL_MANAGEMENT_TOKEN
 
@@ -340,8 +342,10 @@ async function run() {
   })
 
   // Use or prompt for dataset
-  dataset = await getOrCreateDataset(dataset, client)
-  client.config({dataset})
+  if (!dataset) {
+    dataset = await getOrCreateDataset(dataset, client)
+    client.config({dataset})
+  }
 
   // Run the migration
   await migrate({
@@ -354,7 +358,8 @@ async function run() {
     output,
     operation,
     client,
-    locale: flags.locale
+    locale,
+    keepMarkdown
   })
 
   const cd = path.resolve(output) === process.cwd() ? '' : `cd ${output} && `

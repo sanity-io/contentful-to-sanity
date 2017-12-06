@@ -44,6 +44,7 @@ Requires node.js version >= 7.6
     --contentful-token <token> Contentful management token to authenticate with
     --replace Replace documents in dataset if same IDs are encountered
     --missing Skip documents that already exist
+    --keep-markdown Keeps markdown as-is. Converts to block content format by default.
     --help Show this help
 
   Examples
@@ -64,6 +65,7 @@ Requires node.js version >= 7.6
 ## Caveats
 
 - Only published items will be imported
+- Markdown is converted on a best-effort basis. Certain features (like tables) are not supported. Arbitrary HTML is either skipped or unwrapped to simple text values. You can disable markdown conversion by using `--keep-markdown`
 - Validations are not ported (currently)
 - Omitted fields are not included
 - Fields that accept both images and files currently only allow images

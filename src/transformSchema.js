@@ -24,11 +24,11 @@ const editorMap = {
   tagEditor: 'tags'
 }
 
-function transformSchema(data) {
-  return data.contentTypes.map(type => transformContentType(type, data))
+function transformSchema(data, options) {
+  return data.contentTypes.map(type => transformContentType(type, data, options))
 }
 
-function transformContentType(type, data) {
+function transformContentType(type, data, options) {
   const output = {
     name: type.sys.id,
     title: type.name,
@@ -49,7 +49,7 @@ function transformContentType(type, data) {
       isRequired(source),
       isHidden(source),
       {type: undefined},
-      contentfulTypeToSanityType(source, data, type.sys.id)
+      contentfulTypeToSanityType(source, data, type.sys.id, options)
     )
   )
 
@@ -64,7 +64,7 @@ function isRequired(field) {
   return field.required ? {required: true} : {}
 }
 
-function contentfulTypeToSanityType(source, data, typeId) {
+function contentfulTypeToSanityType(source, data, typeId, options) {
   const editor = data.editorInterfaces.find(ed => ed.sys.contentType.sys.id === typeId)
   const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id).widgetId
   const defaultEditor = defaultEditors[source.type]
@@ -82,8 +82,8 @@ function contentfulTypeToSanityType(source, data, typeId) {
     return determineSlugType(source, data, typeId)
   }
 
-  if (source.type === 'Text' && widgetId === 'markdown') {
-    return {type: 'array', of: [{type: 'block'}]}
+  if (!options.keepMarkdown && source.type === 'Text' && widgetId === 'markdown') {
+    return {type: 'array', of: [{type: 'block'}, {type: 'image'}]}
   }
 
   if (source.type === 'Text') {
