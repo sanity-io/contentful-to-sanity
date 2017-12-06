@@ -82,8 +82,10 @@ function contentfulTypeToSanityType(source, data, typeId) {
     return determineSlugType(source, data, typeId)
   }
 
-  // @todo This kind of depends on the editor.
-  // We probably want to convert to block-text on markdown?
+  if (source.type === 'Text' && widgetId === 'markdown') {
+    return {type: 'array', of: {type: 'block'}}
+  }
+
   if (source.type === 'Text') {
     return {type: 'text'}
   }
@@ -170,7 +172,7 @@ function determineAssetRefType(source, data) {
   const mimeValidation = source.validations.find(val => val.linkMimetypeGroup) || {}
   const mimeGroups = mimeValidation.linkMimetypeGroup || []
 
-  if (mimeGroups.includes('image') || ['image', 'picture'].includes(source)) {
+  if (mimeGroups.includes('image') || ['image', 'picture'].includes(source.id)) {
     return {type: 'image'}
   }
 

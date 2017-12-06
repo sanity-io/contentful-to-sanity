@@ -1,3 +1,5 @@
+const markdownToBlocks = require('./markdownToBlocks')
+
 const transformData = (data, options = {}) => {
   if (data.locales.length > 1 && !options.locale) {
     throw new Error('Only one locale supported currently, please specify which locale to use')
@@ -8,16 +10,16 @@ const transformData = (data, options = {}) => {
   }
 
   const locale = options.locale || data.locales[0].code
-  return data.entries.map(entry => transformEntry(entry, data, locale))
+  return data.entries.filter(isPublished).map(entry => transformEntry(entry, data, locale))
 }
 
-function isDraft(entry) {
-  return typeof entry.sys.publishedAt !== 'string'
+function isPublished(entry) {
+  return typeof entry.sys.publishedAt === 'string'
 }
 
 function transformEntry(entry, data, locale) {
   const doc = {
-    _id: isDraft(entry) ? `drafts.${entry.sys.id}` : entry.sys.id,
+    _id: entry.sys.id,
     _type: entry.sys.contentType.sys.id,
     _createdAt: entry.sys.createdAt,
     _updatedAt: entry.sys.updatedAt
@@ -32,15 +34,22 @@ function transformEntry(entry, data, locale) {
 function transformField(entry, fieldName, data, locale) {
   const value = entry.fields[fieldName][locale]
 
+  const typeId = entry.sys.contentType.sys.id
+  const editor = data.editorInterfaces.find(ed => ed.sys.contentType.sys.id === typeId)
+  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === fieldName).widgetId
+
   if (typeof value === 'undefined') {
     return undefined
+  }
+
+  if (typeof value === 'string' && widgetId === 'markdown') {
+    return markdownToBlocks(value)
   }
 
   if (value && value.sys && value.sys.type === 'Link') {
     return transformLink(value, data, locale)
   }
 
-  const typeId = entry.sys.contentType.sys.id
   const parentTypeDef = data.contentTypes.find(type => type.sys.id === typeId)
   if (!parentTypeDef) {
     throw new Error(`Could not find type definition for type "${typeId}"`)
