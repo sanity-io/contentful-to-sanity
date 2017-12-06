@@ -83,7 +83,7 @@ function contentfulTypeToSanityType(source, data, typeId) {
   }
 
   if (source.type === 'Text' && widgetId === 'markdown') {
-    return {type: 'array', of: {type: 'block'}}
+    return {type: 'array', of: [{type: 'block'}]}
   }
 
   if (source.type === 'Text') {
@@ -104,7 +104,9 @@ function contentfulTypeToSanityType(source, data, typeId) {
   }
 
   throw new Error(
-    `Unhandled data type "${source.type}" with widget "${widgetId}" for field "${source.id}" of type "${typeId}"`
+    `Unhandled data type "${source.type}" with widget "${widgetId}" for field "${
+      source.id
+    }" of type "${typeId}"`
   )
 }
 
