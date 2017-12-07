@@ -33,7 +33,7 @@ function transformContentType(type, data, options) {
     name: type.sys.id,
     title: type.name,
     description: type.description || undefined,
-    type: 'object'
+    type: 'document'
   }
 
   if (type.displayField) {
