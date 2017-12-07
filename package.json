@@ -1,6 +1,6 @@
 {
   "name": "contentful-to-sanity",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Migrate from Contentful to Sanity",
   "main": "src/migrate.js",
   "bin": {
@@ -16,7 +16,11 @@
     "type": "git",
     "url": "git+https://github.com/sanity-io/contentful-to-sanity.git"
   },
-  "keywords": ["sanity", "contentful", "headless"],
+  "keywords": [
+    "sanity",
+    "contentful",
+    "headless"
+  ],
   "author": "Sanity.io <hello@sanity.io>",
   "license": "MIT",
   "bugs": {
