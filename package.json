@@ -16,11 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/sanity-io/contentful-to-sanity.git"
   },
-  "keywords": [
-    "sanity",
-    "contentful",
-    "headless"
-  ],
+  "keywords": ["sanity", "contentful", "headless"],
   "author": "Sanity.io <hello@sanity.io>",
   "license": "MIT",
   "bugs": {
@@ -34,15 +30,15 @@
     "hard-rejection": "^1.0.0"
   },
   "dependencies": {
-    "@sanity/block-tools": "0.122.5",
-    "@sanity/client": "^0.122.0",
-    "@sanity/import": "^0.122.0",
-    "@sanity/schema": "0.120.0",
+    "@sanity/block-tools": "0.123.0",
+    "@sanity/client": "^0.123.0",
+    "@sanity/import": "^0.123.0",
+    "@sanity/schema": "0.123.0",
     "configstore": "^3.1.1",
     "contentful-batch-libs": "5.10.0",
     "execa": "^0.8.0",
     "fs-extra": "^4.0.3",
-    "inquirer": "^3.3.0",
+    "inquirer": "^4.0.1",
     "jsdom": "^11.5.1",
     "lodash": "^4.17.4",
     "markdown-it": "^8.4.0",
