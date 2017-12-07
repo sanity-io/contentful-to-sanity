@@ -44,7 +44,7 @@ function transformField(entry, fieldName, data, options) {
   }
 
   if (!keepMarkdown && typeof value === 'string' && widgetId === 'markdown') {
-    return markdownToBlocks(value)
+    return markdownToBlocks(value, options)
   }
 
   if (value && value.sys && value.sys.type === 'Link') {
