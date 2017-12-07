@@ -15,7 +15,7 @@ const schema = Schema.compile({
           title: 'Body',
           name: 'body',
           type: 'array',
-          of: [{type: 'block'}, {type: 'image'}]
+          of: [{type: 'block'}, {type: 'image'}, {type: 'image', options: {inline: true}}]
         }
       ]
     }
@@ -23,16 +23,31 @@ const schema = Schema.compile({
 })
 
 const blockContentType = schema.get('mock').fields.find(field => field.name === 'body').type
-const unwrapQuotes = (el, next) => {
-  return undefined
+
+const extractImages = (el, next) => {
+  if (el.tagName === 'P' && el.childNodes.length === 1 && el.childNodes[0].tagName === 'IMG') {
+    return {
+      _sanityAsset: `image@${el.childNodes[0].getAttribute('src').replace(/^\/\//, 'https://')}`
+    }
+  }
+
+  if (el.tagName !== 'IMG') {
+    return undefined
+  }
+
+  const src = el.getAttribute('src')
+  return {
+    _sanityAsset: `image@${src.replace(/^\/\//, 'https://')}`
+  }
 }
 
-module.exports = input => {
+module.exports = (input, options) => {
   const html = md.render(input)
   const blocks = blockTools.htmlToBlocks(html, {
+    rules: [{deserialize: extractImages}],
     blockContentType,
-    rules: [{deserialize: unwrapQuotes}],
     parseHtml: htmlContent => new JSDOM(htmlContent).window.document
   })
+
   return blocks
 }
