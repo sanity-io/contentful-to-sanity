@@ -15,7 +15,7 @@ const schema = Schema.compile({
           title: 'Body',
           name: 'body',
           type: 'array',
-          of: [{type: 'block'}, {type: 'image'}, {type: 'image', options: {inline: true}}]
+          of: [{type: 'block'}, {type: 'image'}]
         }
       ]
     }
@@ -31,14 +31,8 @@ const extractImages = (el, next) => {
     }
   }
 
-  if (el.tagName !== 'IMG') {
-    return undefined
-  }
-
-  const src = el.getAttribute('src')
-  return {
-    _sanityAsset: `image@${src.replace(/^\/\//, 'https://')}`
-  }
+  // Only convert block-level images, for now
+  return undefined
 }
 
 module.exports = (input, options) => {

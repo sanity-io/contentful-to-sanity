@@ -65,7 +65,7 @@ Requires node.js version >= 7.6
 ## Caveats
 
 - Only published items will be imported
-- Markdown is converted on a best-effort basis. Certain features (like tables) are not supported. Arbitrary HTML is either skipped or unwrapped to simple text values. You can disable markdown conversion by using `--keep-markdown`
+- Markdown is converted on a best-effort basis. Certain features (like tables) are not supported. Arbitrary HTML is either skipped or unwrapped to simple text values. Inline images are currently skipped. You can disable markdown conversion by using `--keep-markdown`.
 - Validations are not ported (currently)
 - Omitted fields are not included
 - Fields that accept both images and files currently only allow images

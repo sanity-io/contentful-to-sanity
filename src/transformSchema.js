@@ -85,7 +85,7 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
   if (!options.keepMarkdown && source.type === 'Text' && widgetId === 'markdown') {
     return {
       type: 'array',
-      of: [{type: 'block'}, {type: 'image'}, {type: 'image', options: {inline: true}}]
+      of: [{type: 'block'}, {type: 'image'}]
     }
   }
 
