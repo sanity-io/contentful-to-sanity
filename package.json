@@ -1,6 +1,6 @@
 {
   "name": "contentful-to-sanity",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Migrate from Contentful to Sanity",
   "main": "src/migrate.js",
   "bin": {
