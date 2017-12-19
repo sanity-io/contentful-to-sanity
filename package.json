@@ -30,14 +30,14 @@
   "devDependencies": {
     "eslint": "^4.7.2",
     "eslint-config-prettier": "^2.5.0",
-    "eslint-config-sanity": "^3.0.1",
-    "hard-rejection": "^1.0.0"
+    "eslint-config-sanity": "^3.0.1"
   },
   "dependencies": {
     "@sanity/block-tools": "0.123.0",
     "@sanity/client": "^0.123.0",
     "@sanity/import": "^0.123.0",
     "@sanity/schema": "0.123.0",
+    "hard-rejection": "^1.0.0",
     "configstore": "^3.1.1",
     "contentful-batch-libs": "5.10.0",
     "execa": "^0.8.0",
