@@ -4,15 +4,17 @@ const defaultsDeep = require('lodash/defaultsDeep')
 
 const schemaTemplate = `
 import createSchema from 'part:@sanity/base/schema-creator'
+import schemaTypes from 'all:part:@sanity/base/schema-type'
 __IMPORTS__
 
 export default createSchema({
   name: 'default',
-  types: [__TYPES__]
+  types: schemaTypes.concat([__TYPES__])
 })
 `
 
 const defaultPrettierOptions = {
+  parser: 'babylon',
   semi: false,
   singleQuote: true,
   bracketSpacing: false
@@ -43,9 +45,11 @@ function createSanitySchema(types, options = {}) {
 }
 
 function generateSchemaForType(type) {
-  const blockPreview =
+  const typeField =
     type.preview &&
-    type.fields.find(field => field.name === type.preview.select.title).type === 'array'
+    type.fields.find(field => field.name === type.preview.select.title)
+
+  const blockPreview = typeField && typeField.type === 'array'
 
   if (!blockPreview) {
     return `export default ${JSON.stringify(type, null, 2)}`
