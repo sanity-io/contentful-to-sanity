@@ -52,7 +52,7 @@ function generateSchemaForType(type) {
   const blockPreview = typeField && typeField.type === 'array'
 
   if (!blockPreview) {
-    return `export default ${JSON.stringify(type, null, 2)}`
+    return `export default ${processJsonSchema(JSON.stringify(type, null, 2))}`
   }
 
   const prepareMethod = `values => {
@@ -62,8 +62,12 @@ function generateSchemaForType(type) {
   }`
 
   const preparedType = defaultsDeep({preview: {prepare: '__PREPARE__'}}, type)
-  const typeContent = `export default ${JSON.stringify(preparedType, null, 2)}`
+  const typeContent = `export default ${processJsonSchema(JSON.stringify(preparedType, null, 2))}`
   return typeContent.replace(/["']__PREPARE__["']/, prepareMethod)
+}
+
+function processJsonSchema(typeDef) {
+  return typeDef.replace(/"required": true,\n /g, '"validation": Rule => Rule.required(),\n')
 }
 
 function generateImport(typeName) {
