@@ -5,7 +5,7 @@ const directMap = {
   Location: 'geopoint',
   Boolean: 'boolean',
   Date: 'datetime',
-  Object: 'object' // @todo Arbitrary JSON editor?
+  Object: 'object'
 }
 
 const defaultEditors = {
@@ -40,18 +40,21 @@ function transformContentType(type, data, options) {
     output.preview = {select: {title: type.displayField}}
   }
 
-  output.fields = type.fields.filter(field => !field.omitted).map(source =>
-    Object.assign(
-      {
-        name: source.id,
-        title: source.name
-      },
-      isRequired(source),
-      isHidden(source),
-      {type: undefined},
-      contentfulTypeToSanityType(source, data, type.sys.id, options)
+  output.fields = type.fields
+    .filter(field => !field.omitted)
+    .filter(field => !shouldSkip(field, data, type.sys.id))
+    .map(source =>
+      Object.assign(
+        {
+          name: source.id,
+          title: source.name
+        },
+        isRequired(source),
+        isHidden(source),
+        {type: undefined},
+        contentfulTypeToSanityType(source, data, type.sys.id, options)
+      )
     )
-  )
 
   return output
 }
@@ -62,6 +65,12 @@ function isHidden(field) {
 
 function isRequired(field) {
   return field.required ? {required: true} : {}
+}
+
+function shouldSkip(source, data, typeId) {
+  const editor = data.editorInterfaces.find(ed => ed.sys.contentType.sys.id === typeId)
+  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id).widgetId
+  return source.type === 'Object' && widgetId === 'objectEditor'
 }
 
 function contentfulTypeToSanityType(source, data, typeId, options) {
