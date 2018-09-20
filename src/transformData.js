@@ -47,6 +47,10 @@ function transformField(entry, fieldName, data, options) {
     return markdownToBlocks(value, options)
   }
 
+  if (value && widgetId === 'slugEditor') {
+    return {current: value}
+  }
+
   if (value && value.sys && value.sys.type === 'Link') {
     return transformLink(value, data, locale)
   }
