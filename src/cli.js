@@ -349,20 +349,28 @@ async function run() {
   }
 
   // Run the migration
-  await migrate({
-    contentfulToken,
-    onProgress,
-    fromFile,
-    space,
-    project,
-    dataset,
-    output,
-    operation,
-    weakRefs,
-    client,
-    locale,
-    keepMarkdown
-  })
+  try {
+    await migrate({
+      contentfulToken,
+      onProgress,
+      fromFile,
+      space,
+      project,
+      dataset,
+      output,
+      operation,
+      weakRefs,
+      client,
+      locale,
+      keepMarkdown
+    })
+  } catch (err) {
+    if (spinner) {
+      spinner.fail()
+    }
+
+    throw err
+  }
 
   const cd = path.resolve(output) === process.cwd() ? '' : `cd ${output} && `
 
