@@ -52,7 +52,7 @@ function transformField(entry, fieldName, data, options) {
   }
 
   if (value && value.sys && value.sys.type === 'Link') {
-    return transformLink(value, data, locale)
+    return transformLink(value, data, locale, options)
   }
 
   const parentTypeDef = data.contentTypes.find(type => type.sys.id === typeId)
@@ -72,7 +72,7 @@ function transformField(entry, fieldName, data, options) {
   if (Array.isArray(value)) {
     return value.map(val => {
       if (val && val.sys && val.sys.type === 'Link') {
-        return transformLink(val, data, locale)
+        return transformLink(val, data, locale, options)
       }
 
       return val
@@ -90,27 +90,36 @@ function transformLocation(coords) {
   }
 }
 
-function transformLink(value, data, locale) {
+function maybeWeakRef(ref, options) {
+  return options.weakRefs ? Object.assign({}, ref, {_weak: true}) : ref
+}
+
+function transformLink(value, data, locale, options) {
   if (value.sys.linkType === 'Asset') {
-    return transformAssetLink(value, data, locale)
+    return transformAssetLink(value, data, locale, options)
   }
 
   if (value.sys.linkType === 'Entry') {
-    return {_type: 'reference', _ref: value.sys.id}
+    return maybeWeakRef({_type: 'reference', _ref: value.sys.id}, options)
   }
 
   throw new Error(`Unhandled link type "${value.sys.linkType}"`)
 }
 
-function transformAssetLink(value, data, locale) {
+function transformAssetLink(value, data, locale, options) {
   const asset = data.assets.find(item => item.sys.id === value.sys.id)
-  if (!asset) {
+  if (!asset && !options.weakRefs) {
     throw new Error(`Document referenced non-existing asset with ID "${value.sys.id}"`)
+  } else if (!asset) {
+    return undefined
   }
 
   const file = asset.fields.file[locale]
   const type = file.contentType.startsWith('image/') ? 'image' : 'file'
-  return {_type: 'reference', _sanityAsset: `${type}@${prefixUrl(file.url)}`}
+  return maybeWeakRef(
+    {_type: 'reference', _sanityAsset: `${type}@${prefixUrl(file.url)}`},
+    options
+  )
 }
 
 function prefixUrl(url) {

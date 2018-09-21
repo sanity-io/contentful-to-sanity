@@ -45,6 +45,7 @@ Requires node.js version >= 7.6
     --replace Replace documents in dataset if same IDs are encountered
     --missing Skip documents that already exist
     --keep-markdown Keeps markdown as-is. Converts to block content format by default.
+    --weak-refs Use weak references (allow import to continue on broken references)
     --help Show this help
 
   Examples

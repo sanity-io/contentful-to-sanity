@@ -35,6 +35,7 @@ const cli = meow(
     --replace Replace documents in dataset if same IDs are encountered
     --missing Skip documents that already exist
     --keep-markdown Keeps markdown as-is. Converts to block content format by default.
+    --weak-refs Use weak references (allow import to continue on broken references)
     --help Show this help
 
   Examples
@@ -284,7 +285,7 @@ function onProgress(opts) {
 }
 
 async function run() {
-  const {keepMarkdown, locale} = flags
+  const {keepMarkdown, locale, weakRefs} = flags
   let {space, project, dataset, output, fromFile} = flags
   let contentfulToken = flags.contentfulToken || process.env.CONTENTFUL_MANAGEMENT_TOKEN
 
@@ -357,6 +358,7 @@ async function run() {
     dataset,
     output,
     operation,
+    weakRefs,
     client,
     locale,
     keepMarkdown
