@@ -52,7 +52,7 @@ function transformField(entry, fieldName, data, options) {
   }
 
   if (value && value.sys && value.sys.type === 'Link') {
-    return transformLink(value, data, locale, options)
+    return transformLink(value, data, locale, options, entry)
   }
 
   const parentTypeDef = data.contentTypes.find(type => type.sys.id === typeId)
@@ -72,7 +72,7 @@ function transformField(entry, fieldName, data, options) {
   if (Array.isArray(value)) {
     return value.map(val => {
       if (val && val.sys && val.sys.type === 'Link') {
-        return transformLink(val, data, locale, options)
+        return transformLink(val, data, locale, options, entry)
       }
 
       return val
@@ -94,9 +94,9 @@ function maybeWeakRef(ref, options) {
   return options.weakRefs ? Object.assign({}, ref, {_weak: true}) : ref
 }
 
-function transformLink(value, data, locale, options) {
+function transformLink(value, data, locale, options, parent) {
   if (value.sys.linkType === 'Asset') {
-    return transformAssetLink(value, data, locale, options)
+    return transformAssetLink(value, data, locale, options, parent)
   }
 
   if (value.sys.linkType === 'Entry') {
@@ -106,10 +106,13 @@ function transformLink(value, data, locale, options) {
   throw new Error(`Unhandled link type "${value.sys.linkType}"`)
 }
 
-function transformAssetLink(value, data, locale, options) {
+function transformAssetLink(value, data, locale, options, parent) {
   const asset = data.assets.find(item => item.sys.id === value.sys.id)
   if (!asset && !options.weakRefs) {
-    throw new Error(`Document referenced non-existing asset with ID "${value.sys.id}"`)
+    const parentId = parent.sys.id
+    throw new Error(
+      `Document with ID "${parentId}" references non-existing asset with ID "${value.sys.id}"`
+    )
   } else if (!asset) {
     return undefined
   }
