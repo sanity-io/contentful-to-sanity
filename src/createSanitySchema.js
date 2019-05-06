@@ -14,7 +14,7 @@ export default createSchema({
 `
 
 const defaultPrettierOptions = {
-  parser: 'babylon',
+  parser: 'babel',
   semi: false,
   singleQuote: true,
   bracketSpacing: false
