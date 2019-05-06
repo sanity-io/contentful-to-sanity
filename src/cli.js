@@ -59,7 +59,8 @@ const cli = meow(
       p: 'project',
       d: 'dataset',
       o: 'output',
-      l: 'locale'
+      l: 'locale',
+      f: 'fromFile'
     }
   }
 )
