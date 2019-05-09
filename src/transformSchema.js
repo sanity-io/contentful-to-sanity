@@ -115,6 +115,10 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
     return {type: sanityEquivalent, options: {list, layout}}
   }
 
+  if (source.type === 'Symbol') {
+    return {type: 'string'}
+  }
+
   throw new Error(
     `Unhandled data type "${source.type}" with widget "${widgetId}" for field "${
       source.id
