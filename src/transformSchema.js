@@ -161,7 +161,7 @@ function determineArrayType(source, data, typeId) {
   }
 
   if (itemsType === 'Link') {
-    field.of = [determineRefType(source.items)]
+    field.of = [determineRefType(source.items, data)]
     return field
   }
 
