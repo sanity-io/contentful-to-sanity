@@ -120,9 +120,7 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
   }
 
   throw new Error(
-    `Unhandled data type "${source.type}" with widget "${widgetId}" for field "${
-      source.id
-    }" of type "${typeId}"`
+    `Unhandled data type "${source.type}" with widget "${widgetId}" for field "${source.id}" of type "${typeId}"`
   )
 }
 
@@ -200,16 +198,20 @@ function determineAssetRefType(source, data) {
 
 function determineEntryRefType(source, data) {
   const typeValidation = source.validations.find(val => val.linkContentType) || {}
-  const linkTypes = typeValidation.linkContentType || []
-  if (linkTypes.length === 1) {
-    return {type: 'reference', to: [{type: linkTypes[0]}]}
+  const linkTypes = (typeValidation.linkContentType || []).filter(typeName => {
+    // Validations can contain deleted content types - make sure to remove them
+    return data.contentTypes.some(type => type.sys.id === typeName)
+  })
+
+  if (linkTypes.length === 0) {
+    // Allow referencing all types
+    return {
+      type: 'reference',
+      to: data.contentTypes.map(type => ({type: type.sys.id}))
+    }
   }
 
-  if (linkTypes.length > 1) {
-    return {type: 'reference', to: linkTypes.map(type => ({type}))}
-  }
-
-  return {type: 'reference', to: data.contentTypes.map(type => ({type: type.sys.id}))}
+  return {type: 'reference', to: linkTypes.map(type => ({type}))}
 }
 
 module.exports = transformSchema
