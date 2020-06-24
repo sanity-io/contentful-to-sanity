@@ -10,7 +10,7 @@
     "node": ">=7.6.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,8 @@
   "devDependencies": {
     "eslint": "^4.7.2",
     "eslint-config-prettier": "^2.5.0",
-    "eslint-config-sanity": "^3.0.1"
+    "eslint-config-sanity": "^3.0.1",
+    "jest": "^26.0.1"
   },
   "dependencies": {
     "@sanity/block-tools": "0.133.2",
