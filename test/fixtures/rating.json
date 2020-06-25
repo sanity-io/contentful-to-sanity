@@ -1,0 +1,497 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5xd3w2zxdm05"
+          }
+        },
+        "id": "author",
+        "type": "ContentType",
+        "createdAt": "2020-06-25T12:23:21.033Z",
+        "updatedAt": "2020-06-25T12:55:03.037Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-06-25T12:55:03.037Z",
+        "firstPublishedAt": "2020-06-25T12:23:21.556Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Author",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "bio",
+          "name": "bio",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "nodes": {}
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, and quote nodes are allowed"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "photo",
+          "name": "photo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": ["image"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "rating",
+          "name": "rating",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5xd3w2zxdm05",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2020-06-25T12:23:21.756Z",
+        "createdBy": {
+          "sys": {
+            "id": "4RIo3QLXzJZIsRleYS8gmL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-06-25T12:55:03.694Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4RIo3QLXzJZIsRleYS8gmL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "author",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "bio",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "photo",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "rating",
+          "settings": {
+            "stars": "10",
+            "helpText": "This authors rating"
+          },
+          "widgetId": "rating",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5xd3w2zxdm05",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2020-06-25T12:24:21.043Z",
+        "createdBy": {
+          "sys": {
+            "id": "4RIo3QLXzJZIsRleYS8gmL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-06-25T12:24:47.792Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4RIo3QLXzJZIsRleYS8gmL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "post",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "author",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "metadata",
+          "widgetId": "objectEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5xd3w2zxdm05"
+          }
+        },
+        "id": "264PR6TGgObfFOnSk6sJnK",
+        "type": "Entry",
+        "createdAt": "2020-06-25T12:24:53.328Z",
+        "updatedAt": "2020-06-25T12:55:15.863Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-06-25T12:55:15.863Z",
+        "firstPublishedAt": "2020-06-25T12:25:44.926Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Rune Botten"
+        },
+        "bio": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Rune is a developer. He ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "likes",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " to develop things.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6eFGcfJLGKeUFCDWIBc0he"
+            }
+          }
+        },
+        "rating": {
+          "en-US": 9
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5xd3w2zxdm05"
+          }
+        },
+        "id": "6eFGcfJLGKeUFCDWIBc0he",
+        "type": "Asset",
+        "createdAt": "2020-06-25T12:25:13.246Z",
+        "updatedAt": "2020-06-25T12:25:36.982Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-06-25T12:25:36.982Z",
+        "firstPublishedAt": "2020-06-25T12:25:36.982Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Rune"
+        },
+        "description": {
+          "en-US": "Photo of Rune"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5xd3w2zxdm05/6eFGcfJLGKeUFCDWIBc0he/5b3d39184ea259a388330ff21f09608b/rune_mindre.png",
+            "details": {
+              "size": 822102,
+              "image": {
+                "width": 800,
+                "height": 749
+              }
+            },
+            "fileName": "rune mindre.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "38w3KhmDmd5NXY7TYRgnGu",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5xd3w2zxdm05"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        },
+        "createdAt": "2020-06-25T12:22:04Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4RIo3QLXzJZIsRleYS8gmL"
+          }
+        },
+        "updatedAt": "2020-06-25T12:22:04Z"
+      }
+    }
+  ],
+  "webhooks": [],
+  "roles": []
+}

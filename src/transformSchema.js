@@ -149,7 +149,7 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
     return determineArrayType(source, data, typeId);
   }
 
-  if (sanityEquivalent && ["dropdown", "radio"].includes(widgetId)) {
+  if (sanityEquivalent && ["dropdown", "radio", "rating"].includes(widgetId)) {
     const { list, layout } = determineSelectOptions(source, data, typeId);
     return { type: sanityEquivalent, options: { list, layout } };
   }
@@ -179,17 +179,26 @@ function determineSlugType(source, data, typeId) {
 }
 
 function determineSelectOptions(source, data, typeId) {
-  const validations = source.items
-    ? source.items.validations
-    : source.validations;
-  const onlyValues = (validations.find((val) => val.in) || {}).in;
   const editor = data.editorInterfaces.find(
     (ed) => ed.sys.contentType.sys.id === typeId
   );
-  const widgetId = editor.controls.find((ctrl) => ctrl.fieldId === source.id)
-    .widgetId;
-  const layout = editorMap[widgetId];
+  const control = editor.controls.find((ctrl) => ctrl.fieldId === source.id);
 
+  let onlyValues;
+  if (control.widgetId === "rating") {
+    const maxValue = Number(control.settings.stars);
+    onlyValues = [];
+    for (var i = 1; i <= maxValue; i++) {
+      onlyValues.push(i);
+    }
+  } else {
+    const validations = source.items
+      ? source.items.validations
+      : source.validations;
+    onlyValues = (validations.find((val) => val.in) || {}).in;
+  }
+
+  const layout = editorMap[control.widgetId];
   return onlyValues ? { list: onlyValues, layout } : { layout };
 }
 

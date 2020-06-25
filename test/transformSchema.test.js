@@ -6,6 +6,11 @@ const defaultOptions = {
 };
 
 describe("transformSchema", () => {
+  it("handles rating", () => {
+    const fixture = require("./fixtures/rating.json");
+    const schema = transformSchema(fixture, defaultOptions);
+    console.log(JSON.stringify(schema, null, 2));
+  });
   describe("RichText", () => {
     const fixture = require("./fixtures/richText.json");
     it("includes an object for handling HR", () => {
