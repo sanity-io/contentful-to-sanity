@@ -1,6 +1,6 @@
 const crypto = require('crypto')
 const markdownToBlocks = require('./markdownToBlocks')
-const { toPortableText } = require('contentful-rich-text-to-portable-text')
+const {toPortableText} = require('contentful-rich-text-to-portable-text')
 
 const transformData = (data, options = {}) => {
   if (data.locales.length > 1 && !options.locale) {
@@ -19,7 +19,7 @@ const transformData = (data, options = {}) => {
   }
 
   const locale = options.locale || data.locales[0].code
-  const opts = Object.assign({}, options, { locale })
+  const opts = Object.assign({}, options, {locale})
   return data.entries
     .filter(isPublished)
     .map(entry => transformEntry(entry, data, opts))
@@ -34,7 +34,7 @@ function transformEntry(entry, data, options) {
     _id: entry.sys.id,
     _type: entry.sys.contentType.sys.id,
     _createdAt: entry.sys.createdAt,
-    _updatedAt: entry.sys.updatedAt,
+    _updatedAt: entry.sys.updatedAt
   }
 
   return Object.keys(entry.fields).reduce((acc, fieldName) => {
@@ -44,7 +44,7 @@ function transformEntry(entry, data, options) {
 }
 
 function transformField(entry, fieldName, data, options) {
-  const { locale, keepMarkdown } = options
+  const {locale, keepMarkdown} = options
   const value = entry.fields[fieldName][locale]
   const typeId = entry.sys.contentType.sys.id
   const editor = data.editorInterfaces.find(
@@ -62,7 +62,7 @@ function transformField(entry, fieldName, data, options) {
   }
 
   if (value && widgetId === 'slugEditor') {
-    return { current: value }
+    return {current: value}
   }
 
   if (value && value.sys && value.sys.type === 'Link') {
@@ -106,12 +106,12 @@ function transformLocation(coords) {
   return {
     _type: 'geopoint',
     lat: coords.lat,
-    lng: coords.lon,
+    lng: coords.lon
   }
 }
 
 function maybeWeakRef(ref, options) {
-  return options.weakRefs ? Object.assign({}, ref, { _weak: true }) : ref
+  return options.weakRefs ? Object.assign({}, ref, {_weak: true}) : ref
 }
 
 function transformLink(value, data, locale, options, parent) {
@@ -120,7 +120,7 @@ function transformLink(value, data, locale, options, parent) {
   }
 
   if (value.sys.linkType === 'Entry') {
-    return maybeWeakRef({ _type: 'reference', _ref: value.sys.id }, options)
+    return maybeWeakRef({_type: 'reference', _ref: value.sys.id}, options)
   }
 
   throw new Error(`Unhandled link type "${value.sys.linkType}"`)
@@ -140,7 +140,7 @@ function transformAssetLink(value, data, locale, options, parent) {
   const file = asset.fields.file[locale]
   const type = file.contentType.startsWith('image/') ? 'image' : 'file'
   return maybeWeakRef(
-    { _type: 'reference', _sanityAsset: `${type}@${prefixUrl(file.url)}` },
+    {_type: 'reference', _sanityAsset: `${type}@${prefixUrl(file.url)}`},
     options
   )
 }
@@ -165,11 +165,11 @@ function transformRichText(data, options) {
           {
             _type: 'break',
             _key: generateKey(),
-            style: 'lineBreak',
-          },
+            style: 'lineBreak'
+          }
         ]
-      },
-    },
+      }
+    }
   })
 }
 

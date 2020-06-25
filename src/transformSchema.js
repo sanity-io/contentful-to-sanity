@@ -7,7 +7,7 @@ const directMap = {
   Location: 'geopoint',
   Boolean: 'boolean',
   Date: 'datetime',
-  Object: 'object',
+  Object: 'object'
 }
 
 const defaultEditors = {
@@ -17,13 +17,13 @@ const defaultEditors = {
   Location: 'locationEditor',
   Boolean: 'boolean',
   Date: 'datePicker',
-  Object: 'objectEditor',
+  Object: 'objectEditor'
 }
 
 const editorMap = {
   radio: 'radio',
   dropdown: 'dropdown',
-  tagEditor: 'tags',
+  tagEditor: 'tags'
 }
 
 function portableTextType(contentTypes) {
@@ -34,7 +34,7 @@ function portableTextType(contentTypes) {
     .map(doc => ({
       type: 'reference',
       name: `${doc.name}Ref`,
-      to: [{ type: doc.name }],
+      to: [{type: doc.name}]
     }))
 
   return {
@@ -42,10 +42,10 @@ function portableTextType(contentTypes) {
     type: 'array',
     title: 'Rich text',
     of: [
-      { type: 'block', of: [{ type: 'image' }].concat(docReferences) },
-      { type: 'break' },
-      { type: 'image' },
-    ].concat(docReferences),
+      {type: 'block', of: [{type: 'image'}].concat(docReferences)},
+      {type: 'break'},
+      {type: 'image'}
+    ].concat(docReferences)
   }
 }
 
@@ -62,11 +62,11 @@ function transformContentType(type, data, options) {
     name: type.sys.id,
     title: type.name,
     description: type.description || undefined,
-    type: 'document',
+    type: 'document'
   }
 
   if (type.displayField) {
-    output.preview = { select: { title: type.displayField } }
+    output.preview = {select: {title: type.displayField}}
   }
 
   output.fields = type.fields
@@ -76,11 +76,11 @@ function transformContentType(type, data, options) {
       Object.assign(
         {
           name: source.id,
-          title: source.name,
+          title: source.name
         },
         isRequired(source),
         isHidden(source),
-        { type: undefined },
+        {type: undefined},
         contentfulTypeToSanityType(source, data, type.sys.id, options)
       )
     )
@@ -89,11 +89,11 @@ function transformContentType(type, data, options) {
 }
 
 function isHidden(field) {
-  return field.disabled ? { hidden: true } : {}
+  return field.disabled ? {hidden: true} : {}
 }
 
 function isRequired(field) {
-  return field.required ? { required: true } : {}
+  return field.required ? {required: true} : {}
 }
 
 function shouldSkip(source, data, typeId) {
@@ -115,11 +115,11 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
   const sanityEquivalent = directMap[source.type]
 
   if (sanityEquivalent && widgetId === defaultEditor) {
-    return { type: sanityEquivalent }
+    return {type: sanityEquivalent}
   }
 
   if (widgetId === 'urlEditor') {
-    return { type: 'url' }
+    return {type: 'url'}
   }
 
   if (widgetId === 'slugEditor') {
@@ -133,12 +133,12 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
   ) {
     return {
       type: 'array',
-      of: [{ type: 'block' }, { type: 'image' }],
+      of: [{type: 'block'}, {type: 'image'}]
     }
   }
 
   if (source.type === 'Text') {
-    return { type: 'text' }
+    return {type: 'text'}
   }
 
   if (source.type === 'Link') {
@@ -150,17 +150,17 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
   }
 
   if (sanityEquivalent && ['dropdown', 'radio'].includes(widgetId)) {
-    const { list, layout } = determineSelectOptions(source, data, typeId)
-    return { type: sanityEquivalent, options: { list, layout } }
+    const {list, layout} = determineSelectOptions(source, data, typeId)
+    return {type: sanityEquivalent, options: {list, layout}}
   }
 
   if (source.type === 'Symbol') {
-    return { type: 'string' }
+    return {type: 'string'}
   }
 
   if (source.type === 'RichText') {
     // this is a type we supply. See the portableTextType() function
-    return { type: 'portableText' }
+    return {type: 'portableText'}
   }
 
   throw new Error(
@@ -175,7 +175,7 @@ function determineSlugType(source, data, typeId) {
     throw new Error(`Unable to determine which field to extract slug from`)
   }
 
-  return { type: 'slug', options: { source: sourceField } }
+  return {type: 'slug', options: {source: sourceField}}
 }
 
 function determineSelectOptions(source, data, typeId) {
@@ -190,24 +190,24 @@ function determineSelectOptions(source, data, typeId) {
     .widgetId
   const layout = editorMap[widgetId]
 
-  return onlyValues ? { list: onlyValues, layout } : { layout }
+  return onlyValues ? {list: onlyValues, layout} : {layout}
 }
 
 function determineArrayType(source, data, typeId) {
   const itemsType = source.items.type
   const onlyValues = (source.items.validations.find(val => val.in) || {}).in
 
-  const field = { type: 'array' }
+  const field = {type: 'array'}
   const type = directMap[itemsType]
-  const { list, layout } = determineSelectOptions(source, data, typeId)
+  const {list, layout} = determineSelectOptions(source, data, typeId)
 
   if (type === 'string' && onlyValues) {
-    field.of = [{ type: 'string', options: { list, layout } }]
+    field.of = [{type: 'string', options: {list, layout}}]
     return field
   }
 
   if (type) {
-    field.of = [{ type, options: { layout } }]
+    field.of = [{type, options: {layout}}]
     return field
   }
 
@@ -242,11 +242,11 @@ function determineAssetRefType(source, data) {
     mimeGroups.includes('image') ||
     ['image', 'picture'].includes(source.id)
   ) {
-    return { type: 'image' }
+    return {type: 'image'}
   }
 
   // @todo file/image?
-  return { type: 'file' }
+  return {type: 'file'}
 }
 
 function determineEntryRefType(source, data) {
@@ -261,11 +261,11 @@ function determineEntryRefType(source, data) {
     // Allow referencing all types
     return {
       type: 'reference',
-      to: data.contentTypes.map(type => ({ type: type.sys.id })),
+      to: data.contentTypes.map(type => ({type: type.sys.id}))
     }
   }
 
-  return { type: 'reference', to: linkTypes.map(type => ({ type })) }
+  return {type: 'reference', to: linkTypes.map(type => ({type}))}
 }
 
 module.exports = transformSchema
