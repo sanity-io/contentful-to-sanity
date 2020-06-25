@@ -160,13 +160,13 @@ function generateKey(length = 8) {
 
 function transformRichText(data, options) {
   return toPortableText(data, {
-    generateKey: () => generateKey(8),
+    generateKey: () => generateKey(),
     transformers: {
       hr: () => {
         return [
           {
             _type: "break",
-            _key: generateKey(8),
+            _key: generateKey(),
             style: "lineBreak",
           },
         ];
