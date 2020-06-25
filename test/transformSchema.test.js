@@ -9,7 +9,19 @@ describe("transformSchema", () => {
   it("handles rating", () => {
     const fixture = require("./fixtures/rating.json");
     const schema = transformSchema(fixture, defaultOptions);
-    console.log(JSON.stringify(schema, null, 2));
+
+    const ratingField = schema
+      .find((typeDef) => typeDef.name === "author")
+      .fields.find((field) => field.name === "rating");
+    assert(ratingField, "Did not find rating field");
+    expect(ratingField).toEqual(
+      expect.objectContaining({
+        type: "number",
+        options: {
+          list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        },
+      })
+    );
   });
   describe("RichText", () => {
     const fixture = require("./fixtures/richText.json");
