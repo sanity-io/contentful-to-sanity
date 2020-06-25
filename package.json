@@ -40,6 +40,7 @@
     "@sanity/schema": "0.133.2",
     "configstore": "^4.0.0",
     "contentful-batch-libs": "5.10.0",
+    "contentful-rich-text-to-portable-text": "0.1.0",
     "execa": "^0.8.0",
     "fs-extra": "^4.0.3",
     "hard-rejection": "^1.0.0",
