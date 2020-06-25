@@ -82,7 +82,7 @@ function transformField(entry, fieldName, data, options) {
   }
 
   if (typeDef.type === 'RichText') {
-    return transformRichText(value, {})
+    return transformRichText(value, data, locale, options)
   }
 
   if (typeDef.type === 'Location') {
@@ -156,10 +156,20 @@ function generateKey(length = 8) {
   return alphaNum.slice(0, length)
 }
 
-function transformRichText(data, options) {
-  return toPortableText(data, {
+function transformRichText(value, data, locale, options) {
+  return toPortableText(value, {
     generateKey: () => generateKey(),
     transformers: {
+      'embedded-asset-block': node => {
+        return [
+          Object.assign(
+            transformAssetLink(node.data.target, data, locale, options),
+            {
+              _key: generateKey()
+            }
+          )
+        ]
+      },
       hr: () => {
         return [
           {
