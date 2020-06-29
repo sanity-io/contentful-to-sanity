@@ -27,25 +27,57 @@ const editorMap = {
 }
 
 function portableTextType(contentTypes) {
-  const docReferences = contentTypes
-    .filter(typeDef => {
-      return typeDef.type === 'document'
-    })
-    .map(doc => ({
-      type: 'reference',
-      name: `${doc.name}Ref`,
-      to: [{type: doc.name}]
-    }))
+  const docNames = contentTypes
+    .filter(typeDef => typeDef.type === 'document')
+    .map(doc => doc.name)
+
+  // We want to allow a reference to any document
+  const docReferences = {
+    type: 'reference',
+    to: docNames.map(type => ({type}))
+  }
 
   return {
     name: 'portableText',
     type: 'array',
     title: 'Rich text',
     of: [
-      {type: 'block', of: [{type: 'image'}].concat(docReferences)},
+      {
+        type: 'block',
+        of: [{type: 'image'}, docReferences],
+        styles: [
+          {title: 'Normal text', value: 'normal'},
+          {title: 'Heading 1', value: 'h1'},
+          {title: 'Heading 2', value: 'h2'},
+          {title: 'Heading 3', value: 'h3'},
+          {title: 'Heading 4', value: 'h4'},
+          {title: 'Heading 5', value: 'h5'},
+          {title: 'Heading 6', value: 'h6'},
+          {title: 'Quote', value: 'blockquote'}
+        ],
+        marks: {
+          annotations: [
+            {
+              name: 'link',
+              type: 'object',
+              title: 'URL',
+              fields: [
+                {
+                  title: 'URL',
+                  name: 'href',
+                  type: 'url'
+                }
+              ]
+            },
+            {type: 'image'},
+            docReferences
+          ]
+        }
+      },
       {type: 'break'},
-      {type: 'image'}
-    ].concat(docReferences)
+      {type: 'image'},
+      docReferences
+    ]
   }
 }
 
