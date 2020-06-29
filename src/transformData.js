@@ -159,26 +159,16 @@ function generateKey(length = 8) {
 function transformRichText(value, data, locale, options) {
   return toPortableText(value, {
     generateKey: () => generateKey(),
+    referenceResolver: (node, opts) =>
+      transformLink(node.data.target, data, locale, options),
     transformers: {
-      'embedded-asset-block': node => {
-        return [
-          Object.assign(
-            transformAssetLink(node.data.target, data, locale, options),
-            {
-              _key: generateKey()
-            }
-          )
-        ]
-      },
-      hr: () => {
-        return [
-          {
-            _type: 'break',
-            _key: generateKey(),
-            style: 'lineBreak'
-          }
-        ]
-      }
+      hr: () => [
+        {
+          _type: 'break',
+          _key: generateKey(),
+          style: 'lineBreak'
+        }
+      ]
     }
   })
 }
