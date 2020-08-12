@@ -1,3 +1,5 @@
+const builtIns = require('./builtinTypes')
+
 const directMap = {
   Integer: 'number',
   Number: 'number',
@@ -24,8 +26,67 @@ const editorMap = {
   tagEditor: 'tags'
 }
 
+function portableTextType(contentTypes) {
+  const docNames = contentTypes
+    .filter(typeDef => typeDef.type === 'document')
+    .map(doc => doc.name)
+
+  // We want to allow a reference to any document
+  const docReferences = {
+    type: 'reference',
+    to: docNames.map(type => ({type}))
+  }
+
+  return {
+    name: 'portableText',
+    type: 'array',
+    title: 'Rich text',
+    of: [
+      {
+        type: 'block',
+        of: [{type: 'image'}, docReferences],
+        styles: [
+          {title: 'Normal text', value: 'normal'},
+          {title: 'Heading 1', value: 'h1'},
+          {title: 'Heading 2', value: 'h2'},
+          {title: 'Heading 3', value: 'h3'},
+          {title: 'Heading 4', value: 'h4'},
+          {title: 'Heading 5', value: 'h5'},
+          {title: 'Heading 6', value: 'h6'},
+          {title: 'Quote', value: 'blockquote'}
+        ],
+        marks: {
+          annotations: [
+            {
+              name: 'link',
+              type: 'object',
+              title: 'URL',
+              fields: [
+                {
+                  title: 'URL',
+                  name: 'href',
+                  type: 'url'
+                }
+              ]
+            },
+            {type: 'image'},
+            docReferences
+          ]
+        }
+      },
+      {type: 'break'},
+      {type: 'image'},
+      docReferences
+    ]
+  }
+}
+
 function transformSchema(data, options) {
-  return data.contentTypes.map(type => transformContentType(type, data, options))
+  const contentTypes = data.contentTypes.map(type =>
+    transformContentType(type, data, options)
+  )
+
+  return builtIns.concat(portableTextType(contentTypes)).concat(contentTypes)
 }
 
 function transformContentType(type, data, options) {
@@ -68,14 +129,20 @@ function isRequired(field) {
 }
 
 function shouldSkip(source, data, typeId) {
-  const editor = data.editorInterfaces.find(ed => ed.sys.contentType.sys.id === typeId)
-  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id).widgetId
+  const editor = data.editorInterfaces.find(
+    ed => ed.sys.contentType.sys.id === typeId
+  )
+  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id)
+    .widgetId
   return source.type === 'Object' && widgetId === 'objectEditor'
 }
 
 function contentfulTypeToSanityType(source, data, typeId, options) {
-  const editor = data.editorInterfaces.find(ed => ed.sys.contentType.sys.id === typeId)
-  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id).widgetId
+  const editor = data.editorInterfaces.find(
+    ed => ed.sys.contentType.sys.id === typeId
+  )
+  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id)
+    .widgetId
   const defaultEditor = defaultEditors[source.type]
   const sanityEquivalent = directMap[source.type]
 
@@ -91,7 +158,11 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
     return determineSlugType(source, data, typeId)
   }
 
-  if (!options.keepMarkdown && source.type === 'Text' && widgetId === 'markdown') {
+  if (
+    !options.keepMarkdown &&
+    source.type === 'Text' &&
+    widgetId === 'markdown'
+  ) {
     return {
       type: 'array',
       of: [{type: 'block'}, {type: 'image'}]
@@ -119,6 +190,11 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
     return {type: 'string'}
   }
 
+  if (source.type === 'RichText') {
+    // this is a type we supply. See the portableTextType() function
+    return {type: 'portableText'}
+  }
+
   throw new Error(
     `Unhandled data type "${source.type}" with widget "${widgetId}" for field "${source.id}" of type "${typeId}"`
   )
@@ -135,10 +211,15 @@ function determineSlugType(source, data, typeId) {
 }
 
 function determineSelectOptions(source, data, typeId) {
-  const validations = source.items ? source.items.validations : source.validations
+  const validations = source.items
+    ? source.items.validations
+    : source.validations
   const onlyValues = (validations.find(val => val.in) || {}).in
-  const editor = data.editorInterfaces.find(ed => ed.sys.contentType.sys.id === typeId)
-  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id).widgetId
+  const editor = data.editorInterfaces.find(
+    ed => ed.sys.contentType.sys.id === typeId
+  )
+  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id)
+    .widgetId
   const layout = editorMap[widgetId]
 
   return onlyValues ? {list: onlyValues, layout} : {layout}
@@ -185,10 +266,14 @@ function determineRefType(source, data) {
 }
 
 function determineAssetRefType(source, data) {
-  const mimeValidation = source.validations.find(val => val.linkMimetypeGroup) || {}
+  const mimeValidation =
+    source.validations.find(val => val.linkMimetypeGroup) || {}
   const mimeGroups = mimeValidation.linkMimetypeGroup || []
 
-  if (mimeGroups.includes('image') || ['image', 'picture'].includes(source.id)) {
+  if (
+    mimeGroups.includes('image') ||
+    ['image', 'picture'].includes(source.id)
+  ) {
     return {type: 'image'}
   }
 
@@ -197,7 +282,8 @@ function determineAssetRefType(source, data) {
 }
 
 function determineEntryRefType(source, data) {
-  const typeValidation = source.validations.find(val => val.linkContentType) || {}
+  const typeValidation =
+    source.validations.find(val => val.linkContentType) || {}
   const linkTypes = (typeValidation.linkContentType || []).filter(typeName => {
     // Validations can contain deleted content types - make sure to remove them
     return data.contentTypes.some(type => type.sys.id === typeName)

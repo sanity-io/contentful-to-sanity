@@ -1,17 +1,28 @@
+const crypto = require('crypto')
 const markdownToBlocks = require('./markdownToBlocks')
+const { toPortableText } = require('@portabletext/contentful-rich-text-to-portable-text')
 
 const transformData = (data, options = {}) => {
   if (data.locales.length > 1 && !options.locale) {
-    throw new Error('Only one locale supported currently, please specify which locale to use')
+    throw new Error(
+      'Only one locale supported currently, please specify which locale to use'
+    )
   }
 
-  if (options.locale && !data.locales.find(locale => locale.code === options.locale)) {
-    throw new Error(`Locale "${options.locale}" not found in exported Contentful data`)
+  if (
+    options.locale &&
+    !data.locales.find(locale => locale.code === options.locale)
+  ) {
+    throw new Error(
+      `Locale "${options.locale}" not found in exported Contentful data`
+    )
   }
 
   const locale = options.locale || data.locales[0].code
-  const opts = Object.assign({}, options, {locale})
-  return data.entries.filter(isPublished).map(entry => transformEntry(entry, data, opts))
+  const opts = Object.assign({}, options, { locale })
+  return data.entries
+    .filter(isPublished)
+    .map(entry => transformEntry(entry, data, opts))
 }
 
 function isPublished(entry) {
@@ -33,11 +44,14 @@ function transformEntry(entry, data, options) {
 }
 
 function transformField(entry, fieldName, data, options) {
-  const {locale, keepMarkdown} = options
+  const { locale, keepMarkdown } = options
   const value = entry.fields[fieldName][locale]
   const typeId = entry.sys.contentType.sys.id
-  const editor = data.editorInterfaces.find(ed => ed.sys.contentType.sys.id === typeId)
-  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === fieldName).widgetId
+  const editor = data.editorInterfaces.find(
+    ed => ed.sys.contentType.sys.id === typeId
+  )
+  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === fieldName)
+    .widgetId
 
   if (typeof value === 'undefined') {
     return undefined
@@ -48,7 +62,7 @@ function transformField(entry, fieldName, data, options) {
   }
 
   if (value && widgetId === 'slugEditor') {
-    return {current: value}
+    return { current: value }
   }
 
   if (value && value.sys && value.sys.type === 'Link') {
@@ -62,7 +76,13 @@ function transformField(entry, fieldName, data, options) {
 
   const typeDef = parentTypeDef.fields.find(field => field.id === fieldName)
   if (!typeDef) {
-    throw new Error(`Could not find type definition for field "${fieldName}" in type "${typeId}"`)
+    throw new Error(
+      `Could not find type definition for field "${fieldName}" in type "${typeId}"`
+    )
+  }
+
+  if (typeDef.type === 'RichText') {
+    return transformRichText(value, data, locale, options)
   }
 
   if (typeDef.type === 'Location') {
@@ -91,7 +111,7 @@ function transformLocation(coords) {
 }
 
 function maybeWeakRef(ref, options) {
-  return options.weakRefs ? Object.assign({}, ref, {_weak: true}) : ref
+  return options.weakRefs ? Object.assign({}, ref, { _weak: true }) : ref
 }
 
 function transformLink(value, data, locale, options, parent) {
@@ -100,7 +120,7 @@ function transformLink(value, data, locale, options, parent) {
   }
 
   if (value.sys.linkType === 'Entry') {
-    return maybeWeakRef({_type: 'reference', _ref: value.sys.id}, options)
+    return maybeWeakRef({ _type: 'reference', _ref: value.sys.id }, options)
   }
 
   throw new Error(`Unhandled link type "${value.sys.linkType}"`)
@@ -120,13 +140,37 @@ function transformAssetLink(value, data, locale, options, parent) {
   const file = asset.fields.file[locale]
   const type = file.contentType.startsWith('image/') ? 'image' : 'file'
   return maybeWeakRef(
-    {_type: 'reference', _sanityAsset: `${type}@${prefixUrl(file.url)}`},
+    { _type: 'reference', _sanityAsset: `${type}@${prefixUrl(file.url)}` },
     options
   )
 }
 
 function prefixUrl(url) {
   return url.startsWith('//') ? `https:${url}` : url
+}
+
+function generateKey(length = 8) {
+  const bytes = crypto.randomBytes(length * 2)
+  const base64 = bytes.toString('base64')
+  const alphaNum = base64.replace(/[^a-z0-9]/gi, '')
+  return alphaNum.slice(0, length)
+}
+
+function transformRichText(value, data, locale, options) {
+  return toPortableText(value, {
+    generateKey: () => generateKey(),
+    referenceResolver: (node, opts) =>
+      transformLink(node.data.target, data, locale, options),
+    transformers: {
+      hr: () => [
+        {
+          _type: 'break',
+          _key: generateKey(),
+          style: 'lineBreak'
+        }
+      ]
+    }
+  })
 }
 
 module.exports = transformData
