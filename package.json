@@ -34,13 +34,13 @@
     "jest": "^26.0.1"
   },
   "dependencies": {
+    "@portabletext/contentful-rich-text-to-portable-text": "^0.1.0",
     "@sanity/block-tools": "0.133.2",
     "@sanity/client": "^0.133.2",
     "@sanity/import": "^0.133.2",
     "@sanity/schema": "0.133.2",
     "configstore": "^4.0.0",
     "contentful-batch-libs": "5.10.0",
-    "contentful-rich-text-to-portable-text": "0.1.0",
     "execa": "^0.8.0",
     "fs-extra": "^4.0.3",
     "hard-rejection": "^1.0.0",
