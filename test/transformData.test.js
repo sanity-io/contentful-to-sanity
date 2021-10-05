@@ -1,3 +1,4 @@
+/* eslint-env jest */
 const assert = require('assert')
 const transformData = require('../src/transformData')
 

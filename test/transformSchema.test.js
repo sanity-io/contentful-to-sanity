@@ -1,13 +1,36 @@
-const transformSchema = require('../src/transformSchema')
+/* eslint-env jest */
 const assert = require('assert')
+const transformSchema = require('../src/transformSchema')
 
 const defaultOptions = {
   keepMarkdown: true // This is not connected to RichText
 }
 
 describe('transformSchema', () => {
+  describe('defaults', () => {
+    const fixture = require('./fixtures/simpleSchema.json')
+
+    it('handles missing widget ids', () => {
+      const schema = transformSchema(fixture, defaultOptions)
+      const person = schema.find((typeDef) => typeDef.name === 'person')
+      expect(person).toBeTruthy()
+
+      const idField = person.fields.find((fieldDef) => fieldDef.name === 'id')
+      expect(idField).toBeTruthy()
+      expect(idField).toMatchInlineSnapshot(`
+        Object {
+          "name": "id",
+          "required": true,
+          "title": "ID",
+          "type": "number",
+        }
+      `)
+    })
+  })
+
   describe('RichText', () => {
     const fixture = require('./fixtures/richText.json')
+
     it('includes an object for handling HR', () => {
       const schema = transformSchema(fixture, defaultOptions)
       assert(

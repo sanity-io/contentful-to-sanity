@@ -9,5 +9,8 @@
   ],
   "parserOptions": {
     "ecmaVersion": 2017
+  },
+  "rules": {
+    "max-depth": [5, "warn"]
   }
 }
