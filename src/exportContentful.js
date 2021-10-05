@@ -3,8 +3,8 @@ const getFullSourceSpace = require('contentful-batch-libs/dist/get/get-full-sour
 
 const requiredParams = ['space', 'contentfulToken']
 
-module.exports = async opts => {
-  requiredParams.forEach(param => {
+module.exports = async (opts) => {
+  requiredParams.forEach((param) => {
     if (!opts[param]) {
       throw new Error(`"${param}" needs to be specified`)
     }

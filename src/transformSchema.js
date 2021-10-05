@@ -28,13 +28,13 @@ const editorMap = {
 
 function portableTextType(contentTypes) {
   const docNames = contentTypes
-    .filter(typeDef => typeDef.type === 'document')
-    .map(doc => doc.name)
+    .filter((typeDef) => typeDef.type === 'document')
+    .map((doc) => doc.name)
 
   // We want to allow a reference to any document
   const docReferences = {
     type: 'reference',
-    to: docNames.map(type => ({type}))
+    to: docNames.map((type) => ({type}))
   }
 
   return {
@@ -82,7 +82,7 @@ function portableTextType(contentTypes) {
 }
 
 function transformSchema(data, options) {
-  const contentTypes = data.contentTypes.map(type =>
+  const contentTypes = data.contentTypes.map((type) =>
     transformContentType(type, data, options)
   )
 
@@ -102,9 +102,9 @@ function transformContentType(type, data, options) {
   }
 
   output.fields = type.fields
-    .filter(field => !field.omitted)
-    .filter(field => !shouldSkip(field, data, type.sys.id))
-    .map(source =>
+    .filter((field) => !field.omitted)
+    .filter((field) => !shouldSkip(field, data, type.sys.id))
+    .map((source) =>
       Object.assign(
         {
           name: source.id,
@@ -130,19 +130,21 @@ function isRequired(field) {
 
 function shouldSkip(source, data, typeId) {
   const editor = data.editorInterfaces.find(
-    ed => ed.sys.contentType.sys.id === typeId
+    (ed) => ed.sys.contentType.sys.id === typeId
   )
-  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id)
-    .widgetId
+  const widgetId = editor.controls.find(
+    (ctrl) => ctrl.fieldId === source.id
+  ).widgetId
   return source.type === 'Object' && widgetId === 'objectEditor'
 }
 
 function contentfulTypeToSanityType(source, data, typeId, options) {
   const editor = data.editorInterfaces.find(
-    ed => ed.sys.contentType.sys.id === typeId
+    (ed) => ed.sys.contentType.sys.id === typeId
   )
-  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id)
-    .widgetId
+  const widgetId = editor.controls.find(
+    (ctrl) => ctrl.fieldId === source.id
+  ).widgetId
   const defaultEditor = defaultEditors[source.type]
   const sanityEquivalent = directMap[source.type]
 
@@ -201,7 +203,7 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
 }
 
 function determineSlugType(source, data, typeId) {
-  const type = data.contentTypes.find(typ => typ.sys.id === typeId)
+  const type = data.contentTypes.find((typ) => typ.sys.id === typeId)
   const sourceField = type.displayField
   if (!sourceField) {
     throw new Error(`Unable to determine which field to extract slug from`)
@@ -214,12 +216,13 @@ function determineSelectOptions(source, data, typeId) {
   const validations = source.items
     ? source.items.validations
     : source.validations
-  const onlyValues = (validations.find(val => val.in) || {}).in
+  const onlyValues = (validations.find((val) => val.in) || {}).in
   const editor = data.editorInterfaces.find(
-    ed => ed.sys.contentType.sys.id === typeId
+    (ed) => ed.sys.contentType.sys.id === typeId
   )
-  const widgetId = editor.controls.find(ctrl => ctrl.fieldId === source.id)
-    .widgetId
+  const widgetId = editor.controls.find(
+    (ctrl) => ctrl.fieldId === source.id
+  ).widgetId
   const layout = editorMap[widgetId]
 
   return onlyValues ? {list: onlyValues, layout} : {layout}
@@ -227,7 +230,7 @@ function determineSelectOptions(source, data, typeId) {
 
 function determineArrayType(source, data, typeId) {
   const itemsType = source.items.type
-  const onlyValues = (source.items.validations.find(val => val.in) || {}).in
+  const onlyValues = (source.items.validations.find((val) => val.in) || {}).in
 
   const field = {type: 'array'}
   const type = directMap[itemsType]
@@ -267,7 +270,7 @@ function determineRefType(source, data) {
 
 function determineAssetRefType(source, data) {
   const mimeValidation =
-    source.validations.find(val => val.linkMimetypeGroup) || {}
+    source.validations.find((val) => val.linkMimetypeGroup) || {}
   const mimeGroups = mimeValidation.linkMimetypeGroup || []
 
   if (
@@ -283,21 +286,23 @@ function determineAssetRefType(source, data) {
 
 function determineEntryRefType(source, data) {
   const typeValidation =
-    source.validations.find(val => val.linkContentType) || {}
-  const linkTypes = (typeValidation.linkContentType || []).filter(typeName => {
-    // Validations can contain deleted content types - make sure to remove them
-    return data.contentTypes.some(type => type.sys.id === typeName)
-  })
+    source.validations.find((val) => val.linkContentType) || {}
+  const linkTypes = (typeValidation.linkContentType || []).filter(
+    (typeName) => {
+      // Validations can contain deleted content types - make sure to remove them
+      return data.contentTypes.some((type) => type.sys.id === typeName)
+    }
+  )
 
   if (linkTypes.length === 0) {
     // Allow referencing all types
     return {
       type: 'reference',
-      to: data.contentTypes.map(type => ({type: type.sys.id}))
+      to: data.contentTypes.map((type) => ({type: type.sys.id}))
     }
   }
 
-  return {type: 'reference', to: linkTypes.map(type => ({type}))}
+  return {type: 'reference', to: linkTypes.map((type) => ({type}))}
 }
 
 module.exports = transformSchema

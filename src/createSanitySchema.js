@@ -21,16 +21,20 @@ const defaultPrettierOptions = {
 }
 
 function createSanitySchema(types, options = {}) {
-  const typeNames = types.map(type => upperFirst(type.name))
+  const typeNames = types.map((type) => upperFirst(type.name))
   const typeImports = typeNames.map(generateImport).join('\n')
   const typeArray = typeNames.join(', ')
-  const prettierOptions = Object.assign({}, defaultPrettierOptions, options.prettierOptions)
+  const prettierOptions = Object.assign(
+    {},
+    defaultPrettierOptions,
+    options.prettierOptions
+  )
   const schemaContent = schemaTemplate
     .replace(/__TYPES__/, typeArray)
     .replace(/__IMPORTS__/, typeImports)
 
   return types
-    .map(type => ({
+    .map((type) => ({
       path: `${upperFirst(type.name)}.js`,
       content: format(generateSchemaForType(type))
     }))
@@ -47,7 +51,7 @@ function createSanitySchema(types, options = {}) {
 function generateSchemaForType(type) {
   const typeField =
     type.preview &&
-    type.fields.find(field => field.name === type.preview.select.title)
+    type.fields.find((field) => field.name === type.preview.select.title)
 
   const blockPreview = typeField && typeField.type === 'array'
 
@@ -62,12 +66,17 @@ function generateSchemaForType(type) {
   }`
 
   const preparedType = defaultsDeep({preview: {prepare: '__PREPARE__'}}, type)
-  const typeContent = `export default ${processJsonSchema(JSON.stringify(preparedType, null, 2))}`
+  const typeContent = `export default ${processJsonSchema(
+    JSON.stringify(preparedType, null, 2)
+  )}`
   return typeContent.replace(/["']__PREPARE__["']/, prepareMethod)
 }
 
 function processJsonSchema(typeDef) {
-  return typeDef.replace(/"required": true,\n /g, '"validation": Rule => Rule.required(),\n')
+  return typeDef.replace(
+    /"required": true,\n /g,
+    '"validation": Rule => Rule.required(),\n'
+  )
 }
 
 function generateImport(typeName) {

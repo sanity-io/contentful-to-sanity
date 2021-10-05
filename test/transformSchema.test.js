@@ -12,7 +12,7 @@ describe('transformSchema', () => {
       const schema = transformSchema(fixture, defaultOptions)
       assert(
         schema.filter(
-          typeDef => typeDef.name === 'break' && typeDef.type == 'object'
+          (typeDef) => typeDef.name === 'break' && typeDef.type == 'object'
         ).length === 1,
         'Did not export break type for dealing with HR'
       )
@@ -21,12 +21,12 @@ describe('transformSchema', () => {
     it('uses portableText type for RichText fields', () => {
       const schema = transformSchema(fixture, defaultOptions)
       const doc = schema.find(
-        typeDef =>
+        (typeDef) =>
           typeDef.name === 'fullRichText' && typeDef.type === 'document'
       )
       assert(doc, 'Could not find document')
 
-      const field = doc.fields.find(field => field.name == 'body')
+      const field = doc.fields.find((field) => field.name == 'body')
       assert(!!field, 'Missing body field')
       expect(field.type).toEqual('portableText')
     })

@@ -14,10 +14,10 @@ describe('transformData', () => {
     it('imports image assets', () => {
       const fixture = require('./fixtures/richTextLinks.json')
       const res = transformData(fixture)
-      const post = res.find(doc => doc._id === '7vT1sZuT2szsmpywiFIAZz')
+      const post = res.find((doc) => doc._id === '7vT1sZuT2szsmpywiFIAZz')
 
       const embeddedImageAssetRef = post.body.filter(
-        node =>
+        (node) =>
           node._sanityAsset &&
           node._sanityAsset.match(/^image@.+Phnom.Penh.original.11991.jpg$/)
       )

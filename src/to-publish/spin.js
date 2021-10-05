@@ -1,7 +1,7 @@
 const ora = require('ora')
 const prettyMs = require('pretty-ms')
 
-module.exports = opts => {
+module.exports = (opts) => {
   const spinner = ora(opts)
   const text = spinner.text
   let startTime

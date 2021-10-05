@@ -14,8 +14,8 @@ const ConfigStore = require('configstore')
 const spin = require('./to-publish/spin')
 const migrate = require('./migrate')
 
-const red = str => `\u001b[31mERROR: ${str}\u001b[39m`
-const error = str => console.error(red(str))
+const red = (str) => `\u001b[31mERROR: ${str}\u001b[39m`
+const error = (str) => console.error(red(str))
 const hasSanity = !spawn('sanity', ['help']).error
 
 const cli = meow(
@@ -66,12 +66,15 @@ const cli = meow(
 )
 
 const {flags, showHelp} = cli
-const sanityToken = flags.sanityToken || getSanityToken() || process.env.SANITY_IMPORT_TOKEN
+const sanityToken =
+  flags.sanityToken || getSanityToken() || process.env.SANITY_IMPORT_TOKEN
 let firstPrompt = true
 let spinner
 
 if (!sanityToken && hasSanity) {
-  console.log('Hi! It seems you are not logged in to Sanity locally, please run:')
+  console.log(
+    'Hi! It seems you are not logged in to Sanity locally, please run:'
+  )
   console.log('sanity login')
   process.exit(1)
 }
@@ -113,7 +116,7 @@ function prompt(options) {
   }
 
   const question = Object.assign(defaults, options, {name: 'value'})
-  return inquirer.prompt([question]).then(answers => answers.value)
+  return inquirer.prompt([question]).then((answers) => answers.value)
 }
 
 function getSanityToken() {
@@ -149,7 +152,9 @@ function expandHome(filePath) {
 
 function absolutify(dir) {
   const pathName = expandHome(dir)
-  return path.isAbsolute(pathName) ? pathName : path.resolve(process.cwd(), pathName)
+  return path.isAbsolute(pathName)
+    ? pathName
+    : path.resolve(process.cwd(), pathName)
 }
 
 async function validateEmptyPath(dir) {
@@ -172,7 +177,7 @@ function createProject(client, options) {
       uri: '/projects',
       body: options
     })
-    .then(response => ({
+    .then((response) => ({
       projectId: response.projectId || response.id,
       displayName: options.displayName || ''
     }))
@@ -182,7 +187,7 @@ function promptForDatasetName() {
   return prompt({
     message: 'Dataset name:',
     default: 'production',
-    validate: name => {
+    validate: (name) => {
       return /^[-\w]{1,128}$/.test(name) || 'Invalid dataset name'
     }
   })
@@ -193,7 +198,9 @@ async function getOrCreateProject(client) {
   try {
     projects = await client.projects.list()
   } catch (err) {
-    throw new Error(`Failed to communicate with the Sanity API:\n${err.message}`)
+    throw new Error(
+      `Failed to communicate with the Sanity API:\n${err.message}`
+    )
   }
 
   if (projects.length === 0) {
@@ -201,7 +208,7 @@ async function getOrCreateProject(client) {
     return createProject(client, {displayName: projectName})
   }
 
-  const projectChoices = projects.map(project => ({
+  const projectChoices = projects.map((project) => ({
     value: project.id,
     name: `${project.displayName} [${project.id}]`
   }))
@@ -226,7 +233,7 @@ async function getOrCreateProject(client) {
 
   return {
     projectId: selected,
-    displayName: projects.find(proj => proj.id === selected).displayName
+    displayName: projects.find((proj) => proj.id === selected).displayName
   }
 }
 
@@ -239,11 +246,11 @@ async function getOrCreateDataset(userSpecified, client) {
     return name
   }
 
-  if (userSpecified && !datasets.find(item => item.name === userSpecified)) {
+  if (userSpecified && !datasets.find((item) => item.name === userSpecified)) {
     throw new Error(`Dataset with name "${userSpecified}" not found`)
   }
 
-  const datasetChoices = datasets.map(dataset => ({value: dataset.name}))
+  const datasetChoices = datasets.map((dataset) => ({value: dataset.name}))
 
   const selected = await prompt({
     message: 'Select dataset to use',
@@ -288,7 +295,8 @@ function onProgress(opts) {
 async function run() {
   const {keepMarkdown, locale, weakRefs} = flags
   let {space, project, dataset, output, fromFile} = flags
-  let contentfulToken = flags.contentfulToken || process.env.CONTENTFUL_MANAGEMENT_TOKEN
+  let contentfulToken =
+    flags.contentfulToken || process.env.CONTENTFUL_MANAGEMENT_TOKEN
 
   // Use current work dir if empty
   const cwdIsEmpty = await isEmpty(process.cwd())
@@ -306,7 +314,7 @@ async function run() {
   }
 
   output = absolutify(output)
-  if (!await isEmpty(output)) {
+  if (!(await isEmpty(output))) {
     throw new Error(`Output directory (${output}) is not empty`)
   }
 

@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -70,8 +69,7 @@
           "required": false,
           "validations": [
             {
-              "nodes": {
-              }
+              "nodes": {}
             },
             {
               "enabledNodeTypes": [
@@ -100,9 +98,7 @@
           "required": false,
           "validations": [
             {
-              "linkMimetypeGroup": [
-                "image"
-              ]
+              "linkMimetypeGroup": ["image"]
             }
           ],
           "disabled": false,
@@ -168,8 +164,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -181,9 +176,7 @@
           "required": true,
           "validations": [
             {
-              "linkContentType": [
-                "author"
-              ],
+              "linkContentType": ["author"],
               "message": "Articles need an author"
             }
           ],
@@ -199,8 +192,7 @@
           "required": false,
           "validations": [
             {
-              "nodes": {
-              }
+              "nodes": {}
             }
           ],
           "disabled": false,
@@ -212,8 +204,7 @@
           "type": "Object",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
@@ -418,24 +409,19 @@
         },
         "bio": {
           "en-US": {
-            "data": {
-            },
+            "data": {},
             "content": [
               {
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": "Rune is a developer. He ",
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -445,10 +431,8 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": " to develop things.",
                     "nodeType": "text"
                   }
@@ -540,8 +524,7 @@
         "body": {
           "en-US": {
             "nodeType": "document",
-            "data": {
-            },
+            "data": {},
             "content": [
               {
                 "nodeType": "heading-1",
@@ -549,14 +532,11 @@
                   {
                     "nodeType": "text",
                     "value": "My headling",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "paragraph",
@@ -564,10 +544,8 @@
                   {
                     "nodeType": "text",
                     "value": "I am going to write out a numbered list of what I ",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   },
                   {
                     "nodeType": "text",
@@ -577,12 +555,10 @@
                         "type": "underline"
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "ordered-list",
@@ -596,18 +572,14 @@
                           {
                             "nodeType": "text",
                             "value": "Food",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "marks": [],
+                            "data": {}
                           }
                         ],
-                        "data": {
-                        }
+                        "data": {}
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   },
                   {
                     "nodeType": "list-item",
@@ -618,18 +590,14 @@
                           {
                             "nodeType": "text",
                             "value": "Music",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "marks": [],
+                            "data": {}
                           }
                         ],
-                        "data": {
-                        }
+                        "data": {}
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   },
                   {
                     "nodeType": "list-item",
@@ -640,29 +608,22 @@
                           {
                             "nodeType": "text",
                             "value": "Travel",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "marks": [],
+                            "data": {}
                           }
                         ],
-                        "data": {
-                        }
+                        "data": {}
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "hr",
-                "content": [
-                ],
-                "data": {
-                }
+                "content": [],
+                "data": {}
               },
               {
                 "nodeType": "paragraph",
@@ -670,14 +631,11 @@
                   {
                     "nodeType": "text",
                     "value": "Now lets do a bulleted list",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "unordered-list",
@@ -691,18 +649,14 @@
                           {
                             "nodeType": "text",
                             "value": "Italian food",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "marks": [],
+                            "data": {}
                           }
                         ],
-                        "data": {
-                        }
+                        "data": {}
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   },
                   {
                     "nodeType": "list-item",
@@ -713,10 +667,8 @@
                           {
                             "nodeType": "text",
                             "value": "Soft ",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "marks": [],
+                            "data": {}
                           },
                           {
                             "nodeType": "text",
@@ -726,20 +678,16 @@
                                 "type": "italic"
                               }
                             ],
-                            "data": {
-                            }
+                            "data": {}
                           },
                           {
                             "nodeType": "text",
                             "value": " music",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "marks": [],
+                            "data": {}
                           }
                         ],
-                        "data": {
-                        }
+                        "data": {}
                       },
                       {
                         "nodeType": "unordered-list",
@@ -753,26 +701,20 @@
                                   {
                                     "nodeType": "text",
                                     "value": "Preferrably ambient",
-                                    "marks": [
-                                    ],
-                                    "data": {
-                                    }
+                                    "marks": [],
+                                    "data": {}
                                   }
                                 ],
-                                "data": {
-                                }
+                                "data": {}
                               }
                             ],
-                            "data": {
-                            }
+                            "data": {}
                           }
                         ],
-                        "data": {
-                        }
+                        "data": {}
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   },
                   {
                     "nodeType": "list-item",
@@ -783,22 +725,17 @@
                           {
                             "nodeType": "text",
                             "value": "Warm places",
-                            "marks": [
-                            ],
-                            "data": {
-                            }
+                            "marks": [],
+                            "data": {}
                           }
                         ],
-                        "data": {
-                        }
+                        "data": {}
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "blockquote",
@@ -809,14 +746,11 @@
                       {
                         "nodeType": "text",
                         "value": "Fake quote",
-                        "marks": [
-                        ],
-                        "data": {
-                        }
+                        "marks": [],
+                        "data": {}
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   },
                   {
                     "nodeType": "paragraph",
@@ -824,18 +758,14 @@
                       {
                         "nodeType": "text",
                         "value": "- Albert Einstein",
-                        "marks": [
-                        ],
-                        "data": {
-                        }
+                        "marks": [],
+                        "data": {}
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "paragraph",
@@ -843,10 +773,8 @@
                   {
                     "nodeType": "text",
                     "value": "This is a ",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   },
                   {
                     "nodeType": "hyperlink",
@@ -854,10 +782,8 @@
                       {
                         "nodeType": "text",
                         "value": "link to my homepage",
-                        "marks": [
-                        ],
-                        "data": {
-                        }
+                        "marks": [],
+                        "data": {}
                       }
                     ],
                     "data": {
@@ -867,14 +793,11 @@
                   {
                     "nodeType": "text",
                     "value": "",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "paragraph",
@@ -882,19 +805,15 @@
                   {
                     "nodeType": "text",
                     "value": "Lets see a photo.",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "embedded-asset-block",
-                "content": [
-                ],
+                "content": [],
                 "data": {
                   "target": {
                     "sys": {
@@ -911,15 +830,12 @@
                   {
                     "nodeType": "text",
                     "value": "Here is an Author inline: ",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   },
                   {
                     "nodeType": "embedded-entry-inline",
-                    "content": [
-                    ],
+                    "content": [],
                     "data": {
                       "target": {
                         "sys": {
@@ -933,14 +849,11 @@
                   {
                     "nodeType": "text",
                     "value": ". Done with that.",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "paragraph",
@@ -948,10 +861,8 @@
                   {
                     "nodeType": "text",
                     "value": "Here is a link to the ",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   },
                   {
                     "nodeType": "entry-hyperlink",
@@ -959,10 +870,8 @@
                       {
                         "nodeType": "text",
                         "value": "same editor",
-                        "marks": [
-                        ],
-                        "data": {
-                        }
+                        "marks": [],
+                        "data": {}
                       }
                     ],
                     "data": {
@@ -978,14 +887,11 @@
                   {
                     "nodeType": "text",
                     "value": "",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "paragraph",
@@ -993,19 +899,15 @@
                   {
                     "nodeType": "text",
                     "value": "Finally we add the author as a block",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               },
               {
                 "nodeType": "embedded-entry-block",
-                "content": [
-                ],
+                "content": [],
                 "data": {
                   "target": {
                     "sys": {
@@ -1022,14 +924,11 @@
                   {
                     "nodeType": "text",
                     "value": "",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ],
-                "data": {
-                }
+                "data": {}
               }
             ]
           }
@@ -1231,8 +1130,6 @@
       }
     }
   ],
-  "webhooks": [
-  ],
-  "roles": [
-  ]
+  "webhooks": [],
+  "roles": []
 }

@@ -22,12 +22,20 @@ const schema = Schema.compile({
   ]
 })
 
-const blockContentType = schema.get('mock').fields.find(field => field.name === 'body').type
+const blockContentType = schema
+  .get('mock')
+  .fields.find((field) => field.name === 'body').type
 
 const extractImages = (el, next) => {
-  if (el.tagName === 'P' && el.childNodes.length === 1 && el.childNodes[0].tagName === 'IMG') {
+  if (
+    el.tagName === 'P' &&
+    el.childNodes.length === 1 &&
+    el.childNodes[0].tagName === 'IMG'
+  ) {
     return {
-      _sanityAsset: `image@${el.childNodes[0].getAttribute('src').replace(/^\/\//, 'https://')}`
+      _sanityAsset: `image@${el.childNodes[0]
+        .getAttribute('src')
+        .replace(/^\/\//, 'https://')}`
     }
   }
 
@@ -40,7 +48,7 @@ module.exports = (input, options) => {
   const blocks = blockTools.htmlToBlocks(html, {
     rules: [{deserialize: extractImages}],
     blockContentType,
-    parseHtml: htmlContent => new JSDOM(htmlContent).window.document
+    parseHtml: (htmlContent) => new JSDOM(htmlContent).window.document
   })
 
   return blocks
