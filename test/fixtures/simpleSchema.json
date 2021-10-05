@@ -52,6 +52,16 @@
       "description": null,
       "fields": [
         {
+          "id": "id",
+          "name": "ID",
+          "type": "Number",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
           "id": "name",
           "name": "Name",
           "type": "Symbol",
@@ -284,6 +294,9 @@
         }
       },
       "controls": [
+        {
+          "fieldId": "id"
+        },
         {
           "fieldId": "name",
           "widgetId": "singleLine"

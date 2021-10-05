@@ -132,9 +132,8 @@ function shouldSkip(source, data, typeId) {
   const editor = data.editorInterfaces.find(
     (ed) => ed.sys.contentType.sys.id === typeId
   )
-  const widgetId = editor.controls.find(
-    (ctrl) => ctrl.fieldId === source.id
-  ).widgetId
+  const control = editor.controls.find((ctrl) => ctrl.fieldId === source.id)
+  const widgetId = control && control.widgetId
   return source.type === 'Object' && widgetId === 'objectEditor'
 }
 
@@ -142,9 +141,8 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
   const editor = data.editorInterfaces.find(
     (ed) => ed.sys.contentType.sys.id === typeId
   )
-  const widgetId = editor.controls.find(
-    (ctrl) => ctrl.fieldId === source.id
-  ).widgetId
+  const control = editor.controls.find((ctrl) => ctrl.fieldId === source.id)
+  const widgetId = control && control.widgetId
   const defaultEditor = defaultEditors[source.type]
   const sanityEquivalent = directMap[source.type]
 
@@ -195,6 +193,10 @@ function contentfulTypeToSanityType(source, data, typeId, options) {
   if (source.type === 'RichText') {
     // this is a type we supply. See the portableTextType() function
     return {type: 'portableText'}
+  }
+
+  if (sanityEquivalent && typeof widgetId === 'undefined') {
+    return {type: sanityEquivalent}
   }
 
   throw new Error(
