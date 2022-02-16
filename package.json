@@ -1,57 +1,104 @@
 {
   "name": "contentful-to-sanity",
-  "version": "2.0.1",
-  "description": "Migrate from Contentful to Sanity",
-  "main": "src/migrate.js",
+  "version": "3.0.0",
+  "description": "Migration tool from Contentful to Sanity",
+  "author": "Sanity.io <hello@sanity.io>",
   "bin": {
-    "contentful-to-sanity": "./bin/contentful-to-sanity.js"
+    "contentful-to-sanity": "./bin/run"
   },
-  "engines": {
-    "node": ">=10.0.0"
+  "homepage": "https://github.com/sanity-io/contentful-to-sanity",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": "sanity-io/contentful-to-sanity",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "dependencies": {
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5",
+    "@portabletext/contentful-rich-text-to-portable-text": "^0.1.0",
+    "@sanity/block-tools": "^2.27.0",
+    "@sanity/client": "^3.0.3",
+    "@sanity/schema": "^2.27.0",
+    "axios": "^0.25.0",
+    "case": "^1.6.3",
+    "configstore": "^6.0.0",
+    "contentful": "^9.1.7",
+    "contentful-export": "^7.14.22",
+    "contentful-management": "^7.53.0",
+    "execa": "^6.0.0",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "javascript-stringify": "^2.1.0",
+    "joi": "^17.5.0",
+    "jsdom": "^19.0.0",
+    "just-compact": "^3.0.1",
+    "just-omit": "^2.0.1",
+    "just-safe-get": "^4.0.1",
+    "just-safe-set": "^4.0.2",
+    "markdown-it": "^12.3.2",
+    "zod": "^3.11.6"
+  },
+  "devDependencies": {
+    "@oclif/test": "^2",
+    "@sanity/portable-text-editor": "^2.26.0",
+    "@sanity/types": "^2.26.0",
+    "@types/chai": "^4",
+    "@types/configstore": "^5.0.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^8.1.3",
+    "@types/jsdom": "^16.2.14",
+    "@types/markdown-it": "^12.2.3",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.9.4",
+    "chai": "^4",
+    "eslint": "^7.32.0",
+    "eslint-config-oclif": "^4",
+    "eslint-config-oclif-typescript": "^1.0.2",
+    "globby": "^11.1.0",
+    "mocha": "^9",
+    "moment": "^2.29.1",
+    "oclif": "^2",
+    "react": "^17.0.2",
+    "shx": "^0.3.3",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.12.0",
+    "tslib": "^2.3.1",
+    "tsup": "^5.11.13",
+    "typescript": "^4.4.3"
+  },
+  "oclif": {
+    "bin": "contentful-to-sanity",
+    "dirname": "oex",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+    }
   },
   "scripts": {
-    "test": "jest"
+    "build": "tsup",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
+    "prepack": "yarn build && oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sanity-io/contentful-to-sanity.git"
+  "engines": {
+    "node": ">=14.0.0"
   },
+  "bugs": "https://github.com/sanity-io/contentful-to-sanity/issues",
   "keywords": [
+    "oclif",
     "sanity",
     "contentful",
-    "headless"
+    "migration"
   ],
-  "author": "Sanity.io <hello@sanity.io>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sanity-io/contentful-to-sanity/issues"
-  },
-  "homepage": "https://github.com/sanity-io/contentful-to-sanity#readme",
-  "devDependencies": {
-    "eslint": "^7.6.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-config-sanity": "^3.0.1",
-    "jest": "^26.0.1"
-  },
-  "dependencies": {
-    "@portabletext/contentful-rich-text-to-portable-text": "^0.1.0",
-    "@sanity/block-tools": "0.133.2",
-    "@sanity/client": "^0.133.2",
-    "@sanity/import": "^0.133.2",
-    "@sanity/schema": "0.133.2",
-    "configstore": "^5.0.1",
-    "contentful-batch-libs": "5.10.0",
-    "execa": "^0.8.0",
-    "fs-extra": "^4.0.3",
-    "hard-rejection": "^1.0.0",
-    "inquirer": "^4.0.1",
-    "jsdom": "^11.5.1",
-    "lodash": "^4.17.19",
-    "markdown-it": "^8.4.2",
-    "meow": "^3.7.0",
-    "ora": "^1.3.0",
-    "prettier": "^2.4.1",
-    "pretty-ms": "^3.0.1",
-    "string-to-stream": "^1.1.1"
-  }
+  "types": "dist/index.d.ts"
 }
