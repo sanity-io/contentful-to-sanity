@@ -22,11 +22,12 @@ export async function writeSingleSanitySchema(
     throw new ContentfulNoDefaultLocaleError()
   }
 
-  const schemasDir = path.join(flags.dir ?? process.cwd(), 'schemas')
+  const schemasDir = path.join(flags.dir ?? process.cwd(), 'schemas', schema.type === 'document' ? 'documents' : 'objects')
   await fs.ensureDir(schemasDir)
   await fs.writeFile(
     path.join(schemasDir, `${schema.name}.js`),
-    `export default ${stringify(schema, (value, space, next, key) => {
+`import {defineType} from "sanity"
+export const ${schema.name}Type = defineType(${stringify(schema, (value, space, next, key) => {
       if (key === 'validation') {
         if (Array.isArray(value) && value.length > 0) {
           return `Rule => Rule.cloneWithRules(${stringify(value)})`
@@ -44,6 +45,6 @@ export async function writeSingleSanitySchema(
       }
 
       return next(value, key)
-    }, 2)}`,
+    }, 2)})`,
   )
 }
