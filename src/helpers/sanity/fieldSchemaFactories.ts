@@ -12,13 +12,13 @@ type FactoryObject<Schema extends AnySanityFieldSchema> = Required<{
 
 const createFactoryProxy = <Schema extends AnySanityFieldSchema>(initialSchema: Schema) => {
   let clonedSchema = {...initialSchema}
-  const buildFn = (keys?: string[]) => {
+  const buildFn = (keys?: (keyof Schema)[]) => {
     const emptyKeysToOmit = Object.keys(clonedSchema).filter(key => {
       const value = get(clonedSchema, key)
       return typeof value === 'undefined' || value === null || (
         Array.isArray(value) && value.length === 0
       ) || (typeof value === 'object' && Object.keys(value).length === 0)
-    })
+    }) as (keyof Schema)[]
     return omit(clonedSchema, [...keys ?? [], ...emptyKeysToOmit])
   }
 
@@ -27,7 +27,7 @@ const createFactoryProxy = <Schema extends AnySanityFieldSchema>(initialSchema: 
       if (prop !== 'build' && prop !== 'anonymous' && typeof prop === 'string') {
         return (value: any): FactoryObject<Schema> => {
           if (typeof value === 'undefined') {
-            clonedSchema = omit(clonedSchema, [prop]) as typeof clonedSchema
+            clonedSchema = omit(clonedSchema, [prop as (keyof Schema)]) as typeof clonedSchema
           } else {
             if (typeof value === 'object') {
               for (const key in value) {
