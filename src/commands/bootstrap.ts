@@ -106,12 +106,14 @@ export default class Bootstrap extends Command {
 
     if (data?.contentTypes) {
       CliUx.ux.action.start(steps.bootstrapStudio)
+      /*
       await bootstrapStudio({
         project: project.id,
         dataset: dataset.name,
         output,
       })
       CliUx.ux.action.stop(steps.bootstrapStudio)
+      */
 
       CliUx.ux.action.start(steps.createSchema)
       const schemas: (SanityDocumentSchema | SanityObjectSchema)[] = compact(data.contentTypes.map(type => (
