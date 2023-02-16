@@ -25,7 +25,7 @@ export async function parseOutputFlag<V extends WithOutputFlag>(
   options: FlagOptions = {},
 ): Promise<string | undefined> {
   let output = flags.output
-  const shouldCheckEmpty = options.checkEmpty ?? true
+  const shouldCheckEmpty = options.checkEmpty === true
 
   const cwdIsEmpty = await isDirEmpty(process.cwd())
   if (!output && (cwdIsEmpty && shouldCheckEmpty)) {
