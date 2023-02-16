@@ -2,15 +2,17 @@ import fs from 'fs-extra'
 import contentfulExport, {ContentfulExport} from 'contentful-export'
 import {parseManagementTokenFlag} from '@/helpers/flags/parseManagementTokenFlag'
 import {parseOutputFlag} from '@/helpers/flags/parseOutputFlag'
+/*
 import {parseProjectFlag} from '@/helpers/flags/parseProjectFlag'
 import {parseSanityTokenFlag} from '@/helpers/flags/parseSanityTokenFlag'
-import {parseSpaceFlag} from '@/helpers/flags/parseSpaceFlag'
 import {parseDatasetFlag} from '@/helpers/flags/parseDatasetFlag'
+*/
+import {parseSpaceFlag} from '@/helpers/flags/parseSpaceFlag'
 import {CliUx, Command, Flags} from '@oclif/core'
 import {ContentfulParamsMissingError} from '@/helpers/errors'
 import {absolutify, contentfulTypeToSanitySchema} from '@/utils'
 import compact from 'just-compact'
-import {bootstrapStudio, writeRootSanitySchema, writeSingleSanitySchema} from '@/helpers/sanity'
+import {/* bootstrapStudio, */ writeRootSanitySchema, writeSingleSanitySchema} from '@/helpers/sanity'
 import {stringFieldSchemaFactory} from '@/helpers/sanity/fieldSchemaFactories'
 import {IntlMode} from '@/constants'
 import type {OptionFlag} from '@oclif/core/lib/interfaces'
@@ -47,6 +49,7 @@ export default class Bootstrap extends Command {
   async run(): Promise<void> {
     const {flags} = await this.parse(Bootstrap)
 
+    /*
     const sanityToken = await parseSanityTokenFlag(flags, {
       required: true,
     })
@@ -61,6 +64,7 @@ export default class Bootstrap extends Command {
       projectId: project.id,
       sanityToken,
     })
+    */
 
     const output = await parseOutputFlag(flags, {
       required: true,
