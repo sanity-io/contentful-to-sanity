@@ -83,7 +83,7 @@ export type NumberSanityFieldSchema = BaseSanityFieldSchema<'number', number, {
 // @TODO incomplete as unnecessary for contentful since inline objects don't exist
 export type ObjectSanityFieldSchema = BaseSanityFieldSchema<'object', any, {
 }, {
-  fields?: LinkedType[] // @TODO
+  fields?: AnySanityFieldSchema[] // @TODO
   inputComponent?: ReactNode
 }>
 
