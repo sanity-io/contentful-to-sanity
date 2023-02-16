@@ -5,6 +5,7 @@ import {stringify} from 'javascript-stringify'
 import {IntlMode} from '@/constants'
 import {ContentfulExport} from 'contentful-export'
 import {ContentfulNoDefaultLocaleError} from '../errors'
+import {serializeRuleSpecToCode} from '@/helpers/sanity'
 
 type Flags = {
   intl?: IntlMode
@@ -26,25 +27,25 @@ export async function writeSingleSanitySchema(
   await fs.ensureDir(schemasDir)
   await fs.writeFile(
     path.join(schemasDir, `${schema.name}.js`),
-`import {defineType} from "sanity"
+    `import {defineType} from "sanity"
 export const ${schema.name}Type = defineType(${stringify(schema, (value, space, next, key) => {
-      if (key === 'validation') {
-        if (Array.isArray(value) && value.length > 0) {
-          return `Rule => Rule.cloneWithRules(${stringify(value)})`
-        }
+  if (key === 'validation') {
+    if (Array.isArray(value) && value.length > 0) {
+      return `Rule => Rule.${rules.map(r => serializeRuleSpecToCode(r)).join('.')}`
+    }
 
-        return
-      }
+    return
+  }
 
-      if (key === 'initialValue') {
-        if (useMultiLocale) {
-          // @TODO
-        } else {
-          return next(value[defaultLocale.code], key)
-        }
-      }
+  if (key === 'initialValue') {
+    if (useMultiLocale) {
+      // @TODO
+    } else {
+      return next(value[defaultLocale.code], key)
+    }
+  }
 
-      return next(value, key)
-    }, 2)})`,
+  return next(value, key)
+}, 2)})`,
   )
 }
