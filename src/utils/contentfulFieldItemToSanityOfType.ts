@@ -38,6 +38,10 @@ export function contentfulFieldItemToSanityOfType(field: Exclude<ContentFields['
       .filter(type => availableTypeIds.has(type))
       .map(type => ({type})),
       )
+    } else {
+      // Unfortunately, if no restriction is set on the destination of this reference, we have
+      // to assume that it can point to any content type, and then we need to include all of them
+      factory.to([...availableTypeIds].map(type => ({type})))
     }
 
     return factory.anonymous()
