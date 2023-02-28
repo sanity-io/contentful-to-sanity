@@ -25,7 +25,15 @@ export const serializeRuleSpecToCode = (ruleSpec: RuleSpec): string => {
     return `regex(${ruleSpec.constraint.pattern.toString()}, ${stringify(omit(ruleSpec.constraint, ['pattern']))})`
   case 'custom':
     return `custom(${ruleSpec.constraint.toString()})`
+  case 'uri':
+    return `uri(${stringify({
+      scheme: ruleSpec.constraint.options.scheme,
+      allowRelative: ruleSpec.constraint.options.allowRelative,
+      relativeOnly: ruleSpec.constraint.options.relativeOnly,
+      allowCredentials: ruleSpec.constraint.options.allowCredentials,
+    })})`
   default:
+    console.error('ruleSpec', ruleSpec)
     throw new Error('Unknown rule spec: ' + ruleSpec.flag)
   }
 }

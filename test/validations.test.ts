@@ -1,6 +1,6 @@
 import {expect, test} from '@oclif/test'
 import type {CustomValidator} from '@sanity/types'
-import {serializeRuleSpecToCode} from '@/helpers/sanity'
+import {serializeRuleSpecToCode} from '../src/helpers/sanity/serializeRuleSpecToCode'
 
 describe('Validations', () => {
   test.it('transforms RuleSpec to javascript according to Sanity Studio validations API', () => {
@@ -62,5 +62,16 @@ describe('Validations', () => {
     expect(serializeRuleSpecToCode({flag: 'custom', constraint: validator})).to.equal(
       "custom((value, _) => value === 'foo' ? true : { message: 'Value must be foo' })",
     )
+
+    expect(serializeRuleSpecToCode({
+      flag: 'uri', constraint: {
+        options: {
+          scheme: [/^http/, /^https/],
+          allowRelative: true,
+          relativeOnly: false,
+          allowCredentials: true,
+        },
+      },
+    })).to.equal('uri({scheme:[/^http/,/^https/],allowRelative:true,relativeOnly:false,allowCredentials:true})')
   })
 })

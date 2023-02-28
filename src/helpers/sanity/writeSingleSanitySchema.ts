@@ -31,7 +31,7 @@ export async function writeSingleSanitySchema(
 export const ${schema.name}Type = defineType(${stringify(schema, (value, space, next, key) => {
   if (key === 'validation') {
     if (Array.isArray(value) && value.length > 0) {
-      return `Rule => Rule.${rules.map(r => serializeRuleSpecToCode(r)).join('.')}`
+      return `Rule => Rule.${value.map(ruleSpec => serializeRuleSpecToCode(ruleSpec)).join('.')}`
     }
 
     return
