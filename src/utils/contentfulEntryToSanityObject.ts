@@ -58,7 +58,8 @@ export function contentfulEntryToSanityObject(
     const value = values[locale]
     const canCopyValueAsIs = (
       typeof value === 'string' ||
-      typeof value === 'number'
+      typeof value === 'number' ||
+      typeof value === 'boolean'
     )
     if (canCopyValueAsIs) {
       if (widgetId === 'slugEditor') {
