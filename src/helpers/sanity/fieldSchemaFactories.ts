@@ -71,6 +71,11 @@ export const textFieldSchemaFactory = (name: string) => createFactoryProxy<TextS
   type: 'text',
 })
 
+export const markdownFieldSchemaFactory = (name: string) => createFactoryProxy<TextSanityFieldSchema>({
+  name,
+  type: 'markdown',
+})
+
 export const urlFieldSchemaFactory = (name: string) => createFactoryProxy<UrlSanityFieldSchema>({
   name,
   type: 'url',

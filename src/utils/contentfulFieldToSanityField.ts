@@ -3,7 +3,7 @@ import {AnySanityFieldSchema, StringSanityFieldSchema} from '@/types'
 import type {ContentfulExport} from 'contentful-export'
 import {extractValidationRulesFromContentfulField} from './extractValidationRulesFromContentfulField'
 import {BuiltInContentfulEditors, IntlMode} from '@/constants'
-import {arrayFieldSchemaFactory, blockFieldSchemaFactory, booleanFieldSchemaFactory, dateFieldSchemaFactory, datetimeFieldSchemaFactory, fileFieldSchemaFactory, geopointFieldSchemaFactory, imageFieldSchemaFactory, numberFieldSchemaFactory, referenceFieldSchemaFactory, slugFieldSchemaFactory, stringFieldSchemaFactory, textFieldSchemaFactory, urlFieldSchemaFactory} from '@/helpers/sanity/fieldSchemaFactories'
+import {arrayFieldSchemaFactory, blockFieldSchemaFactory, booleanFieldSchemaFactory, dateFieldSchemaFactory, datetimeFieldSchemaFactory, fileFieldSchemaFactory, geopointFieldSchemaFactory, imageFieldSchemaFactory, markdownFieldSchemaFactory, numberFieldSchemaFactory, referenceFieldSchemaFactory, slugFieldSchemaFactory, stringFieldSchemaFactory, textFieldSchemaFactory, urlFieldSchemaFactory} from '@/helpers/sanity/fieldSchemaFactories'
 import {extractContentfulRichTextFieldParameters} from './extractContentfulRichTextFieldParameters'
 import {contentfulFieldItemToSanityOfType} from './contentfulFieldItemToSanityOfType'
 import {findEditorControlForField} from './findEditorControlForField'
@@ -142,7 +142,7 @@ export function contentfulFieldToSanityField(
         widgetId === 'multipleLine' ||
         (widgetId === 'markdown' && flags['keep-markdown'])
       ) {
-        return textFieldSchemaFactory(field.id)
+        return markdownFieldSchemaFactory(field.id)
         .title(field.name).hidden(field.disabled)
         .description(helpText).initialValue(defaultValue).validation(validationRules)
         .build()
