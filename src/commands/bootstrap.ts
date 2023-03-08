@@ -139,6 +139,19 @@ export default class Bootstrap extends Command {
         saveFile: Boolean(flags['export-dir']),
         maxAllowedLimit: 50,
       })
+      /**
+       * https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/
+       * Equivalent to running contentful-cli with
+       * contentful space export
+       * --export-dir <export-dir>
+       * --space-id <space>
+       * --management-token <contentfulToken>
+       * --environment-id <environment>
+       * --skip-content !<export-dir>
+       * --skip-webhooks
+       * --skip-roles
+       * --save-file
+       */
       CliUx.ux.action.stop(steps.exporting)
     }
 
