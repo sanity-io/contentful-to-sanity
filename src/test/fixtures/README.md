@@ -3,3 +3,26 @@
 ```bash
  npx contentful-cli@latest space export --space-id <space-id> --management-token <token> --environment-id master --skip-webhooks --skip-roles --export-dir ./exports --save-file
 ```
+
+`contentful-export.json` were generated using `node test.mjs`:
+
+```js
+import contentfulExport from 'contentful-export'
+
+console.log('Export start')
+const data = await contentfulExport({
+  exportDir: './exports',
+  spaceId: spaceId,
+  managementToken: managementToken,
+  environmentId: 'master',
+  skipContentModel: false,
+  skipEditorInterfaces: false,
+  skipContent: false,
+  skipWebhooks: true,
+  skipRoles: true,
+  downloadAssets: false,
+  saveFile: true,
+  maxAllowedLimit: 50,
+})
+console.log('Result', data)
+```

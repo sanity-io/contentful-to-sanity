@@ -6,9 +6,5 @@
     "baseUrl": "./src",
     "rootDir": "."
   },
-  "ts-node": {
-    "files": true,
-    "require": ["tsconfig-paths/register"]
-  },
   "include": ["**/*.ts", "**/*.tsx", "./modules.d.ts"]
 }
