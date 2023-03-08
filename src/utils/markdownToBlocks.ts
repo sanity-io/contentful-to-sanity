@@ -1,5 +1,7 @@
 import blockTools from '@sanity/block-tools'
 import Schema from '@sanity/schema'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import {Block} from '@sanity/types'
 import {JSDOM} from 'jsdom'
 import md from 'markdown-it'
@@ -43,12 +45,14 @@ function extractImages(el: HTMLElement) {
   }
 
   // Only convert block-level images, for now
+  return undefined
 }
 
 export function markdownToBlocks(input: string) {
   const html = md({html: true}).render(input)
   const blocks = blockTools.htmlToBlocks(html, blockContentType, {
     parseHtml: (html: string) => new JSDOM(html).window.document,
+    // @ts-expect-error
     rules: [{deserialize: extractImages}],
   })
   return blocks as Block[]

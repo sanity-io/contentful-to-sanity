@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import {CliUx} from '@oclif/core'
 import type {SanityClient} from '@sanity/client'
 import inquirer from 'inquirer'
@@ -31,7 +33,7 @@ export async function parseProjectFlag<V extends WithProjectFlag>(
 export async function parseProjectFlag<V extends WithProjectFlag>(
   flags: V,
   options: FlagOptions,
-): Promise<SanityProject | undefined> {
+): Promise<SanityProject | void> {
   const client = defaultSanityClient.withConfig({
     token: options.sanityToken,
   })

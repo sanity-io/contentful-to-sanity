@@ -3,9 +3,7 @@
   "compilerOptions": {
     "noEmit": true,
     "module": "esnext",
-    "baseUrl": "./src",
-    "rootDir": "."
   },
   "include": ["**/*.ts", "**/*.tsx", "./modules.d.ts"],
-  "exclude": ["src/commands/*.ts"]
+  "exclude": ["legacy/**/*.ts"]
 }

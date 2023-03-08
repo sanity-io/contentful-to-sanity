@@ -5,6 +5,7 @@ export async function isDirEmpty(dir: string, createIfMissing = false): Promise<
     const files = await fse.readdir(dir)
     return files.length === 0
   } catch (error) {
+    // @ts-expect-error
     if (createIfMissing && error instanceof Error && error.code === 'ENOENT') {
       await fse.ensureDir(dir)
       return true

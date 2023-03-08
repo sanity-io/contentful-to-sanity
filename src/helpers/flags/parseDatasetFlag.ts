@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import {CliUx} from '@oclif/core'
 import type {SanityClient} from '@sanity/client'
 import inquirer from 'inquirer'
@@ -33,7 +35,7 @@ export async function parseDatasetFlag<V extends WithDatasetFlag>(
 export async function parseDatasetFlag<V extends WithDatasetFlag>(
   flags: V,
   options: FlagOptions,
-): Promise<SanityDataset | undefined> {
+): Promise<SanityDataset | void> {
   const client = defaultSanityClient.withConfig({
     useProjectHostname: true,
     projectId: options.projectId,

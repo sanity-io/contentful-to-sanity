@@ -1,1 +1,1 @@
-console.log('Soly?')
+export default () => console.log('Soly?')

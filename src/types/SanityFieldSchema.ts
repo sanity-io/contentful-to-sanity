@@ -1,4 +1,5 @@
 import type {SanityDocument} from '@sanity/client'
+// @ts-expect-error
 import type {Block, CurrentUser, File, Image, Reference, Rule, RuleSpec, Slug} from '@sanity/types'
 import {ReactNode} from 'react'
 

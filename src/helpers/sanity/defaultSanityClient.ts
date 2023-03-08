@@ -1,6 +1,6 @@
-import SanityClient from '@sanity/client'
+import {createClient} from '@sanity/client'
 
-export const defaultSanityClient = new SanityClient({
+export const defaultSanityClient = createClient({
   apiVersion: '2022-02-07',
   useProjectHostname: false,
   dataset: 'dummy',

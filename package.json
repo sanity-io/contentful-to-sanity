@@ -23,8 +23,8 @@
     ".": {
       "types": "./dist/index.d.ts",
       "source": "./src/index.ts",
-      "import": "./dist/index.js",
       "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./cli": {
@@ -56,11 +56,11 @@
   ],
   "scripts": {
     "format": "prettier --cache --ignore-path .gitignore --write .",
-    "prepublishOnly": "rm -rf dist && pkg build --strict",
     "lint": "TIMING=1 eslint . --cache",
     "lint:fix": "npm run lint -- --fix",
+    "prepublishOnly": "rm -rf dist && pkg build --strict",
     "test": "vitest",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
   },
   "browserslist": [
     "> 0.2% and supports es6-module and supports es6-module-dynamic-import and not dead and not IE 11",

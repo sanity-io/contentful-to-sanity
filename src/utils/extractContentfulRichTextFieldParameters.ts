@@ -83,6 +83,7 @@ export function extractContentfulRichTextFieldParameters(
   const enabledMarksValidation = field.validations?.find((validation) =>
     Boolean(validation.enabledMarks),
   )
+  // @ts-expect-error
   const nodesValidation = field.validations?.find((validation) => Boolean(validation.nodes))
 
   const canUseHyperLinks = enabledNodeTypesValidation?.enabledNodeTypes?.includes('hyperlink')
@@ -110,14 +111,15 @@ export function extractContentfulRichTextFieldParameters(
 
   // @README limiting number of links is not supported
   const supportedEmbeddedInlineTypes = canEmbedEntriesInline
-    ? nodesValidation?.nodes?.['embedded-entry-inline']?.reduce<LinkedType[]>(
-        (acc, value) =>
+    ? // @ts-expect-error
+      nodesValidation?.nodes?.['embedded-entry-inline']?.reduce<LinkedType[]>(
+        (acc: any, value: any) =>
           value.linkContentType
             ? [
                 ...acc,
                 ...value.linkContentType
-                  .filter((type) => availableTypeIds.has(type))
-                  .map((type) => ({type})),
+                  .filter((type: any) => availableTypeIds.has(type))
+                  .map((type: any) => ({type})),
               ]
             : acc,
         [],
@@ -125,14 +127,15 @@ export function extractContentfulRichTextFieldParameters(
     : []
 
   const supportedEmbeddedBlockTypes = canEmbedEntries
-    ? nodesValidation?.nodes?.['embedded-entry-block']?.reduce<LinkedType[]>(
-        (acc, value) =>
+    ? // @ts-expect-error
+      nodesValidation?.nodes?.['embedded-entry-block']?.reduce<LinkedType[]>(
+        (acc: any, value: any) =>
           value.linkContentType
             ? [
                 ...acc,
                 ...value.linkContentType
-                  .filter((type) => availableTypeIds.has(type))
-                  .map((type) => ({type})),
+                  .filter((type: any) => availableTypeIds.has(type))
+                  .map((type: any) => ({type})),
               ]
             : acc,
         [],
@@ -140,14 +143,15 @@ export function extractContentfulRichTextFieldParameters(
     : []
 
   const supportedEntryLinkTypes = canUseEntryLinks
-    ? nodesValidation?.nodes?.['entry-hyperlink']?.reduce<LinkedType[]>(
-        (acc, value) =>
+    ? // @ts-expect-error
+      nodesValidation?.nodes?.['entry-hyperlink']?.reduce<LinkedType[]>(
+        (acc: any, value: any) =>
           value.linkContentType
             ? [
                 ...acc,
                 ...value.linkContentType
-                  .filter((type) => availableTypeIds.has(type))
-                  .map((type) => ({type})),
+                  .filter((type: any) => availableTypeIds.has(type))
+                  .map((type: any) => ({type})),
               ]
             : acc,
         [],
@@ -195,7 +199,7 @@ export function extractContentfulRichTextFieldParameters(
             ],
           } as ObjectSanityFieldSchema),
         ...(canUseEntryLinks && supportedEntryLinkTypes
-          ? supportedEntryLinkTypes.map((linkType) => ({
+          ? supportedEntryLinkTypes.map((linkType: any) => ({
               type: 'reference',
               to: [{type: linkType.type}],
             }))

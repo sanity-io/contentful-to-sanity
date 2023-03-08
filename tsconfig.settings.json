@@ -27,6 +27,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
 
+    "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"],
       "~/*": ["./app/*"]

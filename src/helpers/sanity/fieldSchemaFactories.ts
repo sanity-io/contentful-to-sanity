@@ -71,6 +71,8 @@ const createFactoryProxy = <Schema extends AnySanityFieldSchema>(initialSchema: 
       if (prop === 'anonymous') {
         return () => buildFn(['name'])
       }
+
+      return undefined
     },
   })
   return proxy
