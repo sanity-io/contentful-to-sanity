@@ -1,0 +1,606 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "t0iskacpk08s"
+          }
+        },
+        "id": "blog",
+        "type": "ContentType",
+        "createdAt": "2022-10-25T16:21:06.929Z",
+        "updatedAt": "2023-03-06T16:28:45.544Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-03-06T16:28:45.544Z",
+        "firstPublishedAt": "2022-10-25T16:21:07.358Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        }
+      },
+      "displayField": "author",
+      "name": "Blog",
+      "description": "",
+      "fields": [
+        {
+          "id": "author",
+          "name": "Author",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "RichText",
+          "localized": true,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "embedded-entry-block"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, asset, table, link to Url, link to entry, link to asset, inline entry, and block entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "t0iskacpk08s"
+          }
+        },
+        "id": "author",
+        "type": "ContentType",
+        "createdAt": "2023-03-08T19:55:03.535Z",
+        "updatedAt": "2023-03-08T19:55:34.577Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-03-08T19:55:34.577Z",
+        "firstPublishedAt": "2023-03-08T19:55:03.847Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Author",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "avatar",
+          "name": "avatar",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "t0iskacpk08s",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2022-10-25T16:21:07.448Z",
+        "createdBy": {
+          "sys": {
+            "id": "2CkSZGptNYCJt1zldw6nLB",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-03-06T16:28:47.833Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2CkSZGptNYCJt1zldw6nLB",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "blog",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "author",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "settings": {
+            "helpText": "Help"
+          },
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "t0iskacpk08s",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2023-03-08T19:55:03.969Z",
+        "createdBy": {
+          "sys": {
+            "id": "2CkSZGptNYCJt1zldw6nLB",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-03-08T19:55:35.163Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2CkSZGptNYCJt1zldw6nLB",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "author",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "avatar",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "t0iskacpk08s"
+          }
+        },
+        "id": "5fwuiE6dWicZi3kJMa8ujZ",
+        "type": "Entry",
+        "createdAt": "2023-03-06T15:55:13.260Z",
+        "updatedAt": "2023-03-08T19:56:06.001Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-03-08T19:56:06.001Z",
+        "firstPublishedAt": "2023-03-06T15:56:13.650Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog"
+          }
+        }
+      },
+      "fields": {
+        "author": {
+          "en-US": "Hello World!"
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Some rich text",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "t0iskacpk08s"
+          }
+        },
+        "id": "4b2IEWMqFWAN5rNPoOp3Wx",
+        "type": "Entry",
+        "createdAt": "2023-03-08T19:56:11.021Z",
+        "updatedAt": "2023-03-08T19:56:55.378Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-03-08T19:56:55.378Z",
+        "firstPublishedAt": "2023-03-08T19:56:55.378Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Cody Olsen"
+        },
+        "avatar": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4FmICWXYBshZDCwxtEOFK0"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "t0iskacpk08s"
+          }
+        },
+        "id": "4FmICWXYBshZDCwxtEOFK0",
+        "type": "Asset",
+        "createdAt": "2023-03-08T19:56:17.292Z",
+        "updatedAt": "2023-03-08T19:56:45.577Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-03-08T19:56:45.577Z",
+        "firstPublishedAt": "2023-03-08T19:56:45.577Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Headshot"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/t0iskacpk08s/4FmICWXYBshZDCwxtEOFK0/cdd5aaea7253e3fbca376d5b931d79cd/361474078_a_skull_embedded_in_a_computer_chip__cyberpunk__neon.png",
+            "details": {
+              "size": 410474,
+              "image": {
+                "width": 512,
+                "height": 512
+              }
+            },
+            "fileName": "361474078_a_skull_embedded_in_a_computer_chip__cyberpunk__neon.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "3rzQZP5KYzVGQ75Cl8rEzl",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "t0iskacpk08s"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "66bd452d-a0b5-462d-bcea-50dd791b3408"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "createdAt": "2022-10-25T16:17:27Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2CkSZGptNYCJt1zldw6nLB"
+          }
+        },
+        "updatedAt": "2022-10-25T16:17:27Z"
+      }
+    }
+  ]
+}
