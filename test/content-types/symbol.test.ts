@@ -1,19 +1,28 @@
 import {contentfulTypeToSanitySchema} from '@/utils'
 import {expect, test} from '@oclif/test'
 import type {ContentfulExport} from 'contentful-export'
-import {contentfulContentTypeFactory, contentfulEditorControlFactory, contentfulEditorInterfaceFactory} from 'test/helpers'
+import {
+  contentfulContentTypeFactory,
+  contentfulEditorControlFactory,
+  contentfulEditorInterfaceFactory,
+} from 'test/helpers'
 
 describe('create schema for Symbol type', () => {
-  const contentType = contentfulContentTypeFactory('contentType', [{
-    id: 'field',
-    name: 'field',
-    type: 'Symbol',
-    localized: false,
-    required: false,
-  }], 'field')
+  const contentType = contentfulContentTypeFactory(
+    'contentType',
+    [
+      {
+        id: 'field',
+        name: 'field',
+        type: 'Symbol',
+        localized: false,
+        required: false,
+      },
+    ],
+    'field',
+  )
 
-  test
-  .it('should create a Sanity schema for urlEditor', () => {
+  test.it('should create a Sanity schema for urlEditor', () => {
     const data: ContentfulExport = {
       editorInterfaces: [
         contentfulEditorInterfaceFactory('contentType', [
@@ -27,22 +36,23 @@ describe('create schema for Symbol type', () => {
       name: 'field',
       type: 'url',
       title: 'field',
-      validation: [{
-        constraint: {
-          options: {
-            allowCredentials: true,
-            allowRelative: true,
-            relativeOnly: false,
-            scheme: [/^http/, /^https/],
+      validation: [
+        {
+          constraint: {
+            options: {
+              allowCredentials: true,
+              allowRelative: true,
+              relativeOnly: false,
+              scheme: [/^http/, /^https/],
+            },
           },
+          flag: 'uri',
         },
-        flag: 'uri',
-      }],
+      ],
     })
   })
 
-  test
-  .it('should create a Sanity schema for slugEditor', () => {
+  test.it('should create a Sanity schema for slugEditor', () => {
     const data: ContentfulExport = {
       editorInterfaces: [
         contentfulEditorInterfaceFactory('contentType', [
@@ -68,16 +78,19 @@ describe('create schema for Symbol type', () => {
     })
   })
 
-  test
-  .it('should create a Sanity schema for a dropdown', () => {
+  test.it('should create a Sanity schema for a dropdown', () => {
     const withOnlyAllowValues: typeof contentType = {
       ...contentType,
-      fields: [{
-        ...contentType.fields[0],
-        validations: [{
-          in: ['foo', 'bar'],
-        }],
-      }],
+      fields: [
+        {
+          ...contentType.fields[0],
+          validations: [
+            {
+              in: ['foo', 'bar'],
+            },
+          ],
+        },
+      ],
     }
 
     const data: ContentfulExport = {

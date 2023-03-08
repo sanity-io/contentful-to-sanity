@@ -2,7 +2,9 @@ import moment from 'moment'
 import {ContentFields} from 'contentful-management'
 import type {RuleSpec} from '@sanity/types'
 
-export function extractValidationRulesFromContentfulField(field: ContentFields | Exclude<ContentFields['items'], undefined>): RuleSpec[] {
+export function extractValidationRulesFromContentfulField(
+  field: ContentFields | Exclude<ContentFields['items'], undefined>,
+): RuleSpec[] {
   const validations = field.validations ?? []
   const rules: RuleSpec[] = []
 
@@ -33,21 +35,19 @@ export function extractValidationRulesFromContentfulField(field: ContentFields |
       const min = moment(validation.dateRange.min)
       rules.push({
         flag: 'custom',
-        constraint: value => (
-          moment(value as string).isAfter(min) ?
-            true :
-            `Value should be no earlier than ${min.toLocaleString()}`
-        ),
+        constraint: (value) =>
+          moment(value as string).isAfter(min)
+            ? true
+            : `Value should be no earlier than ${min.toLocaleString()}`,
       })
     } else if (validation.dateRange?.max) {
       const max = moment(validation.dateRange.max)
       rules.push({
         flag: 'custom',
-        constraint: value => (
-          moment(value as string).isBefore(max) ?
-            true :
-            `Value should be no later than ${max.toLocaleString()}`
-        ),
+        constraint: (value) =>
+          moment(value as string).isBefore(max)
+            ? true
+            : `Value should be no later than ${max.toLocaleString()}`,
       })
     }
   }

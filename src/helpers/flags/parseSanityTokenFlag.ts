@@ -10,33 +10,33 @@ type WithSanityTokenFlag = {
   'sanity-token'?: string
 }
 
-export const SanityConfigStore = new Configstore('sanity', {}, {
-  globalConfigPath: true,
-})
+export const SanityConfigStore = new Configstore(
+  'sanity',
+  {},
+  {
+    globalConfigPath: true,
+  },
+)
 
 export async function parseSanityTokenFlag<V extends WithSanityTokenFlag>(
   flags: V,
-  options: FlagOptions & { required: true }
-): Promise<string>;
+  options: FlagOptions & {required: true},
+): Promise<string>
 export async function parseSanityTokenFlag<V extends WithSanityTokenFlag>(
   flags: V,
-  options: FlagOptions & { required?: false }
-): Promise<string | undefined>;
+  options: FlagOptions & {required?: false},
+): Promise<string | undefined>
 export async function parseSanityTokenFlag<V extends WithSanityTokenFlag>(
   flags: V,
   options: FlagOptions = {},
 ): Promise<string | undefined> {
   const hasSanity = !spawnSync('sanity', ['help']).error
   const sanityToken: string | undefined =
-    flags['sanity-token'] ||
-    SanityConfigStore.get('authToken') ||
-    process.env.SANITY_IMPORT_TOKEN
+    flags['sanity-token'] || SanityConfigStore.get('authToken') || process.env.SANITY_IMPORT_TOKEN
 
   if (options.required) {
     if (!sanityToken && hasSanity) {
-      console.log(
-        'Hi! It seems you are not logged in to Sanity locally, please run:',
-      )
+      console.log('Hi! It seems you are not logged in to Sanity locally, please run:')
       console.log('sanity login')
       throw new SanityNotAuthenticatedError()
     }
@@ -56,4 +56,3 @@ export async function parseSanityTokenFlag<V extends WithSanityTokenFlag>(
 
   return sanityToken
 }
-

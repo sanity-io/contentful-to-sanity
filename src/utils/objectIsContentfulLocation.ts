@@ -3,11 +3,8 @@ export type ContentfulLocationValue = {
   lon: number
 }
 
-export function objectIsContentfulLocation(value: any | ContentfulLocationValue): value is ContentfulLocationValue {
-  return (
-    value &&
-    typeof value === 'object' &&
-    'lat' in value &&
-    'lon' in value.sys
-  )
+export function objectIsContentfulLocation(
+  value: any | ContentfulLocationValue,
+): value is ContentfulLocationValue {
+  return value && typeof value === 'object' && 'lat' in value && 'lon' in value.sys
 }

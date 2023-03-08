@@ -1,26 +1,37 @@
 import {contentfulTypeToSanitySchema} from '@/utils'
 import {expect, test} from '@oclif/test'
 import type {ContentfulExport} from 'contentful-export'
-import {contentfulContentTypeFactory, contentfulEditorControlFactory, contentfulEditorInterfaceFactory} from 'test/helpers'
+import {
+  contentfulContentTypeFactory,
+  contentfulEditorControlFactory,
+  contentfulEditorInterfaceFactory,
+} from 'test/helpers'
 
 describe('create schema for Link type', () => {
-  const contentType = contentfulContentTypeFactory('contentType', [{
-    id: 'field',
-    name: 'field',
-    type: 'Link',
-    localized: false,
-    required: false,
-  }], 'field')
+  const contentType = contentfulContentTypeFactory(
+    'contentType',
+    [
+      {
+        id: 'field',
+        name: 'field',
+        type: 'Link',
+        localized: false,
+        required: false,
+      },
+    ],
+    'field',
+  )
 
-  test
-  .it('should create a Sanity schema for an asset link', () => {
+  test.it('should create a Sanity schema for an asset link', () => {
     const assetLinkContentType: typeof contentType = {
       ...contentType,
-      fields: [{
-        ...contentType.fields[0],
-        linkType: 'Asset',
-        validations: [{linkMimetypeGroup: ['image']}],
-      }],
+      fields: [
+        {
+          ...contentType.fields[0],
+          linkType: 'Asset',
+          validations: [{linkMimetypeGroup: ['image']}],
+        },
+      ],
     }
 
     const data: ContentfulExport = {
@@ -39,15 +50,16 @@ describe('create schema for Link type', () => {
     })
   })
 
-  test
-  .it('should create a Sanity schema for an entry link', () => {
+  test.it('should create a Sanity schema for an entry link', () => {
     const entryLinkContentType: typeof contentType = {
       ...contentType,
-      fields: [{
-        ...contentType.fields[0],
-        linkType: 'Entry',
-        validations: [{linkContentType: ['contentType']}],
-      }],
+      fields: [
+        {
+          ...contentType.fields[0],
+          linkType: 'Entry',
+          validations: [{linkContentType: ['contentType']}],
+        },
+      ],
     }
 
     const data: ContentfulExport = {

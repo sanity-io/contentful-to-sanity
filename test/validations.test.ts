@@ -8,9 +8,7 @@ describe('Validations', () => {
       'required()',
     )
 
-    expect(serializeRuleSpecToCode({flag: 'presence', constraint: 'optional'})).to.equal(
-      '',
-    )
+    expect(serializeRuleSpecToCode({flag: 'presence', constraint: 'optional'})).to.equal('')
 
     expect(serializeRuleSpecToCode({flag: 'unique'})).to.equal('unique()')
 
@@ -20,18 +18,22 @@ describe('Validations', () => {
 
     expect(serializeRuleSpecToCode({flag: 'integer'})).to.equal('integer()')
 
-    expect(serializeRuleSpecToCode({flag: 'length', constraint: 29})).to.equal(
-      'length(29)',
-    )
+    expect(serializeRuleSpecToCode({flag: 'length', constraint: 29})).to.equal('length(29)')
 
     expect(serializeRuleSpecToCode({flag: 'email'})).to.equal('email()')
 
     expect(
-      serializeRuleSpecToCode({flag: 'stringCasing', constraint: 'lowercase'}),
+      serializeRuleSpecToCode({
+        flag: 'stringCasing',
+        constraint: 'lowercase',
+      }),
     ).to.equal('lowercase()')
 
     expect(
-      serializeRuleSpecToCode({flag: 'stringCasing', constraint: 'uppercase'}),
+      serializeRuleSpecToCode({
+        flag: 'stringCasing',
+        constraint: 'uppercase',
+      }),
     ).to.equal('uppercase()')
 
     const pattern = /^\d{3}/

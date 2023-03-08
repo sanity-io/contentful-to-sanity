@@ -10,11 +10,7 @@
   "parserOptions": {
     "ecmaVersion": 2018
   },
-  "plugins": [
-    "@typescript-eslint",
-    "simple-import-sort",
-    "prettier"
-  ],
+  "plugins": ["@typescript-eslint", "simple-import-sort", "prettier"],
   "rules": {
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/member-delimiter-style": "off",
@@ -27,28 +23,20 @@
       "warn",
       {
         "location": "start",
-        "terms": [
-          "todo",
-          "@todo",
-          "fixme"
-        ]
+        "terms": ["todo", "@todo", "fixme"]
       }
     ],
     "prettier/prettier": "warn"
   },
   "overrides": [
     {
-      "files": [
-        "**/*.js"
-      ],
+      "files": ["**/*.js"],
       "rules": {
         "@typescript-eslint/explicit-module-boundary-types": "off"
       }
     },
     {
-      "files": [
-        "test/**/*.ts"
-      ],
+      "files": ["test/**/*.ts"],
       "rules": {
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/no-explicit-any": "off"

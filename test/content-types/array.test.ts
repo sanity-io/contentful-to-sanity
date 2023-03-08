@@ -1,22 +1,31 @@
 import {contentfulTypeToSanitySchema} from '@/utils'
 import {expect, test} from '@oclif/test'
 import type {ContentfulExport} from 'contentful-export'
-import {contentfulContentTypeFactory, contentfulEditorControlFactory, contentfulEditorInterfaceFactory} from 'test/helpers'
+import {
+  contentfulContentTypeFactory,
+  contentfulEditorControlFactory,
+  contentfulEditorInterfaceFactory,
+} from 'test/helpers'
 
 describe('create schema for Array type', () => {
-  const contentType = contentfulContentTypeFactory('contentType', [{
-    id: 'field',
-    name: 'field',
-    type: 'Array',
-    localized: false,
-    required: false,
-    items: {
-      type: 'Symbol',
-    },
-  }], 'field')
+  const contentType = contentfulContentTypeFactory(
+    'contentType',
+    [
+      {
+        id: 'field',
+        name: 'field',
+        type: 'Array',
+        localized: false,
+        required: false,
+        items: {
+          type: 'Symbol',
+        },
+      },
+    ],
+    'field',
+  )
 
-  test
-  .it('should create a Sanity schema for tagEditor', () => {
+  test.it('should create a Sanity schema for tagEditor', () => {
     const data: ContentfulExport = {
       editorInterfaces: [
         contentfulEditorInterfaceFactory('contentType', [
@@ -30,9 +39,11 @@ describe('create schema for Array type', () => {
       name: 'field',
       type: 'array',
       title: 'field',
-      of: [{
-        type: 'string',
-      }],
+      of: [
+        {
+          type: 'string',
+        },
+      ],
       options: {
         layout: 'tag',
       },

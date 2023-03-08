@@ -5,11 +5,13 @@ type Answers = {
   value: string
 }
 
-export async function promptSingleInput(options: Omit<InputQuestion<Answers>, 'type'> = {}): Promise<string> {
+export async function promptSingleInput(
+  options: Omit<InputQuestion<Answers>, 'type'> = {},
+): Promise<string> {
   const defaults: InputQuestion<Answers> = {
     type: 'input',
     validate: requiredString,
-    filter: value => `${value}`.trim(),
+    filter: (value) => `${value}`.trim(),
   }
 
   const answers = await inquirer.prompt<Answers>([

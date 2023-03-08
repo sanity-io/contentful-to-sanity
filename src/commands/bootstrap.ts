@@ -12,7 +12,10 @@ import {CliUx, Command, Flags} from '@oclif/core'
 import {ContentfulParamsMissingError} from '@/helpers/errors'
 import {absolutify, contentfulTypeToSanitySchema} from '@/utils'
 import compact from 'just-compact'
-import {/* bootstrapStudio, */ writeRootSanitySchema, writeSingleSanitySchema} from '@/helpers/sanity'
+import {
+  /* bootstrapStudio, */ writeRootSanitySchema,
+  writeSingleSanitySchema,
+} from '@/helpers/sanity'
 import {stringFieldSchemaFactory} from '@/helpers/sanity/fieldSchemaFactories'
 import {IntlMode} from '@/constants'
 import type {OptionFlag} from '@oclif/core/lib/interfaces'
@@ -25,23 +28,51 @@ const steps = {
 }
 
 export default class Bootstrap extends Command {
-  static description = 'Migrate the structure of a Contentful space into a new or existing Sanity project'
+  static description =
+    'Migrate the structure of a Contentful space into a new or existing Sanity project'
 
   static flags = {
-    space: Flags.string({char: 's', description: 'The Contentful space ID', exclusive: ['from-file']}),
-    environment: Flags.string({char: 'e', description: 'The Contentful environment', exclusive: ['from-file']}),
-    'from-file': Flags.string({char: 'f', description: 'The contentful file export to use', exclusive: ['space', 'environment']}),
+    space: Flags.string({
+      char: 's',
+      description: 'The Contentful space ID',
+      exclusive: ['from-file'],
+    }),
+    environment: Flags.string({
+      char: 'e',
+      description: 'The Contentful environment',
+      exclusive: ['from-file'],
+    }),
+    'from-file': Flags.string({
+      char: 'f',
+      description: 'The contentful file export to use',
+      exclusive: ['space', 'environment'],
+    }),
     project: Flags.string({char: 'p', description: 'The Sanity project ID'}),
     dataset: Flags.string({char: 'd', description: 'The Sanity dataset'}),
-    output: Flags.string({char: 'o', description: 'The output directory to output the Studio to'}),
-    'export-dir': Flags.string({description: 'The directory to save the Contentful export in.'}),
-    'contentful-token': Flags.string({description: 'The Contentful management API token', env: 'CONTENTFUL_MANAGEMENT_TOKEN'}),
-    'sanity-token': Flags.string({description: 'The Sanity token to use for interaction with the API', env: 'SANITY_TOKEN'}),
-    'keep-markdown': Flags.boolean({description: 'Whether to keep markdown as-is or convert it to portable text', default: false}),
+    output: Flags.string({
+      char: 'o',
+      description: 'The output directory to output the Studio to',
+    }),
+    'export-dir': Flags.string({
+      description: 'The directory to save the Contentful export in.',
+    }),
+    'contentful-token': Flags.string({
+      description: 'The Contentful management API token',
+      env: 'CONTENTFUL_MANAGEMENT_TOKEN',
+    }),
+    'sanity-token': Flags.string({
+      description: 'The Sanity token to use for interaction with the API',
+      env: 'SANITY_TOKEN',
+    }),
+    'keep-markdown': Flags.boolean({
+      description: 'Whether to keep markdown as-is or convert it to portable text',
+      default: false,
+    }),
     intl: Flags.string({
       char: 'i',
       default: IntlMode.SINGLE,
-      description: 'Define the intl behavior. This is disabled by default and only one locale will be considered.',
+      description:
+        'Define the intl behavior. This is disabled by default and only one locale will be considered.',
       options: [IntlMode.SINGLE, IntlMode.MULTIPLE],
     }) as OptionFlag<IntlMode>,
   }
@@ -120,19 +151,21 @@ export default class Bootstrap extends Command {
       */
 
       CliUx.ux.action.start(steps.createSchema)
-      const schemas: (SanityDocumentSchema | SanityObjectSchema)[] = compact(data.contentTypes.map(type => (
-        data && contentfulTypeToSanitySchema(type, data, flags)
-      )))
+      const schemas: (SanityDocumentSchema | SanityObjectSchema)[] = compact(
+        data.contentTypes.map((type) => data && contentfulTypeToSanitySchema(type, data, flags)),
+      )
 
       // add object break schema
       if (
-        data.editorInterfaces?.some(editor => (
-          editor.controls?.some(ctrl => ctrl.widgetId === 'richTextEditor')
-        ))
+        data.editorInterfaces?.some((editor) =>
+          editor.controls?.some((ctrl) => ctrl.widgetId === 'richTextEditor'),
+        )
       ) {
-        const alreadyHasBreakSchema =  schemas.some(({name}) => name === 'break')
+        const alreadyHasBreakSchema = schemas.some(({name}) => name === 'break')
         if (alreadyHasBreakSchema) {
-          console.warn('Found user-defined content model called "break". Be aware this could result in broken portable text')
+          console.warn(
+            'Found user-defined content model called "break". Be aware this could result in broken portable text',
+          )
         }
 
         if (!alreadyHasBreakSchema) {
@@ -141,12 +174,14 @@ export default class Bootstrap extends Command {
             title: 'Break',
             type: 'object',
             fields: [
-              stringFieldSchemaFactory('style').options({
-                list: [
-                  {title: 'Line break', value: 'lineBreak'},
-                  {title: 'Read more', value: 'readMore'},
-                ],
-              }).build(),
+              stringFieldSchemaFactory('style')
+                .options({
+                  list: [
+                    {title: 'Line break', value: 'lineBreak'},
+                    {title: 'Read more', value: 'readMore'},
+                  ],
+                })
+                .build(),
             ],
           })
         }
@@ -156,7 +191,9 @@ export default class Bootstrap extends Command {
       if (data.tags?.length) {
         const alreadyHasTagSchema = schemas.some(({name}) => name === 'tag')
         if (alreadyHasTagSchema) {
-          console.warn('Found user-defined content model called "tag". Please review manually as this could conflict with the tags data import from contentful')
+          console.warn(
+            'Found user-defined content model called "tag". Please review manually as this could conflict with the tags data import from contentful',
+          )
         }
 
         if (!alreadyHasTagSchema) {
@@ -165,20 +202,25 @@ export default class Bootstrap extends Command {
             title: 'Tag',
             type: 'document',
             fields: [
-              stringFieldSchemaFactory('name').title('Name')
-              .validation([{flag: 'presence', constraint: 'required'}])
-              .build(),
+              stringFieldSchemaFactory('name')
+                .title('Name')
+                .validation([{flag: 'presence', constraint: 'required'}])
+                .build(),
             ],
           })
         }
       }
 
-      await Promise.all(schemas.map(schema => (
-        data && writeSingleSanitySchema(schema, data, {
-          ...flags,
-          dir: output,
-        })
-      )))
+      await Promise.all(
+        schemas.map(
+          (schema) =>
+            data &&
+            writeSingleSanitySchema(schema, data, {
+              ...flags,
+              dir: output,
+            }),
+        ),
+      )
       await writeRootSanitySchema(schemas, output)
       CliUx.ux.action.stop(steps.createSchema)
 

@@ -14,16 +14,18 @@ type WithProjectFlag = {
   project?: string
 }
 
-type SanityProject = ReturnType<SanityClient['projects']['getById']> extends Promise<infer V> ? V : never
+type SanityProject = ReturnType<SanityClient['projects']['getById']> extends Promise<infer V>
+  ? V
+  : never
 
 export async function parseProjectFlag<V extends WithProjectFlag>(
   flags: V,
-  options: FlagOptions & { required: true }
-): Promise<SanityProject>;
+  options: FlagOptions & {required: true},
+): Promise<SanityProject>
 export async function parseProjectFlag<V extends WithProjectFlag>(
   flags: V,
-  options: FlagOptions & { required?: boolean }
-): Promise<SanityProject | undefined>;
+  options: FlagOptions & {required?: boolean},
+): Promise<SanityProject | undefined>
 export async function parseProjectFlag<V extends WithProjectFlag>(
   flags: V,
   options: FlagOptions,
@@ -43,10 +45,7 @@ export async function parseProjectFlag<V extends WithProjectFlag>(
   }
 
   const userSpecifiedProject = projects.find(({id}) => id === flags.project)
-  if (
-    flags.project &&
-    !userSpecifiedProject
-  ) {
+  if (flags.project && !userSpecifiedProject) {
     throw new SanityProjectNotFoundError(flags.project)
   }
 
@@ -58,19 +57,21 @@ export async function parseProjectFlag<V extends WithProjectFlag>(
     let selectAnswer = {project: 'new'}
 
     if (projects.length > 0) {
-      selectAnswer = await inquirer.prompt([{
-        type: 'list',
-        name: 'project',
-        message: 'Select project to use',
-        choices: [
-          {value: 'new', name: 'Create new project'},
-          new inquirer.Separator(),
-          ...projects.map(project => ({
-            value: project.id,
-            name: `${project.displayName} [${project.id}]`,
-          })),
-        ],
-      }])
+      selectAnswer = await inquirer.prompt([
+        {
+          type: 'list',
+          name: 'project',
+          message: 'Select project to use',
+          choices: [
+            {value: 'new', name: 'Create new project'},
+            new inquirer.Separator(),
+            ...projects.map((project) => ({
+              value: project.id,
+              name: `${project.displayName} [${project.id}]`,
+            })),
+          ],
+        },
+      ])
     }
 
     if (selectAnswer.project === 'new') {
@@ -86,4 +87,3 @@ export async function parseProjectFlag<V extends WithProjectFlag>(
     return selectedProject
   }
 }
-

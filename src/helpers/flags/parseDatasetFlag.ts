@@ -15,17 +15,19 @@ type WithDatasetFlag = {
   dataset?: string
 }
 
-type SanityDatasetList = ReturnType<SanityClient['datasets']['list']> extends Promise<infer V> ? V : never
+type SanityDatasetList = ReturnType<SanityClient['datasets']['list']> extends Promise<infer V>
+  ? V
+  : never
 type SanityDataset = SanityDatasetList[number]
 
 export async function parseDatasetFlag<V extends WithDatasetFlag>(
   flags: V,
-  options: FlagOptions & { required: true }
-): Promise<SanityDataset>;
+  options: FlagOptions & {required: true},
+): Promise<SanityDataset>
 export async function parseDatasetFlag<V extends WithDatasetFlag>(
   flags: V,
-  options: FlagOptions & { required?: boolean }
-): Promise<SanityDataset | undefined>;
+  options: FlagOptions & {required?: boolean},
+): Promise<SanityDataset | undefined>
 export async function parseDatasetFlag<V extends WithDatasetFlag>(
   flags: V,
   options: FlagOptions,
@@ -47,10 +49,7 @@ export async function parseDatasetFlag<V extends WithDatasetFlag>(
   }
 
   const userSpecifiedDataset = datasets.find(({name}) => name === flags.dataset)
-  if (
-    flags.dataset &&
-    !userSpecifiedDataset
-  ) {
+  if (flags.dataset && !userSpecifiedDataset) {
     throw new SanityDatasetNotFoundError(flags.dataset)
   }
 
@@ -62,18 +61,20 @@ export async function parseDatasetFlag<V extends WithDatasetFlag>(
     let selectAnswer = {dataset: 'new'}
 
     if (datasets.length > 0) {
-      selectAnswer = await inquirer.prompt([{
-        type: 'list',
-        name: 'dataset',
-        message: 'Select dataset to use',
-        choices: [
-          {value: 'new', name: 'Create new dataset'},
-          new inquirer.Separator(),
-          ...datasets.map(dataset => ({
-            value: dataset.name,
-          })),
-        ],
-      }])
+      selectAnswer = await inquirer.prompt([
+        {
+          type: 'list',
+          name: 'dataset',
+          message: 'Select dataset to use',
+          choices: [
+            {value: 'new', name: 'Create new dataset'},
+            new inquirer.Separator(),
+            ...datasets.map((dataset) => ({
+              value: dataset.name,
+            })),
+          ],
+        },
+      ])
     }
 
     if (selectAnswer.dataset === 'new') {
@@ -92,4 +93,3 @@ export async function parseDatasetFlag<V extends WithDatasetFlag>(
     return selectedDataset
   }
 }
-

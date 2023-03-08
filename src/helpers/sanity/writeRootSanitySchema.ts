@@ -10,16 +10,18 @@ export async function writeRootSanitySchema(
   const schemasDir = path.join(dir ?? process.cwd(), 'schemas')
   await fs.ensureDir(schemasDir)
 
-  const importStatements = schemas.map(schema => {
-    return `import {${Case.camel(schema.name)}Type} from './${schema.type === 'document' ? 'documents' : 'objects'}/${schema.name}.js'`
-  }).join('\n')
-  const typesConcatList = schemas.map(schema => (
-    `  ${Case.camel(schema.name)}Type,`
-  )).join('\n')
+  const importStatements = schemas
+    .map((schema) => {
+      return `import {${Case.camel(schema.name)}Type} from './${
+        schema.type === 'document' ? 'documents' : 'objects'
+      }/${schema.name}.js'`
+    })
+    .join('\n')
+  const typesConcatList = schemas.map((schema) => `  ${Case.camel(schema.name)}Type,`).join('\n')
 
   await fs.writeFile(
     path.join(schemasDir, 'schema.js'),
-`
+    `
 ${importStatements}
 
 export const schemas = [

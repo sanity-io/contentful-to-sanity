@@ -3,7 +3,10 @@ import {contentfulSpaceLinkFactory} from './contentfulSpaceLinkFactory'
 import {contentfulEnvironmentLinkFactory} from './contentfulEnvironmentLinkFactory'
 import type {EditorInterfaceProps, Control} from 'contentful-management'
 
-export function contentfulEditorInterfaceFactory(contentType: string, controls: Control[]): EditorInterfaceProps {
+export function contentfulEditorInterfaceFactory(
+  contentType: string,
+  controls: Control[],
+): EditorInterfaceProps {
   return {
     sys: {
       id: 'default',

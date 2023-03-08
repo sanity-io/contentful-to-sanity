@@ -18,34 +18,42 @@ export async function writeSingleSanitySchema(
   flags: Flags = {},
 ): Promise<void> {
   const useMultiLocale = flags.intl === IntlMode.MULTIPLE
-  const defaultLocale = data.locales?.find(locale => Boolean(locale.default))
+  const defaultLocale = data.locales?.find((locale) => Boolean(locale.default))
   if (!defaultLocale) {
     throw new ContentfulNoDefaultLocaleError()
   }
 
-  const schemasDir = path.join(flags.dir ?? process.cwd(), 'schemas', schema.type === 'document' ? 'documents' : 'objects')
+  const schemasDir = path.join(
+    flags.dir ?? process.cwd(),
+    'schemas',
+    schema.type === 'document' ? 'documents' : 'objects',
+  )
   await fs.ensureDir(schemasDir)
   await fs.writeFile(
     path.join(schemasDir, `${schema.name}.js`),
     `import {defineType} from "sanity"
-export const ${schema.name}Type = defineType(${stringify(schema, (value, space, next, key) => {
-  if (key === 'validation') {
-    if (Array.isArray(value) && value.length > 0) {
-      return `Rule => Rule.${value.map(r => serializeRuleSpecToCode(r)).join('.')}`
-    }
+export const ${schema.name}Type = defineType(${stringify(
+      schema,
+      (value, space, next, key) => {
+        if (key === 'validation') {
+          if (Array.isArray(value) && value.length > 0) {
+            return `Rule => Rule.${value.map((r) => serializeRuleSpecToCode(r)).join('.')}`
+          }
 
-    return
-  }
+          return
+        }
 
-  if (key === 'initialValue') {
-    if (useMultiLocale) {
-      // @TODO
-    } else {
-      return next(value[defaultLocale.code], key)
-    }
-  }
+        if (key === 'initialValue') {
+          if (useMultiLocale) {
+            // @TODO
+          } else {
+            return next(value[defaultLocale.code], key)
+          }
+        }
 
-  return next(value, key)
-}, 2)})`,
+        return next(value, key)
+      },
+      2,
+    )})`,
   )
 }

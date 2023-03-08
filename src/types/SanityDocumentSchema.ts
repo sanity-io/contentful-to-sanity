@@ -2,8 +2,8 @@ import type {ReactNode} from 'react'
 import {FieldType} from './FieldType'
 
 type DefaultPreviewSelection = {
-  title: string;
-  subtitle: string;
+  title: string
+  subtitle: string
 }
 
 export type SanityDocumentSchema<P = DefaultPreviewSelection> = {
@@ -15,8 +15,8 @@ export type SanityDocumentSchema<P = DefaultPreviewSelection> = {
   preview?: {
     select: Record<string, string>
     prepare?: (selection: P) => {
-      title: string;
-      subtitle: string;
+      title: string
+      subtitle: string
       media?: ReactNode
     }
   }

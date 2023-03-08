@@ -2,13 +2,11 @@
   "extends": "./tsconfig.settings",
   "compilerOptions": {
     "noEmit": true,
-    "module": "esnext",
+    "module": "esnext"
   },
   "ts-node": {
     "files": true,
     "require": ["tsconfig-paths/register"]
   },
-  "include": [
-    "**/*.ts","**/*.tsx","./modules.d.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", "./modules.d.ts"]
 }

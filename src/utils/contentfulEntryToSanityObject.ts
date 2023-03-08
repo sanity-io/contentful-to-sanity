@@ -14,11 +14,14 @@ import type {ContentfulExport} from 'contentful-export'
 import type {SysLink} from './objectIsContentfulLink'
 import type {EntryProps} from 'contentful-management'
 
-type ReferenceResolver = (node: {data:{target:SysLink}}, opts: any) => ReturnType<typeof contentfulLinkToSanityReference> | null
+type ReferenceResolver = (
+  node: {data: {target: SysLink}},
+  opts: any,
+) => ReturnType<typeof contentfulLinkToSanityReference> | null
 
 type Options = {
   useMultiLocale: boolean
-  idStructure: IntlIdStructure,
+  idStructure: IntlIdStructure
   defaultLocale: string
   supportedLocales: string[]
   keepMarkdown?: boolean
@@ -56,10 +59,7 @@ export function contentfulEntryToSanityObject(
     const widgetId = control?.widgetId
 
     const value = values[locale]
-    const canCopyValueAsIs = (
-      typeof value === 'string' ||
-      typeof value === 'number'
-    )
+    const canCopyValueAsIs = typeof value === 'string' || typeof value === 'number'
     if (canCopyValueAsIs) {
       if (widgetId === 'slugEditor') {
         doc[key] = {current: value}
@@ -77,9 +77,8 @@ export function contentfulEntryToSanityObject(
         lng: value.lon,
       }
     } else if (objectIsContentfulRichText(value)) {
-      const referenceResolver: ReferenceResolver = node => (
+      const referenceResolver: ReferenceResolver = (node) =>
         contentfulLinkToSanityReference(node.data.target, locale, data, options)
-      )
 
       doc[key] = toPortableText(value, {
         generateKey: () => generateKey(),
@@ -95,13 +94,15 @@ export function contentfulEntryToSanityObject(
         },
       })
     } else if (Array.isArray(value)) {
-      doc[key] = compact(value.map(val => {
-        if (objectIsContentfulLink(val)) {
-          return contentfulLinkToSanityReference(val, locale, data, options)
-        }
+      doc[key] = compact(
+        value.map((val) => {
+          if (objectIsContentfulLink(val)) {
+            return contentfulLinkToSanityReference(val, locale, data, options)
+          }
 
-        return val
-      }))
+          return val
+        }),
+      )
     }
   }
 

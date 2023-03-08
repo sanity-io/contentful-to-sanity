@@ -10,12 +10,12 @@ type WithSpaceFlag = {
 
 export async function parseSpaceFlag<V extends WithSpaceFlag>(
   flags: V,
-  options: FlagOptions & { required: true }
-): Promise<string>;
+  options: FlagOptions & {required: true},
+): Promise<string>
 export async function parseSpaceFlag<V extends WithSpaceFlag>(
   flags: V,
-  options: FlagOptions & { required?: boolean }
-): Promise<string | undefined>;
+  options: FlagOptions & {required?: boolean},
+): Promise<string | undefined>
 export async function parseSpaceFlag<V extends WithSpaceFlag>(
   flags: V,
   options: FlagOptions = {},
@@ -29,4 +29,3 @@ export async function parseSpaceFlag<V extends WithSpaceFlag>(
 
   return space
 }
-

@@ -2,7 +2,11 @@ import {contentfulEnvironmentLinkFactory} from './contentfulEnvironmentLinkFacto
 import {contentfulSpaceLinkFactory} from './contentfulSpaceLinkFactory'
 import type {ContentTypeProps, ContentFields} from 'contentful-management'
 
-export function contentfulContentTypeFactory(contentType: string, fields: ContentFields[], displayField = ''): ContentTypeProps {
+export function contentfulContentTypeFactory(
+  contentType: string,
+  fields: ContentFields[],
+  displayField = '',
+): ContentTypeProps {
   return {
     sys: {
       id: contentType,

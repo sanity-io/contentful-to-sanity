@@ -10,12 +10,12 @@ type WithTokenFlag = {
 
 export async function parseManagementTokenFlag<V extends WithTokenFlag>(
   flags: V,
-  options: FlagOptions & { required: true }
-): Promise<string>;
+  options: FlagOptions & {required: true},
+): Promise<string>
 export async function parseManagementTokenFlag<V extends WithTokenFlag>(
   flags: V,
-  options: FlagOptions & { required?: boolean }
-): Promise<string | undefined>;
+  options: FlagOptions & {required?: boolean},
+): Promise<string | undefined>
 export async function parseManagementTokenFlag<V extends WithTokenFlag>(
   flags: V,
   options: FlagOptions = {},
@@ -29,4 +29,3 @@ export async function parseManagementTokenFlag<V extends WithTokenFlag>(
 
   return token
 }
-

@@ -27,19 +27,18 @@ export function contentfulTypeToSanitySchema(
 
     schemaType.preview = {
       select: {
-        title: control?.widgetId === 'slugEditor' ?
-          `${contentType.displayField}.current` :
-          contentType.displayField,
+        title:
+          control?.widgetId === 'slugEditor'
+            ? `${contentType.displayField}.current`
+            : contentType.displayField,
       },
     }
   }
 
   schemaType.fields = compact(
     contentType.fields
-    .filter(({omitted}) => !omitted)
-    .map(field => (
-      contentfulFieldToSanityField(contentType, field, data, flags)
-    )),
+      .filter(({omitted}) => !omitted)
+      .map((field) => contentfulFieldToSanityField(contentType, field, data, flags)),
   )
 
   return schemaType

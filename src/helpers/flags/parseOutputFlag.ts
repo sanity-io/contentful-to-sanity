@@ -14,12 +14,12 @@ type WithOutputFlag = {
 
 export async function parseOutputFlag<V extends WithOutputFlag>(
   flags: V,
-  options: FlagOptions & { required: true }
-): Promise<string>;
+  options: FlagOptions & {required: true},
+): Promise<string>
 export async function parseOutputFlag<V extends WithOutputFlag>(
   flags: V,
-  options: FlagOptions & { required?: false }
-): Promise<string | undefined>;
+  options: FlagOptions & {required?: false},
+): Promise<string | undefined>
 export async function parseOutputFlag<V extends WithOutputFlag>(
   flags: V,
   options: FlagOptions = {},
@@ -28,7 +28,7 @@ export async function parseOutputFlag<V extends WithOutputFlag>(
   const shouldCheckEmpty = options.checkEmpty === true
 
   const cwdIsEmpty = await isDirEmpty(process.cwd())
-  if (!output && (cwdIsEmpty && shouldCheckEmpty)) {
+  if (!output && cwdIsEmpty && shouldCheckEmpty) {
     output = process.cwd()
   }
 
@@ -37,10 +37,8 @@ export async function parseOutputFlag<V extends WithOutputFlag>(
       message: 'Content studio output path:',
       default: path.join(process.cwd()),
       filter: absolutify,
-      validate: async value => (
-        await requiredString(value) &&
-        (shouldCheckEmpty ? pathIsEmpty(value) : true)
-      ),
+      validate: async (value) =>
+        (await requiredString(value)) && (shouldCheckEmpty ? pathIsEmpty(value) : true),
     })
   }
 
@@ -53,4 +51,3 @@ export async function parseOutputFlag<V extends WithOutputFlag>(
 
   return output
 }
-
