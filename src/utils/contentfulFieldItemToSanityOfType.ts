@@ -1,5 +1,5 @@
-import {ContentfulExport} from 'contentful-export'
 import type {ContentFields} from 'contentful-management'
+import {ContentfulExport} from 'types'
 
 import {
   fileFieldSchemaFactory,

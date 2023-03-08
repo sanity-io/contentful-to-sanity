@@ -1,5 +1,5 @@
-import {ContentfulExport} from 'contentful-export'
 import {Control} from 'contentful-management'
+import {ContentfulExport} from 'types'
 
 export function findEditorControlForField(
   fieldId: string,

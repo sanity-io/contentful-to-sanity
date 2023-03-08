@@ -1,9 +1,9 @@
-import type {ContentfulExport} from 'contentful-export'
 import {
   contentfulContentTypeFactory,
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from 'test/helpers'
+import type {ContentfulExport} from 'types'
 import {describe, expect, test} from 'vitest'
 
 import {contentfulTypeToSanitySchema} from '@/utils'

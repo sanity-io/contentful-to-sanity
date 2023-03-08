@@ -1,8 +1,8 @@
 import path from 'node:path'
 
-import {ContentfulExport} from 'contentful-export'
 import fs from 'fs-extra'
 import {stringify} from 'javascript-stringify'
+import {ContentfulExport} from 'types'
 
 import {IntlMode} from '@/constants'
 import {serializeRuleSpecToCode} from '@/helpers/sanity'

@@ -1,6 +1,6 @@
-import type {ContentfulExport} from 'contentful-export'
 import {ContentFields, ContentTypeProps} from 'contentful-management'
 import get from 'just-safe-get'
+import type {ContentfulExport} from 'types'
 
 import {BuiltInContentfulEditors, IntlMode} from '@/constants'
 import {

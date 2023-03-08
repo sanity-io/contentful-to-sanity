@@ -1,6 +1,6 @@
-import type {ContentfulExport} from 'contentful-export'
 import type {ContentTypeProps} from 'contentful-management'
 import compact from 'just-compact'
+import type {ContentfulExport} from 'types'
 
 import {SanityDocumentSchema} from '@/types'
 

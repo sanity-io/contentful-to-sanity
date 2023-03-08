@@ -6,5 +6,6 @@
     "baseUrl": "./src",
     "rootDir": "."
   },
-  "include": ["**/*.ts", "**/*.tsx", "./modules.d.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "./modules.d.ts"],
+  "exclude": ["src/commands/*.ts"]
 }

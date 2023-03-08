@@ -1,8 +1,8 @@
 import {toPortableText} from '@portabletext/contentful-rich-text-to-portable-text'
 import type {SanityDocument} from '@sanity/client'
-import type {ContentfulExport} from 'contentful-export'
 import type {EntryProps} from 'contentful-management'
 import compact from 'just-compact'
+import type {ContentfulExport} from 'types'
 
 import {IntlIdStructure} from '@/constants'
 

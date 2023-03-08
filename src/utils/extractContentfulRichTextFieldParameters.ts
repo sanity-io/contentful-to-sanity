@@ -1,6 +1,6 @@
-import {ContentfulExport} from 'contentful-export'
 import {ContentFields} from 'contentful-management'
 import compact from 'just-compact'
+import {ContentfulExport} from 'types'
 
 import {BlockSanityFieldSchema, LinkedType, ObjectSanityFieldSchema} from '@/types'
 
