@@ -55,11 +55,12 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "tsup",
     "format": "prettier --cache --ignore-path .gitignore --write .",
-    "lint": "eslint . --cache",
+    "prepublishOnly": "rm -rf dist && pkg build --strict",
+    "lint": "TIMING=1 eslint . --cache",
     "lint:fix": "npm run lint -- --fix",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
   },
   "browserslist": [
     "> 0.2% and supports es6-module and supports es6-module-dynamic-import and not dead and not IE 11",
@@ -116,15 +117,11 @@
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "globby": "^11.1.0",
     "moment": "^2.29.1",
     "prettier": "^2.8.4",
     "prettier-plugin-packagejson": "^2.4.3",
-    "shx": "^0.3.3",
-    "ts-node": "^10.4.0",
+    "rimraf": "^4.3.1",
     "tsconfig-paths": "^3.12.0",
-    "tslib": "^2.3.1",
-    "tsup": "^5.11.13",
     "typescript": "^4.9.5",
     "vite-tsconfig-paths": "^4.0.5",
     "vitest": "^0.29.2",
