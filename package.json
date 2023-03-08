@@ -13,12 +13,9 @@
   "files": [
     "/bin",
     "/dist",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "CHANGELOG.md"
   ],
   "dependencies": {
-    "@oclif/core": "^1",
-    "@oclif/plugin-help": "^5",
     "@portabletext/contentful-rich-text-to-portable-text": "^0.1.0",
     "@sanity/block-tools": "^2.27.0",
     "@sanity/client": "^3.0.3",
@@ -43,7 +40,6 @@
     "zod": "^3.11.6"
   },
   "devDependencies": {
-    "@oclif/test": "^2",
     "@sanity/portable-text-editor": "^2.26.0",
     "@sanity/types": "^2.26.0",
     "@types/chai": "^4",
@@ -54,48 +50,37 @@
     "@types/markdown-it": "^12.2.3",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
     "chai": "^4",
-    "eslint": "^7.32.0",
-    "eslint-config-oclif": "^4",
-    "eslint-config-oclif-typescript": "^1.0.2",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "globby": "^11.1.0",
     "mocha": "^9",
     "moment": "^2.29.1",
-    "oclif": "^2",
+    "prettier": "^2.8.4",
+    "prettier-plugin-packagejson": "^2.4.3",
     "react": "^17.0.2",
     "shx": "^0.3.3",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.12.0",
     "tslib": "^2.3.1",
     "tsup": "^5.11.13",
-    "typescript": "^4.4.3"
-  },
-  "oclif": {
-    "bin": "contentful-to-sanity",
-    "dirname": "oex",
-    "commands": "./dist/commands",
-    "plugins": [
-      "@oclif/plugin-help"
-    ],
-    "topicSeparator": " ",
-    "topics": {
-    }
+    "typescript": "^4.9.5"
   },
   "scripts": {
     "build": "tsup",
-    "lint": "eslint . --ext .ts --config .eslintrc",
-    "postpack": "shx rm -f oclif.manifest.json",
+    "lint": "eslint . --cache",
     "posttest": "yarn lint",
-    "prepack": "yarn build && oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
+    "test": "mocha --forbid-only \"test/**/*.test.ts\""
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=14.18"
   },
   "bugs": "https://github.com/sanity-io/contentful-to-sanity/issues",
   "keywords": [
-    "oclif",
     "sanity",
     "contentful",
     "migration"

@@ -3,15 +3,12 @@
   "compilerOptions": {
     "noEmit": true,
     "module": "esnext",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
   },
   "ts-node": {
     "files": true,
     "require": ["tsconfig-paths/register"]
   },
   "include": [
-    "**/*.ts","**/*.tsx"
+    "**/*.ts","**/*.tsx","./modules.d.ts"
   ]
 }
