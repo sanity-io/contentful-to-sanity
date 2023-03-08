@@ -1,1 +1,0 @@
-  contentFile: 'contentful-export.json',

@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -70,14 +69,7 @@
           "required": true,
           "validations": [
             {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript"
-              ],
+              "enabledMarks": ["bold", "italic", "underline", "code", "superscript", "subscript"],
               "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
             },
             {
@@ -103,8 +95,7 @@
               "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, asset, table, link to Url, link to entry, link to asset, inline entry, and block entry nodes are allowed"
             },
             {
-              "nodes": {
-              }
+              "nodes": {}
             }
           ],
           "disabled": false,
@@ -169,8 +160,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -182,9 +172,7 @@
           "required": false,
           "validations": [
             {
-              "linkMimetypeGroup": [
-                "image"
-              ]
+              "linkMimetypeGroup": ["image"]
             }
           ],
           "disabled": false,
@@ -194,8 +182,7 @@
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -316,8 +303,7 @@
   "entries": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -364,8 +350,7 @@
             "id": "2CkSZGptNYCJt1zldw6nLB"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -381,21 +366,17 @@
         "content": {
           "en-US": {
             "nodeType": "document",
-            "data": {
-            },
+            "data": {},
             "content": [
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "Some rich text",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               }
@@ -406,8 +387,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -454,8 +434,7 @@
             "id": "2CkSZGptNYCJt1zldw6nLB"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -483,8 +462,7 @@
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
