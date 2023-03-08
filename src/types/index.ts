@@ -1,4 +1,5 @@
+export * from './ContentfulExport'
 export * from './FieldType'
 export * from './SanityDocumentSchema'
-export * from './SanityObjectSchema'
 export * from './SanityFieldSchema'
+export * from './SanityObjectSchema'

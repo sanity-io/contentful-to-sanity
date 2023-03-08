@@ -1,0 +1,2696 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "author",
+        "type": "ContentType",
+        "createdAt": "2015-01-12T16:32:42.971Z",
+        "updatedAt": "2015-02-09T14:45:48.120Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 96,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "publishedVersion": 95,
+        "firstPublishedAt": "2015-01-12T16:34:02.219Z",
+        "publishedAt": "2015-02-09T14:45:48.098Z"
+      },
+      "displayField": "name",
+      "name": "Author",
+      "description": "This content type defines the structure of an author entry",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "twitterHandle",
+          "name": "Twitter handle",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "profilePhoto",
+          "name": "Profile photo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": "image"
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "biography",
+          "name": "Biography",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "createdEntries",
+          "name": "Created entries",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["image"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "image",
+        "type": "ContentType",
+        "createdAt": "2015-01-12T16:35:23.335Z",
+        "updatedAt": "2015-01-30T13:12:50.643Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1JBA2HCnctvGN3MtWUa5QZ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 58,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1JBA2HCnctvGN3MtWUa5QZ"
+          }
+        },
+        "publishedVersion": 57,
+        "firstPublishedAt": "2015-01-12T16:36:20.453Z",
+        "publishedAt": "2015-01-30T13:12:50.586Z"
+      },
+      "displayField": "title",
+      "name": "Image",
+      "description": "This content type defines the structure of an image entry",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "photo",
+          "name": "Photo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": "image"
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "imageCaption",
+          "name": "Image caption",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "imageCredits",
+          "name": "Image credits",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "photoGallery",
+        "type": "ContentType",
+        "createdAt": "2015-02-25T09:44:42.711Z",
+        "updatedAt": "2015-03-04T15:18:17.820Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4FLrUHftHW3v2BLi9fzfjU"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1JBA2HCnctvGN3MtWUa5QZ"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 103,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1JBA2HCnctvGN3MtWUa5QZ"
+          }
+        },
+        "publishedVersion": 102,
+        "firstPublishedAt": "2015-02-25T09:47:35.203Z",
+        "publishedAt": "2015-03-04T15:18:17.787Z"
+      },
+      "displayField": "title",
+      "name": "Photo Gallery",
+      "description": "This content type defines the structure of a gallery entry",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "author",
+          "name": "Author",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": ["author"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "coverImage",
+          "name": "Cover Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": "image"
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["image"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "tags",
+          "name": "Tags",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": []
+          }
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "location",
+          "name": "Location",
+          "type": "Location",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": true,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1qptv5yuwnfh",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2015-02-25T12:09:55.728Z",
+        "createdBy": {
+          "sys": {
+            "id": "4FLrUHftHW3v2BLi9fzfjU",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2015-03-12T15:10:53.588Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2u3AlPOpmEvvt47kzdCclj",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "photoGallery",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {},
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {},
+          "widgetId": "slugEditor"
+        },
+        {
+          "fieldId": "author",
+          "settings": {},
+          "widgetId": "entryCardEditor"
+        },
+        {
+          "fieldId": "coverImage",
+          "settings": {},
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "description",
+          "settings": {},
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "images",
+          "settings": {},
+          "widgetId": "entryCardsEditor"
+        },
+        {
+          "fieldId": "tags",
+          "settings": {},
+          "widgetId": "listInput"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker"
+        },
+        {
+          "fieldId": "location",
+          "settings": {},
+          "widgetId": "locationEditor"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "4DyrC6MPp6Ws8UmQEQIGUc",
+        "type": "Entry",
+        "createdAt": "2015-01-12T16:37:02.159Z",
+        "updatedAt": "2015-01-12T16:38:17.192Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 14,
+        "firstPublishedAt": "2015-01-12T16:38:17.145Z",
+        "publishedAt": "2015-01-12T16:38:17.145Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Janine McKay"
+        },
+        "twitterHandle": {
+          "en-US": "@contentful"
+        },
+        "profilePhoto": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "149UafeyfcGSoOmESmmYSA"
+            }
+          }
+        },
+        "biography": {
+          "en-US": "Janine is our communications manager. Coming from the South of Germany via London, she enjoys the newest electronica, Japanese candy and literary discussions about the choices of tragic heroes."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "2YhtjbebgscIwO2keYEa4O",
+        "type": "Entry",
+        "createdAt": "2015-01-12T16:38:30.727Z",
+        "updatedAt": "2015-01-12T16:39:31.932Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 5,
+        "firstPublishedAt": "2015-01-12T16:39:31.881Z",
+        "publishedAt": "2015-01-12T16:39:31.881Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Air Baloon"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1zY02V76cUsM6yWycWqyk6"
+            }
+          }
+        },
+        "imageCaption": {
+          "en-US": "Up in the air"
+        },
+        "imageCredits": {
+          "en-US": "Austin Ban // http://austinban.com/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "3eL4DUKKdyqGIQm2M6SaCe",
+        "type": "Entry",
+        "createdAt": "2015-01-12T16:39:45.484Z",
+        "updatedAt": "2015-01-12T16:40:35.608Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 13,
+        "firstPublishedAt": "2015-01-12T16:40:35.556Z",
+        "publishedAt": "2015-01-12T16:40:35.556Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "The Flower"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "26PCF5jzziyeiessOOY0o0"
+            }
+          }
+        },
+        "imageCaption": {
+          "en-US": "Right in your backyard"
+        },
+        "imageCredits": {
+          "en-US": "John French // http://johnmfrench.tumblr.com/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "4MA2xHUeLeKaAs2K4Kqiog",
+        "type": "Entry",
+        "createdAt": "2015-01-12T16:40:39.522Z",
+        "updatedAt": "2015-01-12T16:41:32.580Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 15,
+        "firstPublishedAt": "2015-01-12T16:41:32.532Z",
+        "publishedAt": "2015-01-12T16:41:32.532Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "City Street"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "geptFDHuzQa8oA2Ywmiew"
+            }
+          }
+        },
+        "imageCaption": {
+          "en-US": "Taken in San Sebastian"
+        },
+        "imageCredits": {
+          "en-US": "Oscar Nillson // http://oscr.se/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "3rzf72XFm8aQU4oMOci8WY",
+        "type": "Entry",
+        "createdAt": "2015-01-12T16:41:41.983Z",
+        "updatedAt": "2015-01-12T16:42:31.176Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 7,
+        "firstPublishedAt": "2015-01-12T16:42:31.122Z",
+        "publishedAt": "2015-01-12T16:42:31.122Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Pie in the Sky"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5DGRkcoj9mAgwkgGyKMuwe"
+            }
+          }
+        },
+        "imageCaption": {
+          "en-US": "Taken at Woods Hole"
+        },
+        "imageCredits": {
+          "en-US": "Dogancan Ozturan // http://dogancan.org/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "2MtVnLk3wIiAgOC6OG6qS4",
+        "type": "Entry",
+        "createdAt": "2015-01-12T16:42:43.199Z",
+        "updatedAt": "2015-01-12T16:43:26.501Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 5,
+        "firstPublishedAt": "2015-01-12T16:43:26.450Z",
+        "publishedAt": "2015-01-12T16:43:26.450Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "The Golden Gate Bridge"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2czUZ3VWIc68cyOoyGY4MW"
+            }
+          }
+        },
+        "imageCaption": {
+          "en-US": "The bridge, as seen on a cloudy day"
+        },
+        "imageCredits": {
+          "en-US": "Chris Brignola // http://www.avelamedia.com/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "67rvVwLG3mMsucCsaKgaMi",
+        "type": "Entry",
+        "createdAt": "2015-01-12T16:43:38.803Z",
+        "updatedAt": "2015-01-12T16:44:21.523Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 5,
+        "firstPublishedAt": "2015-01-12T16:44:21.469Z",
+        "publishedAt": "2015-01-12T16:44:21.469Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "The world on a digital screen"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3nCIlsuVKwQysuMcKGuUA4"
+            }
+          }
+        },
+        "imageCaption": {
+          "en-US": "From the personal archive"
+        },
+        "imageCredits": {
+          "en-US": "Jay Wennington // http://jaywennington.tumblr.com/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "5dT4Tgc7gQCuyGSGiakqYC",
+        "type": "Entry",
+        "createdAt": "2015-01-12T16:45:10.535Z",
+        "updatedAt": "2015-03-17T10:31:40.635Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1JBA2HCnctvGN3MtWUa5QZ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 69,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1JBA2HCnctvGN3MtWUa5QZ"
+          }
+        },
+        "publishedVersion": 68,
+        "firstPublishedAt": "2015-01-12T16:46:14.111Z",
+        "publishedAt": "2015-03-17T10:31:40.589Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "It's a Celebration"
+        },
+        "photo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6y0psij2o02YIwGScEo4kS"
+            }
+          }
+        },
+        "imageCaption": {
+          "en-US": "From the personal archive"
+        },
+        "imageCredits": {
+          "en-US": "Morgan Sessions // http://www.morgansessions.com/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "54O5P32wmcY0wiAY0ewA2e",
+        "type": "Entry",
+        "createdAt": "2015-02-25T09:47:42.467Z",
+        "updatedAt": "2015-02-25T12:10:30.786Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4FLrUHftHW3v2BLi9fzfjU"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4FLrUHftHW3v2BLi9fzfjU"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 32,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4FLrUHftHW3v2BLi9fzfjU"
+          }
+        },
+        "publishedVersion": 31,
+        "firstPublishedAt": "2015-02-25T09:49:04.965Z",
+        "publishedAt": "2015-02-25T12:10:30.759Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "photoGallery"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "The World Around Me: The Best of Young Photography"
+        },
+        "slug": {
+          "en-US": "the-world-around-me-the-best-of-young-photography"
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4DyrC6MPp6Ws8UmQEQIGUc"
+            }
+          }
+        },
+        "coverImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6y0psij2o02YIwGScEo4kS"
+            }
+          }
+        },
+        "description": {
+          "en-US": "All the images in the gallery taken from “[Unsplash](https://unsplash.com/)” photo project."
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5dT4Tgc7gQCuyGSGiakqYC"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "67rvVwLG3mMsucCsaKgaMi"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2MtVnLk3wIiAgOC6OG6qS4"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3rzf72XFm8aQU4oMOci8WY"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4MA2xHUeLeKaAs2K4Kqiog"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3eL4DUKKdyqGIQm2M6SaCe"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2YhtjbebgscIwO2keYEa4O"
+              }
+            }
+          ]
+        },
+        "tags": {
+          "en-US": [
+            "city",
+            "lens",
+            "bridge",
+            "bar",
+            "people",
+            "perspective",
+            "macro",
+            "close up",
+            "baloon"
+          ]
+        },
+        "date": {
+          "en-US": "2015-01-30"
+        },
+        "location": {
+          "en-US": {
+            "lon": 13.404953999999975,
+            "lat": 52.52000659999999
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "149UafeyfcGSoOmESmmYSA",
+        "type": "Asset",
+        "createdAt": "2015-01-12T16:37:31.579Z",
+        "updatedAt": "2015-01-12T16:37:52.699Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 26,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 25,
+        "firstPublishedAt": "2015-01-12T16:37:52.649Z",
+        "publishedAt": "2015-01-12T16:37:52.649Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Janine"
+        },
+        "description": {
+          "en-US": "Profile pic"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1qptv5yuwnfh/149UafeyfcGSoOmESmmYSA/920d36c3af2a6b38efb52c1ee5950bab/FI01.png",
+            "details": {
+              "size": 12940,
+              "image": {
+                "width": 128,
+                "height": 128
+              }
+            },
+            "fileName": "FI01.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "1zY02V76cUsM6yWycWqyk6",
+        "type": "Asset",
+        "createdAt": "2015-01-12T16:39:05.867Z",
+        "updatedAt": "2015-01-12T16:39:25.325Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 13,
+        "firstPublishedAt": "2015-01-12T16:39:25.270Z",
+        "publishedAt": "2015-01-12T16:39:25.271Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Air Baloon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1qptv5yuwnfh/1zY02V76cUsM6yWycWqyk6/a9b8fbf8d7e8c6f73b295c21733a5bc8/bXoAlw8gT66vBo1wcFoO_IMG_9181.jpg",
+            "details": {
+              "size": 4328734,
+              "image": {
+                "width": 5184,
+                "height": 3456
+              }
+            },
+            "fileName": "bXoAlw8gT66vBo1wcFoO_IMG_9181.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "26PCF5jzziyeiessOOY0o0",
+        "type": "Asset",
+        "createdAt": "2015-01-12T16:40:04.950Z",
+        "updatedAt": "2015-01-12T16:40:26.923Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 13,
+        "firstPublishedAt": "2015-01-12T16:40:26.878Z",
+        "publishedAt": "2015-01-12T16:40:26.878Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "The Flower"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1qptv5yuwnfh/26PCF5jzziyeiessOOY0o0/2ac10bfed3c99a3bfbe369ca08dd3156/2MwGKhLETRSQoHP9UWE4_IMG_1348-3.jpg",
+            "details": {
+              "size": 8797338,
+              "image": {
+                "width": 5184,
+                "height": 3456
+              }
+            },
+            "fileName": "2MwGKhLETRSQoHP9UWE4_IMG_1348-3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "geptFDHuzQa8oA2Ywmiew",
+        "type": "Asset",
+        "createdAt": "2015-01-12T16:40:59.090Z",
+        "updatedAt": "2015-01-12T16:41:27.348Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 14,
+        "firstPublishedAt": "2015-01-12T16:41:27.298Z",
+        "publishedAt": "2015-01-12T16:41:27.298Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "City Street"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1qptv5yuwnfh/geptFDHuzQa8oA2Ywmiew/79773456d1ababc6af041fb915b7e853/3CoEETpvQYO8x60lnZSA_rue.jpg",
+            "details": {
+              "size": 8254379,
+              "image": {
+                "width": 4912,
+                "height": 3264
+              }
+            },
+            "fileName": "3CoEETpvQYO8x60lnZSA_rue.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "5DGRkcoj9mAgwkgGyKMuwe",
+        "type": "Asset",
+        "createdAt": "2015-01-12T16:42:02.482Z",
+        "updatedAt": "2015-01-12T16:42:23.876Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 14,
+        "firstPublishedAt": "2015-01-12T16:42:23.826Z",
+        "publishedAt": "2015-01-12T16:42:23.826Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Pie in the sky"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1qptv5yuwnfh/5DGRkcoj9mAgwkgGyKMuwe/064327e63234d1a5749da0584dc0e21d/EOZpjI3oSqKPNnF2S4Tp_Untitled.jpg",
+            "details": {
+              "size": 2076159,
+              "image": {
+                "width": 4080,
+                "height": 2720
+              }
+            },
+            "fileName": "EOZpjI3oSqKPNnF2S4Tp_Untitled.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "2czUZ3VWIc68cyOoyGY4MW",
+        "type": "Asset",
+        "createdAt": "2015-01-12T16:43:06.907Z",
+        "updatedAt": "2015-01-12T16:43:20.808Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 20,
+        "firstPublishedAt": "2015-01-12T16:43:20.758Z",
+        "publishedAt": "2015-01-12T16:43:20.758Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Golden Gate Bridge"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1qptv5yuwnfh/2czUZ3VWIc68cyOoyGY4MW/83a35155f2e581b68e52a230dfc6015b/lUUnN7VGSoWZ3noefeH7_Baker_Beach-12.jpg",
+            "details": {
+              "size": 9508880,
+              "image": {
+                "width": 5580,
+                "height": 3720
+              }
+            },
+            "fileName": "lUUnN7VGSoWZ3noefeH7_Baker Beach-12.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "3nCIlsuVKwQysuMcKGuUA4",
+        "type": "Asset",
+        "createdAt": "2015-01-12T16:43:54.387Z",
+        "updatedAt": "2015-01-12T16:44:11.048Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 32,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "publishedVersion": 31,
+        "firstPublishedAt": "2015-01-12T16:44:10.997Z",
+        "publishedAt": "2015-01-12T16:44:10.997Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "The world on a digital screen"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1qptv5yuwnfh/3nCIlsuVKwQysuMcKGuUA4/e2a6ae668a127703cad73ac88fa07104/tU3ptNgGSP6U2fE67Gvy_SYDNEY-162.jpg",
+            "details": {
+              "size": 1871426,
+              "image": {
+                "width": 4896,
+                "height": 3264
+              }
+            },
+            "fileName": "tU3ptNgGSP6U2fE67Gvy_SYDNEY-162.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "id": "6y0psij2o02YIwGScEo4kS",
+        "type": "Asset",
+        "createdAt": "2015-01-12T16:45:46.302Z",
+        "updatedAt": "2015-03-17T10:31:34.267Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1JBA2HCnctvGN3MtWUa5QZ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 32,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1JBA2HCnctvGN3MtWUa5QZ"
+          }
+        },
+        "publishedVersion": 31,
+        "firstPublishedAt": "2015-01-12T16:46:04.030Z",
+        "publishedAt": "2015-03-17T10:31:34.218Z"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Celebration"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1qptv5yuwnfh/6y0psij2o02YIwGScEo4kS/42f79e02751071d83930aa912ecf2ded/photo-1421986527537-888d998adb74.jpeg",
+            "details": {
+              "size": 465358,
+              "image": {
+                "width": 2509,
+                "height": 1673
+              }
+            },
+            "fileName": "photo-1421986527537-888d998adb74.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "U.S. English",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "6jIpQ2cCIDpnvzBHc9lU4t",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "createdAt": "2015-01-12T16:27:22Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedAt": "2015-01-12T16:27:22Z"
+      }
+    }
+  ],
+  "webhooks": [],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing of all Entries",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "6jVAfTLWtgec1lqcjGjL53",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "createdAt": "2015-01-12T16:27:23Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedAt": "2015-01-12T16:27:23Z"
+      }
+    },
+    {
+      "name": "Developer",
+      "description": "Allows reading Entries and managing API Keys",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": "all",
+        "Environments": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "6k0eMGVCqjKsQyWEcF4VQN",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "createdAt": "2015-01-12T16:27:23Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2u3AlPOpmEvvt47kzdCclj"
+          }
+        },
+        "updatedAt": "2015-01-12T16:27:23Z"
+      }
+    },
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4JmSV346RluQ3XLqdbSibn",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "createdAt": "2016-06-28T13:17:37Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "updatedAt": "2016-06-28T13:17:37Z"
+      }
+    },
+    {
+      "name": "Freelancer",
+      "description": "Allows only editing of content they created themselves",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["delete"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["delete"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4JoolZW6p0Owdpmo59lIuJ",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "createdAt": "2016-06-28T13:17:37Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "updatedAt": "2016-06-28T13:17:37Z"
+      }
+    },
+    {
+      "name": "Translator 1",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4JpX5Xf5ZWDsWegrRgfQwN",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "createdAt": "2016-06-28T13:17:37Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "updatedAt": "2016-06-28T13:17:37Z"
+      }
+    },
+    {
+      "name": "Translator 2",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4Jrq9NrFaM1WOkAZjkbYb7",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "createdAt": "2016-06-28T13:17:37Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "updatedAt": "2016-06-28T13:17:37Z"
+      }
+    },
+    {
+      "name": "Translator 3",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4JsSdrYjEkm8itkdsFvfEB",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1qptv5yuwnfh"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "createdAt": "2016-06-28T13:17:37Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7aaj6JJFX1PWD4rElzXEWO"
+          }
+        },
+        "updatedAt": "2016-06-28T13:17:37Z"
+      }
+    }
+  ]
+}

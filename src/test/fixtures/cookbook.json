@@ -1,0 +1,4916 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "ingredient",
+        "type": "ContentType",
+        "createdAt": "2022-06-22T12:20:44.943Z",
+        "updatedAt": "2022-06-22T12:20:45.635Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:45.635Z",
+        "firstPublishedAt": "2022-06-22T12:20:45.635Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Ingredient",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "quantityType",
+          "name": "Quantity Type",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "Loose",
+                "Cup(s)",
+                "Can",
+                "kg",
+                "grams",
+                "ml",
+                "liter(s)",
+                "Tea Spoon",
+                "Table Spoon"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "recipe",
+        "type": "ContentType",
+        "createdAt": "2022-06-22T12:23:34.576Z",
+        "updatedAt": "2022-06-22T13:54:19.206Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2022-06-22T13:54:19.206Z",
+        "firstPublishedAt": "2022-06-22T12:23:34.838Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Recipe",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "ingredients",
+          "name": "Ingredients",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": ["bold", "italic"],
+              "message": "Only bold and italic marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "ordered-list",
+                "embedded-entry-block",
+                "entry-hyperlink",
+                "embedded-entry-inline",
+                "unordered-list"
+              ],
+              "message": "Only ordered list, block entry, link to entry, inline entry, and unordered list nodes are allowed"
+            },
+            {
+              "nodes": {
+                "embedded-entry-block": [
+                  {
+                    "linkContentType": ["ingredient"],
+                    "message": null
+                  }
+                ],
+                "embedded-entry-inline": [
+                  {
+                    "linkContentType": ["ingredient"],
+                    "message": null
+                  }
+                ]
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "instructions",
+          "name": "Instructions",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": ["bold", "italic", "underline", "code"],
+              "message": "Only bold, italic, underline, and code marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {}
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "rsj8wf5a3fox",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2022-06-22T12:20:45.696Z",
+        "createdBy": {
+          "sys": {
+            "id": "08LcM38OAVfUmJY7a18Nr9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-06-22T12:20:46.745Z",
+        "updatedBy": {
+          "sys": {
+            "id": "08LcM38OAVfUmJY7a18Nr9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "ingredient",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "quantityType",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "rsj8wf5a3fox",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2022-06-22T12:23:34.923Z",
+        "createdBy": {
+          "sys": {
+            "id": "08LcM38OAVfUmJY7a18Nr9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-06-22T13:54:19.774Z",
+        "updatedBy": {
+          "sys": {
+            "id": "08LcM38OAVfUmJY7a18Nr9",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "recipe",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "ingredients",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "instructions",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "1iSACx8nnyontA2ZUDusFn",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:47.152Z",
+        "updatedAt": "2022-06-22T12:20:50.462Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:50.462Z",
+        "firstPublishedAt": "2022-06-22T12:20:50.462Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Shredded Cheese"
+        },
+        "quantityType": {
+          "en-US": "Cup(s)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "QEYoHrwU0QRuhxTcFB7sE",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:47.162Z",
+        "updatedAt": "2022-06-22T12:20:50.093Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:50.093Z",
+        "firstPublishedAt": "2022-06-22T12:20:50.093Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Black Beans"
+        },
+        "quantityType": {
+          "en-US": "Can"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "1zBqZiw41gICLNFIQWeGvw",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:47.167Z",
+        "updatedAt": "2022-06-22T12:20:49.776Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:49.776Z",
+        "firstPublishedAt": "2022-06-22T12:20:49.776Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Wraps"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "3vI4JIGvK38u12NZr3Y9rn",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:47.545Z",
+        "updatedAt": "2022-06-22T12:20:50.802Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:50.802Z",
+        "firstPublishedAt": "2022-06-22T12:20:50.802Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Red Bell Pepper"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "4it0p6dkGRCucM9ksaZTc5",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:47.560Z",
+        "updatedAt": "2022-06-22T12:20:51.529Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:51.529Z",
+        "firstPublishedAt": "2022-06-22T12:20:51.529Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Red Onion"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "5ybYrG6OMvWgPxuKD0rwUC",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:47.561Z",
+        "updatedAt": "2022-06-22T12:20:51.146Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:51.146Z",
+        "firstPublishedAt": "2022-06-22T12:20:51.146Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Zucchini"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "3BZqTpZPi5cAB2HHdQrUSA",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:47.568Z",
+        "updatedAt": "2022-06-22T12:20:51.880Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:51.880Z",
+        "firstPublishedAt": "2022-06-22T12:20:51.880Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Olive Oil"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "2s0yziwNPN27a2f8vwsx89",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:47.571Z",
+        "updatedAt": "2022-06-22T12:20:52.243Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:52.243Z",
+        "firstPublishedAt": "2022-06-22T12:20:52.243Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Chilli Powder"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "79MVyh9o8DHxnNzm7Mreu",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:48.523Z",
+        "updatedAt": "2022-06-22T12:20:53.348Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:53.348Z",
+        "firstPublishedAt": "2022-06-22T12:20:53.348Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Salt"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "3PJUNaufUdxcmoLVLt2ZgW",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:48.544Z",
+        "updatedAt": "2022-06-22T12:20:52.561Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:52.561Z",
+        "firstPublishedAt": "2022-06-22T12:20:52.561Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Cumin"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "5xtOXxlxEy4vORMT54fNRt",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:48.550Z",
+        "updatedAt": "2022-06-22T12:20:54.459Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:54.459Z",
+        "firstPublishedAt": "2022-06-22T12:20:54.459Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Hot Sauce"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "63vNrgYaYhQ5Y8OpUF7Tov",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:48.587Z",
+        "updatedAt": "2022-06-22T12:20:54.795Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:54.795Z",
+        "firstPublishedAt": "2022-06-22T12:20:54.795Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Avocado"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "469S2RiAxHMe5mEcdh6LwX",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:48.622Z",
+        "updatedAt": "2022-06-22T12:20:52.894Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:52.894Z",
+        "firstPublishedAt": "2022-06-22T12:20:52.894Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Garlic Powder"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "4J1aTyKzS9TauHzRJrPVHV",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:48.626Z",
+        "updatedAt": "2022-06-22T12:20:53.825Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:53.825Z",
+        "firstPublishedAt": "2022-06-22T12:20:53.825Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Black Pepper"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "3XYxKjltW302mTYBEHuQrI",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:48.630Z",
+        "updatedAt": "2022-06-22T12:20:54.159Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:54.159Z",
+        "firstPublishedAt": "2022-06-22T12:20:54.159Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Smoked Paprika"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "4I0yvuIBLc3JAnWAM2UI7O",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:49.492Z",
+        "updatedAt": "2022-06-22T12:20:55.157Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:55.157Z",
+        "firstPublishedAt": "2022-06-22T12:20:55.157Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Salsa"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "3aRuFScY0g4QvZOIAiqHpD",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:20:49.494Z",
+        "updatedAt": "2022-06-22T12:20:55.467Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-22T12:20:55.467Z",
+        "firstPublishedAt": "2022-06-22T12:20:55.467Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Sour Cream"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "1FePScuAYHkqbk6I6FnrPm",
+        "type": "Entry",
+        "createdAt": "2022-06-22T12:23:39.251Z",
+        "updatedAt": "2022-06-27T14:29:12.745Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 36,
+        "publishedAt": "2022-06-27T14:29:12.745Z",
+        "firstPublishedAt": "2022-06-22T12:30:03.811Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 37,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "recipe"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Black Bean and Veggie Burritos"
+        },
+        "description": {
+          "en-US": "Delicious and healthy veggie burritos!"
+        },
+        "ingredients": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "5 ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "target": {
+                                "sys": {
+                                  "id": "1zBqZiw41gICLNFIQWeGvw",
+                                  "type": "Link",
+                                  "linkType": "Entry"
+                                }
+                              }
+                            },
+                            "content": [],
+                            "nodeType": "embedded-entry-inline"
+                          },
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "1 ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "target": {
+                                "sys": {
+                                  "id": "QEYoHrwU0QRuhxTcFB7sE",
+                                  "type": "Link",
+                                  "linkType": "Entry"
+                                }
+                              }
+                            },
+                            "content": [],
+                            "nodeType": "embedded-entry-inline"
+                          },
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": ", rinsed",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "1/2 ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "target": {
+                                "sys": {
+                                  "id": "1iSACx8nnyontA2ZUDusFn",
+                                  "type": "Link",
+                                  "linkType": "Entry"
+                                }
+                              }
+                            },
+                            "content": [],
+                            "nodeType": "embedded-entry-inline"
+                          },
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "1 ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "target": {
+                                "sys": {
+                                  "id": "3vI4JIGvK38u12NZr3Y9rn",
+                                  "type": "Link",
+                                  "linkType": "Entry"
+                                }
+                              }
+                            },
+                            "content": [],
+                            "nodeType": "embedded-entry-inline"
+                          },
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": ", chopped",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "1 ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "target": {
+                                "sys": {
+                                  "id": "3aRuFScY0g4QvZOIAiqHpD",
+                                  "type": "Link",
+                                  "linkType": "Entry"
+                                }
+                              }
+                            },
+                            "content": [],
+                            "nodeType": "embedded-entry-inline"
+                          },
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "instructions": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Heat a large pan on medium heat for 1 minute, then add in your olive oil.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Add your chopped zucchini, bell pepper and onion into the pan, and cook over a medium low flame for about 7-8 minutes until the veggies begin to soften- stir occasionally.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Once the veggies start to become tender, add in your black beans, hot sauce and spices. Toss together to coat evenly, and continue to cook over a medium flame for an additional 5-7 minutes.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Remove from heat and let the veggies cool for 5 minutes before assembling your burrito.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Lay a wrap flat onto your working surface, spread some cheese over the center, and pour about 1/3 cup of the filling into the center. fold the sides of the burrito over, then begin rolling tightly from the bottom.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "To freeze, wrap each burrito individually in parchment paper or foil, and store in a reusable or ziplock bag for up to 2 months.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "If desired, you can grill the burritos before freezing them. wipe down the pan you cooked your veggies in, and grill each side of the burrito on medium heat for about 2 minute- start with the opening side down. once cool, follow wrapping instructions above.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "ordered-list"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "MICROWAVE INSTRUCTIONS:",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " remove burrito from freezer and unwrap. Place on a plate and microwave for 1 minute, flip over and microwave additional minute. You can also choose the “defrost” setting for 2 minutes, or defrost for 1 minute and continue to cook on a heated pan for another 3-4 minutes.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "value": "OVEN INSTRUCTIONS:",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": " Bake from frozen on 350 for 20-25 minutes unwrapped, flipping halfway through. To save time in the oven, you can defrost the burrito in the fridge overnight and cut down baking time to 10-15 minutes!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4oaf0vi232rxojfzHcGrDG"
+              }
+            }
+          ]
+        },
+        "slug": {
+          "en-US": "black-bean-and-veggie-burritos"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "1sMNbnL4kma17Amj6LjgpA",
+        "type": "Entry",
+        "createdAt": "2022-06-27T09:42:09.120Z",
+        "updatedAt": "2022-06-27T09:58:18.405Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 66,
+        "publishedAt": "2022-06-27T09:58:18.405Z",
+        "firstPublishedAt": "2022-06-27T09:58:18.405Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 67,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "recipe"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "White Sauce Pasta"
+        },
+        "description": {
+          "en-US": "Delicious Cheesy Pasta"
+        },
+        "ingredients": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "3 spoons ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "20AFEJOjaNETfizqaLKzGW",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "3 spoons ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "2OUH0f7gvuo7ExZz55iXFk",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "317tMunrV4jML5IphBQUTQ",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "4iVhmCkzUcfmaR1xdhr0hg",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "7wJzzI3rZ9nXSIqMzM7G2t",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", chopped",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "28yNZ8uOJui8HCDbS1elFo",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", chopped",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 cup ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "1iSACx8nnyontA2ZUDusFn",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 tablespoon ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "1c81gG7Cf2Ugy1s7FKPVuC",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 tablespoon ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "3qpW0dpR61UL0Ukb3kkThK",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "79MVyh9o8DHxnNzm7Mreu",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "instructions": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Boil pasta in a pot",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Heat butter in a pan",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Saute the chopped vegetables",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Add White flour and milk",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Stir for consistency",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Add the boiled pasta",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Add Cheese",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Add Chili Flakes, Oregano, and Salt",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Lower the heat, and let it cook for 5 mins.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Sprinkles chili flakes and oregano before serving.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "ordered-list"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "34dZERDAm5GNzMqGvzcA2i"
+              }
+            }
+          ]
+        },
+        "slug": {
+          "en-US": "white-sauce-pasta"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "20AFEJOjaNETfizqaLKzGW",
+        "type": "Entry",
+        "createdAt": "2022-06-27T09:43:48.713Z",
+        "updatedAt": "2022-06-27T09:44:11.825Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-27T09:44:11.825Z",
+        "firstPublishedAt": "2022-06-27T09:44:11.825Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Butter"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "2OUH0f7gvuo7ExZz55iXFk",
+        "type": "Entry",
+        "createdAt": "2022-06-27T09:45:10.026Z",
+        "updatedAt": "2022-06-27T09:45:18.346Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-27T09:45:18.346Z",
+        "firstPublishedAt": "2022-06-27T09:45:18.346Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "White Flour"
+        },
+        "quantityType": {
+          "en-US": "Cup(s)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "317tMunrV4jML5IphBQUTQ",
+        "type": "Entry",
+        "createdAt": "2022-06-27T09:45:39.126Z",
+        "updatedAt": "2022-06-27T09:45:47.614Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-27T09:45:47.614Z",
+        "firstPublishedAt": "2022-06-27T09:45:47.614Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Milk"
+        },
+        "quantityType": {
+          "en-US": "liter(s)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "4iVhmCkzUcfmaR1xdhr0hg",
+        "type": "Entry",
+        "createdAt": "2022-06-27T09:46:04.552Z",
+        "updatedAt": "2022-06-27T09:46:18.631Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-06-27T09:46:18.631Z",
+        "firstPublishedAt": "2022-06-27T09:46:18.631Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Pasta"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "7wJzzI3rZ9nXSIqMzM7G2t",
+        "type": "Entry",
+        "createdAt": "2022-06-27T09:47:01.379Z",
+        "updatedAt": "2022-06-27T09:47:07.843Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-27T09:47:07.843Z",
+        "firstPublishedAt": "2022-06-27T09:47:07.843Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Onion"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "28yNZ8uOJui8HCDbS1elFo",
+        "type": "Entry",
+        "createdAt": "2022-06-27T09:47:41.820Z",
+        "updatedAt": "2022-06-27T09:48:48.966Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2022-06-27T09:48:48.966Z",
+        "firstPublishedAt": "2022-06-27T09:48:48.966Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Bell Pepper"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "1c81gG7Cf2Ugy1s7FKPVuC",
+        "type": "Entry",
+        "createdAt": "2022-06-27T09:52:08.818Z",
+        "updatedAt": "2022-06-27T09:57:14.240Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2022-06-27T09:57:14.240Z",
+        "firstPublishedAt": "2022-06-27T09:52:20.085Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Chili Flakes"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "3qpW0dpR61UL0Ukb3kkThK",
+        "type": "Entry",
+        "createdAt": "2022-06-27T09:52:41.803Z",
+        "updatedAt": "2022-06-27T09:52:52.391Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-27T09:52:52.391Z",
+        "firstPublishedAt": "2022-06-27T09:52:52.391Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Oregano"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "6KLCAU2id96oEuYtIoJWu9",
+        "type": "Entry",
+        "createdAt": "2022-06-27T10:00:10.744Z",
+        "updatedAt": "2022-06-27T10:16:27.171Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 54,
+        "publishedAt": "2022-06-27T10:16:27.171Z",
+        "firstPublishedAt": "2022-06-27T10:16:27.171Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 55,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "recipe"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hakka Noodles"
+        },
+        "description": {
+          "en-US": "Hakka Noodles fused in Indian style"
+        },
+        "ingredients": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Boiled ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "57eNxicvLFOHZMLtNIk9er",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "28yNZ8uOJui8HCDbS1elFo",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", sliced",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "7wJzzI3rZ9nXSIqMzM7G2t",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", sliced",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "3B38WE9VB7MFqXdpRMT2tJ",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", sliced",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "2 tablespoon",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "3BZqTpZPi5cAB2HHdQrUSA",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "3-4",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "306xCEj3xZuAQ0ZUKc6BUP",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "cloves, finely chopped",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "2 ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "OFeTO7LbWltfL7qtuMfoO",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": ", finely chopped",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "1 tablespoon ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "4eQoFduokoBDwKcN0rExPa",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "2 tablespoon ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "15UkP5KPhAI6XEnIYbPEOJ",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "instructions": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "In a pan, heat some olive oil",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "When the oil is hot, add garlic and green chilies and saute them",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Add Onion, Bell Pepper, and Carrots",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Saute the veggies for a few minutes",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Add salt for taste",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Add Red Chili sauce and Soy Sauce",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Stir well and let it cook for a few minutes",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {},
+                    "content": [
+                      {
+                        "data": {},
+                        "content": [
+                          {
+                            "data": {},
+                            "marks": [],
+                            "value": "Add boiled noodles and stir the mixture well",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "ordered-list"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3vsTfOlKTonXK5e7MX83Vy"
+              }
+            }
+          ]
+        },
+        "slug": {
+          "en-US": "hakka-noodles"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "57eNxicvLFOHZMLtNIk9er",
+        "type": "Entry",
+        "createdAt": "2022-06-27T10:03:54.146Z",
+        "updatedAt": "2022-06-27T10:04:03.587Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-06-27T10:04:03.587Z",
+        "firstPublishedAt": "2022-06-27T10:04:03.587Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Noodles"
+        },
+        "quantityType": {
+          "en-US": "grams"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "3B38WE9VB7MFqXdpRMT2tJ",
+        "type": "Entry",
+        "createdAt": "2022-06-27T10:04:34.075Z",
+        "updatedAt": "2022-06-27T10:04:48.516Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-06-27T10:04:48.516Z",
+        "firstPublishedAt": "2022-06-27T10:04:48.516Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Carrot"
+        },
+        "quantityType": {
+          "en-US": "grams"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "306xCEj3xZuAQ0ZUKc6BUP",
+        "type": "Entry",
+        "createdAt": "2022-06-27T10:05:47.125Z",
+        "updatedAt": "2022-06-27T10:05:54.462Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-27T10:05:54.462Z",
+        "firstPublishedAt": "2022-06-27T10:05:54.462Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Garlic"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "OFeTO7LbWltfL7qtuMfoO",
+        "type": "Entry",
+        "createdAt": "2022-06-27T10:06:20.895Z",
+        "updatedAt": "2022-06-27T10:08:31.418Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2022-06-27T10:08:31.418Z",
+        "firstPublishedAt": "2022-06-27T10:06:30.218Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Green Chilies"
+        },
+        "quantityType": {
+          "en-US": "Loose"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "4eQoFduokoBDwKcN0rExPa",
+        "type": "Entry",
+        "createdAt": "2022-06-27T10:12:41.030Z",
+        "updatedAt": "2022-06-27T10:12:51.151Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-06-27T10:12:51.151Z",
+        "firstPublishedAt": "2022-06-27T10:12:51.151Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Red Chili Sauce"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "15UkP5KPhAI6XEnIYbPEOJ",
+        "type": "Entry",
+        "createdAt": "2022-06-27T10:13:04.901Z",
+        "updatedAt": "2022-06-27T10:13:12.766Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-27T10:13:12.766Z",
+        "firstPublishedAt": "2022-06-27T10:13:12.766Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ingredient"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Soy Sauce"
+        },
+        "quantityType": {
+          "en-US": "Table Spoon"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "4oaf0vi232rxojfzHcGrDG",
+        "type": "Asset",
+        "createdAt": "2022-06-22T12:28:16.311Z",
+        "updatedAt": "2022-06-22T12:29:57.637Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2022-06-22T12:29:57.637Z",
+        "firstPublishedAt": "2022-06-22T12:28:48.103Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Black Beans and Veggie Burrito"
+        },
+        "description": {
+          "en-US": "Black Beans and Veggie Burrito image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/rsj8wf5a3fox/4oaf0vi232rxojfzHcGrDG/4fabf817205583cf827fccdc93703ca5/IMG_7911.jpg",
+            "details": {
+              "size": 4386072,
+              "image": {
+                "width": 3024,
+                "height": 4032
+              }
+            },
+            "fileName": "IMG_7911.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "34dZERDAm5GNzMqGvzcA2i",
+        "type": "Asset",
+        "createdAt": "2022-06-27T09:57:21.023Z",
+        "updatedAt": "2022-06-27T09:58:14.863Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2022-06-27T09:58:14.863Z",
+        "firstPublishedAt": "2022-06-27T09:58:14.863Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "White Gravy Pasta"
+        },
+        "description": {
+          "en-US": "White Gravy Pasta image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/rsj8wf5a3fox/34dZERDAm5GNzMqGvzcA2i/2e3cd6544f60be12675af72372565ff6/IMG_1586.jpg",
+            "details": {
+              "size": 3672750,
+              "image": {
+                "width": 3024,
+                "height": 4032
+              }
+            },
+            "fileName": "IMG_1586.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "id": "3vsTfOlKTonXK5e7MX83Vy",
+        "type": "Asset",
+        "createdAt": "2022-06-27T10:15:39.305Z",
+        "updatedAt": "2022-06-27T10:16:07.309Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2022-06-27T10:16:07.309Z",
+        "firstPublishedAt": "2022-06-27T10:16:07.309Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hakka Noodles"
+        },
+        "description": {
+          "en-US": "Hakka Noodles Image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/rsj8wf5a3fox/3vsTfOlKTonXK5e7MX83Vy/7d5671c521f6441c63ecdd3c382c2b17/IMG_2974.jpg",
+            "details": {
+              "size": 3379958,
+              "image": {
+                "width": 3024,
+                "height": 4032
+              }
+            },
+            "fileName": "IMG_2974.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "2zP2dpPatQufsriJGI75rG",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "173ee7f9-79e4-427a-b4b5-9ed80bed171f"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "createdAt": "2022-06-22T12:18:21Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedAt": "2022-06-22T12:18:21Z"
+      }
+    }
+  ],
+  "webhooks": [],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2zSyUbz3QBobKnw3POb7cA",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "createdAt": "2022-06-22T12:18:21Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedAt": "2022-06-22T12:18:21Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2zT8umZO4tMkVVJAwcmudy",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "createdAt": "2022-06-22T12:18:21Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedAt": "2022-06-22T12:18:21Z"
+      }
+    },
+    {
+      "name": "Freelancer",
+      "description": "Allows only editing of content they created themselves",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["delete"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["delete"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2zTH7mT4HSeWNFDQYc21ri",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "createdAt": "2022-06-22T12:18:21Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedAt": "2022-06-22T12:18:21Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2zUhviRlTaGx5ZxD5Xw4c8",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "rsj8wf5a3fox"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "createdAt": "2022-06-22T12:18:21Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "08LcM38OAVfUmJY7a18Nr9"
+          }
+        },
+        "updatedAt": "2022-06-22T12:18:21Z"
+      }
+    }
+  ]
+}

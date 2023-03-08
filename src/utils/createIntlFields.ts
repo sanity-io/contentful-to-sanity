@@ -1,7 +1,5 @@
-import {IntlIdStructure} from '@/constants'
-
 type Options = {
-  idStructure: IntlIdStructure,
+  idStructure: 'subpath' | 'delimiter'
   defaultLocale: string
   supportedLocales: string[]
 }
@@ -19,29 +17,23 @@ type Fields = {
   }
 }
 
-function buildI18nId(forId: string, locale: string, idStructure: IntlIdStructure) {
-  return idStructure === IntlIdStructure.SUBPATH ?
-    `i18n.${forId}.${locale}` :
-    `${forId}__i18n_${locale}`
+function buildI18nId(forId: string, locale: string, idStructure: 'subpath' | 'delimiter') {
+  return idStructure === 'subpath' ? `i18n.${forId}.${locale}` : `${forId}__i18n_${locale}`
 }
 
-export function createIntlFields(
-  forId: string,
-  locale: string,
-  options: Options,
-): Fields {
+export function createIntlFields(forId: string, locale: string, options: Options): Fields {
   const result: Fields = {
     __i18n_lang: locale,
   }
 
   if (locale === options.defaultLocale) {
     result.__i18n_refs = options.supportedLocales
-    .filter(lang => lang !== options.defaultLocale)
-    .map(lang => ({
-      _key: lang,
-      _type: 'reference',
-      _ref: buildI18nId(forId, lang, options.idStructure),
-    }))
+      .filter((lang) => lang !== options.defaultLocale)
+      .map((lang) => ({
+        _key: lang,
+        _type: 'reference',
+        _ref: buildI18nId(forId, lang, options.idStructure),
+      }))
   }
 
   if (locale !== options.defaultLocale) {

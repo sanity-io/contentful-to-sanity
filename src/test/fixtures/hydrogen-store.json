@@ -1,0 +1,1963 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "brand",
+        "type": "ContentType",
+        "createdAt": "2022-06-08T11:46:25.297Z",
+        "updatedAt": "2022-06-08T11:46:25.908Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-08T11:46:25.908Z",
+        "firstPublishedAt": "2022-06-08T11:46:25.908Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "displayField": "companyName",
+      "name": "Brand",
+      "description": null,
+      "fields": [
+        {
+          "id": "companyName",
+          "name": "Company name",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "companyDescription",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "website",
+          "name": "Website",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "twitter",
+          "name": "Twitter",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "email",
+          "name": "Email",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "phone",
+          "name": "Phone #",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": []
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "product",
+        "type": "ContentType",
+        "createdAt": "2022-06-08T11:46:25.357Z",
+        "updatedAt": "2022-06-12T22:56:01.131Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 35,
+        "publishedAt": "2022-06-12T22:56:01.131Z",
+        "firstPublishedAt": "2022-06-08T11:46:25.887Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 18,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "displayField": "productName",
+      "name": "Product",
+      "description": null,
+      "fields": [
+        {
+          "id": "productName",
+          "name": "Product name",
+          "type": "Text",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "handle",
+          "name": "Handle",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "productDescription",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "tags",
+          "name": "Tags",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": []
+          }
+        },
+        {
+          "id": "recommendations",
+          "name": "Recommendations",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["product"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "categories",
+          "name": "Categories",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["category"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "category",
+        "type": "ContentType",
+        "createdAt": "2022-06-08T11:46:25.546Z",
+        "updatedAt": "2022-06-08T11:46:25.812Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-06-08T11:46:25.812Z",
+        "firstPublishedAt": "2022-06-08T11:46:25.812Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Category",
+      "description": null,
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "icon",
+          "name": "Icon",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "categoryDescription",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "jhyp12qew1u7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 1,
+        "createdAt": "2022-06-08T11:46:26.027Z",
+        "createdBy": {
+          "sys": {
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-06-08T11:46:26.027Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "brand",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "companyName"
+        },
+        {
+          "fieldId": "logo"
+        },
+        {
+          "fieldId": "companyDescription"
+        },
+        {
+          "fieldId": "website"
+        },
+        {
+          "fieldId": "twitter"
+        },
+        {
+          "fieldId": "email"
+        },
+        {
+          "fieldId": "phone"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "jhyp12qew1u7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 35,
+        "createdAt": "2022-06-08T11:46:26.029Z",
+        "createdBy": {
+          "sys": {
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-06-12T22:56:01.803Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "product",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "productName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "handle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "productDescription",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "tags",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "recommendations",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "categories",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "jhyp12qew1u7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 1,
+        "createdAt": "2022-06-08T11:46:25.865Z",
+        "createdBy": {
+          "sys": {
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-06-08T11:46:25.865Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "category",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title"
+        },
+        {
+          "fieldId": "icon"
+        },
+        {
+          "fieldId": "categoryDescription"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "6eiN0tXaFLPwwpDRLho2lk",
+        "type": "Entry",
+        "createdAt": "2022-06-12T22:48:44.562Z",
+        "updatedAt": "2022-06-12T22:54:10.777Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2022-06-12T22:54:10.777Z",
+        "firstPublishedAt": "2022-06-12T22:54:10.777Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "category"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Skateboards"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "61IQ4BaanTVTQQo2TXSn5j"
+            }
+          }
+        },
+        "categoryDescription": {
+          "en-US": "A skateboard is a type of sports equipment used for skateboarding. They are usually made of a specially designed 7-8 ply maple plywood deck and polyurethane wheels attached to the underside by a pair of skateboarding trucks."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "6uhLyaVqXsik16zcRUEpM1",
+        "type": "Entry",
+        "createdAt": "2022-06-12T22:56:58.511Z",
+        "updatedAt": "2022-06-12T23:10:41.771Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2022-06-12T23:10:41.771Z",
+        "firstPublishedAt": "2022-06-12T23:05:43.472Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "productName": {
+          "en-US": "The Full Stack Skateboard"
+        },
+        "handle": {
+          "en-US": "the-full-stack"
+        },
+        "productDescription": {
+          "en-US": "## Full Stack Skater\n\nIs someone who works with the Back End — or server side — of the application as well as the Front End, or client side. Full Stack Developers have to have some skills in a wide variety of coding niches, from databases to graphic design and UI/UX management in order to do their job well.\n\n![Full Stack Skater](//images.ctfassets.net/jhyp12qew1u7/10fmD4cHnXvLBDxMzRylIa/0ff03dc2a24b463583dd480314a3d2d5/skate.jpg)"
+        },
+        "tags": {
+          "en-US": ["Skater", "Developer", "Full Stack"]
+        },
+        "categories": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6eiN0tXaFLPwwpDRLho2lk"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "2MryGmnGTAuWBnb9vMkutA",
+        "type": "Entry",
+        "createdAt": "2022-06-12T23:11:59.970Z",
+        "updatedAt": "2022-06-12T23:17:04.120Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2022-06-12T23:17:04.120Z",
+        "firstPublishedAt": "2022-06-12T23:17:04.120Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "product"
+          }
+        }
+      },
+      "fields": {
+        "productName": {
+          "en-US": "The Hydrogen Snowboard"
+        },
+        "handle": {
+          "en-US": "snowboard"
+        },
+        "productDescription": {
+          "en-US": "Hydrogen is the lightest element. At standard conditions hydrogen is a gas of diatomic molecules having the formula H2. It is colorless, odorless, tasteless, non-toxic, and highly combustible. Hydrogen is the most abundant chemical substance in the universe, constituting roughly 75% of all normal matter.\n\n![Hydrogen Space Dust](//images.ctfassets.net/jhyp12qew1u7/12RqEZFMT2iocJ6GGQLHGB/5dee6fff40e433830896cca0553dd717/Nursery_of_New_Stars_-_GPN-2000-000972.jpg)"
+        },
+        "tags": {
+          "en-US": ["Hydrogen", "Contentful", "More", "Data"]
+        },
+        "categories": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6eiN0tXaFLPwwpDRLho2lk"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "Xc0ny7GWsMEMCeASWO2um",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:26.683Z",
+        "updatedAt": "2022-06-08T11:46:33.647Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:33.647Z",
+        "firstPublishedAt": "2022-06-08T11:46:33.647Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hudson Wall Cup "
+        },
+        "description": {
+          "en-US": "Merchandise image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/Xc0ny7GWsMEMCeASWO2um/3e920e8668f5dfe74db1b2b73b39b0c5/jqvtazcyfwseah9fmysz.jpg",
+            "details": {
+              "size": 48751,
+              "image": {
+                "width": 600,
+                "height": 600
+              }
+            },
+            "fileName": "jqvtazcyfwseah9fmysz.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "6m5AJ9vMPKc8OUoQeoCS4o",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:26.716Z",
+        "updatedAt": "2022-06-08T11:46:33.641Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:33.641Z",
+        "firstPublishedAt": "2022-06-08T11:46:33.641Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home and Kitchen"
+        },
+        "description": {
+          "en-US": "category icon"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/6m5AJ9vMPKc8OUoQeoCS4o/835578fe2521c8c00011bcc13e9b197c/1418244847_Streamline-18-256.png",
+            "details": {
+              "size": 2977,
+              "image": {
+                "width": 256,
+                "height": 256
+              }
+            },
+            "fileName": "1418244847_Streamline-18-256.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "10TkaLheGeQG6qQGqWYqUI",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:26.719Z",
+        "updatedAt": "2022-06-08T11:46:34.696Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:34.696Z",
+        "firstPublishedAt": "2022-06-08T11:46:34.696Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Whisk beaters"
+        },
+        "description": {
+          "en-US": "Merchandise photo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/10TkaLheGeQG6qQGqWYqUI/2ddfcbfbaaef2d4dfca841c8da1d37c8/ryugj83mqwa1asojwtwb.jpg",
+            "details": {
+              "size": 28435,
+              "image": {
+                "width": 450,
+                "height": 600
+              }
+            },
+            "fileName": "ryugj83mqwa1asojwtwb.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "1MgbdJNTsMWKI0W68oYqkU",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:26.773Z",
+        "updatedAt": "2022-06-08T11:46:34.690Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:34.690Z",
+        "firstPublishedAt": "2022-06-08T11:46:34.690Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Chive logo"
+        },
+        "description": {
+          "en-US": "Brand logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/1MgbdJNTsMWKI0W68oYqkU/3e72ede3351122825d14157ef4db2b75/9ef190c59f0d375c0dea58b58a4bc1f0.jpeg",
+            "details": {
+              "size": 44089,
+              "image": {
+                "width": 500,
+                "height": 500
+              }
+            },
+            "fileName": "9ef190c59f0d375c0dea58b58a4bc1f0.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "2Y8LhXLnYAYqKCGEWG4EKI",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:26.777Z",
+        "updatedAt": "2022-06-08T11:46:33.647Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:33.647Z",
+        "firstPublishedAt": "2022-06-08T11:46:33.647Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lemnos"
+        },
+        "description": {
+          "en-US": "company logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/2Y8LhXLnYAYqKCGEWG4EKI/5610325032523ea72380b028f0d8177f/lemnos-logo.jpg",
+            "details": {
+              "size": 7149,
+              "image": {
+                "width": 175,
+                "height": 32
+              }
+            },
+            "fileName": "lemnos-logo.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "6s3iG2OVmoUcosmA8ocqsG",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:26.778Z",
+        "updatedAt": "2022-06-08T11:46:33.656Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:33.656Z",
+        "firstPublishedAt": "2022-06-08T11:46:33.656Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "House icon"
+        },
+        "description": {
+          "en-US": "Category icon set"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/6s3iG2OVmoUcosmA8ocqsG/14c1210b2b6bead811763453359b271e/1418244847_Streamline-18-256__1_.png",
+            "details": {
+              "size": 4244,
+              "image": {
+                "width": 250,
+                "height": 250
+              }
+            },
+            "fileName": "1418244847_Streamline-18-256 (1).png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "4zj1ZOfHgQ8oqgaSKm4Qo2",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:27.586Z",
+        "updatedAt": "2022-06-08T11:46:34.668Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:34.668Z",
+        "firstPublishedAt": "2022-06-08T11:46:34.668Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Playsam"
+        },
+        "description": {
+          "en-US": "Brand logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/4zj1ZOfHgQ8oqgaSKm4Qo2/11819b34153c74b70116c216880fc261/playsam.jpg",
+            "details": {
+              "size": 7003,
+              "image": {
+                "width": 100,
+                "height": 100
+              }
+            },
+            "fileName": "playsam.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "KTRF62Q4gg60q6WCsWKw8",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:27.590Z",
+        "updatedAt": "2022-06-08T11:46:35.664Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:35.664Z",
+        "firstPublishedAt": "2022-06-08T11:46:35.664Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "SoSo Wall Clock"
+        },
+        "description": {
+          "en-US": "by Lemnos"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/KTRF62Q4gg60q6WCsWKw8/9e15a4944e17ba8b0e6cef94bf239fc3/soso.clock.jpg",
+            "details": {
+              "size": 66927,
+              "image": {
+                "width": 1000,
+                "height": 1000
+              }
+            },
+            "fileName": "soso.clock.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "6t4HKjytPi0mYgs240wkG",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:27.602Z",
+        "updatedAt": "2022-06-08T11:46:34.674Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:34.674Z",
+        "firstPublishedAt": "2022-06-08T11:46:34.674Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Toys"
+        },
+        "description": {
+          "en-US": "Category icon set"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/6t4HKjytPi0mYgs240wkG/78c22dfa1787ed287519630ae150e711/toys_512pxGREY.png",
+            "details": {
+              "size": 6744,
+              "image": {
+                "width": 128,
+                "height": 128
+              }
+            },
+            "fileName": "toys_512pxGREY.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "3wtvPBbBjiMKqKKga8I2Cu",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:27.611Z",
+        "updatedAt": "2022-06-08T11:46:34.702Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:34.702Z",
+        "firstPublishedAt": "2022-06-08T11:46:34.702Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Normann Copenhagen"
+        },
+        "description": {
+          "en-US": "Brand logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/3wtvPBbBjiMKqKKga8I2Cu/c7f159313a3d921a0853199aba337b0b/zJYzDlGk.jpeg",
+            "details": {
+              "size": 12302,
+              "image": {
+                "width": 353,
+                "height": 353
+              }
+            },
+            "fileName": "zJYzDlGk.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "wtrHxeu3zEoEce2MokCSi",
+        "type": "Asset",
+        "createdAt": "2022-06-08T11:46:27.684Z",
+        "updatedAt": "2022-06-08T11:46:34.659Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-06-08T11:46:34.659Z",
+        "firstPublishedAt": "2022-06-08T11:46:34.659Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Playsam Streamliner"
+        },
+        "description": {
+          "en-US": "Merchandise photo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/wtrHxeu3zEoEce2MokCSi/934a8cd34ab2f50ffaedd6065f325d0d/quwowooybuqbl6ntboz3.jpg",
+            "details": {
+              "size": 27187,
+              "image": {
+                "width": 600,
+                "height": 446
+              }
+            },
+            "fileName": "quwowooybuqbl6ntboz3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "61IQ4BaanTVTQQo2TXSn5j",
+        "type": "Asset",
+        "createdAt": "2022-06-12T22:49:00.343Z",
+        "updatedAt": "2022-06-12T22:52:26.354Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2022-06-12T22:52:26.354Z",
+        "firstPublishedAt": "2022-06-12T22:51:10.105Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Skateboard"
+        },
+        "description": {
+          "en-US": "Man shadow jumping while doing a skateboard trick in sun light"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/61IQ4BaanTVTQQo2TXSn5j/e051b7a3c91ac8ab10c44176e059498e/Skateboard.jpg",
+            "details": {
+              "size": 65369,
+              "image": {
+                "width": 524,
+                "height": 640
+              }
+            },
+            "fileName": "Skateboard",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "10fmD4cHnXvLBDxMzRylIa",
+        "type": "Asset",
+        "createdAt": "2022-06-12T23:00:47.883Z",
+        "updatedAt": "2022-06-12T23:05:23.114Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2022-06-12T23:05:23.114Z",
+        "firstPublishedAt": "2022-06-12T23:05:23.114Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Full Stack Skater"
+        },
+        "description": {
+          "en-US": "A person doing a skateboard trick at the park in a sunny day"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/10fmD4cHnXvLBDxMzRylIa/0ff03dc2a24b463583dd480314a3d2d5/skate.jpg",
+            "details": {
+              "size": 88869,
+              "image": {
+                "width": 640,
+                "height": 427
+              }
+            },
+            "fileName": "Skate",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "id": "12RqEZFMT2iocJ6GGQLHGB",
+        "type": "Asset",
+        "createdAt": "2022-06-12T23:12:51.049Z",
+        "updatedAt": "2022-06-12T23:16:06.231Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2022-06-12T23:16:06.231Z",
+        "firstPublishedAt": "2022-06-12T23:16:06.231Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hydrogen Space Dust"
+        },
+        "description": {
+          "en-US": "Hydrogen is the lightest element"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/jhyp12qew1u7/12RqEZFMT2iocJ6GGQLHGB/5dee6fff40e433830896cca0553dd717/Nursery_of_New_Stars_-_GPN-2000-000972.jpg",
+            "details": {
+              "size": 2538777,
+              "image": {
+                "width": 1127,
+                "height": 1201
+              }
+            },
+            "fileName": "Nursery_of_New_Stars_-_GPN-2000-000972.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "4c09SldktGXnm0BmQTGnDT",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "8f99b5bd-c87a-4dc5-b5e7-42be88519741"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "createdAt": "2022-06-08T11:46:20Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedAt": "2022-06-08T11:46:20Z"
+      }
+    }
+  ],
+  "webhooks": [],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4c4Ii02E1vMlJ9VQMUsuBn",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "jhyp12qew1u7"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "createdAt": "2022-06-08T11:46:20Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7LUXRXFv6ot4WNP5tdCVwZ"
+          }
+        },
+        "updatedAt": "2022-06-08T11:46:20Z"
+      }
+    }
+  ]
+}

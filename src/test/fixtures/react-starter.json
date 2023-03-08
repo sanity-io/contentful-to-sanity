@@ -1,0 +1,2204 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "id": "heroImage",
+        "type": "ContentType",
+        "createdAt": "2019-03-19T21:05:56.358Z",
+        "updatedAt": "2019-03-19T21:05:58.561Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2019-03-19T21:05:58.561Z",
+        "firstPublishedAt": "2019-03-19T21:05:58.561Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Hero Image",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": ["image"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "id": "seoMetadata",
+        "type": "ContentType",
+        "createdAt": "2019-03-19T21:05:56.555Z",
+        "updatedAt": "2019-03-19T21:05:58.901Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2019-03-19T21:05:58.901Z",
+        "firstPublishedAt": "2019-03-19T21:05:58.901Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "SEO Metadata",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "keywords",
+          "name": "Keywords",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": []
+          }
+        },
+        {
+          "id": "author",
+          "name": "Author",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "id": "specialOfferLandingPage",
+        "type": "ContentType",
+        "createdAt": "2019-04-24T18:56:33.451Z",
+        "updatedAt": "2019-06-17T10:20:23.341Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 45,
+        "publishedAt": "2019-06-17T10:20:23.341Z",
+        "firstPublishedAt": "2019-04-24T18:56:34.339Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "publishedCounter": 23,
+        "version": 46,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Special Offer Landing Page",
+      "description": "A landing page with promotional items needing legal approval",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "seoMetadata",
+          "name": "SEO Metadata",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": ["seoMetadata"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "hero",
+          "name": "Hero",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": ["heroImage"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "spoffer",
+          "name": "Offer",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": ["specialOffer"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "reviewState",
+          "name": "Review State",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": ["Needs review", "Needs changes", "Needs Legal Review", "Ready to publish"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "legalApproval",
+          "name": "Legal Approval",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": ["Yes"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "id": "specialOffer",
+        "type": "ContentType",
+        "createdAt": "2019-04-25T21:09:11.982Z",
+        "updatedAt": "2019-04-25T21:36:08.786Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2019-04-25T21:36:08.786Z",
+        "firstPublishedAt": "2019-04-25T21:09:12.263Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Special Offer",
+      "description": "The body of text used in special offers",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "headline",
+          "name": "Headline",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "offerBody",
+          "name": "Offer Body",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "nodes": {}
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "d560sv2otlha",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2019-03-19T21:05:58.680Z",
+        "createdBy": {
+          "sys": {
+            "id": "45VX0tlnhX9oU1TT1LUzFY",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-03-19T21:06:08.120Z",
+        "updatedBy": {
+          "sys": {
+            "id": "45VX0tlnhX9oU1TT1LUzFY",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "heroImage",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "d560sv2otlha",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2019-03-19T21:05:59.018Z",
+        "createdBy": {
+          "sys": {
+            "id": "45VX0tlnhX9oU1TT1LUzFY",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-03-19T21:06:08.196Z",
+        "updatedBy": {
+          "sys": {
+            "id": "45VX0tlnhX9oU1TT1LUzFY",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "seoMetadata",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "keywords",
+          "widgetId": "tagEditor"
+        },
+        {
+          "fieldId": "author",
+          "widgetId": "singleLine"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "d560sv2otlha",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 46,
+        "createdAt": "2019-04-24T18:56:34.460Z",
+        "createdBy": {
+          "sys": {
+            "id": "45VX0tlnhX9oU1TT1LUzFY",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-06-17T10:20:23.927Z",
+        "updatedBy": {
+          "sys": {
+            "id": "45VX0tlnhX9oU1TT1LUzFY",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "specialOfferLandingPage",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "seoMetadata",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hero",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "spoffer",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "reviewState",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "legalApproval",
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "d560sv2otlha",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2019-04-25T21:09:12.414Z",
+        "createdBy": {
+          "sys": {
+            "id": "45VX0tlnhX9oU1TT1LUzFY",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2019-04-25T21:36:09.336Z",
+        "updatedBy": {
+          "sys": {
+            "id": "45VX0tlnhX9oU1TT1LUzFY",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "specialOffer",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "headline",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "offerBody",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "id": "2IOql3FHSGN8QTsXrrnV8C",
+        "type": "Entry",
+        "createdAt": "2019-04-25T21:12:25.777Z",
+        "updatedAt": "2020-09-11T23:05:58.319Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2020-09-11T23:05:58.319Z",
+        "firstPublishedAt": "2019-04-25T21:14:37.065Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "heroImage"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Free Roku"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2ygGBRdo6aryOqrD4duLz2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "id": "6vNDsXMExcHcj1iI3WGPPB",
+        "type": "Entry",
+        "createdAt": "2019-04-25T21:37:38.830Z",
+        "updatedAt": "2020-09-11T23:05:58.275Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 85,
+        "publishedAt": "2020-09-11T23:05:58.275Z",
+        "firstPublishedAt": "2019-04-25T21:40:30.773Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 86,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "seoMetadata"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Free Roku Offer"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2ygGBRdo6aryOqrD4duLz2"
+            }
+          }
+        },
+        "description": {
+          "en-US": "Get a free Roku when you purchase a subscription to Altamont Studios TV."
+        },
+        "keywords": {
+          "en-US": ["Streaming", "Roku", "TV"]
+        },
+        "author": {
+          "en-US": "Jim Ambras"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "id": "6kcvpiqOYHzKZA9Vgd1eEP",
+        "type": "Entry",
+        "createdAt": "2019-05-06T23:32:00.034Z",
+        "updatedAt": "2020-09-29T23:00:59.118Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 39,
+        "publishedAt": "2020-09-29T23:00:59.118Z",
+        "firstPublishedAt": "2019-05-07T15:59:37.810Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6HCFE83XMx8z8RGDjP45c6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 40,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "specialOffer"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Get a Free Roku Ultra!!"
+        },
+        "headline": {
+          "en-US": "Get a free Roku Ultra!"
+        },
+        "offerBody": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "For a limited-time, you’ll get a FREE Roku® Ultra ($129.99 value) when you subscribe and prepay for 2 months of Altamont Studios TV!",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-6",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Device Offer",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "One per customer and cannot be combined. Must provide email address and credit card. Must pre-pay for two month(s) of service. New customers only. Limit one device per Altamont Studios account. Not available with free trial. Not available in Puerto Rico.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-6",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Billing",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "After two month(s), your credit card will be charged monthly for applicable subscription until you cancel your service.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "heading-6",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Cancellation",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              },
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Cancel on altamontstudios.com or visit help.altamontstudios.com to contact us. Programming fees are charged monthly in advance and no credits or refunds will be issued for partial or prepaid months after cancellation.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "id": "4xX8vGLSfUBuXOsNmtBMGB",
+        "type": "Entry",
+        "createdAt": "2020-09-11T23:04:13.073Z",
+        "updatedAt": "2020-09-11T23:05:58.366Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-09-11T23:05:58.366Z",
+        "firstPublishedAt": "2020-09-11T23:05:58.366Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "specialOffer"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Get a Free Roku Stick!"
+        },
+        "headline": {
+          "en-US": "Get a free Roku!"
+        },
+        "offerBody": {
+          "en-US": {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "For a limited-time, you’ll get a FREE Roku® Express ($29.99 value) when you subscribe and prepay for 2 months of Altamont Studios TV!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Device Offer",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-6"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "One per customer and cannot be combined. Must provide email address and credit card. Must pre-pay for two month(s) of service. New customers only. Limit one device per Altamont Studios account. Not available with free trial. Not available in Puerto Rico.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Billing",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-6"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "After two month(s), your credit card will be charged monthly for applicable subscription until you cancel your service.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Cancellation",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-6"
+              },
+              {
+                "data": {},
+                "content": [
+                  {
+                    "data": {},
+                    "marks": [],
+                    "value": "Cancel on altamontstudios.com or visit help.altamontstudios.com to contact us. Programming fees are charged monthly in advance and no credits or refunds will be issued for partial or prepaid months after cancellation.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "id": "6OPCKxJllXi8MFqXlZuLv",
+        "type": "Entry",
+        "createdAt": "2020-09-25T22:07:02.276Z",
+        "updatedAt": "2020-09-29T22:53:56.150Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-09-29T22:53:56.150Z",
+        "firstPublishedAt": "2020-09-29T22:53:56.150Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4iufmVF5bHuGQXajcDPjtx"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "specialOfferLandingPage"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Free Roku Ultra!"
+        },
+        "seoMetadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6vNDsXMExcHcj1iI3WGPPB"
+            }
+          }
+        },
+        "hero": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2IOql3FHSGN8QTsXrrnV8C"
+            }
+          }
+        },
+        "spoffer": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6kcvpiqOYHzKZA9Vgd1eEP"
+            }
+          }
+        },
+        "reviewState": {
+          "en-US": "Ready to publish"
+        },
+        "legalApproval": {
+          "en-US": "Yes"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "id": "2ygGBRdo6aryOqrD4duLz2",
+        "type": "Asset",
+        "createdAt": "2019-04-25T21:12:29.998Z",
+        "updatedAt": "2020-09-11T23:05:58.204Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 29,
+        "publishedAt": "2020-09-11T23:05:58.204Z",
+        "firstPublishedAt": "2019-04-25T21:14:05.570Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 30,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Free Roku"
+        },
+        "description": {
+          "en-US": "Hero for free Roku"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/d560sv2otlha/2ygGBRdo6aryOqrD4duLz2/4975bbf19c66ae83f52cb4f93aa6ea53/streaming-stick-and-remote.png",
+            "details": {
+              "size": 50941,
+              "image": {
+                "width": 690,
+                "height": 430
+              }
+            },
+            "fileName": "streaming-stick-and-remote.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "0DPwPgQZFvl0EOLBFYdqQi",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdAt": "2019-10-04T19:43:29Z",
+        "updatedAt": "2019-10-04T19:43:29Z"
+      }
+    },
+    {
+      "name": "German (Germany)",
+      "code": "de-DE",
+      "fallbackCode": "en-US",
+      "default": false,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "1lH57u25YKcAfXdtsNRkOD",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdAt": "2019-10-04T19:43:29Z",
+        "updatedAt": "2019-10-04T19:43:29Z"
+      }
+    }
+  ],
+  "webhooks": [],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          },
+          "actions": ["create"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          },
+          "actions": ["read"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          },
+          "actions": ["update"]
+        },
+        {
+          "effect": "deny",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.contentType.sys.id"
+                  },
+                  "specialOfferLandingPage"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.legalApproval.%"
+                  }
+                ]
+              }
+            ]
+          },
+          "actions": ["update"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          },
+          "actions": ["create"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          },
+          "actions": ["read"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          },
+          "actions": ["update"]
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "3CSLJVLEFM8gJ2YcPZITJS",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "createdAt": "2019-02-27T14:39:52Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedAt": "2019-05-06T19:07:30Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          },
+          "actions": "all"
+        },
+        {
+          "effect": "deny",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.contentType.sys.id"
+                  },
+                  "specialOfferLandingPage"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.legalApproval.%"
+                  }
+                ]
+              }
+            ]
+          },
+          "actions": ["update"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          },
+          "actions": "all"
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "3CXVCRkLInQZTAS9b35Cze",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "createdAt": "2019-02-27T14:39:52Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedAt": "2019-05-06T19:06:40Z"
+      }
+    },
+    {
+      "name": "Freelancer",
+      "description": "Allows only editing of content they created themselves",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["create"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["delete"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["delete"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "3D17nP6v9mPlfBOm1UAHYk",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "createdAt": "2019-02-27T14:39:52Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedAt": "2019-02-27T14:39:52Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["read"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": ["update"],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "3D5A04MC9rARBXICL5yn3i",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "createdAt": "2019-02-27T14:39:52Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedAt": "2019-02-27T14:39:52Z"
+      }
+    },
+    {
+      "name": "Legal Approver",
+      "description": "Used to give legal approval to some content types before publishing",
+      "policies": [
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.contentType.sys.id"
+                  },
+                  "specialOfferLandingPage"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.legalApproval.%"
+                  }
+                ]
+              }
+            ]
+          },
+          "actions": ["update"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.contentType.sys.id"
+                  },
+                  "specialOfferLandingPage"
+                ]
+              }
+            ]
+          },
+          "actions": ["read"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.contentType.sys.id"
+                  },
+                  "seoMetadata"
+                ]
+              }
+            ]
+          },
+          "actions": ["read"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.contentType.sys.id"
+                  },
+                  "heroImage"
+                ]
+              }
+            ]
+          },
+          "actions": ["read"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.contentType.sys.id"
+                  },
+                  "specialOffer"
+                ]
+              }
+            ]
+          },
+          "actions": ["read"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.contentType.sys.id"
+                  },
+                  "specialOfferLandingPage"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.reviewState.%"
+                  }
+                ]
+              }
+            ]
+          },
+          "actions": ["update"]
+        },
+        {
+          "effect": "allow",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          },
+          "actions": ["read"]
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5OkFDVumEXLQSzvdv0pNi8",
+        "version": 5,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "d560sv2otlha"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "createdAt": "2019-04-24T19:47:41Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "45VX0tlnhX9oU1TT1LUzFY"
+          }
+        },
+        "updatedAt": "2019-05-07T20:00:21Z"
+      }
+    }
+  ]
+}
