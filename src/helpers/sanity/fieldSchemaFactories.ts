@@ -18,7 +18,7 @@ import {
   StringSanityFieldSchema,
   TextSanityFieldSchema,
   UrlSanityFieldSchema,
-} from '@/types'
+} from '../../types'
 
 type FactoryObject<Schema extends AnySanityFieldSchema> = Required<{
   [K in keyof Schema]: (value: Schema[K]) => FactoryObject<Schema>

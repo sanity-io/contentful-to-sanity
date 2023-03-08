@@ -2,11 +2,11 @@ import {
   contentfulContentTypeFactory,
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
-} from 'test/helpers'
-import type {ContentfulExport} from 'types'
+} from '../helpers'
+import type {ContentfulExport} from '../../types'
 import {describe, expect, test} from 'vitest'
 
-import {contentfulTypeToSanitySchema} from '@/utils'
+import {contentfulTypeToSanitySchema} from '../../utils'
 
 describe('create schema for Location type', () => {
   const contentType = contentfulContentTypeFactory(

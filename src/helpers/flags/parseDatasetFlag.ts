@@ -4,7 +4,7 @@ import {CliUx} from '@oclif/core'
 import type {SanityClient} from '@sanity/client'
 import inquirer from 'inquirer'
 
-import {promptSingleInput} from '@/utils'
+import {promptSingleInput} from 'utils'
 
 import {SanityApiError, SanityDatasetNotFoundError} from '../errors'
 import {defaultSanityClient} from '../sanity'

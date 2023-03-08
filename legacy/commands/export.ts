@@ -6,16 +6,16 @@ import fs from 'fs-extra'
 import compact from 'just-compact'
 import path from 'path'
 
-import {IntlIdStructure, IntlMode} from '@/constants'
+import {IntlIdStructure, IntlMode} from 'constants'
 import {
   ContentfulNoDefaultLocaleError,
   ContentfulNoLocalesError,
   ContentfulParamsMissingError,
-} from '@/helpers/errors'
-import {parseManagementTokenFlag} from '@/helpers/flags/parseManagementTokenFlag'
-import {parseOutputFlag} from '@/helpers/flags/parseOutputFlag'
-import {parseSpaceFlag} from '@/helpers/flags/parseSpaceFlag'
-import {absolutify, contentfulEntryToSanityObject} from '@/utils'
+} from 'helpers/errors'
+import {parseManagementTokenFlag} from 'helpers/flags/parseManagementTokenFlag'
+import {parseOutputFlag} from 'helpers/flags/parseOutputFlag'
+import {parseSpaceFlag} from 'helpers/flags/parseSpaceFlag'
+import {absolutify, contentfulEntryToSanityObject} from 'utils'
 
 const steps = {
   exporting: 'Exporting from contentful',

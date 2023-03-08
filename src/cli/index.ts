@@ -1,1 +1,5 @@
-export default () => console.log('Soly?')
+import {hello} from '../hello'
+
+console.log('Soly?')
+
+hello()

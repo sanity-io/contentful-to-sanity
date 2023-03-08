@@ -60,6 +60,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublishOnly": "rm -rf dist && pkg build --strict",
     "test": "vitest",
+    "run": "contentful-to-sanity arg1",
     "typecheck": "tsc --noEmit"
   },
   "browserslist": [

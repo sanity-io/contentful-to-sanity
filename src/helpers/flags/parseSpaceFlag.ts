@@ -1,4 +1,4 @@
-import {promptSingleInput} from '@/utils'
+import {promptSingleInput} from 'utils'
 
 type FlagOptions = {
   required?: boolean

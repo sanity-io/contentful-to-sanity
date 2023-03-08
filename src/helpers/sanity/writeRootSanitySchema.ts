@@ -2,7 +2,7 @@ import Case from 'case'
 import fs from 'fs-extra'
 import path from 'path'
 
-import {SanityDocumentSchema, SanityObjectSchema} from '@/types'
+import {SanityDocumentSchema, SanityObjectSchema} from '../../types'
 
 export async function writeRootSanitySchema(
   schemas: (SanityDocumentSchema | SanityObjectSchema)[],

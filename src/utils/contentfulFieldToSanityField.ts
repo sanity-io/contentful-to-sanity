@@ -1,8 +1,8 @@
 import {ContentFields, ContentTypeProps} from 'contentful-management'
 import get from 'just-safe-get'
-import type {ContentfulExport} from 'types'
+import type {ContentfulExport} from '../types'
 
-import {BuiltInContentfulEditors, IntlMode} from '@/constants'
+import {BuiltInContentfulEditors, IntlMode} from 'constants'
 import {
   arrayFieldSchemaFactory,
   blockFieldSchemaFactory,
@@ -18,8 +18,8 @@ import {
   stringFieldSchemaFactory,
   textFieldSchemaFactory,
   urlFieldSchemaFactory,
-} from '@/helpers/sanity/fieldSchemaFactories'
-import {AnySanityFieldSchema, StringSanityFieldSchema} from '@/types'
+} from '../helpers/sanity/fieldSchemaFactories'
+import {AnySanityFieldSchema, StringSanityFieldSchema} from '../types'
 
 import {contentfulFieldItemToSanityOfType} from './contentfulFieldItemToSanityOfType'
 import {extractContentfulRichTextFieldParameters} from './extractContentfulRichTextFieldParameters'

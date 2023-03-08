@@ -10,7 +10,7 @@ import {
   arrayFieldSchemaFactory,
   blockFieldSchemaFactory,
   imageFieldSchemaFactory,
-} from '@/helpers/sanity/fieldSchemaFactories'
+} from 'helpers/sanity/fieldSchemaFactories'
 
 const mockSchema = Schema.compile({
   name: 'default',

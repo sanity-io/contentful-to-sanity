@@ -2,9 +2,9 @@ import {toPortableText} from '@portabletext/contentful-rich-text-to-portable-tex
 import type {SanityDocument} from '@sanity/client'
 import type {EntryProps} from 'contentful-management'
 import compact from 'just-compact'
-import type {ContentfulExport} from 'types'
+import type {ContentfulExport} from '../types'
 
-import {IntlIdStructure} from '@/constants'
+import {IntlIdStructure} from 'constants'
 
 import {contentfulLinkToSanityReference} from './contentfulLinkToSanityReference'
 import {createIntlFields} from './createIntlFields'

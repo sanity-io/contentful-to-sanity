@@ -1,7 +1,7 @@
 import type {CustomValidator} from '@sanity/types'
 import {describe, expect, test} from 'vitest'
 
-import {serializeRuleSpecToCode} from '@/helpers/sanity'
+import {serializeRuleSpecToCode} from 'helpers/sanity'
 
 describe('Validations', () => {
   test('transforms RuleSpec to javascript according to Sanity Studio validations API', () => {

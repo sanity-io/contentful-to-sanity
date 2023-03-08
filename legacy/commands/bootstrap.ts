@@ -6,23 +6,20 @@ import contentfulExport, {ContentfulExport} from 'contentful-export'
 import fs from 'fs-extra'
 import compact from 'just-compact'
 
-import {IntlMode} from '@/constants'
-import {ContentfulParamsMissingError} from '@/helpers/errors'
-import {parseManagementTokenFlag} from '@/helpers/flags/parseManagementTokenFlag'
-import {parseOutputFlag} from '@/helpers/flags/parseOutputFlag'
+import {IntlMode} from 'constants'
+import {ContentfulParamsMissingError} from 'helpers/errors'
+import {parseManagementTokenFlag} from 'helpers/flags/parseManagementTokenFlag'
+import {parseOutputFlag} from 'helpers/flags/parseOutputFlag'
 /*
-import {parseProjectFlag} from '@/helpers/flags/parseProjectFlag'
-import {parseSanityTokenFlag} from '@/helpers/flags/parseSanityTokenFlag'
-import {parseDatasetFlag} from '@/helpers/flags/parseDatasetFlag'
+import {parseProjectFlag} from 'helpers/flags/parseProjectFlag'
+import {parseSanityTokenFlag} from 'helpers/flags/parseSanityTokenFlag'
+import {parseDatasetFlag} from 'helpers/flags/parseDatasetFlag'
 */
-import {parseSpaceFlag} from '@/helpers/flags/parseSpaceFlag'
-import {
-  /* bootstrapStudio, */ writeRootSanitySchema,
-  writeSingleSanitySchema,
-} from '@/helpers/sanity'
-import {stringFieldSchemaFactory} from '@/helpers/sanity/fieldSchemaFactories'
-import type {SanityDocumentSchema, SanityObjectSchema} from '@/types'
-import {absolutify, contentfulTypeToSanitySchema} from '@/utils'
+import {parseSpaceFlag} from 'helpers/flags/parseSpaceFlag'
+import {/* bootstrapStudio, */ writeRootSanitySchema, writeSingleSanitySchema} from 'helpers/sanity'
+import {stringFieldSchemaFactory} from 'helpers/sanity/fieldSchemaFactories'
+import type {SanityDocumentSchema, SanityObjectSchema} from '../../types'
+import {absolutify, contentfulTypeToSanitySchema} from '../../utils'
 
 const steps = {
   exporting: 'Exporting from contentful',

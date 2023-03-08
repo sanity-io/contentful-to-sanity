@@ -1,7 +1,7 @@
 import path from 'path'
 
-import {OutputDirectoryNotEmptyError} from '@/helpers/errors'
-import {absolutify, isDirEmpty, promptSingleInput} from '@/utils'
+import {OutputDirectoryNotEmptyError} from 'helpers/errors'
+import {absolutify, isDirEmpty, promptSingleInput} from 'utils'
 
 import {pathIsEmpty, requiredString} from '../validators'
 

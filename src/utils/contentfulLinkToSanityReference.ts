@@ -1,5 +1,5 @@
 import {Reference} from '@sanity/types'
-import type {ContentfulExport} from 'types'
+import type {ContentfulExport} from '../types'
 
 import type {SysLink} from './objectIsContentfulLink'
 

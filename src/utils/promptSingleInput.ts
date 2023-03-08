@@ -1,6 +1,6 @@
 import inquirer, {InputQuestion} from 'inquirer'
 
-import {requiredString} from '@/helpers/validators'
+import {requiredString} from 'helpers/validators'
 
 type Answers = {
   value: string
