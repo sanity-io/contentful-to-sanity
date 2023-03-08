@@ -1,15 +1,58 @@
 {
-  "ignorePatterns": ["bin/*"],
+  "root": true,
   "extends": [
-    "oclif",
-    "oclif-typescript"
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "simple-import-sort",
+    "prettier"
   ],
   "rules": {
-    "complexity": "off",
-    "max-depth": "off",
-    "camelcase": ["error", {
-      "allow": ["__i18n_lang", "__i18n_refs", "__i18n_base"]
-    }],
-    "node/no-missing-import": "off"
-  }
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "no-console": "error",
+    "no-shadow": "error",
+    "no-warning-comments": [
+      "warn",
+      {
+        "location": "start",
+        "terms": [
+          "todo",
+          "@todo",
+          "fixme"
+        ]
+      }
+    ],
+    "prettier/prettier": "warn"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.js"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+      }
+    },
+    {
+      "files": [
+        "test/**/*.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ]
 }
