@@ -1,6 +1,6 @@
-import moment from 'moment'
-import {ContentFields} from 'contentful-management'
 import type {RuleSpec} from '@sanity/types'
+import {ContentFields} from 'contentful-management'
+import moment from 'moment'
 
 export function extractValidationRulesFromContentfulField(
   field: ContentFields | Exclude<ContentFields['items'], undefined>,

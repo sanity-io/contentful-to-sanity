@@ -1,6 +1,7 @@
+import type {ContentFields, ContentTypeProps} from 'contentful-management'
+
 import {contentfulEnvironmentLinkFactory} from './contentfulEnvironmentLinkFactory'
 import {contentfulSpaceLinkFactory} from './contentfulSpaceLinkFactory'
-import type {ContentTypeProps, ContentFields} from 'contentful-management'
 
 export function contentfulContentTypeFactory(
   contentType: string,

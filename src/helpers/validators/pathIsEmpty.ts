@@ -1,4 +1,5 @@
 import {z} from 'zod'
+
 import {isPathEmpty} from '../refinements'
 
 export async function pathIsEmpty(value: any): Promise<string | boolean> {

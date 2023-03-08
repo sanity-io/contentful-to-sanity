@@ -1,11 +1,12 @@
-import {contentfulTypeToSanitySchema} from '@/utils'
-import {expect, test} from '@oclif/test'
 import type {ContentfulExport} from 'contentful-export'
 import {
   contentfulContentTypeFactory,
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from 'test/helpers'
+import {describe, expect, test} from 'vitest'
+
+import {contentfulTypeToSanitySchema} from '@/utils'
 
 describe('create schema for Symbol type', () => {
   const contentType = contentfulContentTypeFactory(
@@ -22,7 +23,7 @@ describe('create schema for Symbol type', () => {
     'field',
   )
 
-  test.it('should create a Sanity schema for urlEditor', () => {
+  test('should create a Sanity schema for urlEditor', () => {
     const data: ContentfulExport = {
       editorInterfaces: [
         contentfulEditorInterfaceFactory('contentType', [
@@ -52,7 +53,7 @@ describe('create schema for Symbol type', () => {
     })
   })
 
-  test.it('should create a Sanity schema for slugEditor', () => {
+  test('should create a Sanity schema for slugEditor', () => {
     const data: ContentfulExport = {
       editorInterfaces: [
         contentfulEditorInterfaceFactory('contentType', [
@@ -78,7 +79,7 @@ describe('create schema for Symbol type', () => {
     })
   })
 
-  test.it('should create a Sanity schema for a dropdown', () => {
+  test('should create a Sanity schema for a dropdown', () => {
     const withOnlyAllowValues: typeof contentType = {
       ...contentType,
       fields: [

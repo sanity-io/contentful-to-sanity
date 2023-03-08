@@ -1,7 +1,7 @@
-import get from 'just-safe-get'
-import {AnySanityFieldSchema, StringSanityFieldSchema} from '@/types'
 import type {ContentfulExport} from 'contentful-export'
-import {extractValidationRulesFromContentfulField} from './extractValidationRulesFromContentfulField'
+import {ContentFields, ContentTypeProps} from 'contentful-management'
+import get from 'just-safe-get'
+
 import {BuiltInContentfulEditors, IntlMode} from '@/constants'
 import {
   arrayFieldSchemaFactory,
@@ -19,10 +19,12 @@ import {
   textFieldSchemaFactory,
   urlFieldSchemaFactory,
 } from '@/helpers/sanity/fieldSchemaFactories'
-import {extractContentfulRichTextFieldParameters} from './extractContentfulRichTextFieldParameters'
+import {AnySanityFieldSchema, StringSanityFieldSchema} from '@/types'
+
 import {contentfulFieldItemToSanityOfType} from './contentfulFieldItemToSanityOfType'
+import {extractContentfulRichTextFieldParameters} from './extractContentfulRichTextFieldParameters'
+import {extractValidationRulesFromContentfulField} from './extractValidationRulesFromContentfulField'
 import {findEditorControlForField} from './findEditorControlForField'
-import {ContentTypeProps, ContentFields} from 'contentful-management'
 
 type Flags = {
   'keep-markdown'?: boolean

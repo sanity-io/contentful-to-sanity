@@ -1,13 +1,14 @@
-import md from 'markdown-it'
-import Schema from '@sanity/schema'
 import blockTools from '@sanity/block-tools'
+import Schema from '@sanity/schema'
+import {Block} from '@sanity/types'
 import {JSDOM} from 'jsdom'
+import md from 'markdown-it'
+
 import {
   arrayFieldSchemaFactory,
   blockFieldSchemaFactory,
   imageFieldSchemaFactory,
 } from '@/helpers/sanity/fieldSchemaFactories'
-import {Block} from '@sanity/types'
 
 const mockSchema = Schema.compile({
   name: 'default',

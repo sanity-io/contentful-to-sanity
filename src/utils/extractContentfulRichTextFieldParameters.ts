@@ -1,7 +1,8 @@
-import compact from 'just-compact'
-import {BlockSanityFieldSchema, LinkedType, ObjectSanityFieldSchema} from '@/types'
 import {ContentfulExport} from 'contentful-export'
 import {ContentFields} from 'contentful-management'
+import compact from 'just-compact'
+
+import {BlockSanityFieldSchema, LinkedType, ObjectSanityFieldSchema} from '@/types'
 
 const allStyles = [
   {title: 'Normal text', value: 'normal'},

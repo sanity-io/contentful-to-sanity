@@ -10,3 +10,4 @@ package-lock.json
 node_modules
 oclif.manifest.json
 *.tsbuildinfo
+.eslintcache

@@ -1,4 +1,5 @@
 import path from 'path'
+
 import {expandHome} from './expandHome'
 
 export function absolutify(dir: string): string {

@@ -1,20 +1,21 @@
-import {contentfulTypeToSanitySchema} from '@/utils'
-import {expect, test} from '@oclif/test'
 import type {ContentfulExport} from 'contentful-export'
 import {
   contentfulContentTypeFactory,
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from 'test/helpers'
+import {describe, expect, test} from 'vitest'
 
-describe('create schema for Number type', () => {
+import {contentfulTypeToSanitySchema} from '@/utils'
+
+describe('create schema for Date type', () => {
   const contentType = contentfulContentTypeFactory(
     'contentType',
     [
       {
         id: 'field',
         name: 'field',
-        type: 'Number',
+        type: 'Date',
         localized: false,
         required: false,
       },
@@ -22,11 +23,13 @@ describe('create schema for Number type', () => {
     'field',
   )
 
-  test.it('should create a Sanity schema for rating', () => {
+  test('should create a Sanity schema for date format', () => {
     const data: ContentfulExport = {
       editorInterfaces: [
         contentfulEditorInterfaceFactory('contentType', [
-          contentfulEditorControlFactory('field', 'rating'),
+          contentfulEditorControlFactory('field', 'datePicker', 'builtin', {
+            format: 'dateonly',
+          }),
         ]),
       ],
       contentTypes: [contentType],
@@ -34,19 +37,18 @@ describe('create schema for Number type', () => {
 
     expect(contentfulTypeToSanitySchema(contentType, data).fields[0]).to.deep.equal({
       name: 'field',
-      type: 'number',
+      type: 'date',
       title: 'field',
-      options: {
-        list: [1, 2, 3, 4, 5],
-      },
     })
   })
 
-  test.it('should create a Sanity schema for numberEditor', () => {
+  test('should create a Sanity schema for date & time format', () => {
     const data: ContentfulExport = {
       editorInterfaces: [
         contentfulEditorInterfaceFactory('contentType', [
-          contentfulEditorControlFactory('field', 'numberEditor'),
+          contentfulEditorControlFactory('field', 'datePicker', 'builtin', {
+            format: 'timeZ',
+          }),
         ]),
       ],
       contentTypes: [contentType],
@@ -54,8 +56,11 @@ describe('create schema for Number type', () => {
 
     expect(contentfulTypeToSanitySchema(contentType, data).fields[0]).to.deep.equal({
       name: 'field',
-      type: 'number',
+      type: 'datetime',
       title: 'field',
+      options: {
+        timeFormat: 'H:mmZ',
+      },
     })
   })
 })

@@ -1,7 +1,8 @@
+import type {Control, EditorInterfaceProps} from 'contentful-management'
+
 import {contentfulContentTypeLinkFactory} from './contentfulContentTypeLinkFactory'
-import {contentfulSpaceLinkFactory} from './contentfulSpaceLinkFactory'
 import {contentfulEnvironmentLinkFactory} from './contentfulEnvironmentLinkFactory'
-import type {EditorInterfaceProps, Control} from 'contentful-management'
+import {contentfulSpaceLinkFactory} from './contentfulSpaceLinkFactory'
 
 export function contentfulEditorInterfaceFactory(
   contentType: string,

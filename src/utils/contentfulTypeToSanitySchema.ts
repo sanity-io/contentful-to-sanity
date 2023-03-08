@@ -1,8 +1,10 @@
-import compact from 'just-compact'
-import {SanityDocumentSchema} from '@/types'
-import {contentfulFieldToSanityField} from './contentfulFieldToSanityField'
-import type {ContentTypeProps} from 'contentful-management'
 import type {ContentfulExport} from 'contentful-export'
+import type {ContentTypeProps} from 'contentful-management'
+import compact from 'just-compact'
+
+import {SanityDocumentSchema} from '@/types'
+
+import {contentfulFieldToSanityField} from './contentfulFieldToSanityField'
 import {findEditorControlForField} from './findEditorControlForField'
 
 type Flags = {

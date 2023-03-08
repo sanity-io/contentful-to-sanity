@@ -1,11 +1,14 @@
-import fs from 'fs-extra'
 import path from 'node:path'
-import {SanityDocumentSchema, SanityObjectSchema} from '@/types'
-import {stringify} from 'javascript-stringify'
-import {IntlMode} from '@/constants'
+
 import {ContentfulExport} from 'contentful-export'
-import {ContentfulNoDefaultLocaleError} from '../errors'
+import fs from 'fs-extra'
+import {stringify} from 'javascript-stringify'
+
+import {IntlMode} from '@/constants'
 import {serializeRuleSpecToCode} from '@/helpers/sanity'
+import {SanityDocumentSchema, SanityObjectSchema} from '@/types'
+
+import {ContentfulNoDefaultLocaleError} from '../errors'
 
 type Flags = {
   intl?: IntlMode

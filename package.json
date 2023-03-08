@@ -27,7 +27,7 @@
     "format": "prettier --cache --ignore-path .gitignore --write .",
     "lint": "eslint . --cache",
     "lint:fix": "npm run lint -- --fix",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\""
+    "test": "vitest"
   },
   "prettier": {
     "arrowParens": "always",
@@ -74,6 +74,7 @@
     "@types/node": "^16.9.4",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "@vitest/coverage-c8": "^0.29.2",
     "chai": "^4",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
@@ -90,7 +91,10 @@
     "tsconfig-paths": "^3.12.0",
     "tslib": "^2.3.1",
     "tsup": "^5.11.13",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vite-tsconfig-paths": "^4.0.5",
+    "vitest": "^0.29.2",
+    "vitest-github-actions-reporter": "^0.10.0"
   },
   "engines": {
     "node": ">=14.18"

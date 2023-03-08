@@ -1,3 +1,3 @@
 export * from './BuiltInContentfulEditors'
-export * from './IntlMode'
 export * from './IntlIdStructure'
+export * from './IntlMode'

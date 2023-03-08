@@ -1,5 +1,5 @@
-import type {CurrentUser, Rule, Block, File, Image, Reference, Slug, RuleSpec} from '@sanity/types'
 import type {SanityDocument} from '@sanity/client'
+import type {Block, CurrentUser, File, Image, Reference, Rule, RuleSpec, Slug} from '@sanity/types'
 import {ReactNode} from 'react'
 
 type CallbackParam<V = any, P = any> = {

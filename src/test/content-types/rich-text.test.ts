@@ -1,11 +1,12 @@
-import {contentfulTypeToSanitySchema} from '@/utils'
-import {expect, test} from '@oclif/test'
 import type {ContentfulExport} from 'contentful-export'
 import {
   contentfulContentTypeFactory,
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from 'test/helpers'
+import {describe, expect, test} from 'vitest'
+
+import {contentfulTypeToSanitySchema} from '@/utils'
 
 describe('create schema for RichText type', () => {
   const contentType = contentfulContentTypeFactory(
@@ -42,7 +43,7 @@ describe('create schema for RichText type', () => {
     'field',
   )
 
-  test.it('should create a Sanity schema for richTextEditor', () => {
+  test('should create a Sanity schema for richTextEditor', () => {
     const data: ContentfulExport = {
       editorInterfaces: [
         contentfulEditorInterfaceFactory('contentType', [

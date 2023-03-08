@@ -1,20 +1,21 @@
-import {contentfulTypeToSanitySchema} from '@/utils'
-import {expect, test} from '@oclif/test'
 import type {ContentfulExport} from 'contentful-export'
 import {
   contentfulContentTypeFactory,
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from 'test/helpers'
+import {describe, expect, test} from 'vitest'
 
-describe('create schema for Boolean type', () => {
+import {contentfulTypeToSanitySchema} from '@/utils'
+
+describe('create schema for Location type', () => {
   const contentType = contentfulContentTypeFactory(
     'contentType',
     [
       {
         id: 'field',
         name: 'field',
-        type: 'Boolean',
+        type: 'Location',
         localized: false,
         required: false,
       },
@@ -22,11 +23,11 @@ describe('create schema for Boolean type', () => {
     'field',
   )
 
-  test.it('should create a Sanity schema for boolean', () => {
+  test('should create a Sanity schema for locationEditor', () => {
     const data: ContentfulExport = {
       editorInterfaces: [
         contentfulEditorInterfaceFactory('contentType', [
-          contentfulEditorControlFactory('field', 'boolean'),
+          contentfulEditorControlFactory('field', 'locationEditor'),
         ]),
       ],
       contentTypes: [contentType],
@@ -34,7 +35,7 @@ describe('create schema for Boolean type', () => {
 
     expect(contentfulTypeToSanitySchema(contentType, data).fields[0]).to.deep.equal({
       name: 'field',
-      type: 'boolean',
+      type: 'geopoint',
       title: 'field',
     })
   })

@@ -1,11 +1,12 @@
-import {contentfulTypeToSanitySchema} from '@/utils'
-import {expect, test} from '@oclif/test'
 import type {ContentfulExport} from 'contentful-export'
 import {
   contentfulContentTypeFactory,
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from 'test/helpers'
+import {describe, expect, test} from 'vitest'
+
+import {contentfulTypeToSanitySchema} from '@/utils'
 
 describe('create schema for Integer type', () => {
   const contentType = contentfulContentTypeFactory(
@@ -22,7 +23,7 @@ describe('create schema for Integer type', () => {
     'field',
   )
 
-  test.it('should create a Sanity schema for numberEditor', () => {
+  test('should create a Sanity schema for numberEditor', () => {
     const data: ContentfulExport = {
       editorInterfaces: [
         contentfulEditorInterfaceFactory('contentType', [

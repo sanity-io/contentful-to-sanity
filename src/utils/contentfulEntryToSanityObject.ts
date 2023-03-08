@@ -1,18 +1,20 @@
-import compact from 'just-compact'
-import {IntlIdStructure} from '@/constants'
-import {createIntlFields} from './createIntlFields'
-import {objectIsContentfulLink} from './objectIsContentfulLink'
-import {findEditorControlForField} from './findEditorControlForField'
-import {markdownToBlocks} from './markdownToBlocks'
 import {toPortableText} from '@portabletext/contentful-rich-text-to-portable-text'
-import {objectIsContentfulRichText} from './objectIsContentfulRichText'
-import {generateKey} from './generateKey'
-import {contentfulLinkToSanityReference} from './contentfulLinkToSanityReference'
-import {objectIsContentfulLocation} from './objectIsContentfulLocation'
 import type {SanityDocument} from '@sanity/client'
 import type {ContentfulExport} from 'contentful-export'
-import type {SysLink} from './objectIsContentfulLink'
 import type {EntryProps} from 'contentful-management'
+import compact from 'just-compact'
+
+import {IntlIdStructure} from '@/constants'
+
+import {contentfulLinkToSanityReference} from './contentfulLinkToSanityReference'
+import {createIntlFields} from './createIntlFields'
+import {findEditorControlForField} from './findEditorControlForField'
+import {generateKey} from './generateKey'
+import {markdownToBlocks} from './markdownToBlocks'
+import type {SysLink} from './objectIsContentfulLink'
+import {objectIsContentfulLink} from './objectIsContentfulLink'
+import {objectIsContentfulLocation} from './objectIsContentfulLocation'
+import {objectIsContentfulRichText} from './objectIsContentfulRichText'
 
 type ReferenceResolver = (
   node: {data: {target: SysLink}},

@@ -1,5 +1,13 @@
-import fs from 'fs-extra'
+// @ts-expect-error
+import {CliUx, Command, Flags} from '@oclif/core'
+// @ts-expect-error
+import type {OptionFlag} from '@oclif/core/lib/interfaces'
 import contentfulExport, {ContentfulExport} from 'contentful-export'
+import fs from 'fs-extra'
+import compact from 'just-compact'
+
+import {IntlMode} from '@/constants'
+import {ContentfulParamsMissingError} from '@/helpers/errors'
 import {parseManagementTokenFlag} from '@/helpers/flags/parseManagementTokenFlag'
 import {parseOutputFlag} from '@/helpers/flags/parseOutputFlag'
 /*
@@ -8,18 +16,13 @@ import {parseSanityTokenFlag} from '@/helpers/flags/parseSanityTokenFlag'
 import {parseDatasetFlag} from '@/helpers/flags/parseDatasetFlag'
 */
 import {parseSpaceFlag} from '@/helpers/flags/parseSpaceFlag'
-import {CliUx, Command, Flags} from '@oclif/core'
-import {ContentfulParamsMissingError} from '@/helpers/errors'
-import {absolutify, contentfulTypeToSanitySchema} from '@/utils'
-import compact from 'just-compact'
 import {
   /* bootstrapStudio, */ writeRootSanitySchema,
   writeSingleSanitySchema,
 } from '@/helpers/sanity'
 import {stringFieldSchemaFactory} from '@/helpers/sanity/fieldSchemaFactories'
-import {IntlMode} from '@/constants'
-import type {OptionFlag} from '@oclif/core/lib/interfaces'
 import type {SanityDocumentSchema, SanityObjectSchema} from '@/types'
+import {absolutify, contentfulTypeToSanitySchema} from '@/utils'
 
 const steps = {
   exporting: 'Exporting from contentful',

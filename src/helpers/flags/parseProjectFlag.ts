@@ -1,9 +1,11 @@
-import {promptSingleInput} from '@/utils'
 import {CliUx} from '@oclif/core'
-import {SanityApiError, SanityProjectNotFoundError} from '../errors'
-import {createProject, defaultSanityClient} from '../sanity'
 import type {SanityClient} from '@sanity/client'
 import inquirer from 'inquirer'
+
+import {promptSingleInput} from '@/utils'
+
+import {SanityApiError, SanityProjectNotFoundError} from '../errors'
+import {createProject, defaultSanityClient} from '../sanity'
 
 type FlagOptions = {
   required?: boolean

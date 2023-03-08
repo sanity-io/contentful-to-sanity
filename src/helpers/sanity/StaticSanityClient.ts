@@ -1,5 +1,6 @@
-import {defaultSanityClient} from './defaultSanityClient'
 import type {ClientConfig} from '@sanity/client'
+
+import {defaultSanityClient} from './defaultSanityClient'
 
 export class StaticSanityClient {
   public static client = defaultSanityClient.clone()

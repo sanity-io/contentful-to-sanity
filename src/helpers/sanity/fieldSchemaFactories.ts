@@ -1,6 +1,7 @@
-import set from 'just-safe-set'
-import get from 'just-safe-get'
 import omit from 'just-omit'
+import get from 'just-safe-get'
+import set from 'just-safe-set'
+
 import {
   AnySanityFieldSchema,
   ArraySanityFieldSchema,

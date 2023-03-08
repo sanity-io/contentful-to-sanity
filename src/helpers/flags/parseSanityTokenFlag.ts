@@ -1,5 +1,6 @@
-import Configstore from 'configstore'
 import {spawnSync} from 'child_process'
+import Configstore from 'configstore'
+
 import {SanityNotAuthenticatedError} from '@/helpers/errors'
 
 type FlagOptions = {

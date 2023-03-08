@@ -1,3 +1,6 @@
+import {ContentfulExport} from 'contentful-export'
+import type {ContentFields} from 'contentful-management'
+
 import {
   fileFieldSchemaFactory,
   imageFieldSchemaFactory,
@@ -5,8 +8,7 @@ import {
   stringFieldSchemaFactory,
 } from '@/helpers/sanity/fieldSchemaFactories'
 import {LinkedType} from '@/types'
-import type {ContentFields} from 'contentful-management'
-import {ContentfulExport} from 'contentful-export'
+
 import {extractValidationRulesFromContentfulField} from './extractValidationRulesFromContentfulField'
 
 export function contentfulFieldItemToSanityOfType(

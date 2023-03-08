@@ -1,6 +1,7 @@
-import path from 'path'
-import fs from 'fs-extra'
 import Case from 'case'
+import fs from 'fs-extra'
+import path from 'path'
+
 import {SanityDocumentSchema, SanityObjectSchema} from '@/types'
 
 export async function writeRootSanitySchema(

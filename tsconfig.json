@@ -2,7 +2,9 @@
   "extends": "./tsconfig.settings",
   "compilerOptions": {
     "noEmit": true,
-    "module": "esnext"
+    "module": "esnext",
+    "baseUrl": "./src",
+    "rootDir": "."
   },
   "ts-node": {
     "files": true,

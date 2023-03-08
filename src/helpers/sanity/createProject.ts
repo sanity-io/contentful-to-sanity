@@ -1,5 +1,6 @@
-import {defaultSanityHttpClient} from './deafultSanityHttpClient'
 import type {SanityClient} from '@sanity/client'
+
+import {defaultSanityHttpClient} from './deafultSanityHttpClient'
 
 type SanityProject = ReturnType<SanityClient['projects']['getById']> extends Promise<infer V>
   ? V

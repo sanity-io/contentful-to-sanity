@@ -1,9 +1,11 @@
-import {promptSingleInput} from '@/utils'
 import {CliUx} from '@oclif/core'
-import {SanityApiError, SanityDatasetNotFoundError} from '../errors'
-import {defaultSanityClient} from '../sanity'
 import type {SanityClient} from '@sanity/client'
 import inquirer from 'inquirer'
+
+import {promptSingleInput} from '@/utils'
+
+import {SanityApiError, SanityDatasetNotFoundError} from '../errors'
+import {defaultSanityClient} from '../sanity'
 
 type FlagOptions = {
   required?: boolean

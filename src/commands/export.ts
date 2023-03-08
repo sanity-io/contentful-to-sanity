@@ -1,20 +1,21 @@
-import path from 'path'
+import {CliUx, Command, Flags} from '@oclif/core'
+import type {OptionFlag} from '@oclif/core/lib/interfaces'
+import {SanityDocument} from '@sanity/client'
+import contentfulExport, {ContentfulExport} from 'contentful-export'
 import fs from 'fs-extra'
 import compact from 'just-compact'
-import contentfulExport, {ContentfulExport} from 'contentful-export'
-import {parseManagementTokenFlag} from '@/helpers/flags/parseManagementTokenFlag'
-import {parseSpaceFlag} from '@/helpers/flags/parseSpaceFlag'
-import {CliUx, Command, Flags} from '@oclif/core'
+import path from 'path'
+
+import {IntlIdStructure, IntlMode} from '@/constants'
 import {
   ContentfulNoDefaultLocaleError,
   ContentfulNoLocalesError,
   ContentfulParamsMissingError,
 } from '@/helpers/errors'
-import {absolutify, contentfulEntryToSanityObject} from '@/utils'
-import {SanityDocument} from '@sanity/client'
-import {IntlIdStructure, IntlMode} from '@/constants'
+import {parseManagementTokenFlag} from '@/helpers/flags/parseManagementTokenFlag'
 import {parseOutputFlag} from '@/helpers/flags/parseOutputFlag'
-import type {OptionFlag} from '@oclif/core/lib/interfaces'
+import {parseSpaceFlag} from '@/helpers/flags/parseSpaceFlag'
+import {absolutify, contentfulEntryToSanityObject} from '@/utils'
 
 const steps = {
   exporting: 'Exporting from contentful',

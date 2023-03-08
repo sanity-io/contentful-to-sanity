@@ -1,11 +1,12 @@
-import {contentfulTypeToSanitySchema} from '@/utils'
-import {expect, test} from '@oclif/test'
 import type {ContentfulExport} from 'contentful-export'
 import {
   contentfulContentTypeFactory,
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from 'test/helpers'
+import {describe, expect, test} from 'vitest'
+
+import {contentfulTypeToSanitySchema} from '@/utils'
 
 describe('create schema for Link type', () => {
   const contentType = contentfulContentTypeFactory(
@@ -22,7 +23,7 @@ describe('create schema for Link type', () => {
     'field',
   )
 
-  test.it('should create a Sanity schema for an asset link', () => {
+  test('should create a Sanity schema for an asset link', () => {
     const assetLinkContentType: typeof contentType = {
       ...contentType,
       fields: [
@@ -50,7 +51,7 @@ describe('create schema for Link type', () => {
     })
   })
 
-  test.it('should create a Sanity schema for an entry link', () => {
+  test('should create a Sanity schema for an entry link', () => {
     const entryLinkContentType: typeof contentType = {
       ...contentType,
       fields: [
