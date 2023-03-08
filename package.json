@@ -8,20 +8,64 @@
     "migration"
   ],
   "homepage": "https://github.com/sanity-io/contentful-to-sanity",
-  "bugs": "https://github.com/sanity-io/contentful-to-sanity/issues",
-  "repository": "sanity-io/contentful-to-sanity",
-  "license": "MIT",
   "author": "Sanity.io <hello@sanity.io>",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+
+
+
+
+  "bugs": {
+    "url": "https://github.com/sanity-io/contentful-to-sanity/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sanity-io/contentful-to-sanity.git"  },
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "source": "./src/index.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.ts",
+      "source": "./src/cli/index.ts",
+      "require": "./dist/cli.cjs",
+      "default": "./dist/cli.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "source": "./src/index.ts",
+  "types": "./dist/index.d.ts",
   "bin": {
-    "contentful-to-sanity": "./bin/run"
+    "contentful-to-sanity": "./bin/contentful-to-sanity.cjs"
   },
   "files": [
-    "/bin",
-    "/dist",
+    "bin",
+    "dist",
     "CHANGELOG.md"
   ],
+  "browserslist": [
+    "> 0.2% and supports es6-module and supports es6-module-dynamic-import and not dead and not IE 11",
+    "maintained node versions"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "typesVersions": {
+    "*": {
+      "cli": [
+        "./dist/cli.d.ts"
+      ]
+    }
+  },
+
+
   "scripts": {
     "build": "tsup",
     "format": "prettier --cache --ignore-path .gitignore --write .",
@@ -58,7 +102,9 @@
     "just-omit": "^2.0.1",
     "just-safe-get": "^4.0.1",
     "just-safe-set": "^4.0.2",
+    "listr": "^0.14.3",
     "markdown-it": "^12.3.2",
+    "soly": "^1.1.2",
     "zod": "^3.21.4"
   },
   "devDependencies": {

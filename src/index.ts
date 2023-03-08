@@ -1,2 +1,1 @@
-// @ts-expect-error
-export {run} from '@oclif/core'
+console.log('API entrypoint @TODO, going to be used to offer under the hood utils')
