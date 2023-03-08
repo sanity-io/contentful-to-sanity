@@ -1,6 +1,6 @@
 {
   "root": true,
-  "env":{
+  "env": {
     "node": true
   },
   "extends": [

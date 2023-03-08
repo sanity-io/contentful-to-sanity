@@ -8,18 +8,15 @@
     "migration"
   ],
   "homepage": "https://github.com/sanity-io/contentful-to-sanity",
-  "author": "Sanity.io <hello@sanity.io>",
-
-
-
-
   "bugs": {
     "url": "https://github.com/sanity-io/contentful-to-sanity/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/sanity-io/contentful-to-sanity.git"  },
+    "url": "git+ssh://git@github.com/sanity-io/contentful-to-sanity.git"
+  },
   "license": "MIT",
+  "author": "Sanity.io <hello@sanity.io>",
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -42,6 +39,13 @@
   "module": "./dist/index.js",
   "source": "./src/index.ts",
   "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "cli": [
+        "./dist/cli.d.ts"
+      ]
+    }
+  },
   "bin": {
     "contentful-to-sanity": "./bin/contentful-to-sanity.cjs"
   },
@@ -50,22 +54,6 @@
     "dist",
     "CHANGELOG.md"
   ],
-  "browserslist": [
-    "> 0.2% and supports es6-module and supports es6-module-dynamic-import and not dead and not IE 11",
-    "maintained node versions"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "typesVersions": {
-    "*": {
-      "cli": [
-        "./dist/cli.d.ts"
-      ]
-    }
-  },
-
-
   "scripts": {
     "build": "tsup",
     "format": "prettier --cache --ignore-path .gitignore --write .",
@@ -73,6 +61,10 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "vitest"
   },
+  "browserslist": [
+    "> 0.2% and supports es6-module and supports es6-module-dynamic-import and not dead and not IE 11",
+    "maintained node versions"
+  ],
   "prettier": {
     "arrowParens": "always",
     "bracketSpacing": false,
@@ -108,6 +100,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@sanity/pkg-utils": "^2.2.8",
     "@sanity/portable-text-editor": "^3.6.0",
     "@sanity/types": "^3.6.0",
     "@types/configstore": "^5.0.1",
@@ -139,5 +132,8 @@
   },
   "engines": {
     "node": ">=14.18"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
