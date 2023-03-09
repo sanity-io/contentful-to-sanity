@@ -18,19 +18,19 @@ Create a content management token (under _Space settings_ → _API keys_ → _Co
 npx sanity@latest init --template clean --output-path ./migrate
 ```
 
-### 4. Run the migration, which prepares a dataset.ndjson file for the later import step:
+### 3. Run the migration, which prepares a dataset.ndjson file for the later import step:
 
 ```bash
 npx contentful-to-sanity@latest -s <cspace ID> -t <personal token> ./migrate
 ```
 
-### 5. Start the dataset import process, which will finish in the background:
+### 4. Start the dataset import process, which will finish in the background:
 
 ```bash
 cd ./migrate && npx sanity dataset import ./dataset.ndjson
 ```
 
-### 6. Open `./migrate/sanity.config.ts`
+### 5. Open `./migrate/sanity.config.ts`
 
 If you chose the `clean` template it should look like this
 
