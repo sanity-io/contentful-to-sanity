@@ -73,8 +73,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
@@ -85,8 +84,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": true
         },
@@ -98,14 +96,7 @@
           "required": true,
           "validations": [
             {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript"
-              ],
+              "enabledMarks": ["bold", "italic", "underline", "code", "superscript", "subscript"],
               "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
             },
             {
@@ -131,8 +122,7 @@
               "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, asset, table, link to Url, link to entry, link to asset, inline entry, and block entry nodes are allowed"
             },
             {
-              "nodes": {
-              }
+              "nodes": {}
             }
           ],
           "disabled": false,
@@ -144,8 +134,7 @@
           "type": "Integer",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -155,8 +144,7 @@
           "type": "Number",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -166,8 +154,7 @@
           "type": "Date",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -177,8 +164,7 @@
           "type": "Boolean",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -188,8 +174,7 @@
           "type": "Location",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -199,14 +184,12 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
-            "validations": [
-            ],
+            "validations": [],
             "linkType": "Asset"
           }
         }
@@ -269,8 +252,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -282,9 +264,7 @@
           "required": false,
           "validations": [
             {
-              "linkMimetypeGroup": [
-                "image"
-              ]
+              "linkMimetypeGroup": ["image"]
             }
           ],
           "disabled": false,
@@ -314,16 +294,14 @@
           "type": "Object",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -494,8 +472,7 @@
   "entries": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -542,8 +519,7 @@
             "id": "2CkSZGptNYCJt1zldw6nLB"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -570,24 +546,19 @@
         },
         "content": {
           "en-US": {
-            "data": {
-            },
+            "data": {},
             "content": [
               {
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": "Some ",
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
+                    "data": {},
                     "marks": [
                       {
                         "type": "bold"
@@ -597,10 +568,8 @@
                     "nodeType": "text"
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": " text",
                     "nodeType": "text"
                   }
@@ -624,8 +593,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -672,8 +640,7 @@
             "id": "2CkSZGptNYCJt1zldw6nLB"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -699,8 +666,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -747,8 +713,7 @@
             "id": "2CkSZGptNYCJt1zldw6nLB"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -773,8 +738,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -821,8 +785,7 @@
             "id": "2CkSZGptNYCJt1zldw6nLB"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -850,13 +813,11 @@
         "content": {
           "en-US": {
             "nodeType": "document",
-            "data": {
-            },
+            "data": {},
             "content": [
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
@@ -866,15 +827,13 @@
                         "type": "underline"
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   }
                 ]
               },
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
@@ -884,8 +843,7 @@
                         "type": "bold"
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   }
                 ]
               }
@@ -896,8 +854,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -944,8 +901,7 @@
             "id": "2CkSZGptNYCJt1zldw6nLB"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -969,18 +925,14 @@
         },
         "content": {
           "en-US": {
-            "data": {
-            },
+            "data": {},
             "content": [
               {
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": "Aha",
                     "nodeType": "text"
                   }
@@ -988,14 +940,11 @@
                 "nodeType": "heading-1"
               },
               {
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "data": {},
+                    "marks": [],
                     "value": "",
                     "nodeType": "text"
                   }
@@ -1038,8 +987,7 @@
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
