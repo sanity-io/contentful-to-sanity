@@ -87,7 +87,7 @@ export default defineConfig({
 npx sanity dev
 ```
 
-You don't have to wait for the `npx sanity dataset import ./migrate/dataset.ndjson` job to finish befoer the Studio is ready for use. The Studio will keep up to speed with the progress of the import job in real-time.
+You don't have to wait for the `npx sanity dataset import ./migrate/dataset.ndjson` job to finish before the Studio is ready for use. The Studio will keep up to speed with the progress of the import job in real-time.
 
 ## Commands
 
