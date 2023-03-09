@@ -1,5 +1,6 @@
 import type {CustomValidator} from '@sanity/types'
 import {describe, expect, test} from 'vitest'
+
 import {serializeRuleSpecToCode} from '../helpers/sanity/serializeRuleSpecToCode'
 
 describe('Validations', () => {
