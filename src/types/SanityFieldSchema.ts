@@ -87,6 +87,7 @@ export type FileSanityFieldSchema = BaseSanityFieldSchema<
   {
     storeOriginalFilename?: boolean
     accept?: string
+    // eslint-disable-next-line no-warning-comments
     sources?: any[] // @TODO Image source type?
   },
   {
@@ -104,6 +105,7 @@ export type ImageSanityFieldSchema = BaseSanityFieldSchema<
     hotspot?: boolean
     storeOriginalFilename?: boolean
     accept?: string
+    // eslint-disable-next-line no-warning-comments
     sources?: any[] // @TODO Image source type?
   },
   {
@@ -121,6 +123,7 @@ export type NumberSanityFieldSchema = BaseSanityFieldSchema<
   }
 >
 
+// eslint-disable-next-line no-warning-comments
 // @TODO incomplete as unnecessary for contentful since inline objects don't exist
 export type ObjectSanityFieldSchema = BaseSanityFieldSchema<
   'object',
@@ -128,6 +131,7 @@ export type ObjectSanityFieldSchema = BaseSanityFieldSchema<
   // eslint-disable-next-line @typescript-eslint/ban-types
   {},
   {
+    // eslint-disable-next-line no-warning-comments
     fields?: AnySanityFieldSchema[] // @TODO
     inputComponent?: ReactNode
   }

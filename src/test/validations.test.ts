@@ -59,7 +59,7 @@ describe('Validations', () => {
       }),
     ).to.equal(`regex(${pattern}, {name:'reggie',invert:false})`)
 
-    const validator: CustomValidator = (value, _) =>
+    const validator: CustomValidator = (value) =>
       value === 'foo' ? true : {message: 'Value must be foo'}
 
     expect(serializeRuleSpecToCode({flag: 'custom', constraint: validator})).toEqual(
