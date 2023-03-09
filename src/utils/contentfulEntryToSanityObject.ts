@@ -1,24 +1,28 @@
-import compact from 'just-compact'
-import {IntlIdStructure} from '@/constants'
-import {createIntlFields} from './createIntlFields'
-import {objectIsContentfulLink} from './objectIsContentfulLink'
-import {findEditorControlForField} from './findEditorControlForField'
-import {markdownToBlocks} from './markdownToBlocks'
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {toPortableText} from '@portabletext/contentful-rich-text-to-portable-text'
-import {objectIsContentfulRichText} from './objectIsContentfulRichText'
-import {generateKey} from './generateKey'
-import {contentfulLinkToSanityReference} from './contentfulLinkToSanityReference'
-import {objectIsContentfulLocation} from './objectIsContentfulLocation'
 import type {SanityDocument} from '@sanity/client'
-import type {ContentfulExport} from 'contentful-export'
-import type {SysLink} from './objectIsContentfulLink'
 import type {EntryProps} from 'contentful-management'
+import compact from 'just-compact'
 
-type ReferenceResolver = (node: {data:{target:SysLink}}, opts: any) => ReturnType<typeof contentfulLinkToSanityReference> | null
+import type {ContentfulExport} from '../types'
+import {contentfulLinkToSanityReference} from './contentfulLinkToSanityReference'
+import {createIntlFields} from './createIntlFields'
+import {findEditorControlForField} from './findEditorControlForField'
+import {generateKey} from './generateKey'
+import {markdownToBlocks} from './markdownToBlocks'
+import type {SysLink} from './objectIsContentfulLink'
+import {objectIsContentfulLink} from './objectIsContentfulLink'
+import {objectIsContentfulLocation} from './objectIsContentfulLocation'
+import {objectIsContentfulRichText} from './objectIsContentfulRichText'
+
+type ReferenceResolver = (
+  node: {data: {target: SysLink}},
+  opts: any,
+) => ReturnType<typeof contentfulLinkToSanityReference> | null
 
 type Options = {
   useMultiLocale: boolean
-  idStructure: IntlIdStructure,
+  idStructure: 'subpath' | 'delimiter'
   defaultLocale: string
   supportedLocales: string[]
   keepMarkdown?: boolean
@@ -56,10 +60,7 @@ export function contentfulEntryToSanityObject(
     const widgetId = control?.widgetId
 
     const value = values[locale]
-    const canCopyValueAsIs = (
-      typeof value === 'string' ||
-      typeof value === 'number'
-    )
+    const canCopyValueAsIs = typeof value === 'string' || typeof value === 'number'
     if (canCopyValueAsIs) {
       if (widgetId === 'slugEditor') {
         doc[key] = {current: value}
@@ -77,9 +78,8 @@ export function contentfulEntryToSanityObject(
         lng: value.lon,
       }
     } else if (objectIsContentfulRichText(value)) {
-      const referenceResolver: ReferenceResolver = node => (
+      const referenceResolver: ReferenceResolver = (node) =>
         contentfulLinkToSanityReference(node.data.target, locale, data, options)
-      )
 
       doc[key] = toPortableText(value, {
         generateKey: () => generateKey(),
@@ -95,13 +95,15 @@ export function contentfulEntryToSanityObject(
         },
       })
     } else if (Array.isArray(value)) {
-      doc[key] = compact(value.map(val => {
-        if (objectIsContentfulLink(val)) {
-          return contentfulLinkToSanityReference(val, locale, data, options)
-        }
+      doc[key] = compact(
+        value.map((val) => {
+          if (objectIsContentfulLink(val)) {
+            return contentfulLinkToSanityReference(val, locale, data, options)
+          }
 
-        return val
-      }))
+          return val
+        }),
+      )
     }
   }
 

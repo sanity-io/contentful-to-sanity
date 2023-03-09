@@ -1,34 +1,96 @@
 {
   "name": "contentful-to-sanity",
-  "version": "3.0.0",
+  "version": "2.0.0-dev.0",
   "description": "Migration tool from Contentful to Sanity",
-  "author": "Sanity.io <hello@sanity.io>",
-  "bin": {
-    "contentful-to-sanity": "./bin/run"
-  },
-  "homepage": "https://github.com/sanity-io/contentful-to-sanity",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "repository": "sanity-io/contentful-to-sanity",
-  "files": [
-    "/bin",
-    "/dist",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+  "keywords": [
+    "sanity",
+    "contentful",
+    "migration"
   ],
+  "homepage": "https://github.com/sanity-io/contentful-to-sanity",
+  "bugs": {
+    "url": "https://github.com/sanity-io/contentful-to-sanity/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sanity-io/contentful-to-sanity.git"
+  },
+  "license": "MIT",
+  "author": "Sanity.io <hello@sanity.io>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "source": "./src/index.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.ts",
+      "source": "./src/cli/index.ts",
+      "require": "./dist/cli.cjs",
+      "default": "./dist/cli.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "source": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "cli": [
+        "./dist/cli.d.ts"
+      ]
+    }
+  },
+  "bin": {
+    "contentful-to-sanity": "./bin/contentful-to-sanity.cjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "contentful-to-sanity": "./bin/contentful-to-sanity.cjs",
+    "format": "prettier --cache --ignore-path .gitignore --write .",
+    "lint": "TIMING=1 eslint . --cache",
+    "lint:fix": "npm run lint -- --fix",
+    "prepublishOnly": "rm -rf dist && pkg build --strict",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "browserslist": [
+    "> 0.2% and supports es6-module and supports es6-module-dynamic-import and not dead and not IE 11",
+    "maintained node versions"
+  ],
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": false,
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
   "dependencies": {
-    "@oclif/core": "^1",
-    "@oclif/plugin-help": "^5",
     "@portabletext/contentful-rich-text-to-portable-text": "^0.1.0",
-    "@sanity/block-tools": "^2.27.0",
-    "@sanity/client": "^3.0.3",
-    "@sanity/schema": "^2.27.0",
+    "@sanity/block-tools": "^3.6.0",
+    "@sanity/client": "^5.2.2",
+    "@sanity/schema": "^3.6.0",
+    "@stdlib/assert-is-absolute-path": "^0.0.8",
+    "@stdlib/assert-is-relative-path": "^0.0.8",
+    "@types/prettier": "^2.7.2",
+    "@types/validator": "^13.7.13",
     "axios": "^0.25.0",
     "case": "^1.6.3",
+    "commander": "^10.0.0",
     "configstore": "^6.0.0",
-    "contentful": "^9.1.7",
-    "contentful-export": "^7.14.22",
-    "contentful-management": "^7.53.0",
+    "contentful": "^9.3.3",
+    "contentful-export": "^7.19.36",
+    "contentful-management": "^10.30.0",
     "execa": "^6.0.0",
     "fs-extra": "^10.0.0",
     "inquirer": "^8.2.0",
@@ -39,66 +101,52 @@
     "just-omit": "^2.0.1",
     "just-safe-get": "^4.0.1",
     "just-safe-set": "^4.0.2",
+    "listr": "^0.14.3",
     "markdown-it": "^12.3.2",
-    "zod": "^3.11.6"
+    "mkdirp": "^2.1.5",
+    "prettier": "^2.8.4",
+    "soly": "^1.1.2",
+    "tiny-invariant": "^1.3.1",
+    "valid-filename": "^4.0.0",
+    "validator": "^13.9.0",
+    "zod": "^3.21.4",
+    "zod-validation-error": "^1.0.1"
   },
   "devDependencies": {
-    "@oclif/test": "^2",
-    "@sanity/portable-text-editor": "^2.26.0",
-    "@sanity/types": "^2.26.0",
-    "@types/chai": "^4",
+    "@faker-js/faker": "^7.6.0",
+    "@sanity/pkg-utils": "^2.2.8",
+    "@sanity/portable-text-editor": "^3.6.0",
+    "@sanity/semantic-release-preset": "^4.0.0",
+    "@sanity/types": "^3.6.0",
     "@types/configstore": "^5.0.1",
     "@types/fs-extra": "^9.0.13",
     "@types/inquirer": "^8.1.3",
     "@types/jsdom": "^16.2.14",
     "@types/markdown-it": "^12.2.3",
-    "@types/mocha": "^9.0.0",
-    "@types/node": "^16.9.4",
-    "chai": "^4",
-    "eslint": "^7.32.0",
-    "eslint-config-oclif": "^4",
-    "eslint-config-oclif-typescript": "^1.0.2",
-    "globby": "^11.1.0",
-    "mocha": "^9",
+    "@types/node": "^18.14.6",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "@vitest/coverage-c8": "^0.29.2",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "ls-engines": "^0.9.0",
     "moment": "^2.29.1",
-    "oclif": "^2",
-    "react": "^17.0.2",
-    "shx": "^0.3.3",
-    "ts-node": "^10.4.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "rimraf": "^4.3.1",
+    "sanity": "^3.6.0",
     "tsconfig-paths": "^3.12.0",
-    "tslib": "^2.3.1",
-    "tsup": "^5.11.13",
-    "typescript": "^4.4.3"
-  },
-  "oclif": {
-    "bin": "contentful-to-sanity",
-    "dirname": "oex",
-    "commands": "./dist/commands",
-    "plugins": [
-      "@oclif/plugin-help"
-    ],
-    "topicSeparator": " ",
-    "topics": {
-    }
-  },
-  "scripts": {
-    "build": "tsup",
-    "lint": "eslint . --ext .ts --config .eslintrc",
-    "postpack": "shx rm -f oclif.manifest.json",
-    "posttest": "yarn lint",
-    "prepack": "yarn build && oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
+    "typescript": "^4.9.5",
+    "vite-tsconfig-paths": "^4.0.5",
+    "vitest": "^0.29.2",
+    "vitest-github-actions-reporter": "^0.10.0"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=14.18"
   },
-  "bugs": "https://github.com/sanity-io/contentful-to-sanity/issues",
-  "keywords": [
-    "oclif",
-    "sanity",
-    "contentful",
-    "migration"
-  ],
-  "types": "dist/index.d.ts"
+  "publishConfig": {
+    "access": "public"
+  }
 }

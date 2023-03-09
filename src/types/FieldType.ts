@@ -1,5 +1,5 @@
-import type {Type} from '@sanity/portable-text-editor'
+import type {ObjectDefinition} from '@sanity/types'
 
-export type FieldType = Omit<Type, 'type'> & {
+export type FieldType = Omit<ObjectDefinition, 'type'> & {
   type: string
 }

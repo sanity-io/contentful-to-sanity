@@ -8,3 +8,5 @@ yarn.lock
 node_modules
 oclif.manifest.json
 *.tsbuildinfo
+.eslintcache
+.vscode

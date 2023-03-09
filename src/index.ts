@@ -1,1 +1,12 @@
-export {run} from '@oclif/core'
+// Make available handy utils for other tooling
+export {batchAction} from './actions/batchAction'
+export {datasetAction} from './actions/datasetAction'
+export {exportAction} from './actions/exportAction'
+export {schemaAction} from './actions/schemaAction'
+export {contentfulToDataset} from './helpers/contentfulToDataset'
+export {contentfulToStudioSchema} from './helpers/contentfulToStudioSchema'
+export {type BatchActionArgs, batchActionArgs} from './parsers/batchActionArgs'
+export {type DatasetActionArgs, datasetActionArgs} from './parsers/datasetActionArgs'
+export {type ExportActionArgs, exportActionArgs} from './parsers/exportActionArgs'
+export {type SchemaActionArgs, schemaActionArgs} from './parsers/schemaActionArgs'
+export {formatError} from './utils'
