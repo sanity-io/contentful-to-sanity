@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {toPortableText} from '@portabletext/contentful-rich-text-to-portable-text'
 import type {SanityDocument} from '@sanity/client'
 import type {EntryProps} from 'contentful-management'
