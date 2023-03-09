@@ -63,7 +63,7 @@ describe('Validations', () => {
       value === 'foo' ? true : {message: 'Value must be foo'}
 
     expect(serializeRuleSpecToCode({flag: 'custom', constraint: validator})).toEqual(
-      'custom((value, _) => value === "foo" ? true : { message: "Value must be foo" })',
+      'custom((value) => value === "foo" ? true : { message: "Value must be foo" })',
     )
   })
 })
