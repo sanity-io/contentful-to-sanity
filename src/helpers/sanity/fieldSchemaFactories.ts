@@ -23,6 +23,7 @@ import {
 type FactoryObject<Schema extends AnySanityFieldSchema> = Required<{
   [K in keyof Schema]: (value: Schema[K]) => FactoryObject<Schema>
 }> & {
+  // eslint-disable-next-line no-shadow
   build: <T extends string = never>(omit?: T[]) => Omit<Schema, T>
   anonymous: () => Omit<Schema, 'name'>
 }

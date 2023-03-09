@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {afterEach, describe, expect, test, vi} from 'vitest'
 
 import {type Command, CommandActions, makeProgram} from './command'
