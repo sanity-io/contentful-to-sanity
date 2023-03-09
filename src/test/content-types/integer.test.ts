@@ -3,9 +3,9 @@ import {
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from 'test/helpers'
-import type {ContentfulExport} from '../../types'
 import {describe, expect, test} from 'vitest'
 
+import type {ContentfulExport} from '../../types'
 import {contentfulTypeToSanitySchema} from '../../utils'
 
 describe('create schema for Integer type', () => {

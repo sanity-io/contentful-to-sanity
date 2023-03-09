@@ -1,5 +1,6 @@
-import {hello} from '../hello'
+import {makeProgram} from './command'
 
-console.log('Soly?')
+const program = makeProgram()
 
-hello()
+// Just run it
+program.parse()

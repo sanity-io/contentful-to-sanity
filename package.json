@@ -59,8 +59,8 @@
     "lint": "TIMING=1 eslint . --cache",
     "lint:fix": "npm run lint -- --fix",
     "prepublishOnly": "rm -rf dist && pkg build --strict",
+    "contentful-to-sanity": "./bin/contentful-to-sanity.cjs",
     "test": "vitest",
-    "run": "contentful-to-sanity arg1",
     "typecheck": "tsc --noEmit"
   },
   "browserslist": [
@@ -82,6 +82,7 @@
     "@sanity/schema": "^3.6.0",
     "axios": "^0.25.0",
     "case": "^1.6.3",
+    "commander": "^10.0.0",
     "configstore": "^6.0.0",
     "contentful": "^9.3.3",
     "contentful-export": "^7.19.36",

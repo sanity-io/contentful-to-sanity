@@ -3,7 +3,6 @@
   "include": ["./src", "./modules.d.ts"],
   "exclude": ["./**/*.test.ts", "./**/*.test.tsx"],
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "outDir": "./dist"
   }
 }

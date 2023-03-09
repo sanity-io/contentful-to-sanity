@@ -1,12 +1,12 @@
+import {describe, expect, test} from 'vitest'
+
+import type {ContentfulExport} from '../../types'
+import {contentfulTypeToSanitySchema} from '../../utils'
 import {
   contentfulContentTypeFactory,
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from '../helpers'
-import type {ContentfulExport} from '../../types'
-import {describe, expect, test} from 'vitest'
-
-import {contentfulTypeToSanitySchema} from '../../utils'
 
 describe('create schema for RichText type', () => {
   const contentType = contentfulContentTypeFactory(

@@ -2,11 +2,9 @@
 import {CliUx, Command, Flags} from '@oclif/core'
 // @ts-expect-error
 import type {OptionFlag} from '@oclif/core/lib/interfaces'
+import {IntlMode} from 'constants'
 import contentfulExport, {ContentfulExport} from 'contentful-export'
 import fs from 'fs-extra'
-import compact from 'just-compact'
-
-import {IntlMode} from 'constants'
 import {ContentfulParamsMissingError} from 'helpers/errors'
 import {parseManagementTokenFlag} from 'helpers/flags/parseManagementTokenFlag'
 import {parseOutputFlag} from 'helpers/flags/parseOutputFlag'
@@ -18,6 +16,8 @@ import {parseDatasetFlag} from 'helpers/flags/parseDatasetFlag'
 import {parseSpaceFlag} from 'helpers/flags/parseSpaceFlag'
 import {/* bootstrapStudio, */ writeRootSanitySchema, writeSingleSanitySchema} from 'helpers/sanity'
 import {stringFieldSchemaFactory} from 'helpers/sanity/fieldSchemaFactories'
+import compact from 'just-compact'
+
 import type {SanityDocumentSchema, SanityObjectSchema} from '../../types'
 import {absolutify, contentfulTypeToSanitySchema} from '../../utils'
 

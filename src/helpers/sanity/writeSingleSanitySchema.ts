@@ -3,9 +3,9 @@ import path from 'node:path'
 import fs from 'fs-extra'
 import {stringify} from 'javascript-stringify'
 
-import {ContentfulNoDefaultLocaleError} from '../errors'
 import {IntlMode} from '../../constants'
 import {ContentfulExport, SanityDocumentSchema, SanityObjectSchema} from '../../types'
+import {ContentfulNoDefaultLocaleError} from '../errors'
 import {serializeRuleSpecToCode} from './serializeRuleSpecToCode'
 
 type Flags = {

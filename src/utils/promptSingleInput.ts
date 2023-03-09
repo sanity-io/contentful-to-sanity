@@ -1,6 +1,5 @@
-import inquirer, {InputQuestion} from 'inquirer'
-
 import {requiredString} from 'helpers/validators'
+import inquirer, {InputQuestion} from 'inquirer'
 
 type Answers = {
   value: string

@@ -1,7 +1,7 @@
 import {ContentFields} from 'contentful-management'
 import compact from 'just-compact'
-import {ContentfulExport} from '../types'
 
+import {ContentfulExport} from '../types'
 import {BlockSanityFieldSchema, LinkedType, ObjectSanityFieldSchema} from '../types'
 
 const allStyles = [

@@ -1,12 +1,12 @@
+import {contentfulTypeToSanitySchema} from 'utils'
+import {describe, expect, test} from 'vitest'
+
+import type {ContentfulExport} from '../../types'
 import {
   contentfulContentTypeFactory,
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from '../helpers'
-import type {ContentfulExport} from '../../types'
-import {describe, expect, test} from 'vitest'
-
-import {contentfulTypeToSanitySchema} from 'utils'
 
 describe('create schema for Boolean type', () => {
   const contentType = contentfulContentTypeFactory(

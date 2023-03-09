@@ -3,14 +3,13 @@ import Schema from '@sanity/schema'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import {Block} from '@sanity/types'
-import {JSDOM} from 'jsdom'
-import md from 'markdown-it'
-
 import {
   arrayFieldSchemaFactory,
   blockFieldSchemaFactory,
   imageFieldSchemaFactory,
 } from 'helpers/sanity/fieldSchemaFactories'
+import {JSDOM} from 'jsdom'
+import md from 'markdown-it'
 
 const mockSchema = Schema.compile({
   name: 'default',

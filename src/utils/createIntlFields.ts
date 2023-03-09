@@ -1,4 +1,4 @@
-import {IntlIdStructure} from 'constants'
+import {IntlIdStructure} from '../constants'
 
 type Options = {
   idStructure: IntlIdStructure

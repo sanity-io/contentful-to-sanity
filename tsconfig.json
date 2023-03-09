@@ -2,7 +2,7 @@
   "extends": "./tsconfig.settings",
   "compilerOptions": {
     "noEmit": true,
-    "module": "esnext",
+    "module": "esnext"
   },
   "include": ["**/*.ts", "**/*.tsx", "./modules.d.ts"],
   "exclude": ["legacy/**/*.ts"]

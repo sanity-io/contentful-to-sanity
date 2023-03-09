@@ -1,4 +1,5 @@
 import {Control} from 'contentful-management'
+
 import {ContentfulExport} from '../types'
 
 export function findEditorControlForField(

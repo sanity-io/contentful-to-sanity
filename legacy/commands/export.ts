@@ -1,12 +1,9 @@
 import {CliUx, Command, Flags} from '@oclif/core'
 import type {OptionFlag} from '@oclif/core/lib/interfaces'
 import {SanityDocument} from '@sanity/client'
+import {IntlIdStructure, IntlMode} from 'constants'
 import contentfulExport, {ContentfulExport} from 'contentful-export'
 import fs from 'fs-extra'
-import compact from 'just-compact'
-import path from 'path'
-
-import {IntlIdStructure, IntlMode} from 'constants'
 import {
   ContentfulNoDefaultLocaleError,
   ContentfulNoLocalesError,
@@ -15,6 +12,8 @@ import {
 import {parseManagementTokenFlag} from 'helpers/flags/parseManagementTokenFlag'
 import {parseOutputFlag} from 'helpers/flags/parseOutputFlag'
 import {parseSpaceFlag} from 'helpers/flags/parseSpaceFlag'
+import compact from 'just-compact'
+import path from 'path'
 import {absolutify, contentfulEntryToSanityObject} from 'utils'
 
 const steps = {

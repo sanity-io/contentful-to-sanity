@@ -3,10 +3,10 @@ import {
   contentfulEditorControlFactory,
   contentfulEditorInterfaceFactory,
 } from 'test/helpers'
-import type {ContentfulExport} from '../../types'
+import {contentfulTypeToSanitySchema} from 'utils'
 import {describe, expect, test} from 'vitest'
 
-import {contentfulTypeToSanitySchema} from 'utils'
+import type {ContentfulExport} from '../../types'
 
 describe('create schema for Array type', () => {
   const contentType = contentfulContentTypeFactory(

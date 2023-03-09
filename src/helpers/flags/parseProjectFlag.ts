@@ -3,7 +3,6 @@
 import {CliUx} from '@oclif/core'
 import type {SanityClient} from '@sanity/client'
 import inquirer from 'inquirer'
-
 import {promptSingleInput} from 'utils'
 
 import {SanityApiError, SanityProjectNotFoundError} from '../errors'
