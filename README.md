@@ -69,7 +69,7 @@ export default defineConfig({
   title: '<project-name>',
 ```
 
-### 7. Try the Studio 🎉
+### 6. Try the Studio 🎉
 
 ```bash
 npx sanity dev
