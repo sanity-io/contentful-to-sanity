@@ -100,6 +100,7 @@
     "listr": "^0.14.3",
     "markdown-it": "^12.3.2",
     "soly": "^1.1.2",
+    "tiny-invariant": "^1.3.1",
     "zod": "^3.21.4"
   },
   "devDependencies": {

@@ -1,5 +1,9 @@
-import {version} from '../../package.json'
 import {Command} from 'commander'
+// import {z} from 'zod'
+
+import {version} from '../../package.json'
+
+export type {Command}
 
 const outdirArgument = ['<outdir>', 'The output directory for the operation'] as const
 const exportFileOption = ['--export-file [name]', undefined, 'contentful.json'] as const
@@ -16,27 +20,52 @@ const managementTokenOption = [
   'Contentful Management API token',
 ] as const
 
+export type CommandActions = {
+  defaultAction: (exportDir: string, options: any) => void
+  exportAction: (exportDir: string, options: any) => void
+  schemaAction: (exportDir: string, options: any) => void
+  datasetAction: (exportDir: string, options: any) => void
+}
+
+export interface ProgramOptions {
+  actions?: CommandActions
+  exitOverride?: boolean
+  suppressOutput?: boolean
+}
+
+const requiredAction = (name: string) => () => {
+  throw new TypeError(`Missing required action: ${name}`)
+}
+const requiredActions = {
+  defaultAction: requiredAction('defaultAction'),
+  exportAction: requiredAction('exportAction'),
+  schemaAction: requiredAction('schemaAction'),
+  datasetAction: requiredAction('datasetAction'),
+}
+
 // Inspired by https://github.com/shadowspawn/forest-arborist/blob/fca5ffcc5b300660ae9e1f6c4a8667d72feb0822/src/command.ts
-export function makeProgram(options?: {exitOverride?: boolean; suppressOutput?: boolean}): Command {
+export function makeProgram(opts: ProgramOptions = {}): Command {
   const program = new Command()
+  const actions = {...requiredActions, ...opts.actions}
 
   // Configuration, for easy testing
-  if (options?.exitOverride) {
+  if (opts.exitOverride) {
     program.exitOverride()
   }
-  if (options?.suppressOutput) {
+  if (opts.suppressOutput) {
     program.configureOutput({
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       writeOut: () => {},
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       writeErr: () => {},
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
+      // outputError: () => {},
     })
   }
 
   program
     .allowExcessArguments(false)
     .enablePositionalOptions()
-    .configureHelp({sortSubcommands: true})
     .argument(...outdirArgument)
     .option(...spaceIdOption)
     .option(...environmentIdOption)
@@ -45,8 +74,10 @@ export function makeProgram(options?: {exitOverride?: boolean; suppressOutput?: 
     .option(...schemaFileOption)
     .option(...datasetFileOption)
     .version(version)
-    .action(function (exportDir, options) {
+    .action((exportDir, options) => {
       console.log('default command', {exportDir, options})
+      // add zod step
+      return actions.defaultAction(exportDir, options)
     })
 
   program
@@ -58,6 +89,8 @@ export function makeProgram(options?: {exitOverride?: boolean; suppressOutput?: 
     .option(...exportFileOption)
     .action((exportDir, options) => {
       console.log('export command', {exportDir, options})
+      // add zod step
+      return actions.exportAction(exportDir, options)
     })
 
   program
@@ -67,14 +100,18 @@ export function makeProgram(options?: {exitOverride?: boolean; suppressOutput?: 
     .option(...schemaFileOption)
     .action((exportDir, options) => {
       console.log('schema command', {exportDir, options})
+      // add zod step
+      return actions.schemaAction(exportDir, options)
     })
 
   program
     .command('dataset')
     .argument(...outdirArgument)
     .option(...exportFileOption)
-    .action((exportDir, options) => {
+    .action(async (exportDir, options) => {
       console.log('dataset command', {exportDir, options})
+      // add zod step
+      return actions.datasetAction(exportDir, options)
     })
 
   return program
