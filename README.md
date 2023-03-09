@@ -5,6 +5,18 @@
 
 This package liberates Contentful spaces, creating Sanity projects and schemas as it goes.
 
+## Install
+
+```bash
+npm i -g contentful-to-sanity
+```
+
+Or use it on demand with `npx`:
+
+```bash
+npx contentful-to-sanity@latest --help
+```
+
 ## Usage
 
 ### 1. Open Contentful and navigate to your space: https://app.contentful.com/
@@ -18,10 +30,10 @@ Create a content management token (under _Space settings_ → _API keys_ → _Co
 npx sanity@latest init --template clean --output-path ./migrate
 ```
 
-### 3. Run the migration, which prepares a dataset.ndjson file for the later import step:
+### 3. Run the migration, which prepares a `dataset.ndjson` file for the later import step:
 
 ```bash
-npx contentful-to-sanity@latest -s <cspace ID> -t <personal token> ./migrate
+npx contentful-to-sanity@latest -s <space-id> -t <management-token> ./migrate
 ```
 
 ### 4. Start the dataset import process, which will finish in the background:
@@ -75,7 +87,7 @@ export default defineConfig({
 npx sanity dev
 ```
 
-You don't have to wait for the `import dataset.ndjson` job to finish befoer the Studio is ready for use. The Studio will keep up to speed with the progress of the import job in real-time.
+You don't have to wait for the `npx sanity dataset import ./migrate/dataset.ndjson` job to finish befoer the Studio is ready for use. The Studio will keep up to speed with the progress of the import job in real-time.
 
 ## Commands
 
