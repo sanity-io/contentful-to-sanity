@@ -24,7 +24,7 @@ npx contentful-to-sanity@latest --help
 Find the contentful space ID of your project (under _Space settings_ → _General_).
 Create a content management token (under _Space settings_ → _API keys_ → _Content management tokens_ → _Generate personal token_).
 
-### 2. Setup a clean Sanity v3 Studio and connect it to, or crate, the Sanity project and dataset you want as your destination:
+### 2. Setup a clean Sanity v3 Studio and connect it to, or create, the Sanity project and dataset you want as your destination:
 
 ```bash
 npx sanity@latest init --template clean --output-path ./migrate
