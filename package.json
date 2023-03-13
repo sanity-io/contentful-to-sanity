@@ -88,7 +88,7 @@
     "contentful-export": "^7.19.36",
     "contentful-management": "^10.30.0",
     "javascript-stringify": "^2.1.0",
-    "jsdom": "^19.0.0",
+    "jsdom": "^21.1.1",
     "just-compact": "^3.2.0",
     "just-omit": "^2.2.0",
     "just-safe-get": "^4.2.0",
