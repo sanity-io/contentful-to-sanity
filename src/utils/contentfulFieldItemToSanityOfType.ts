@@ -51,6 +51,8 @@ export function contentfulFieldItemToSanityOfType(
           .filter((type) => availableTypeIds.has(type))
           .map((type) => ({type})),
       )
+    } else if (data.contentTypes) {
+      factory.to(data.contentTypes.map((type) => ({type: type.sys.id})))
     }
 
     return factory.anonymous()
