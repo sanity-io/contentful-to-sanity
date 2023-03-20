@@ -180,4 +180,11 @@ describe('contentfulToStudioSchema', () => {
     expect(await contentfulToStudioSchema(data as any, intlOptions)).toMatchSnapshot()
     expect(await contentfulToStudioSchema(data as any, mdOptions)).toMatchSnapshot()
   })
+  test('references.json', async () => {
+    const {default: data} = await import('./fixtures/references.json')
+    expect(await contentfulToStudioSchema(data as any, tsOptions)).toMatchSnapshot()
+    expect(await contentfulToStudioSchema(data as any, jsOptions)).toMatchSnapshot()
+    expect(await contentfulToStudioSchema(data as any, intlOptions)).toMatchSnapshot()
+    expect(await contentfulToStudioSchema(data as any, mdOptions)).toMatchSnapshot()
+  })
 })

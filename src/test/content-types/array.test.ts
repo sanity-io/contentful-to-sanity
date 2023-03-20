@@ -50,4 +50,47 @@ describe('create schema for Array type', () => {
       },
     })
   })
+
+  test('should create a Sanity schema for a list of entry links', () => {
+    const arrayOfLinksContentType = contentfulContentTypeFactory(
+      'contentType',
+      [
+        {
+          id: 'field',
+          name: 'field',
+          type: 'Array',
+          localized: false,
+          required: false,
+          items: {
+            type: 'Link',
+            validations: [],
+            linkType: 'Entry',
+          },
+        },
+      ],
+      'field',
+    )
+
+    const data: ContentfulExport = {
+      editorInterfaces: [
+        contentfulEditorInterfaceFactory('contentType', [
+          contentfulEditorControlFactory('field', 'entryLinkEditor'),
+        ]),
+      ],
+      contentTypes: [
+        arrayOfLinksContentType,
+        contentfulContentTypeFactory('person', [], 'name'),
+        contentfulContentTypeFactory('post', [], 'name'),
+      ],
+    }
+
+    expect(
+      contentfulTypeToSanitySchema(arrayOfLinksContentType, data, {keepMarkdown: false}).fields[0],
+    ).to.deep.equal({
+      name: 'field',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'contentType'}, {type: 'person'}, {type: 'post'}]}],
+      title: 'field',
+    })
+  })
 })
