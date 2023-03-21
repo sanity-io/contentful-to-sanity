@@ -66,4 +66,32 @@ describe('Validations', () => {
       'custom((value) => value === "foo" ? true : { message: "Value must be foo" })',
     )
   })
+
+  test('transforms uri validation to javascript according to Sanity Studio validations API', () => {
+    expect(
+      serializeRuleSpecToCode({
+        flag: 'uri',
+        constraint: {
+          options: {
+            scheme: [/^ftp/],
+            allowCredentials: true,
+            allowRelative: true,
+            relativeOnly: false,
+          },
+        },
+      }),
+    ).to.equal('uri({scheme:[/^ftp/],allowCredentials:true,allowRelative:true,relativeOnly:false})')
+
+    expect(
+      serializeRuleSpecToCode({
+        flag: 'uri',
+        constraint: {
+          options: {
+            // @ts-expect-error wrong type
+            scheme: ['http', 'https'], // This type seems to be wrong in @sanity/types. See https://www.sanity.io/docs/url-type
+          },
+        },
+      }),
+    ).to.equal(`uri({scheme:['http','https']})`)
+  })
 })

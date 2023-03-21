@@ -14624,7 +14624,12 @@ export const layoutCopyType = defineType({
         Rule.regex(
           /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-\\\\/]))?$/,
           {invert: false},
-        ).required(),
+        ).uri({
+          allowCredentials: true,
+          allowRelative: true,
+          relativeOnly: false,
+          scheme: [/^http/, /^https/],
+        }),
     }),
     defineField({
       name: 'visualStyle',
@@ -15104,7 +15109,12 @@ export const layoutCopyType = {
         Rule.regex(
           /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-\\\\/]))?$/,
           {invert: false},
-        ).required(),
+        ).uri({
+          allowCredentials: true,
+          allowRelative: true,
+          relativeOnly: false,
+          scheme: [/^http/, /^https/],
+        }),
     },
     {
       name: 'visualStyle',
@@ -15585,7 +15595,12 @@ export const layoutCopyType = defineType({
         Rule.regex(
           /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-\\\\/]))?$/,
           {invert: false},
-        ).required(),
+        ).uri({
+          allowCredentials: true,
+          allowRelative: true,
+          relativeOnly: false,
+          scheme: [/^http/, /^https/],
+        }),
     }),
     defineField({
       name: 'visualStyle',
@@ -16009,7 +16024,12 @@ export const layoutCopyType = defineType({
         Rule.regex(
           /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-\\\\/]))?$/,
           {invert: false},
-        ).required(),
+        ).uri({
+          allowCredentials: true,
+          allowRelative: true,
+          relativeOnly: false,
+          scheme: [/^http/, /^https/],
+        }),
     }),
     defineField({
       name: 'visualStyle',
