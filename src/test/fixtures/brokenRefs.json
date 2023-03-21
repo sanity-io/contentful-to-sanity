@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -89,11 +88,7 @@
           "required": false,
           "validations": [
             {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline"
-              ],
+              "enabledMarks": ["bold", "italic", "underline"],
               "message": "Only bold, italic, and underline marks are allowed"
             },
             {
@@ -111,8 +106,7 @@
               "message": "Only unordered list, ordered list, quote, table, link to entry, link to Url, block entry, inline entry, and asset nodes are allowed"
             },
             {
-              "nodes": {
-              }
+              "nodes": {}
             }
           ],
           "disabled": false,
@@ -124,8 +118,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
@@ -136,14 +129,12 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
-            "validations": [
-            ],
+            "validations": [],
             "linkType": "Entry"
           }
         }
@@ -206,8 +197,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -217,8 +207,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
@@ -226,8 +215,7 @@
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -427,8 +415,7 @@
   "entries": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -475,8 +462,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -501,21 +487,17 @@
         "biography": {
           "en-US": {
             "nodeType": "document",
-            "data": {
-            },
+            "data": {},
             "content": [
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "Rune ",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   },
                   {
                     "nodeType": "text",
@@ -525,31 +507,25 @@
                         "type": "bold"
                       }
                     ],
-                    "data": {
-                    }
+                    "data": {}
                   },
                   {
                     "nodeType": "text",
                     "value": " testing Contentful.",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               },
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "Infinite loop:",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               },
@@ -564,21 +540,17 @@
                     }
                   }
                 },
-                "content": [
-                ]
+                "content": []
               },
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               }
@@ -589,8 +561,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -637,8 +608,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -664,8 +634,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -712,8 +681,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -730,8 +698,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -778,8 +745,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -807,8 +773,7 @@
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
