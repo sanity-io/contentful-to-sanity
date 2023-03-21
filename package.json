@@ -84,7 +84,7 @@
     "@stdlib/assert-is-relative-path": "0.0.8",
     "case": "1.6.3",
     "commander": "10.0.0",
-    "contentful-export": "7.19.38",
+    "contentful-export": "7.19.39",
     "contentful-management": "10.30.1",
     "javascript-stringify": "2.1.0",
     "jsdom": "21.1.1",
