@@ -53,6 +53,14 @@ export function contentfulLinkToSanityReference(
     return null
   }
 
+  const linkedEntry = data.entries && data.entries.find((item) => item.sys.id === link.sys.id)
+
+  if (!linkedEntry) {
+    // eslint-disable-next-line no-console
+    console.warn(`Missing entry with ID [${link.sys.id}]`)
+    return null
+  }
+
   return {
     _type: 'reference',
     _ref: link.sys.id,

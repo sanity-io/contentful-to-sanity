@@ -1,9 +1,7 @@
-import {faker} from '@faker-js/faker'
 import {describe, expect, test} from 'vitest'
 
 import {contentfulToDataset} from '../helpers/contentfulToDataset'
-
-faker.seed(123)
+import {parse} from './helpers'
 
 const smOptions = {
   intlMode: 'single',
@@ -40,20 +38,6 @@ const mdOptions = {
   keepMarkdown: true,
   locale: undefined,
 } as const
-
-const mockKey = faker.datatype.uuid().slice(0, 8)
-const mockMarks = [faker.datatype.uuid().slice(0, 8)]
-function parse(str: any) {
-  return JSON.parse(str, (key: string, value: any): any => {
-    if (key === '_key') {
-      return mockKey
-    }
-    if (key === 'marks' && Array.isArray(value) && value.length > 0) {
-      return mockMarks
-    }
-    return value
-  })
-}
 
 describe('contentfulToDataset', () => {
   test('blog.json', async () => {
