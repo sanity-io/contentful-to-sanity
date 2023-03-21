@@ -5,6 +5,7 @@ import omit from 'just-omit'
 export const serializeRuleSpecToCode = (ruleSpec: RuleSpec): string => {
   switch (ruleSpec.flag) {
     case 'uri':
+      return `uri(${stringify(ruleSpec.constraint.options)})`
     case 'presence':
       if (ruleSpec.constraint === 'optional') return ''
       return 'required()'
