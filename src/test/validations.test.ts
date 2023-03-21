@@ -87,6 +87,7 @@ describe('Validations', () => {
         flag: 'uri',
         constraint: {
           options: {
+            // @ts-expect-error wrong type
             scheme: ['http', 'https'], // This type seems to be wrong in @sanity/types. See https://www.sanity.io/docs/url-type
           },
         },
