@@ -28,6 +28,7 @@ export async function exportAction({
     environmentId,
     skipContentModel: false,
     skipEditorInterfaces: false,
+    includeDrafts: true,
     // If saveFile is false, then we're not exporting data, we're exporting what we need to generate a schema
     skipWebhooks: true,
     skipRoles: true,
