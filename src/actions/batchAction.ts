@@ -13,6 +13,7 @@ export async function batchAction({
   keepMarkdown,
   locale,
   managementToken,
+  accessToken,
   saveFile,
   schemaFile,
   spaceId,
@@ -23,6 +24,7 @@ export async function batchAction({
     exportDir,
     exportFile,
     managementToken,
+    accessToken,
     saveFile,
     spaceId,
   })

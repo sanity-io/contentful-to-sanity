@@ -35,6 +35,10 @@ const managementTokenOption = [
   '-t, --management-token <management-token>',
   'Contentful Management API token',
 ] as const
+const accessTokenOption = [
+  '-a, --access-token <access-token>',
+  'Contentful Content Delivery API access token',
+] as const
 const intlOption = new Option(
   '--intl [mode]',
   'Define the intl behavior. This is disabled by default and only one locale will be considered.',
@@ -107,6 +111,7 @@ export function makeProgram(opts: ProgramOptions = {}): Command {
     .argument(...outdirArgument)
     .requiredOption(...spaceIdOption)
     .requiredOption(...managementTokenOption)
+    .requiredOption(...accessTokenOption)
     .option(...environmentIdOption)
     .option(...exportFileOption)
     .action((exportDir, options) => {
@@ -169,6 +174,7 @@ export function makeProgram(opts: ProgramOptions = {}): Command {
     .argument(...outdirArgument)
     .requiredOption(...spaceIdOption)
     .requiredOption(...managementTokenOption)
+    .requiredOption(...accessTokenOption)
     .option(...environmentIdOption)
     .option(...exportFileOption)
     .option(...schemaFileOption)
