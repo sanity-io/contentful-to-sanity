@@ -28,29 +28,15 @@ type Options = {
   weakRefs?: boolean
 }
 
-function isDraft(entry: EntryProps<Record<string, Record<string, any>>>): boolean {
-  return entry.sys.publishedVersion === undefined
-}
-
-function isChanged(entry: EntryProps<Record<string, Record<string, any>>>): boolean {
-  return !!entry.sys.publishedVersion && entry.sys.version >= entry.sys.publishedVersion + 2
-}
-
-function idForEntry(entry: EntryProps<Record<string, Record<string, any>>>): string {
-  if (isDraft(entry) || isChanged(entry)) {
-    return `drafts.${entry.sys.id}`
-  }
-  return entry.sys.id
-}
-
 export function contentfulEntryToSanityObject(
+  id: string,
   entry: EntryProps<Record<string, Record<string, any>>>,
   locale: string,
   data: ContentfulExport,
   options: Options,
 ): SanityDocument {
   let doc: SanityDocument = {
-    _id: idForEntry(entry),
+    _id: id,
     _rev: entry.sys.id,
     _type: entry.sys.contentType.sys.id,
     _createdAt: entry.sys.createdAt,

@@ -61631,7 +61631,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
   },
   {
     "_createdAt": "2017-11-08T16:06:59.430Z",
-    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_id": "4ZQtjYftNKaoKWuksM0sS0",
     "_rev": "4ZQtjYftNKaoKWuksM0sS0",
     "_type": "lessonCopy",
     "_updatedAt": "2018-02-01T13:53:26.380Z",
@@ -62296,7 +62296,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
   },
   {
     "_createdAt": "2017-12-12T14:02:49.950Z",
-    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_id": "77NL8rGPks6SauGuoG8ui",
     "_rev": "77NL8rGPks6SauGuoG8ui",
     "_type": "layoutHeroImage",
     "_updatedAt": "2017-12-14T17:44:39.996Z",
@@ -62794,7 +62794,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
   },
   {
     "_createdAt": "2017-11-08T16:06:56.098Z",
-    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_id": "2uNOpLMJioKeoMq8W44uYc",
     "_rev": "2uNOpLMJioKeoMq8W44uYc",
     "_type": "layout",
     "_updatedAt": "2018-01-24T11:37:16.429Z",
@@ -66204,12 +66204,12 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
     "__i18n_refs": [
       {
         "_key": "bb463b8b",
-        "_ref": "drafts.4ZQtjYftNKaoKWuksM0sS0__i18n_de-DE",
+        "_ref": "4ZQtjYftNKaoKWuksM0sS0__i18n_de-DE",
         "_type": "reference",
       },
     ],
     "_createdAt": "2017-11-08T16:06:59.430Z",
-    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_id": "4ZQtjYftNKaoKWuksM0sS0",
     "_rev": "4ZQtjYftNKaoKWuksM0sS0",
     "_type": "lessonCopy",
     "_updatedAt": "2018-02-01T13:53:26.380Z",
@@ -66303,12 +66303,12 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
   },
   {
     "__i18n_base": {
-      "_ref": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+      "_ref": "4ZQtjYftNKaoKWuksM0sS0",
       "_type": "reference",
     },
     "__i18n_lang": "de-DE",
     "_createdAt": "2017-11-08T16:06:59.430Z",
-    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_id": "4ZQtjYftNKaoKWuksM0sS0",
     "_rev": "4ZQtjYftNKaoKWuksM0sS0",
     "_type": "lessonCopy",
     "_updatedAt": "2018-02-01T13:53:26.380Z",
@@ -67376,12 +67376,12 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
     "__i18n_refs": [
       {
         "_key": "bb463b8b",
-        "_ref": "drafts.77NL8rGPks6SauGuoG8ui__i18n_de-DE",
+        "_ref": "77NL8rGPks6SauGuoG8ui__i18n_de-DE",
         "_type": "reference",
       },
     ],
     "_createdAt": "2017-12-12T14:02:49.950Z",
-    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_id": "77NL8rGPks6SauGuoG8ui",
     "_rev": "77NL8rGPks6SauGuoG8ui",
     "_type": "layoutHeroImage",
     "_updatedAt": "2017-12-14T17:44:39.996Z",
@@ -67394,12 +67394,12 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
   },
   {
     "__i18n_base": {
-      "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+      "_ref": "77NL8rGPks6SauGuoG8ui",
       "_type": "reference",
     },
     "__i18n_lang": "de-DE",
     "_createdAt": "2017-12-12T14:02:49.950Z",
-    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_id": "77NL8rGPks6SauGuoG8ui",
     "_rev": "77NL8rGPks6SauGuoG8ui",
     "_type": "layoutHeroImage",
     "_updatedAt": "2017-12-14T17:44:39.996Z",
@@ -68308,12 +68308,12 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
     "__i18n_refs": [
       {
         "_key": "bb463b8b",
-        "_ref": "drafts.2uNOpLMJioKeoMq8W44uYc__i18n_de-DE",
+        "_ref": "2uNOpLMJioKeoMq8W44uYc__i18n_de-DE",
         "_type": "reference",
       },
     ],
     "_createdAt": "2017-11-08T16:06:56.098Z",
-    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_id": "2uNOpLMJioKeoMq8W44uYc",
     "_rev": "2uNOpLMJioKeoMq8W44uYc",
     "_type": "layout",
     "_updatedAt": "2018-01-24T11:37:16.429Z",
@@ -68336,12 +68336,12 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
   },
   {
     "__i18n_base": {
-      "_ref": "drafts.2uNOpLMJioKeoMq8W44uYc",
+      "_ref": "2uNOpLMJioKeoMq8W44uYc",
       "_type": "reference",
     },
     "__i18n_lang": "de-DE",
     "_createdAt": "2017-11-08T16:06:56.098Z",
-    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_id": "2uNOpLMJioKeoMq8W44uYc",
     "_rev": "2uNOpLMJioKeoMq8W44uYc",
     "_type": "layout",
     "_updatedAt": "2018-01-24T11:37:16.429Z",
@@ -70232,7 +70232,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
   },
   {
     "_createdAt": "2017-11-08T16:06:59.430Z",
-    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_id": "4ZQtjYftNKaoKWuksM0sS0",
     "_rev": "4ZQtjYftNKaoKWuksM0sS0",
     "_type": "lessonCopy",
     "_updatedAt": "2018-02-01T13:53:26.380Z",
@@ -70897,7 +70897,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
   },
   {
     "_createdAt": "2017-12-12T14:02:49.950Z",
-    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_id": "77NL8rGPks6SauGuoG8ui",
     "_rev": "77NL8rGPks6SauGuoG8ui",
     "_type": "layoutHeroImage",
     "_updatedAt": "2017-12-14T17:44:39.996Z",
@@ -71395,7 +71395,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
   },
   {
     "_createdAt": "2017-11-08T16:06:56.098Z",
-    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_id": "2uNOpLMJioKeoMq8W44uYc",
     "_rev": "2uNOpLMJioKeoMq8W44uYc",
     "_type": "layout",
     "_updatedAt": "2018-01-24T11:37:16.429Z",
@@ -73302,7 +73302,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
   },
   {
     "_createdAt": "2017-11-08T16:06:59.430Z",
-    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_id": "4ZQtjYftNKaoKWuksM0sS0",
     "_rev": "4ZQtjYftNKaoKWuksM0sS0",
     "_type": "lessonCopy",
     "_updatedAt": "2018-02-01T13:53:26.380Z",
@@ -73967,7 +73967,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
   },
   {
     "_createdAt": "2017-12-12T14:02:49.950Z",
-    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_id": "77NL8rGPks6SauGuoG8ui",
     "_rev": "77NL8rGPks6SauGuoG8ui",
     "_type": "layoutHeroImage",
     "_updatedAt": "2017-12-14T17:44:39.996Z",
@@ -74465,7 +74465,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
   },
   {
     "_createdAt": "2017-11-08T16:06:56.098Z",
-    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_id": "2uNOpLMJioKeoMq8W44uYc",
     "_rev": "2uNOpLMJioKeoMq8W44uYc",
     "_type": "layout",
     "_updatedAt": "2018-01-24T11:37:16.429Z",
@@ -74901,7 +74901,7 @@ let client = Client(spaceId: \\"<space_id>\\", accessToken: \\"<cpa_token>\\")",
   },
   {
     "_createdAt": "2017-11-08T16:06:59.430Z",
-    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_id": "4ZQtjYftNKaoKWuksM0sS0",
     "_rev": "4ZQtjYftNKaoKWuksM0sS0",
     "_type": "lessonCopy",
     "_updatedAt": "2018-02-01T13:53:26.380Z",
@@ -75034,7 +75034,7 @@ _The proceeding screenshot shows example validations within the Contentful web a
   },
   {
     "_createdAt": "2017-12-12T14:02:49.950Z",
-    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_id": "77NL8rGPks6SauGuoG8ui",
     "_rev": "77NL8rGPks6SauGuoG8ui",
     "_type": "layoutHeroImage",
     "_updatedAt": "2017-12-14T17:44:39.996Z",
@@ -75396,7 +75396,7 @@ The Hello Contentful course covers the following topics:
   },
   {
     "_createdAt": "2017-11-08T16:06:56.098Z",
-    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_id": "2uNOpLMJioKeoMq8W44uYc",
     "_rev": "2uNOpLMJioKeoMq8W44uYc",
     "_type": "layout",
     "_updatedAt": "2018-01-24T11:37:16.429Z",

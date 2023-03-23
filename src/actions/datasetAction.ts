@@ -26,20 +26,32 @@ export async function datasetAction({
     isAbsolutePath(exportFilePath),
     `exportFilePath must be an absolute path: ${exportFilePath}`,
   )
+  const publishedExportFilePath = path.join(
+    exportDir,
+    path.parse(exportFile).name + '.published.json',
+  )
   const datasetFilePath = path.join(exportDir, datasetFile)
   invariant(
     isAbsolutePath(datasetFilePath),
     `datasetFilePath must be an absolute path: ${datasetFilePath}`,
   )
 
-  const data: ContentfulExport = JSON.parse(await readFile(exportFilePath, 'utf8'))
-
-  const convertedDataset = await contentfulToDataset(data, {
-    intlMode,
-    weakRefs,
-    intlIdStructure,
-    keepMarkdown,
-    locale,
-  })
+  const draftData: ContentfulExport = JSON.parse(await readFile(exportFilePath, 'utf8'))
+  const publishedData: ContentfulExport = JSON.parse(
+    await readFile(publishedExportFilePath, 'utf8'),
+  )
+  const convertedDataset = await contentfulToDataset(
+    {
+      drafts: draftData,
+      published: publishedData,
+    },
+    {
+      intlMode,
+      weakRefs,
+      intlIdStructure,
+      keepMarkdown,
+      locale,
+    },
+  )
   await writeFile(datasetFilePath, convertedDataset)
 }
