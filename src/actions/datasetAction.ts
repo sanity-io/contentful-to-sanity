@@ -6,6 +6,7 @@ import invariant from 'tiny-invariant'
 
 import {contentfulToDataset} from '../helpers/contentfulToDataset'
 import type {DatasetActionArgs} from '../parsers/datasetActionArgs'
+import {optimizeSVG} from '../processors/optimizeSVG'
 import {ContentfulExport} from '../types'
 import {absolutify} from '../utils/absolutify'
 
@@ -16,6 +17,7 @@ export async function datasetAction({
   datasetFile,
   weakRefs,
   keepMarkdown,
+  optimizeSvgs,
   intlIdStructure,
   locale,
 }: DatasetActionArgs) {
@@ -53,5 +55,11 @@ export async function datasetAction({
       locale,
     },
   )
-  await writeFile(datasetFilePath, convertedDataset)
+
+  if (optimizeSvgs) {
+    const optimizedDataset = await optimizeSVG(convertedDataset, exportDir)
+    await writeFile(datasetFilePath, optimizedDataset)
+  } else {
+    await writeFile(datasetFilePath, convertedDataset)
+  }
 }

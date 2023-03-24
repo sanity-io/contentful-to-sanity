@@ -9,6 +9,7 @@ export const datasetActionArgs = z.object({
   intl: z.enum(['single', 'multiple']).default('single'),
   weakRefs: z.boolean(),
   keepMarkdown: z.boolean(),
+  optimizeSvgs: z.boolean(),
   intlIdStructure: z.enum(['subpath', 'delimiter']).default('delimiter'),
   locale: z.string().optional(),
 })
