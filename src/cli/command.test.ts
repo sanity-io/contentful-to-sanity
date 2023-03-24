@@ -177,6 +177,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             "intl": "single",
             "intlIdStructure": "delimiter",
             "keepMarkdown": false,
+            "optimizeSvgs": false,
             "weakRefs": false,
           },
         ]
@@ -212,6 +213,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             "intlIdStructure": "delimiter",
             "keepMarkdown": false,
             "managementToken": "abc",
+            "optimizeSvgs": false,
             "saveFile": true,
             "schemaFile": "schema.ts",
             "spaceId": "123",
@@ -248,6 +250,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             "intlIdStructure": "delimiter",
             "keepMarkdown": false,
             "managementToken": "abc",
+            "optimizeSvgs": false,
             "saveFile": true,
             "schemaFile": "schema.ts",
             "spaceId": "123",
@@ -291,6 +294,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             "intlIdStructure": "delimiter",
             "keepMarkdown": false,
             "managementToken": "abc",
+            "optimizeSvgs": false,
             "saveFile": true,
             "schemaFile": "schema.ts",
             "spaceId": "123",
@@ -327,6 +331,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             "intlIdStructure": "delimiter",
             "keepMarkdown": false,
             "managementToken": "abc",
+            "optimizeSvgs": false,
             "saveFile": true,
             "schemaFile": "schema.ts",
             "spaceId": "123",
@@ -415,6 +420,8 @@ describe('contentful-to-sanity [command] <outdir>', () => {
                                         command (default: \\"dataset.ndjson\\")
             --keep-markdown             Whether to keep markdown as-is or convert it to
                                         portable text (default: false)
+            --optimize-svgs             Whether to optimize SVGs before importing them
+                                        (default: false)
             --intl [mode]               Define the intl behavior. This is disabled by
                                         default and only one locale will be considered.
                                         (choices: \\"single\\", \\"multiple\\", default:
@@ -448,6 +455,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             --schema-file [name]                       The filename for the generated Sanity Studio schema definitions file. Use \`.js\` file endings to strip TypeScript syntax. (default: \\"schema.ts\\")
             --dataset-file [name]                      The filename for the generated NDJSON document that can be used with the Sanity CLI \`import\` command (default: \\"dataset.ndjson\\")
             --keep-markdown                            Whether to keep markdown as-is or convert it to portable text (default: false)
+            --optimize-svgs                            Whether to optimize SVGs before importing them (default: false)
             --weak-refs                                Use weak refs instead of strong ones (default: false)
             --intl-id-structure [type]                 Defines the ID behavior for i18n. See @sanity/document-internationalization for more info (choices: \\"subpath\\", \\"delimiter\\", default: \\"delimiter\\")
             --locale [id]                              The locale to import. This should be used when using the intl single mode
