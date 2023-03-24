@@ -161,7 +161,7 @@
         "id": "post",
         "type": "ContentType",
         "createdAt": "2023-03-20T20:34:37.761Z",
-        "updatedAt": "2023-03-22T00:03:47.790Z",
+        "updatedAt": "2023-03-23T00:27:59.264Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -169,8 +169,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2023-03-22T00:03:47.790Z",
+        "publishedVersion": 15,
+        "publishedAt": "2023-03-23T00:27:59.264Z",
         "firstPublishedAt": "2023-03-20T20:34:38.084Z",
         "createdBy": {
           "sys": {
@@ -186,8 +186,8 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "publishedCounter": 7,
-        "version": 14,
+        "publishedCounter": 8,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -222,6 +222,54 @@
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
+        },
+        {
+          "id": "body",
+          "name": "body",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "hyperlink"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to entry, link to asset, inline entry, and link to Url nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
         }
       ]
     }
@@ -346,7 +394,7 @@
             "linkType": "Space"
           }
         },
-        "version": 14,
+        "version": 16,
         "createdAt": "2023-03-20T20:34:38.187Z",
         "createdBy": {
           "sys": {
@@ -355,7 +403,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-03-22T00:03:48.358Z",
+        "updatedAt": "2023-03-23T00:28:00.355Z",
         "updatedBy": {
           "sys": {
             "id": "2jYeCfa60UhCFs76N2hp6o",
@@ -420,98 +468,16 @@
           "fieldId": "author",
           "widgetId": "entryLinkEditor",
           "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
         }
       ]
     }
   ],
   "entries": [
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "6cvippge3sd1"
-          }
-        },
-        "id": "5NCD8ztIrVWo7MMBf9f81D",
-        "type": "Entry",
-        "createdAt": "2023-03-21T23:43:44.399Z",
-        "updatedAt": "2023-03-21T23:43:44.399Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "post"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Published page"
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "6cvippge3sd1"
-          }
-        },
-        "id": "6T4f1JKI3KbeqElChsqUZs",
-        "type": "Entry",
-        "createdAt": "2023-03-21T23:45:03.006Z",
-        "updatedAt": "2023-03-21T23:45:03.006Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "post"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Published page with draft person"
-        },
-        "author": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "9lDgwws6jtn8ow1CkWDmA"
-            }
-          }
-        }
-      }
-    }
   ],
   "assets": [
     {
