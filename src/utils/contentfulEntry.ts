@@ -11,3 +11,7 @@ export function isChanged(entry: EntryProps<Record<string, Record<string, any>>>
 export function isPublished(entry: EntryProps<Record<string, Record<string, any>>>): boolean {
   return !!entry.sys.publishedVersion && entry.sys.version == entry.sys.publishedVersion + 1
 }
+
+export function isArchived(entry: EntryProps<Record<string, Record<string, any>>>) {
+  return !!entry.sys.archivedVersion
+}

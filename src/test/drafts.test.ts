@@ -18,7 +18,7 @@ describe('Drafts', async () => {
     const ndjson = await contentfulToDataset(
       {
         drafts: drafts as any,
-        published: published as any
+        published: published as any,
       },
       options,
     )
@@ -41,10 +41,10 @@ describe('Drafts', async () => {
     expect(docs.find((doc) => doc._id === 'drafts.5NCD8ztIrVWo7MMBf9f81D')).toBeDefined()
 
     // Published doc with a broken draft ref
-    const doc = docs.find((doc) => doc._id === '6T4f1JKI3KbeqElChsqUZs')
+    const doc = docs.find((document) => document._id === '6T4f1JKI3KbeqElChsqUZs')
     expect(doc).toBeDefined()
     expect(doc.author).toBeNull()
   })
 
-  test("Draft doc with a draft reference")
+  test('Draft doc with a draft reference')
 })

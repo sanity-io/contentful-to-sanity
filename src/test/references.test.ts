@@ -15,7 +15,9 @@ describe('Reference fields', async () => {
       locale: undefined,
     } as const
 
-    const res = (await contentfulToDataset({drafts: data as any, published: data as any}, options)).split('\n').map(parse)
+    const res = (await contentfulToDataset({drafts: data as any, published: data as any}, options))
+      .split('\n')
+      .map(parse)
     // 1ulybB3BSdHCNQe2UCWbX5 is the id of a post with a broken `author` link
     const post = res.find((e) => e._id === '1ulybB3BSdHCNQe2UCWbX5')
     expect(post).toBeDefined()

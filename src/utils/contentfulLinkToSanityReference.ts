@@ -1,6 +1,7 @@
 import {Reference} from '@sanity/types'
 
 import type {ContentfulExport} from '../types'
+import {isDraft} from './contentfulEntry'
 import type {SysLink} from './objectIsContentfulLink'
 
 type Options = {
@@ -58,6 +59,12 @@ export function contentfulLinkToSanityReference(
   if (!linkedEntry) {
     // eslint-disable-next-line no-console
     console.warn(`Missing entry with ID [${link.sys.id}]`)
+    return null
+  }
+
+  if (isDraft(linkedEntry)) {
+    // eslint-disable-next-line no-console
+    console.warn(`Link to draft entry with ID [${link.sys.id}]`)
     return null
   }
 
