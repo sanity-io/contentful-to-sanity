@@ -46,8 +46,17 @@ describe('Drafts', async () => {
         type: 'person',
         template: {
           id: 'person',
+          params: {},
         },
       },
     })
+  })
+  test('Published post with a broken ref to a draft', async ({docs}) => {
+    const post = docs.find((doc) => doc._id === '5675910SUMh7sD0qbhvdp2')
+    expect(post).toBeDefined()
+    expect(post?.author).toBeNull()
+
+    // Also this post should not have a draft
+    expect(docs.find((doc) => doc._id === 'draft.5675910SUMh7sD0qbhvdp2')).toBeUndefined()
   })
 })

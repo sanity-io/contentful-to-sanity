@@ -598,6 +598,81 @@
           "en-US": "Draft person"
         }
       }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "6cvippge3sd1"
+          }
+        },
+        "id": "5675910SUMh7sD0qbhvdp2",
+        "type": "Entry",
+        "createdAt": "2023-03-24T20:56:11.973Z",
+        "updatedAt": "2023-03-24T20:56:54.930Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-03-24T20:56:54.930Z",
+        "firstPublishedAt": "2023-03-24T20:56:54.930Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Published post with broken ref to a draft"
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6PRft3TsWQAf2Fkeb6ZKhb"
+            }
+          }
+        }
+      }
     }
   ],
   "assets": [

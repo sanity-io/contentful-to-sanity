@@ -478,6 +478,54 @@
     }
   ],
   "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "6cvippge3sd1"
+          }
+        },
+        "id": "5675910SUMh7sD0qbhvdp2",
+        "type": "Entry",
+        "createdAt": "2023-03-24T20:56:54.930Z",
+        "updatedAt": "2023-03-24T20:56:54.930Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Published post with broken ref to a draft"
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6PRft3TsWQAf2Fkeb6ZKhb"
+            }
+          }
+        }
+      }
+    }
   ],
   "assets": [
     {

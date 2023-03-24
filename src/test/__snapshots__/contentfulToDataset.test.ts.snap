@@ -59869,6 +59869,18 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
         "_type": "reference",
         "_weak": false,
       },
+      {
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "layoutHeroImage",
+            "params": {},
+          },
+          "type": "layoutHeroImage",
+        },
+        "_type": "reference",
+        "_weak": true,
+      },
     ],
     "slug": {
       "current": "home",
@@ -63193,6 +63205,18 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
         "_ref": "4B9n4zqG6QCgui8YiUs4Yc",
         "_type": "reference",
         "_weak": false,
+      },
+      {
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "layoutHeroImage",
+            "params": {},
+          },
+          "type": "layoutHeroImage",
+        },
+        "_type": "reference",
+        "_weak": true,
       },
     ],
     "slug": {
@@ -68857,6 +68881,18 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
         "_type": "reference",
         "_weak": true,
       },
+      {
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "layoutHeroImage",
+            "params": {},
+          },
+          "type": "layoutHeroImage",
+        },
+        "_type": "reference",
+        "_weak": true,
+      },
     ],
     "slug": {
       "current": "home",
@@ -72047,6 +72083,18 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
         "_type": "reference",
         "_weak": false,
       },
+      {
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "layoutHeroImage",
+            "params": {},
+          },
+          "type": "layoutHeroImage",
+        },
+        "_type": "reference",
+        "_weak": true,
+      },
     ],
     "slug": {
       "current": "home",
@@ -75155,6 +75203,18 @@ For fun, change the formatting of **pizza** by going to \`API: Content Delivery 
         "_ref": "4B9n4zqG6QCgui8YiUs4Yc",
         "_type": "reference",
         "_weak": false,
+      },
+      {
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "layoutHeroImage",
+            "params": {},
+          },
+          "type": "layoutHeroImage",
+        },
+        "_type": "reference",
+        "_weak": true,
       },
     ],
     "slug": {

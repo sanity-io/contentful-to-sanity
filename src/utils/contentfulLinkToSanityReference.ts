@@ -20,6 +20,7 @@ function prefixUrl(url: string) {
 }
 
 export function contentfulLinkToSanityReference(
+  id: string,
   link: SysLink,
   locale: string,
   data: ContentfulExport,
@@ -63,6 +64,22 @@ export function contentfulLinkToSanityReference(
   }
 
   if (isDraft(linkedEntry)) {
+    if (id.startsWith('drafts.')) {
+      // We allow a draft to link to another draft
+      const type = linkedEntry.sys.contentType.sys.id
+      return {
+        _type: 'reference',
+        _ref: `drafts.${link.sys.id}`,
+        _weak: true,
+        _strengthenOnPublish: {
+          type: type,
+          template: {
+            id: type,
+            params: {},
+          },
+        },
+      }
+    }
     // eslint-disable-next-line no-console
     console.warn(`Link to draft entry with ID [${link.sys.id}]`)
     return null
