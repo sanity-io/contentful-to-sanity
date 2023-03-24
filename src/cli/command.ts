@@ -57,6 +57,11 @@ const markdownOption = [
   'Whether to keep markdown as-is or convert it to portable text',
   false,
 ] as const
+const optimizeSvgOption = [
+  '--optimize-svgs',
+  'Whether to optimize SVGs before importing them',
+  false,
+] as const
 const localeOption = [
   '--locale [id]',
   'The locale to import. This should be used when using the intl single mode',
@@ -152,6 +157,7 @@ export function makeProgram(opts: ProgramOptions = {}): Command {
     .option(...exportFileOption)
     .option(...datasetFileOption)
     .option(...markdownOption)
+    .option(...optimizeSvgOption)
     .addOption(intlOption)
     .option(...weakRefsOption)
     .addOption(intlIdStructureOption)
@@ -180,6 +186,7 @@ export function makeProgram(opts: ProgramOptions = {}): Command {
     .option(...schemaFileOption)
     .option(...datasetFileOption)
     .option(...markdownOption)
+    .option(...optimizeSvgOption)
     .option(...weakRefsOption)
     .addOption(intlIdStructureOption)
     .option(...localeOption)
