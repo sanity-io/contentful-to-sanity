@@ -20910,6 +20910,48 @@ exports[`contentfulToDataset > cookbook.json 5`] = `
 ]
 `;
 
+exports[`contentfulToDataset > drafts.json 1`] = `
+[
+  {
+    "_createdAt": "2023-03-24T20:35:35.264Z",
+    "_id": "drafts.4RIfygf1stLd0J1gycYXlu",
+    "_rev": "4RIfygf1stLd0J1gycYXlu",
+    "_type": "post",
+    "_updatedAt": "2023-03-24T20:36:28.219Z",
+    "author": {
+      "_ref": "drafts.6PRft3TsWQAf2Fkeb6ZKhb",
+      "_strengthenOnPublish": {
+        "template": {
+          "id": "person",
+          "params": {},
+        },
+        "type": "person",
+      },
+      "_type": "reference",
+      "_weak": true,
+    },
+    "title": "Draft page",
+  },
+  {
+    "_createdAt": "2023-03-24T20:36:22.675Z",
+    "_id": "drafts.6PRft3TsWQAf2Fkeb6ZKhb",
+    "_rev": "6PRft3TsWQAf2Fkeb6ZKhb",
+    "_type": "person",
+    "_updatedAt": "2023-03-24T20:36:28.180Z",
+    "name": "Draft person",
+  },
+  {
+    "_createdAt": "2023-03-24T20:56:54.930Z",
+    "_id": "5675910SUMh7sD0qbhvdp2",
+    "_rev": "5675910SUMh7sD0qbhvdp2",
+    "_type": "post",
+    "_updatedAt": "2023-03-24T20:56:54.930Z",
+    "author": null,
+    "title": "Published post with broken ref to a draft",
+  },
+]
+`;
+
 exports[`contentfulToDataset > gallery.json 1`] = `
 [
   {

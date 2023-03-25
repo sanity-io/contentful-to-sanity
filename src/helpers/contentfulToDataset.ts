@@ -8,20 +8,13 @@ import {contentfulEntryToSanityObject} from '../utils/contentfulEntryToSanityObj
 import {ContentfulNoDefaultLocaleError} from './errors/ContentfulNoDefaultLocaleError'
 import {ContentfulNoLocalesError} from './errors/ContentfulNoLocalesError'
 
-export async function contentfulToDataset(
-  exports: {
-    drafts: ContentfulExport
-    published?: ContentfulExport
-  },
+export function localeDataFromExport(
+  data: ContentfulExport,
   opts: {
     intlMode: 'single' | 'multiple'
-    weakRefs: boolean
-    intlIdStructure: 'subpath' | 'delimiter'
-    keepMarkdown: boolean
     locale: string | undefined
   },
-): Promise<string> {
-  const data = exports.drafts // The metadata is in the draft export
+) {
   const useMultiLocale = opts.intlMode === 'multiple'
   const defaultLocale = data.locales?.find((locale) => Boolean(locale.default))
   if (!defaultLocale) {
@@ -42,9 +35,31 @@ export async function contentfulToDataset(
   if (localesToImport.length === 0) {
     throw new ContentfulNoLocalesError()
   }
+  return {
+    localesToImport,
+    useMultiLocale,
+    defaultLocale,
+  }
+}
 
+export async function contentfulToDataset(
+  exports: {
+    drafts: ContentfulExport
+    published?: ContentfulExport
+  },
+  opts: {
+    intlMode: 'single' | 'multiple'
+    weakRefs: boolean
+    intlIdStructure: 'subpath' | 'delimiter'
+    keepMarkdown: boolean
+    locale: string | undefined
+  },
+): Promise<string> {
+  const data = exports.drafts // The metadata is in the draft export
   invariant(exports.drafts.entries, 'Expected data.entries to be defined')
   invariant(exports.drafts.entries.length > 0, 'Expected data.entries to be defined')
+
+  const {localesToImport, useMultiLocale, defaultLocale} = localeDataFromExport(data, opts)
 
   const importableEntries: Set<SanityDocument> = new Set()
 
