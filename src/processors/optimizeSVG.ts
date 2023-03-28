@@ -45,7 +45,7 @@ export async function optimizeSVG(dataset: string, exportDir: string) {
 
           const {data: optimizedSVG} = await optimize(svgFileContents)
           fs.writeFileSync(svgFilePath, optimizedSVG)
-          newLine = newLine.replace(svgUrl, `file://${svgFilePath}`)
+          newLine = newLine.replace(svgUrl, `file://${JSON.stringify(svgFilePath).slice(1, -1)}`)
         } else {
           // eslint-disable-next-line no-console
           console.error(`Error fetching ${svgUrl}`, response.status)

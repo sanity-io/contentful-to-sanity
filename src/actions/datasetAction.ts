@@ -4,11 +4,13 @@ import path from 'node:path'
 import isAbsolutePath from '@stdlib/assert-is-absolute-path'
 import invariant from 'tiny-invariant'
 
-import {contentfulToDataset} from '../helpers/contentfulToDataset'
+import {contentfulToDataset, localeDataFromExport} from '../helpers/contentfulToDataset'
 import type {DatasetActionArgs} from '../parsers/datasetActionArgs'
+import {convertUnsupportedImages} from '../processors/convertUnsupportedImages'
 import {optimizeSVG} from '../processors/optimizeSVG'
 import {ContentfulExport} from '../types'
 import {absolutify} from '../utils/absolutify'
+import {contentfulAssetUrlToContentType} from '../utils/contentfulAssetUrlToContentType'
 
 export async function datasetAction({
   exportDir: _exportDir,
@@ -18,6 +20,7 @@ export async function datasetAction({
   weakRefs,
   keepMarkdown,
   optimizeSvgs,
+  convertImages,
   intlIdStructure,
   locale,
 }: DatasetActionArgs) {
@@ -38,7 +41,7 @@ export async function datasetAction({
     `datasetFilePath must be an absolute path: ${datasetFilePath}`,
   )
 
-  const draftData: ContentfulExport = JSON.parse(await readFile(exportFilePath, 'utf8'))
+  const draftData = JSON.parse(await readFile(exportFilePath, 'utf8')) as ContentfulExport
   const publishedData: ContentfulExport = JSON.parse(
     await readFile(publishedExportFilePath, 'utf8'),
   )
@@ -56,10 +59,28 @@ export async function datasetAction({
     },
   )
 
+  let dataset = convertedDataset
+
   if (optimizeSvgs) {
-    const optimizedDataset = await optimizeSVG(convertedDataset, exportDir)
-    await writeFile(datasetFilePath, optimizedDataset)
-  } else {
-    await writeFile(datasetFilePath, convertedDataset)
+    dataset = await optimizeSVG(convertedDataset, exportDir)
   }
+
+  if (convertImages) {
+    const {defaultLocale} = localeDataFromExport(draftData, {
+      intlMode,
+      locale,
+    })
+    const contentTypeLookup = (url: string) => {
+      if (draftData.assets) {
+        contentfulAssetUrlToContentType(url, draftData.assets, defaultLocale.code)
+      }
+      // fall back to inferring from the url
+      const ext = path.parse(url).ext
+      // use ext without dot
+      return ext ? `image/${ext.slice(1)}` : undefined
+    }
+    dataset = await convertUnsupportedImages(dataset, exportDir, contentTypeLookup)
+  }
+
+  await writeFile(datasetFilePath, dataset)
 }

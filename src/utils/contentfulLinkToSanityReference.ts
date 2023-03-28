@@ -15,7 +15,7 @@ type ReferenceOrAsset =
       _sanityAsset: string
     }
 
-function prefixUrl(url: string) {
+export function prefixUrl(url: string) {
   return url.startsWith('//') ? `https:${url}` : url
 }
 

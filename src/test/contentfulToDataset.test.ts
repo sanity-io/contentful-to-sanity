@@ -591,4 +591,15 @@ describe('contentfulToDataset', () => {
         .map(parse),
     ).toMatchSnapshot()
   })
+  test('drafts.json', async () => {
+    const {default: drafts} = await import('./fixtures/drafts.json')
+    const {default: published} = await import('./fixtures/drafts.published.json')
+    expect(
+      (await contentfulToDataset({drafts: drafts as any, published: published as any}, {
+        ...smOptions,
+      }))
+        .split('\n')
+        .map(parse),
+    ).toMatchSnapshot()
+  })
 })

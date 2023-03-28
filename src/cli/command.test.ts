@@ -171,6 +171,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
       expect(defaultActions.datasetAction.mock.calls[0]).toMatchInlineSnapshot(`
         [
           {
+            "convertImages": false,
             "datasetFile": "dataset.ndjson",
             "exportDir": "./export",
             "exportFile": "contentful.json",
@@ -205,6 +206,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
         [
           {
             "accessToken": "def",
+            "convertImages": false,
             "datasetFile": "dataset.ndjson",
             "environmentId": "master",
             "exportDir": "./export",
@@ -242,6 +244,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
         [
           {
             "accessToken": "def",
+            "convertImages": false,
             "datasetFile": "dataset.ndjson",
             "environmentId": "master",
             "exportDir": "./export",
@@ -286,6 +289,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
         [
           {
             "accessToken": "def",
+            "convertImages": false,
             "datasetFile": "dataset.ndjson",
             "environmentId": "master",
             "exportDir": "./export",
@@ -323,6 +327,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
         [
           {
             "accessToken": "def",
+            "convertImages": false,
             "datasetFile": "dataset.ndjson",
             "environmentId": "master",
             "exportDir": "./export",
@@ -422,6 +427,8 @@ describe('contentful-to-sanity [command] <outdir>', () => {
                                         portable text (default: false)
             --optimize-svgs             Whether to optimize SVGs before importing them
                                         (default: false)
+            --convert-images            Whether to convert unsupported image formats
+                                        before importing them (default: false)
             --intl [mode]               Define the intl behavior. This is disabled by
                                         default and only one locale will be considered.
                                         (choices: \\"single\\", \\"multiple\\", default:
@@ -456,6 +463,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             --dataset-file [name]                      The filename for the generated NDJSON document that can be used with the Sanity CLI \`import\` command (default: \\"dataset.ndjson\\")
             --keep-markdown                            Whether to keep markdown as-is or convert it to portable text (default: false)
             --optimize-svgs                            Whether to optimize SVGs before importing them (default: false)
+            --convert-images                           Whether to convert unsupported image formats before importing them (default: false)
             --weak-refs                                Use weak refs instead of strong ones (default: false)
             --intl-id-structure [type]                 Defines the ID behavior for i18n. See @sanity/document-internationalization for more info (choices: \\"subpath\\", \\"delimiter\\", default: \\"delimiter\\")
             --locale [id]                              The locale to import. This should be used when using the intl single mode

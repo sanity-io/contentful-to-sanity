@@ -57,7 +57,8 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -88,7 +89,11 @@
           "required": false,
           "validations": [
             {
-              "enabledMarks": ["bold", "italic", "underline"],
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline"
+              ],
               "message": "Only bold, italic, and underline marks are allowed"
             },
             {
@@ -106,7 +111,8 @@
               "message": "Only unordered list, ordered list, quote, table, link to entry, link to Url, block entry, inline entry, and asset nodes are allowed"
             },
             {
-              "nodes": {}
+              "nodes": {
+              }
             }
           ],
           "disabled": false,
@@ -118,7 +124,8 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
@@ -129,12 +136,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
-            "validations": [],
+            "validations": [
+            ],
             "linkType": "Entry"
           }
         }
@@ -197,7 +206,8 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -207,7 +217,8 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
@@ -220,7 +231,14 @@
           "required": false,
           "validations": [
             {
-              "enabledMarks": ["bold", "italic", "underline", "code", "superscript", "subscript"],
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
               "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
             },
             {
@@ -246,7 +264,8 @@
               "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to entry, link to asset, inline entry, and link to Url nodes are allowed"
             },
             {
-              "nodes": {}
+              "nodes": {
+              }
             }
           ],
           "disabled": false,
@@ -255,7 +274,8 @@
       ]
     }
   ],
-  "tags": [],
+  "tags": [
+  ],
   "editorInterfaces": [
     {
       "sys": {
@@ -460,7 +480,8 @@
   "entries": [
     {
       "metadata": {
-        "tags": []
+        "tags": [
+        ]
       },
       "sys": {
         "space": {
@@ -497,7 +518,8 @@
         },
         "publishedCounter": 0,
         "version": 6,
-        "automationTags": [],
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -523,7 +545,8 @@
     },
     {
       "metadata": {
-        "tags": []
+        "tags": [
+        ]
       },
       "sys": {
         "space": {
@@ -560,7 +583,8 @@
         },
         "publishedCounter": 0,
         "version": 2,
-        "automationTags": [],
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -577,7 +601,8 @@
     },
     {
       "metadata": {
-        "tags": []
+        "tags": [
+        ]
       },
       "sys": {
         "space": {
@@ -624,7 +649,8 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [],
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -652,7 +678,8 @@
   "assets": [
     {
       "metadata": {
-        "tags": []
+        "tags": [
+        ]
       },
       "sys": {
         "space": {
