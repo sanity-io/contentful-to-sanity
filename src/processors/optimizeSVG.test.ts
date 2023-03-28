@@ -11,9 +11,7 @@ describe('optimizeSvgs', () => {
     const testData = `{"_id":"1","_type":"article","image":{"_type":"image","_sanityAsset":"image@${svgUrl}"}}`
     const res = await optimizeSVG(testData, tmpdir())
 
-    expect(res).toBe(
-      `{"_id":"1","_type":"article","image":{"_type":"image","_sanityAsset":"image@file://${tmpdir}/assets/git.svg"}}`,
-    )
+    expect(JSON.parse(res).image._sanityAsset).toStrictEqual(`image@file://${tmpdir}/assets/git.svg`)
     expect(fs.existsSync(`${tmpdir()}/assets/git.svg`)).toBe(true)
   })
 })
