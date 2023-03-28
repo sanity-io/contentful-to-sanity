@@ -29,13 +29,14 @@ type Options = {
 }
 
 export function contentfulEntryToSanityObject(
+  id: string,
   entry: EntryProps<Record<string, Record<string, any>>>,
   locale: string,
   data: ContentfulExport,
   options: Options,
 ): SanityDocument {
   let doc: SanityDocument = {
-    _id: entry.sys.id,
+    _id: id,
     _rev: entry.sys.id,
     _type: entry.sys.contentType.sys.id,
     _createdAt: entry.sys.createdAt,
@@ -69,7 +70,7 @@ export function contentfulEntryToSanityObject(
         doc[key] = value
       }
     } else if (objectIsContentfulLink(value)) {
-      doc[key] = contentfulLinkToSanityReference(value, locale, data, options)
+      doc[key] = contentfulLinkToSanityReference(id, value, locale, data, options)
     } else if (objectIsContentfulLocation(value)) {
       doc[key] = {
         _type: 'geopoint',
@@ -78,7 +79,7 @@ export function contentfulEntryToSanityObject(
       }
     } else if (objectIsContentfulRichText(value)) {
       const referenceResolver: ReferenceResolver = (node) =>
-        contentfulLinkToSanityReference(node.data.target, locale, data, options)
+        contentfulLinkToSanityReference(id, node.data.target, locale, data, options)
 
       doc[key] = toPortableText(value, {
         generateKey: () => generateKey(),
@@ -97,7 +98,7 @@ export function contentfulEntryToSanityObject(
       doc[key] = compact(
         value.map((val) => {
           if (objectIsContentfulLink(val)) {
-            return contentfulLinkToSanityReference(val, locale, data, options)
+            return contentfulLinkToSanityReference(id, val, locale, data, options)
           }
 
           return val

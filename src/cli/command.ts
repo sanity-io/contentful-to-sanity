@@ -35,6 +35,10 @@ const managementTokenOption = [
   '-t, --management-token <management-token>',
   'Contentful Management API token',
 ] as const
+const accessTokenOption = [
+  '-a, --access-token <access-token>',
+  'Contentful Content Delivery API access token',
+] as const
 const intlOption = new Option(
   '--intl [mode]',
   'Define the intl behavior. This is disabled by default and only one locale will be considered.',
@@ -51,6 +55,11 @@ const intlIdStructureOption = new Option(
 const markdownOption = [
   '--keep-markdown',
   'Whether to keep markdown as-is or convert it to portable text',
+  false,
+] as const
+const optimizeSvgOption = [
+  '--optimize-svgs',
+  'Whether to optimize SVGs before importing them',
   false,
 ] as const
 const localeOption = [
@@ -107,6 +116,7 @@ export function makeProgram(opts: ProgramOptions = {}): Command {
     .argument(...outdirArgument)
     .requiredOption(...spaceIdOption)
     .requiredOption(...managementTokenOption)
+    .requiredOption(...accessTokenOption)
     .option(...environmentIdOption)
     .option(...exportFileOption)
     .action((exportDir, options) => {
@@ -147,6 +157,7 @@ export function makeProgram(opts: ProgramOptions = {}): Command {
     .option(...exportFileOption)
     .option(...datasetFileOption)
     .option(...markdownOption)
+    .option(...optimizeSvgOption)
     .addOption(intlOption)
     .option(...weakRefsOption)
     .addOption(intlIdStructureOption)
@@ -169,11 +180,13 @@ export function makeProgram(opts: ProgramOptions = {}): Command {
     .argument(...outdirArgument)
     .requiredOption(...spaceIdOption)
     .requiredOption(...managementTokenOption)
+    .requiredOption(...accessTokenOption)
     .option(...environmentIdOption)
     .option(...exportFileOption)
     .option(...schemaFileOption)
     .option(...datasetFileOption)
     .option(...markdownOption)
+    .option(...optimizeSvgOption)
     .option(...weakRefsOption)
     .addOption(intlIdStructureOption)
     .option(...localeOption)

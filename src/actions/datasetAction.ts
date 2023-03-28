@@ -6,6 +6,7 @@ import invariant from 'tiny-invariant'
 
 import {contentfulToDataset} from '../helpers/contentfulToDataset'
 import type {DatasetActionArgs} from '../parsers/datasetActionArgs'
+import {optimizeSVG} from '../processors/optimizeSVG'
 import {ContentfulExport} from '../types'
 import {absolutify} from '../utils/absolutify'
 
@@ -16,6 +17,7 @@ export async function datasetAction({
   datasetFile,
   weakRefs,
   keepMarkdown,
+  optimizeSvgs,
   intlIdStructure,
   locale,
 }: DatasetActionArgs) {
@@ -26,20 +28,38 @@ export async function datasetAction({
     isAbsolutePath(exportFilePath),
     `exportFilePath must be an absolute path: ${exportFilePath}`,
   )
+  const publishedExportFilePath = path.join(
+    exportDir,
+    path.parse(exportFile).name + '.published.json',
+  )
   const datasetFilePath = path.join(exportDir, datasetFile)
   invariant(
     isAbsolutePath(datasetFilePath),
     `datasetFilePath must be an absolute path: ${datasetFilePath}`,
   )
 
-  const data: ContentfulExport = JSON.parse(await readFile(exportFilePath, 'utf8'))
+  const draftData: ContentfulExport = JSON.parse(await readFile(exportFilePath, 'utf8'))
+  const publishedData: ContentfulExport = JSON.parse(
+    await readFile(publishedExportFilePath, 'utf8'),
+  )
+  const convertedDataset = await contentfulToDataset(
+    {
+      drafts: draftData,
+      published: publishedData,
+    },
+    {
+      intlMode,
+      weakRefs,
+      intlIdStructure,
+      keepMarkdown,
+      locale,
+    },
+  )
 
-  const convertedDataset = await contentfulToDataset(data, {
-    intlMode,
-    weakRefs,
-    intlIdStructure,
-    keepMarkdown,
-    locale,
-  })
-  await writeFile(datasetFilePath, convertedDataset)
+  if (optimizeSvgs) {
+    const optimizedDataset = await optimizeSVG(convertedDataset, exportDir)
+    await writeFile(datasetFilePath, optimizedDataset)
+  } else {
+    await writeFile(datasetFilePath, convertedDataset)
+  }
 }

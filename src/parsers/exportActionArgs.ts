@@ -6,6 +6,7 @@ export const exportActionArgs = z.object({
   exportDir: z.string().refine(isRelativePath),
   spaceId: z.string(),
   managementToken: z.string(),
+  accessToken: z.string(),
   environmentId: z.string(),
   saveFile: z.boolean(),
   exportFile: z.string().endsWith('.json').refine(isValidFilename),

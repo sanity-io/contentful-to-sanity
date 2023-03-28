@@ -32,6 +32,7 @@ const mockData = {
   outdir: './export',
   spaceId: ['--space-id', '123'] as const,
   mgmtToken: ['--management-token', 'abc'] as const,
+  accessToken: ['--access-token', 'def'] as const,
 }
 
 describe('contentful-to-sanity [command] <outdir>', () => {
@@ -44,16 +45,23 @@ describe('contentful-to-sanity [command] <outdir>', () => {
   describe('export [options] <outdir>', () => {
     test('<outdir>', () => {
       expect(() =>
-        fab(['export', ...mockData.spaceId, ...mockData.mgmtToken]),
+        fab(['export', ...mockData.spaceId, ...mockData.mgmtToken, ...mockData.accessToken]),
       ).toThrowErrorMatchingInlineSnapshot('"error: missing required argument \'outdir\'"')
       expect(defaultActions.exportAction).not.toHaveBeenCalled()
 
-      fab(['export', ...mockData.spaceId, ...mockData.mgmtToken, mockData.outdir])
+      fab([
+        'export',
+        ...mockData.spaceId,
+        ...mockData.mgmtToken,
+        ...mockData.accessToken,
+        mockData.outdir,
+      ])
 
       expect(defaultActions.exportAction).toHaveBeenCalled()
       expect(defaultActions.exportAction.mock.calls[0]).toMatchInlineSnapshot(`
         [
           {
+            "accessToken": "def",
             "environmentId": "master",
             "exportDir": "./export",
             "exportFile": "contentful.json",
@@ -66,17 +74,24 @@ describe('contentful-to-sanity [command] <outdir>', () => {
     })
     test('--space-id', () => {
       expect(() =>
-        fab(['export', ...mockData.mgmtToken, mockData.outdir]),
+        fab(['export', ...mockData.mgmtToken, ...mockData.accessToken, mockData.outdir]),
       ).toThrowErrorMatchingInlineSnapshot(
         '"error: required option \'-s, --space-id <space-id>\' not specified"',
       )
       expect(defaultActions.exportAction).not.toHaveBeenCalled()
 
-      fab(['export', ...mockData.spaceId, ...mockData.mgmtToken, mockData.outdir])
+      fab([
+        'export',
+        ...mockData.spaceId,
+        ...mockData.mgmtToken,
+        ...mockData.accessToken,
+        mockData.outdir,
+      ])
       expect(defaultActions.exportAction).toHaveBeenCalled()
       expect(defaultActions.exportAction.mock.calls[0]).toMatchInlineSnapshot(`
         [
           {
+            "accessToken": "def",
             "environmentId": "master",
             "exportDir": "./export",
             "exportFile": "contentful.json",
@@ -89,17 +104,24 @@ describe('contentful-to-sanity [command] <outdir>', () => {
     })
     test('--management-token', () => {
       expect(() =>
-        fab(['export', ...mockData.spaceId, mockData.outdir]),
+        fab(['export', ...mockData.spaceId, ...mockData.accessToken, mockData.outdir]),
       ).toThrowErrorMatchingInlineSnapshot(
         '"error: required option \'-t, --management-token <management-token>\' not specified"',
       )
       expect(defaultActions.exportAction).not.toHaveBeenCalled()
 
-      fab(['export', ...mockData.spaceId, ...mockData.mgmtToken, mockData.outdir])
+      fab([
+        'export',
+        ...mockData.spaceId,
+        ...mockData.mgmtToken,
+        ...mockData.accessToken,
+        mockData.outdir,
+      ])
       expect(defaultActions.exportAction).toHaveBeenCalled()
       expect(defaultActions.exportAction.mock.calls[0]).toMatchInlineSnapshot(`
         [
           {
+            "accessToken": "def",
             "environmentId": "master",
             "exportDir": "./export",
             "exportFile": "contentful.json",
@@ -155,6 +177,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             "intl": "single",
             "intlIdStructure": "delimiter",
             "keepMarkdown": false,
+            "optimizeSvgs": false,
             "weakRefs": false,
           },
         ]
@@ -165,16 +188,23 @@ describe('contentful-to-sanity [command] <outdir>', () => {
   describe('batch [options] <outdir>', () => {
     test('<outdir>', () => {
       expect(() =>
-        fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken]),
+        fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken, ...mockData.accessToken]),
       ).toThrowErrorMatchingInlineSnapshot('"error: missing required argument \'outdir\'"')
       expect(defaultActions.batchAction).not.toHaveBeenCalled()
 
-      fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken, mockData.outdir])
+      fab([
+        'batch',
+        ...mockData.spaceId,
+        ...mockData.mgmtToken,
+        ...mockData.accessToken,
+        mockData.outdir,
+      ])
 
       expect(defaultActions.batchAction).toHaveBeenCalled()
       expect(defaultActions.batchAction.mock.calls[0]).toMatchInlineSnapshot(`
         [
           {
+            "accessToken": "def",
             "datasetFile": "dataset.ndjson",
             "environmentId": "master",
             "exportDir": "./export",
@@ -183,6 +213,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             "intlIdStructure": "delimiter",
             "keepMarkdown": false,
             "managementToken": "abc",
+            "optimizeSvgs": false,
             "saveFile": true,
             "schemaFile": "schema.ts",
             "spaceId": "123",
@@ -193,17 +224,24 @@ describe('contentful-to-sanity [command] <outdir>', () => {
     })
     test('--space-id', () => {
       expect(() =>
-        fab(['batch', ...mockData.mgmtToken, mockData.outdir]),
+        fab(['batch', ...mockData.mgmtToken, ...mockData.accessToken, mockData.outdir]),
       ).toThrowErrorMatchingInlineSnapshot(
         '"error: required option \'-s, --space-id <space-id>\' not specified"',
       )
       expect(defaultActions.batchAction).not.toHaveBeenCalled()
 
-      fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken, mockData.outdir])
+      fab([
+        'batch',
+        ...mockData.spaceId,
+        ...mockData.mgmtToken,
+        ...mockData.accessToken,
+        mockData.outdir,
+      ])
       expect(defaultActions.batchAction).toHaveBeenCalled()
       expect(defaultActions.batchAction.mock.calls[0]).toMatchInlineSnapshot(`
         [
           {
+            "accessToken": "def",
             "datasetFile": "dataset.ndjson",
             "environmentId": "master",
             "exportDir": "./export",
@@ -212,6 +250,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             "intlIdStructure": "delimiter",
             "keepMarkdown": false,
             "managementToken": "abc",
+            "optimizeSvgs": false,
             "saveFile": true,
             "schemaFile": "schema.ts",
             "spaceId": "123",
@@ -222,17 +261,31 @@ describe('contentful-to-sanity [command] <outdir>', () => {
     })
     test('--management-token', () => {
       expect(() =>
-        fab(['batch', ...mockData.spaceId, mockData.outdir]),
+        fab(['batch', ...mockData.spaceId, ...mockData.accessToken, mockData.outdir]),
       ).toThrowErrorMatchingInlineSnapshot(
         '"error: required option \'-t, --management-token <management-token>\' not specified"',
       )
       expect(defaultActions.batchAction).not.toHaveBeenCalled()
 
-      fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken, mockData.outdir])
+      expect(() =>
+        fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken, mockData.outdir]),
+      ).toThrowErrorMatchingInlineSnapshot(
+        '"error: required option \'-a, --access-token <access-token>\' not specified"',
+      )
+      expect(defaultActions.batchAction).not.toHaveBeenCalled()
+
+      fab([
+        'batch',
+        ...mockData.spaceId,
+        ...mockData.mgmtToken,
+        ...mockData.accessToken,
+        mockData.outdir,
+      ])
       expect(defaultActions.batchAction).toHaveBeenCalled()
       expect(defaultActions.batchAction.mock.calls[0]).toMatchInlineSnapshot(`
         [
           {
+            "accessToken": "def",
             "datasetFile": "dataset.ndjson",
             "environmentId": "master",
             "exportDir": "./export",
@@ -241,6 +294,44 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             "intlIdStructure": "delimiter",
             "keepMarkdown": false,
             "managementToken": "abc",
+            "optimizeSvgs": false,
+            "saveFile": true,
+            "schemaFile": "schema.ts",
+            "spaceId": "123",
+            "weakRefs": false,
+          },
+        ]
+      `)
+    })
+    test('--access-token', () => {
+      expect(() =>
+        fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken, mockData.outdir]),
+      ).toThrowErrorMatchingInlineSnapshot(
+        '"error: required option \'-a, --access-token <access-token>\' not specified"',
+      )
+      expect(defaultActions.batchAction).not.toHaveBeenCalled()
+
+      fab([
+        'batch',
+        ...mockData.spaceId,
+        ...mockData.mgmtToken,
+        ...mockData.accessToken,
+        mockData.outdir,
+      ])
+      expect(defaultActions.batchAction).toHaveBeenCalled()
+      expect(defaultActions.batchAction.mock.calls[0]).toMatchInlineSnapshot(`
+        [
+          {
+            "accessToken": "def",
+            "datasetFile": "dataset.ndjson",
+            "environmentId": "master",
+            "exportDir": "./export",
+            "exportFile": "contentful.json",
+            "intl": "single",
+            "intlIdStructure": "delimiter",
+            "keepMarkdown": false,
+            "managementToken": "abc",
+            "optimizeSvgs": false,
             "saveFile": true,
             "schemaFile": "schema.ts",
             "spaceId": "123",
@@ -286,6 +377,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
           Options:
             -s, --space-id <space-id>                  The Contentful space ID
             -t, --management-token <management-token>  Contentful Management API token
+            -a, --access-token <access-token>          Contentful Content Delivery API access token
             -e, --environment-id [environment-id[      Contentful environment (default: \\"master\\")
             --export-file [name]                       The filename for the exported JSON document that holds your Contentful data. (default: \\"contentful.json\\")
             -h, --help                                 display help for command
@@ -328,6 +420,8 @@ describe('contentful-to-sanity [command] <outdir>', () => {
                                         command (default: \\"dataset.ndjson\\")
             --keep-markdown             Whether to keep markdown as-is or convert it to
                                         portable text (default: false)
+            --optimize-svgs             Whether to optimize SVGs before importing them
+                                        (default: false)
             --intl [mode]               Define the intl behavior. This is disabled by
                                         default and only one locale will be considered.
                                         (choices: \\"single\\", \\"multiple\\", default:
@@ -355,11 +449,13 @@ describe('contentful-to-sanity [command] <outdir>', () => {
           Options:
             -s, --space-id <space-id>                  The Contentful space ID
             -t, --management-token <management-token>  Contentful Management API token
+            -a, --access-token <access-token>          Contentful Content Delivery API access token
             -e, --environment-id [environment-id[      Contentful environment (default: \\"master\\")
             --export-file [name]                       The filename for the exported JSON document that holds your Contentful data. (default: \\"contentful.json\\")
             --schema-file [name]                       The filename for the generated Sanity Studio schema definitions file. Use \`.js\` file endings to strip TypeScript syntax. (default: \\"schema.ts\\")
             --dataset-file [name]                      The filename for the generated NDJSON document that can be used with the Sanity CLI \`import\` command (default: \\"dataset.ndjson\\")
             --keep-markdown                            Whether to keep markdown as-is or convert it to portable text (default: false)
+            --optimize-svgs                            Whether to optimize SVGs before importing them (default: false)
             --weak-refs                                Use weak refs instead of strong ones (default: false)
             --intl-id-structure [type]                 Defines the ID behavior for i18n. See @sanity/document-internationalization for more info (choices: \\"subpath\\", \\"delimiter\\", default: \\"delimiter\\")
             --locale [id]                              The locale to import. This should be used when using the intl single mode
@@ -392,11 +488,28 @@ describe('contentful-to-sanity [command] <outdir>', () => {
         sequence.push('batch:end')
       })
 
-      await fabAsync([...mockData.spaceId, ...mockData.mgmtToken, './export'])
-      await fabAsync(['export', ...mockData.spaceId, ...mockData.mgmtToken, './export'])
+      await fabAsync([
+        ...mockData.spaceId,
+        ...mockData.mgmtToken,
+        ...mockData.accessToken,
+        './export',
+      ])
+      await fabAsync([
+        'export',
+        ...mockData.spaceId,
+        ...mockData.mgmtToken,
+        ...mockData.accessToken,
+        './export',
+      ])
       await fabAsync(['schema', './export'])
       await fabAsync(['dataset', './export'])
-      await fabAsync(['batch', ...mockData.spaceId, ...mockData.mgmtToken, './export'])
+      await fabAsync([
+        'batch',
+        ...mockData.spaceId,
+        ...mockData.mgmtToken,
+        ...mockData.accessToken,
+        './export',
+      ])
       expect(sequence, 'actions are awaited in order').toEqual([
         'batch:start',
         'batch:end',

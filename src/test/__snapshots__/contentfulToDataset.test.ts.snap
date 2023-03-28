@@ -59751,6 +59751,143 @@ exports[`contentfulToDataset > sveltekit.json 5`] = `
 exports[`contentfulToDataset > the-example-app.json 1`] = `
 [
   {
+    "_createdAt": "2017-11-08T16:06:59.430Z",
+    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_rev": "4ZQtjYftNKaoKWuksM0sS0",
+    "_type": "lessonCopy",
+    "_updatedAt": "2018-02-01T13:53:26.380Z",
+    "copy": [
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "The example app is configured to connect to both the Delivery API and the Preview API.",
+          },
+        ],
+        "markDefs": [],
+        "style": "normal",
+      },
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "For fun, change the formatting of ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "pizza",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " by going to ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "API: Content Delivery API",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " in the top menu bar and selecting ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "API: Content Preview API",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": ".",
+          },
+        ],
+        "markDefs": [],
+        "style": "normal",
+      },
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "Note: The Content Preview API is not behind a CDN cache and hence might take a short moment to load for you.",
+          },
+        ],
+        "markDefs": [],
+        "style": "blockquote",
+      },
+    ],
+    "title": "Fetch draft content > footnote",
+  },
+  {
+    "_createdAt": "2017-12-12T14:02:49.950Z",
+    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_rev": "77NL8rGPks6SauGuoG8ui",
+    "_type": "layoutHeroImage",
+    "_updatedAt": "2017-12-14T17:44:39.996Z",
+    "backgroundImage": {
+      "_sanityAsset": "image@https://images.contentful.com/qz0n5cdakyl9/4dgP2U7BeMuk0icguS4qGw/52cdd3491ac9824da1b1ae2c51a6c30c/Contentful_team.png",
+      "_type": "image",
+    },
+    "headline": "Greetings from Contentful",
+    "title": "Home > Hero image",
+  },
+  {
+    "_createdAt": "2017-11-08T16:06:56.098Z",
+    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_rev": "2uNOpLMJioKeoMq8W44uYc",
+    "_type": "layout",
+    "_updatedAt": "2018-01-24T11:37:16.429Z",
+    "contentModules": [
+      {
+        "_ref": "4B9n4zqG6QCgui8YiUs4Yc",
+        "_type": "reference",
+        "_weak": false,
+      },
+      {
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "layoutHeroImage",
+            "params": {},
+          },
+          "type": "layoutHeroImage",
+        },
+        "_type": "reference",
+        "_weak": true,
+      },
+    ],
+    "slug": {
+      "current": "home",
+    },
+    "title": "Home",
+  },
+  {
     "_createdAt": "2017-11-08T16:06:55.505Z",
     "_id": "7JhDodrNmwmwGmQqiACW4",
     "_rev": "7JhDodrNmwmwGmQqiACW4",
@@ -62804,11 +62941,6 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
         "_type": "reference",
         "_weak": false,
       },
-      {
-        "_ref": "77NL8rGPks6SauGuoG8ui",
-        "_type": "reference",
-        "_weak": false,
-      },
     ],
     "slug": {
       "current": "home",
@@ -62820,6 +62952,290 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
 
 exports[`contentfulToDataset > the-example-app.json 2`] = `
 [
+  {
+    "__i18n_lang": "en-US",
+    "__i18n_refs": [
+      {
+        "_key": "bb463b8b",
+        "_ref": "drafts.4ZQtjYftNKaoKWuksM0sS0__i18n_de-DE",
+        "_type": "reference",
+      },
+    ],
+    "_createdAt": "2017-11-08T16:06:59.430Z",
+    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_rev": "4ZQtjYftNKaoKWuksM0sS0",
+    "_type": "lessonCopy",
+    "_updatedAt": "2018-02-01T13:53:26.380Z",
+    "copy": [
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "The example app is configured to connect to both the Delivery API and the Preview API.",
+          },
+        ],
+        "markDefs": [],
+        "style": "normal",
+      },
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "For fun, change the formatting of ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "pizza",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " by going to ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "API: Content Delivery API",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " in the top menu bar and selecting ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "API: Content Preview API",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": ".",
+          },
+        ],
+        "markDefs": [],
+        "style": "normal",
+      },
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "Note: The Content Preview API is not behind a CDN cache and hence might take a short moment to load for you.",
+          },
+        ],
+        "markDefs": [],
+        "style": "blockquote",
+      },
+    ],
+    "title": "Fetch draft content > footnote",
+  },
+  {
+    "__i18n_base": {
+      "_ref": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+      "_type": "reference",
+    },
+    "__i18n_lang": "de-DE",
+    "_createdAt": "2017-11-08T16:06:59.430Z",
+    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_rev": "4ZQtjYftNKaoKWuksM0sS0",
+    "_type": "lessonCopy",
+    "_updatedAt": "2018-02-01T13:53:26.380Z",
+    "copy": [
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "Diese Beispielanwendung is so konfiguriert worden, dass sie sich sowohl mit der Deliver API als auch der Preview API verbinden kann.",
+          },
+        ],
+        "markDefs": [],
+        "style": "normal",
+      },
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "Zum Spaß können Sie die Formatierung des Wortes ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "Pizza",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " ändern, indem Sie im oberen Menü die Auswahl von ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "API: Preview (unveröffentlichter Inhalt)",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " auf ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "API: Delivery (veröffentlichter Inhalt)",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " ändern.",
+          },
+        ],
+        "markDefs": [],
+        "style": "normal",
+      },
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "Hinweis: Die Content Preview API ist nicht hinter einem Cache und daher etwas langsamer als die Delivery API.",
+          },
+        ],
+        "markDefs": [],
+        "style": "blockquote",
+      },
+    ],
+  },
+  {
+    "__i18n_lang": "en-US",
+    "__i18n_refs": [
+      {
+        "_key": "bb463b8b",
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui__i18n_de-DE",
+        "_type": "reference",
+      },
+    ],
+    "_createdAt": "2017-12-12T14:02:49.950Z",
+    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_rev": "77NL8rGPks6SauGuoG8ui",
+    "_type": "layoutHeroImage",
+    "_updatedAt": "2017-12-14T17:44:39.996Z",
+    "backgroundImage": {
+      "_sanityAsset": "image@https://images.contentful.com/qz0n5cdakyl9/4dgP2U7BeMuk0icguS4qGw/52cdd3491ac9824da1b1ae2c51a6c30c/Contentful_team.png",
+      "_type": "image",
+    },
+    "headline": "Greetings from Contentful",
+    "title": "Home > Hero image",
+  },
+  {
+    "__i18n_base": {
+      "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+      "_type": "reference",
+    },
+    "__i18n_lang": "de-DE",
+    "_createdAt": "2017-12-12T14:02:49.950Z",
+    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_rev": "77NL8rGPks6SauGuoG8ui",
+    "_type": "layoutHeroImage",
+    "_updatedAt": "2017-12-14T17:44:39.996Z",
+    "headline": "Grüße von Contentful",
+  },
+  {
+    "__i18n_lang": "en-US",
+    "__i18n_refs": [
+      {
+        "_key": "bb463b8b",
+        "_ref": "drafts.2uNOpLMJioKeoMq8W44uYc__i18n_de-DE",
+        "_type": "reference",
+      },
+    ],
+    "_createdAt": "2017-11-08T16:06:56.098Z",
+    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_rev": "2uNOpLMJioKeoMq8W44uYc",
+    "_type": "layout",
+    "_updatedAt": "2018-01-24T11:37:16.429Z",
+    "contentModules": [
+      {
+        "_ref": "4B9n4zqG6QCgui8YiUs4Yc",
+        "_type": "reference",
+        "_weak": false,
+      },
+      {
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "layoutHeroImage",
+            "params": {},
+          },
+          "type": "layoutHeroImage",
+        },
+        "_type": "reference",
+        "_weak": true,
+      },
+    ],
+    "slug": {
+      "current": "home",
+    },
+    "title": "Home",
+  },
+  {
+    "__i18n_base": {
+      "_ref": "drafts.2uNOpLMJioKeoMq8W44uYc",
+      "_type": "reference",
+    },
+    "__i18n_lang": "de-DE",
+    "_createdAt": "2017-11-08T16:06:56.098Z",
+    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_rev": "2uNOpLMJioKeoMq8W44uYc",
+    "_type": "layout",
+    "_updatedAt": "2018-01-24T11:37:16.429Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [
@@ -68323,11 +68739,6 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
         "_type": "reference",
         "_weak": false,
       },
-      {
-        "_ref": "77NL8rGPks6SauGuoG8ui",
-        "_type": "reference",
-        "_weak": false,
-      },
     ],
     "slug": {
       "current": "home",
@@ -68351,6 +68762,143 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
 
 exports[`contentfulToDataset > the-example-app.json 3`] = `
 [
+  {
+    "_createdAt": "2017-11-08T16:06:59.430Z",
+    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_rev": "4ZQtjYftNKaoKWuksM0sS0",
+    "_type": "lessonCopy",
+    "_updatedAt": "2018-02-01T13:53:26.380Z",
+    "copy": [
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "The example app is configured to connect to both the Delivery API and the Preview API.",
+          },
+        ],
+        "markDefs": [],
+        "style": "normal",
+      },
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "For fun, change the formatting of ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "pizza",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " by going to ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "API: Content Delivery API",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " in the top menu bar and selecting ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "API: Content Preview API",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": ".",
+          },
+        ],
+        "markDefs": [],
+        "style": "normal",
+      },
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "Note: The Content Preview API is not behind a CDN cache and hence might take a short moment to load for you.",
+          },
+        ],
+        "markDefs": [],
+        "style": "blockquote",
+      },
+    ],
+    "title": "Fetch draft content > footnote",
+  },
+  {
+    "_createdAt": "2017-12-12T14:02:49.950Z",
+    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_rev": "77NL8rGPks6SauGuoG8ui",
+    "_type": "layoutHeroImage",
+    "_updatedAt": "2017-12-14T17:44:39.996Z",
+    "backgroundImage": {
+      "_sanityAsset": "image@https://images.contentful.com/qz0n5cdakyl9/4dgP2U7BeMuk0icguS4qGw/52cdd3491ac9824da1b1ae2c51a6c30c/Contentful_team.png",
+      "_type": "image",
+    },
+    "headline": "Greetings from Contentful",
+    "title": "Home > Hero image",
+  },
+  {
+    "_createdAt": "2017-11-08T16:06:56.098Z",
+    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_rev": "2uNOpLMJioKeoMq8W44uYc",
+    "_type": "layout",
+    "_updatedAt": "2018-01-24T11:37:16.429Z",
+    "contentModules": [
+      {
+        "_ref": "4B9n4zqG6QCgui8YiUs4Yc",
+        "_type": "reference",
+        "_weak": true,
+      },
+      {
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "layoutHeroImage",
+            "params": {},
+          },
+          "type": "layoutHeroImage",
+        },
+        "_type": "reference",
+        "_weak": true,
+      },
+    ],
+    "slug": {
+      "current": "home",
+    },
+    "title": "Home",
+  },
   {
     "_createdAt": "2017-11-08T16:06:55.505Z",
     "_id": "7JhDodrNmwmwGmQqiACW4",
@@ -71405,11 +71953,6 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
         "_type": "reference",
         "_weak": true,
       },
-      {
-        "_ref": "77NL8rGPks6SauGuoG8ui",
-        "_type": "reference",
-        "_weak": true,
-      },
     ],
     "slug": {
       "current": "home",
@@ -71421,6 +71964,143 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
 
 exports[`contentfulToDataset > the-example-app.json 4`] = `
 [
+  {
+    "_createdAt": "2017-11-08T16:06:59.430Z",
+    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_rev": "4ZQtjYftNKaoKWuksM0sS0",
+    "_type": "lessonCopy",
+    "_updatedAt": "2018-02-01T13:53:26.380Z",
+    "copy": [
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "The example app is configured to connect to both the Delivery API and the Preview API.",
+          },
+        ],
+        "markDefs": [],
+        "style": "normal",
+      },
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "For fun, change the formatting of ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "pizza",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " by going to ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "API: Content Delivery API",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": " in the top menu bar and selecting ",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [
+              "a27218b8",
+            ],
+            "text": "API: Content Preview API",
+          },
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": ".",
+          },
+        ],
+        "markDefs": [],
+        "style": "normal",
+      },
+      {
+        "_key": "bb463b8b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bb463b8b",
+            "_type": "span",
+            "marks": [],
+            "text": "Note: The Content Preview API is not behind a CDN cache and hence might take a short moment to load for you.",
+          },
+        ],
+        "markDefs": [],
+        "style": "blockquote",
+      },
+    ],
+    "title": "Fetch draft content > footnote",
+  },
+  {
+    "_createdAt": "2017-12-12T14:02:49.950Z",
+    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_rev": "77NL8rGPks6SauGuoG8ui",
+    "_type": "layoutHeroImage",
+    "_updatedAt": "2017-12-14T17:44:39.996Z",
+    "backgroundImage": {
+      "_sanityAsset": "image@https://images.contentful.com/qz0n5cdakyl9/4dgP2U7BeMuk0icguS4qGw/52cdd3491ac9824da1b1ae2c51a6c30c/Contentful_team.png",
+      "_type": "image",
+    },
+    "headline": "Greetings from Contentful",
+    "title": "Home > Hero image",
+  },
+  {
+    "_createdAt": "2017-11-08T16:06:56.098Z",
+    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_rev": "2uNOpLMJioKeoMq8W44uYc",
+    "_type": "layout",
+    "_updatedAt": "2018-01-24T11:37:16.429Z",
+    "contentModules": [
+      {
+        "_ref": "4B9n4zqG6QCgui8YiUs4Yc",
+        "_type": "reference",
+        "_weak": false,
+      },
+      {
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "layoutHeroImage",
+            "params": {},
+          },
+          "type": "layoutHeroImage",
+        },
+        "_type": "reference",
+        "_weak": true,
+      },
+    ],
+    "slug": {
+      "current": "home",
+    },
+    "title": "Home",
+  },
   {
     "_createdAt": "2017-11-08T16:06:55.505Z",
     "_id": "7JhDodrNmwmwGmQqiACW4",
@@ -74475,11 +75155,6 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
         "_type": "reference",
         "_weak": false,
       },
-      {
-        "_ref": "77NL8rGPks6SauGuoG8ui",
-        "_type": "reference",
-        "_weak": false,
-      },
     ],
     "slug": {
       "current": "home",
@@ -74491,6 +75166,62 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
 
 exports[`contentfulToDataset > the-example-app.json 5`] = `
 [
+  {
+    "_createdAt": "2017-11-08T16:06:59.430Z",
+    "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
+    "_rev": "4ZQtjYftNKaoKWuksM0sS0",
+    "_type": "lessonCopy",
+    "_updatedAt": "2018-02-01T13:53:26.380Z",
+    "copy": "The example app is configured to connect to both the Delivery API and the Preview API. 
+
+For fun, change the formatting of **pizza** by going to \`API: Content Delivery API\` in the top menu bar and selecting \`API: Content Preview API\`.
+
+> Note: The Content Preview API is not behind a CDN cache and hence might take a short moment to load for you.",
+    "title": "Fetch draft content > footnote",
+  },
+  {
+    "_createdAt": "2017-12-12T14:02:49.950Z",
+    "_id": "drafts.77NL8rGPks6SauGuoG8ui",
+    "_rev": "77NL8rGPks6SauGuoG8ui",
+    "_type": "layoutHeroImage",
+    "_updatedAt": "2017-12-14T17:44:39.996Z",
+    "backgroundImage": {
+      "_sanityAsset": "image@https://images.contentful.com/qz0n5cdakyl9/4dgP2U7BeMuk0icguS4qGw/52cdd3491ac9824da1b1ae2c51a6c30c/Contentful_team.png",
+      "_type": "image",
+    },
+    "headline": "Greetings from Contentful",
+    "title": "Home > Hero image",
+  },
+  {
+    "_createdAt": "2017-11-08T16:06:56.098Z",
+    "_id": "drafts.2uNOpLMJioKeoMq8W44uYc",
+    "_rev": "2uNOpLMJioKeoMq8W44uYc",
+    "_type": "layout",
+    "_updatedAt": "2018-01-24T11:37:16.429Z",
+    "contentModules": [
+      {
+        "_ref": "4B9n4zqG6QCgui8YiUs4Yc",
+        "_type": "reference",
+        "_weak": false,
+      },
+      {
+        "_ref": "drafts.77NL8rGPks6SauGuoG8ui",
+        "_strengthenOnPublish": {
+          "template": {
+            "id": "layoutHeroImage",
+            "params": {},
+          },
+          "type": "layoutHeroImage",
+        },
+        "_type": "reference",
+        "_weak": true,
+      },
+    ],
+    "slug": {
+      "current": "home",
+    },
+    "title": "Home",
+  },
   {
     "_createdAt": "2017-11-08T16:06:55.505Z",
     "_id": "7JhDodrNmwmwGmQqiACW4",
@@ -75403,11 +76134,6 @@ The Hello Contentful course covers the following topics:
     "contentModules": [
       {
         "_ref": "4B9n4zqG6QCgui8YiUs4Yc",
-        "_type": "reference",
-        "_weak": false,
-      },
-      {
-        "_ref": "77NL8rGPks6SauGuoG8ui",
         "_type": "reference",
         "_weak": false,
       },
