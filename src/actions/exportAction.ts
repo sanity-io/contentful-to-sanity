@@ -1,5 +1,5 @@
 import isAbsolutePath from '@stdlib/assert-is-absolute-path'
-import contentfulExport from 'contentful-export'
+import contentfulExport, {type Options as ContentfulExportOptions} from 'contentful-export'
 import {mkdirp} from 'mkdirp'
 import path from 'path'
 import invariant from 'tiny-invariant'
@@ -24,13 +24,14 @@ export async function exportAction({
   // eslint-disable-next-line no-warning-comments
   // @TODO use https://listr2.kilic.dev/ to add interactive prompts if spaceId or managementToken are missing
 
-  const options = {
+  const options: ContentfulExportOptions = {
     spaceId,
     managementToken,
     environmentId,
     skipContentModel: false,
     skipEditorInterfaces: false,
     includeDrafts: true,
+    includeArchived: true,
     // If saveFile is false, then we're not exporting data, we're exporting what we need to generate a schema
     skipWebhooks: true,
     skipRoles: true,
@@ -59,6 +60,7 @@ export async function exportAction({
     //skipContentModel: true,
     //skipEditorInterfaces: true,
     includeDrafts: false,
+    includeArchived: false,
     deliveryToken: accessToken,
     contentFile: path.parse(exportFile).name + '.published.json',
   })
