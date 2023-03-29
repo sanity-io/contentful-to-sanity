@@ -5,6 +5,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.4](https://github.com/sanity-io/contentful-to-sanity/compare/v3.0.3...v3.0.4) (2023-03-29)
+
+### Bug Fixes
+
+- **deps:** update dependencies (non-major) ([#55](https://github.com/sanity-io/contentful-to-sanity/issues/55)) ([ceada96](https://github.com/sanity-io/contentful-to-sanity/commit/ceada9691bd1c57d028109403856bb80078e082b))
+- **deps:** update dependency contentful-export to v7.19.44 ([#61](https://github.com/sanity-io/contentful-to-sanity/issues/61)) ([9b9b01d](https://github.com/sanity-io/contentful-to-sanity/commit/9b9b01d443a38a9e3f1d7ba37d4521f01d4a3619))
+- **deps:** update dependency prettier to v2.8.7 ([#56](https://github.com/sanity-io/contentful-to-sanity/issues/56)) ([2461c19](https://github.com/sanity-io/contentful-to-sanity/commit/2461c190c20bdc31a2422e9598bff3f1b523bd99))
+- **deps:** update sanity monorepo to v3.8.0 ([#62](https://github.com/sanity-io/contentful-to-sanity/issues/62)) ([05dbbbc](https://github.com/sanity-io/contentful-to-sanity/commit/05dbbbc3c1b5de46901e6c90e1f126987e1ecf15))
+
 ## [3.0.3](https://github.com/sanity-io/contentful-to-sanity/compare/v3.0.2...v3.0.3) (2023-03-21)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "contentful-to-sanity",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Migration tool from Contentful to Sanity",
   "keywords": [
     "sanity",
