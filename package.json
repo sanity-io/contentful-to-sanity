@@ -78,7 +78,7 @@
   "dependencies": {
     "@portabletext/contentful-rich-text-to-portable-text": "0.1.0",
     "@sanity/block-tools": "3.8.0",
-    "@sanity/client": "5.3.2",
+    "@sanity/client": "5.4.0",
     "@sanity/schema": "3.8.0",
     "@stdlib/assert-is-absolute-path": "0.0.8",
     "@stdlib/assert-is-relative-path": "0.0.8",
