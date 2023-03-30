@@ -46,7 +46,8 @@ export function contentfulTypeToSanitySchema(
   if (schemaType.type == `document`) {
     schemaType.fields.push({
       type: 'boolean',
-      description: 'If this document was archived on Contentful at the time of export, the document will be in a read-only state.',
+      description:
+        'If this document was archived on Contentful at the time of export, the document will be in a read-only state.',
       name: 'contentfulArchived',
       readOnly: true,
     })

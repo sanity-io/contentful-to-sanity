@@ -74,7 +74,7 @@ describe('Archived content entities', async () => {
       .split('\n')
       .map(parse)
 
-    const archivedPost = docs.find(doc => doc._id === '2iacrOBkuYMOQyDWPlEJLc')
+    const archivedPost = docs.find((doc) => doc._id === '2iacrOBkuYMOQyDWPlEJLc')
     expect(archivedPost).toBeDefined()
     expect(archivedPost).toHaveProperty('contentfulArchived', true)
   })

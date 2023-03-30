@@ -68,15 +68,14 @@ export async function contentfulToDataset(
       // We only want to import published entries if we're importing from the Content Delivery API (aka exports.published)
       if (isChanged(entry) || isDraft(entry) || isArchived(entry)) {
         const id = isArchived(entry) ? entry.sys.id : `drafts.${entry.sys.id}`
-        const sanityObject = 
-          contentfulEntryToSanityObject(id, entry, locale, data, {
-            useMultiLocale,
-            idStructure: opts.intlIdStructure,
-            defaultLocale: defaultLocale.code,
-            supportedLocales: localesToImport,
-            keepMarkdown: opts.keepMarkdown,
-            weakRefs: opts.weakRefs,
-          })
+        const sanityObject = contentfulEntryToSanityObject(id, entry, locale, data, {
+          useMultiLocale,
+          idStructure: opts.intlIdStructure,
+          defaultLocale: defaultLocale.code,
+          supportedLocales: localesToImport,
+          keepMarkdown: opts.keepMarkdown,
+          weakRefs: opts.weakRefs,
+        })
         if (isArchived(entry)) {
           sanityObject.contentfulArchived = true
         }
