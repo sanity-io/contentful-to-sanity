@@ -12,7 +12,7 @@
         "id": "post",
         "type": "ContentType",
         "createdAt": "2023-04-04T01:43:12.711Z",
-        "updatedAt": "2023-04-04T02:26:06.440Z",
+        "updatedAt": "2023-04-04T03:30:52.285Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2023-04-04T02:26:06.440Z",
+        "publishedVersion": 9,
+        "publishedAt": "2023-04-04T03:30:52.285Z",
         "firstPublishedAt": "2023-04-04T01:43:12.989Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "publishedCounter": 4,
-        "version": 8,
+        "publishedCounter": 5,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -125,6 +125,75 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "intro",
+          "name": "intro",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "table",
+                "entry-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, table, link to entry, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+                "embedded-entry-block": [
+                  {
+                    "linkContentType": [
+                      "author"
+                    ],
+                    "message": null
+                  }
+                ],
+                "embedded-entry-inline": [
+                  {
+                    "linkContentType": [
+                      "author"
+                    ],
+                    "message": null
+                  }
+                ],
+                "entry-hyperlink": [
+                  {
+                    "linkContentType": [
+                      "author"
+                    ],
+                    "message": null
+                  }
+                ]
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
         }
       ]
     },
@@ -207,7 +276,7 @@
             "linkType": "Space"
           }
         },
-        "version": 8,
+        "version": 10,
         "createdAt": "2023-04-04T01:43:13.101Z",
         "createdBy": {
           "sys": {
@@ -216,7 +285,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-04-04T02:26:07.060Z",
+        "updatedAt": "2023-04-04T03:30:52.919Z",
         "updatedBy": {
           "sys": {
             "id": "2jYeCfa60UhCFs76N2hp6o",
@@ -288,6 +357,11 @@
         },
         {
           "fieldId": "body",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "intro",
           "widgetId": "richTextEditor",
           "widgetNamespace": "builtin"
         }

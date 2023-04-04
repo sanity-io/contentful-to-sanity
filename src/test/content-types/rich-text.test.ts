@@ -114,7 +114,8 @@ describe('create schema for RichText type', () => {
           ],
         },
         {
-          type: 'contentType',
+          type: 'reference',
+          to: [{type: 'contentType'}],
         },
         {
           type: 'image',

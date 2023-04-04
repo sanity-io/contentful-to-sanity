@@ -227,7 +227,8 @@ export function contentfulFieldToSanityField(
         blockFactory.anonymous(),
         ...(richTextOptions.canEmbedEntries && richTextOptions.supportedEmbeddedBlockTypes
           ? richTextOptions.supportedEmbeddedBlockTypes.map((linkType) => ({
-              type: linkType.type,
+              type: 'reference',
+              to: [{type: linkType.type}],
             }))
           : []),
         ...(richTextOptions.canEmbedAssets ? [{type: 'image'}, {type: 'file'}] : []),

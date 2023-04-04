@@ -111,4 +111,28 @@ describe('PTE references', async () => {
       ]),
     )
   })
+
+  test('handles restricted block level references', async ({schemas}) => {
+    const post = schemas.find((schema) => schema.name === 'post')
+    expect(post).toBeDefined()
+    const pteField = post?.fields.find((field) => field.name === 'intro') as ArraySanityFieldSchema
+    expect(pteField).toBeDefined()
+
+    expect(pteField.of).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          type: 'block',
+        }),
+      ]),
+    )
+
+    expect(pteField.of).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          type: 'reference',
+          to: expect.arrayContaining([{type: 'author'}]),
+        }),
+      ]),
+    )
+  })
 })
