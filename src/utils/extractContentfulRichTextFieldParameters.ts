@@ -128,8 +128,8 @@ export function extractContentfulRichTextFieldParameters(
 
   let supportedEmbeddedBlockTypes: LinkedType[] | undefined
   if (canEmbedEntries) {
-    if (nodesValidation?.nodes) {
-      supportedEmbeddedBlockTypes = nodesValidation?.nodes?.['embedded-entry-block']?.reduce<
+    if (nodesValidation?.nodes?.['embedded-entry-block']) {
+      supportedEmbeddedBlockTypes = nodesValidation.nodes['embedded-entry-block']?.reduce<
         LinkedType[]
       >(
         (acc: any, value: any) =>
