@@ -25,8 +25,9 @@ const allLists = [
 const allDecoratorMarks = [
   {title: 'Strong', value: 'strong'},
   {title: 'Emphasis', value: 'em'},
+  {title: 'Code', value: 'code'},
   {title: 'Underline', value: 'underline'},
-  {title: 'Code', value: 'pre'},
+  {title: 'Strike', value: 'strike-through'},
 ]
 
 const isStyleSupportedFns: Record<string, (enabledNodeTypes?: string[]) => boolean> = {
@@ -58,7 +59,7 @@ const isMarkSupportedFns: Record<string, (enabledMarks?: string[]) => boolean> =
   em: (enabledMarks?: string[]) => Boolean(enabledMarks && enabledMarks.includes('italic')),
   underline: (enabledMarks?: string[]) =>
     Boolean(enabledMarks && enabledMarks.includes('underline')),
-  pre: (enabledMarks?: string[]) => Boolean(enabledMarks && enabledMarks.includes('code')),
+  code: (enabledMarks?: string[]) => Boolean(enabledMarks && enabledMarks.includes('code')),
 }
 
 type Params = Required<Pick<BlockSanityFieldSchema, 'styles' | 'marks' | 'lists'>> & {
