@@ -1,5 +1,5 @@
 import {SanityDocument} from '@sanity/client'
-import {DocumentDefinition} from '@sanity/types'
+import {BlockDefinition, DocumentDefinition} from '@sanity/types'
 import type {ContentTypeProps} from 'contentful-management'
 import {beforeEach, describe, expect, test} from 'vitest'
 
@@ -139,16 +139,13 @@ describe('PTE inline embed references', async () => {
   test('handles type limited inline level references', async ({schemas}) => {
     const post = schemas.find((schema) => schema.name === 'post')
     const pteField = post?.fields.find((field) => field.name === 'intro') as ArraySanityFieldSchema
-    expect(pteField.of).toEqual(
+    const block = pteField.of.find((field) => field.type === 'block') as BlockDefinition
+    expect(block).toBeDefined()
+    expect(block.of).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          type: 'block',
-          of: expect.arrayContaining([
-            expect.objectContaining({
-              type: 'reference',
-              to: [{type: 'author'}], // Just author
-            }),
-          ]),
+          type: 'reference',
+          to: [{type: 'author'}], // Just author
         }),
       ]),
     )
