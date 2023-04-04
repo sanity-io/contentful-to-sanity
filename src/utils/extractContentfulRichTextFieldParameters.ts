@@ -219,6 +219,7 @@ export function extractContentfulRichTextFieldParameters(
           supportedEntryLinkTypes?.length && {
             type: 'object',
             name: 'internalLink',
+            title: 'Internal link',
             fields: [
               {
                 type: 'reference',

@@ -95,8 +95,16 @@ describe('create schema for RichText type', () => {
                 ],
               },
               {
-                type: 'reference',
-                to: [{type: 'contentType'}],
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'contentType'}],
+                  },
+                ],
               },
             ],
             decorators: [

@@ -187,6 +187,7 @@ describe('PTE annotation embed references', async () => {
         expect.objectContaining({
           type: 'object',
           name: 'internalLink',
+          title: 'Internal link',
           fields: expect.arrayContaining([
             expect.objectContaining({
               type: 'reference',
@@ -211,6 +212,7 @@ describe('PTE annotation embed references', async () => {
         expect.objectContaining({
           type: 'object',
           name: 'internalLink',
+          title: 'Internal link',
           fields: expect.arrayContaining([
             expect.objectContaining({
               type: 'reference',

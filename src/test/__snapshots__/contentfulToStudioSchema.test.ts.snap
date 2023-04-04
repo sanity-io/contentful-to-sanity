@@ -6264,6 +6264,23 @@ export const productType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'product'},
+                      {type: 'productSection'},
+                      {type: 'category'},
+                      {type: 'landingPage'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -6506,6 +6523,23 @@ export const productType = {
                   },
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'product'},
+                      {type: 'productSection'},
+                      {type: 'category'},
+                      {type: 'landingPage'},
+                    ],
+                  },
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -6741,6 +6775,23 @@ export const productType = defineType({
                         {value: '_parent', title: 'Parent'},
                       ],
                     },
+                  }),
+                ],
+              },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'product'},
+                      {type: 'productSection'},
+                      {type: 'category'},
+                      {type: 'landingPage'},
+                    ],
                   }),
                 ],
               },
@@ -6984,6 +7035,23 @@ export const productType = defineType({
                         {value: '_parent', title: 'Parent'},
                       ],
                     },
+                  }),
+                ],
+              },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'product'},
+                      {type: 'productSection'},
+                      {type: 'category'},
+                      {type: 'landingPage'},
+                    ],
                   }),
                 ],
               },
@@ -7237,8 +7305,18 @@ export const kbAppArticleType = defineType({
                   }),
                 ],
               },
-              {type: 'reference', to: [{type: 'kbAppArticle'}]},
-              {type: 'reference', to: [{type: 'kbAppCategory'}]},
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'kbAppArticle'}, {type: 'kbAppCategory'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -7563,8 +7641,18 @@ export const kbAppArticleType = {
                   },
                 ],
               },
-              {type: 'reference', to: [{type: 'kbAppArticle'}]},
-              {type: 'reference', to: [{type: 'kbAppCategory'}]},
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'kbAppArticle'}, {type: 'kbAppCategory'}],
+                  },
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -7890,8 +7978,18 @@ export const kbAppArticleType = defineType({
                   }),
                 ],
               },
-              {type: 'reference', to: [{type: 'kbAppArticle'}]},
-              {type: 'reference', to: [{type: 'kbAppCategory'}]},
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'kbAppArticle'}, {type: 'kbAppCategory'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -8217,8 +8315,18 @@ export const kbAppArticleType = defineType({
                   }),
                 ],
               },
-              {type: 'reference', to: [{type: 'kbAppArticle'}]},
-              {type: 'reference', to: [{type: 'kbAppCategory'}]},
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'kbAppArticle'}, {type: 'kbAppCategory'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -16932,6 +17040,18 @@ export const officeType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'employee'}, {type: 'office'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -17069,6 +17189,18 @@ export const officeType = {
                         {value: '_parent', title: 'Parent'},
                       ],
                     },
+                  },
+                ],
+              },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'employee'}, {type: 'office'}],
                   },
                 ],
               },
@@ -17219,6 +17351,18 @@ export const officeType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'employee'}, {type: 'office'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -17363,6 +17507,18 @@ export const officeType = defineType({
                         {value: '_parent', title: 'Parent'},
                       ],
                     },
+                  }),
+                ],
+              },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'employee'}, {type: 'office'}],
                   }),
                 ],
               },
