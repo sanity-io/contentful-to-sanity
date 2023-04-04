@@ -209,12 +209,20 @@ export function contentfulFieldToSanityField(
         .styles(richTextOptions.styles)
         .lists(richTextOptions.lists)
         .marks(richTextOptions.marks)
-      if (richTextOptions.canEmbedEntriesInline && richTextOptions.supportedEmbeddedInlineTypes) {
-        blockFactory.of(
-          richTextOptions.supportedEmbeddedInlineTypes.map((linkType) => ({
-            type: linkType.type,
-          })),
-        )
+      if (
+        richTextOptions.canEmbedEntriesInline &&
+        richTextOptions.supportedEmbeddedInlineTypes?.length
+      ) {
+        blockFactory.of([
+          {
+            type: 'reference',
+            // @ts-expect-error - the types for LinkedType are wrong in this
+            // project. It should have a `to` property
+            to: richTextOptions.supportedEmbeddedInlineTypes.map((linkType) => ({
+              type: linkType.type,
+            })),
+          },
+        ])
       }
 
       const factory = arrayFieldSchemaFactory(field.id)

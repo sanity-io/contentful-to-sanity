@@ -111,8 +111,12 @@ export function extractContentfulRichTextFieldParameters(
   )
 
   // @README limiting number of links is not supported
-  const supportedEmbeddedInlineTypes = canEmbedEntriesInline
-    ? nodesValidation?.nodes?.['embedded-entry-inline']?.reduce<LinkedType[]>(
+  let supportedEmbeddedInlineTypes: LinkedType[] | undefined
+  if (canEmbedEntriesInline) {
+    if (nodesValidation?.nodes) {
+      supportedEmbeddedInlineTypes = nodesValidation?.nodes?.['embedded-entry-inline']?.reduce<
+        LinkedType[]
+      >(
         (acc: any, value: any) =>
           value.linkContentType
             ? [
@@ -124,7 +128,10 @@ export function extractContentfulRichTextFieldParameters(
             : acc,
         [],
       )
-    : []
+    } else {
+      supportedEmbeddedInlineTypes = [...availableTypeIds].map((type) => ({type}))
+    }
+  }
 
   let supportedEmbeddedBlockTypes: LinkedType[] | undefined
   if (canEmbedEntries) {
