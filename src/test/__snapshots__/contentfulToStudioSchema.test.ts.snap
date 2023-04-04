@@ -252,6 +252,20 @@ export const bannerBlockType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'page'},
+                {type: 'contentBlock'},
+                {type: 'featuretteBlock'},
+                {type: 'cardBlock'},
+                {type: 'card'},
+                {type: 'bannerBlock'},
+                {type: 'footerBlock'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -607,6 +621,20 @@ export const bannerBlockType = {
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'page'},
+                {type: 'contentBlock'},
+                {type: 'featuretteBlock'},
+                {type: 'cardBlock'},
+                {type: 'card'},
+                {type: 'bannerBlock'},
+                {type: 'footerBlock'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -963,6 +991,20 @@ export const bannerBlockType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'page'},
+                {type: 'contentBlock'},
+                {type: 'featuretteBlock'},
+                {type: 'cardBlock'},
+                {type: 'card'},
+                {type: 'bannerBlock'},
+                {type: 'footerBlock'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -1319,6 +1361,20 @@ export const bannerBlockType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'page'},
+                {type: 'contentBlock'},
+                {type: 'featuretteBlock'},
+                {type: 'cardBlock'},
+                {type: 'card'},
+                {type: 'bannerBlock'},
+                {type: 'footerBlock'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -1501,6 +1557,7 @@ export const blogType = defineType({
               {type: 'file'},
             ],
           },
+          of: [{type: 'reference', to: [{type: 'blog'}, {type: 'author'}]}],
         },
         {type: 'reference', to: [{type: 'blog'}, {type: 'author'}]},
         {type: 'image'},
@@ -1675,6 +1732,7 @@ export const blogType = {
               {type: 'file'},
             ],
           },
+          of: [{type: 'reference', to: [{type: 'blog'}, {type: 'author'}]}],
         },
         {type: 'reference', to: [{type: 'blog'}, {type: 'author'}]},
         {type: 'image'},
@@ -1838,6 +1896,7 @@ export const blogType = defineType({
               {type: 'file'},
             ],
           },
+          of: [{type: 'reference', to: [{type: 'blog'}, {type: 'author'}]}],
         },
         {type: 'reference', to: [{type: 'blog'}, {type: 'author'}]},
         {type: 'image'},
@@ -2013,6 +2072,7 @@ export const blogType = defineType({
               {type: 'file'},
             ],
           },
+          of: [{type: 'reference', to: [{type: 'blog'}, {type: 'author'}]}],
         },
         {type: 'reference', to: [{type: 'blog'}, {type: 'author'}]},
         {type: 'image'},
@@ -3293,6 +3353,7 @@ export const recipeType = defineType({
               {type: 'file'},
             ],
           },
+          of: [{type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]}],
         },
         {type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
         {type: 'image'},
@@ -3480,6 +3541,7 @@ export const recipeType = {
               {type: 'file'},
             ],
           },
+          of: [{type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]}],
         },
         {type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
         {type: 'image'},
@@ -3662,6 +3724,7 @@ export const recipeType = defineType({
               {type: 'file'},
             ],
           },
+          of: [{type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]}],
         },
         {type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
         {type: 'image'},
@@ -3850,6 +3913,7 @@ export const recipeType = defineType({
               {type: 'file'},
             ],
           },
+          of: [{type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]}],
         },
         {type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
         {type: 'image'},
@@ -7179,6 +7243,18 @@ export const kbAppArticleType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'kbAppArticle'},
+                {type: 'kbAppCategory'},
+                {type: 'kbAppLink'},
+                {type: 'kbAppSiteSettings'},
+                {type: 'codeBlock'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -7493,6 +7569,18 @@ export const kbAppArticleType = {
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'kbAppArticle'},
+                {type: 'kbAppCategory'},
+                {type: 'kbAppLink'},
+                {type: 'kbAppSiteSettings'},
+                {type: 'codeBlock'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -7808,6 +7896,18 @@ export const kbAppArticleType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'kbAppArticle'},
+                {type: 'kbAppCategory'},
+                {type: 'kbAppLink'},
+                {type: 'kbAppSiteSettings'},
+                {type: 'codeBlock'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -8123,6 +8223,18 @@ export const kbAppArticleType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'kbAppArticle'},
+                {type: 'kbAppCategory'},
+                {type: 'kbAppLink'},
+                {type: 'kbAppSiteSettings'},
+                {type: 'codeBlock'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -13544,6 +13656,7 @@ export const personType = defineType({
               },
             ],
           },
+          of: [{type: 'reference', to: [{type: 'person'}, {type: 'post'}]}],
         },
         {type: 'reference', to: [{type: 'person'}, {type: 'post'}]},
         {type: 'image'},
@@ -13694,6 +13807,7 @@ export const personType = {
               },
             ],
           },
+          of: [{type: 'reference', to: [{type: 'person'}, {type: 'post'}]}],
         },
         {type: 'reference', to: [{type: 'person'}, {type: 'post'}]},
         {type: 'image'},
@@ -13845,6 +13959,7 @@ export const personType = defineType({
               },
             ],
           },
+          of: [{type: 'reference', to: [{type: 'person'}, {type: 'post'}]}],
         },
         {type: 'reference', to: [{type: 'person'}, {type: 'post'}]},
         {type: 'image'},
@@ -13996,6 +14111,7 @@ export const personType = defineType({
               },
             ],
           },
+          of: [{type: 'reference', to: [{type: 'person'}, {type: 'post'}]}],
         },
         {type: 'reference', to: [{type: 'person'}, {type: 'post'}]},
         {type: 'image'},
@@ -14169,6 +14285,20 @@ export const projectsType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -14283,6 +14413,20 @@ export const blogType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -14463,6 +14607,20 @@ export const pageType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -14570,6 +14728,20 @@ export const talksType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -14775,6 +14947,20 @@ export const projectsType = {
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -14889,6 +15075,20 @@ export const blogType = {
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -15063,6 +15263,20 @@ export const pageType = {
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -15170,6 +15384,20 @@ export const talksType = {
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -15376,6 +15604,20 @@ export const projectsType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -15490,6 +15732,20 @@ export const blogType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -15670,6 +15926,20 @@ export const pageType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -15777,6 +16047,20 @@ export const talksType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -15983,6 +16267,20 @@ export const projectsType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -16097,6 +16395,20 @@ export const blogType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -16277,6 +16589,20 @@ export const pageType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
@@ -16384,6 +16710,20 @@ export const talksType = defineType({
               {type: 'file'},
             ],
           },
+          of: [
+            {
+              type: 'reference',
+              to: [
+                {type: 'role'},
+                {type: 'projects'},
+                {type: 'blog'},
+                {type: 'socialLink'},
+                {type: 'page'},
+                {type: 'talks'},
+                {type: 'seoMetaData'},
+              ],
+            },
+          ],
         },
         {
           type: 'reference',
