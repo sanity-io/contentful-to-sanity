@@ -1,3 +1,4 @@
+import {type FieldValidation} from 'contentful'
 import {ContentFields} from 'contentful-management'
 import compact from 'just-compact'
 
@@ -83,8 +84,8 @@ export function extractContentfulRichTextFieldParameters(
   const enabledMarksValidation = field.validations?.find((validation) =>
     Boolean(validation.enabledMarks),
   )
-  // @ts-expect-error - check why validation.nodes complains `nodes` don't exist
-  const nodesValidation = field.validations?.find((validation) => Boolean(validation.nodes))
+  const fieldValidation = field.validations as FieldValidation[] | undefined
+  const nodesValidation = fieldValidation?.find((validation) => Boolean(validation.nodes))
 
   const canUseHyperLinks = enabledNodeTypesValidation?.enabledNodeTypes?.includes('hyperlink')
   const canUseAssetLinks = enabledNodeTypesValidation?.enabledNodeTypes?.includes('asset-hyperlink')
@@ -111,8 +112,7 @@ export function extractContentfulRichTextFieldParameters(
 
   // @README limiting number of links is not supported
   const supportedEmbeddedInlineTypes = canEmbedEntriesInline
-    ? // @ts-expect-error - check why validation.nodes complains `nodes` don't exist
-      nodesValidation?.nodes?.['embedded-entry-inline']?.reduce<LinkedType[]>(
+    ? nodesValidation?.nodes?.['embedded-entry-inline']?.reduce<LinkedType[]>(
         (acc: any, value: any) =>
           value.linkContentType
             ? [
@@ -126,9 +126,12 @@ export function extractContentfulRichTextFieldParameters(
       )
     : []
 
-  const supportedEmbeddedBlockTypes = canEmbedEntries
-    ? // @ts-expect-error - check why validation.nodes complains `nodes` don't exist
-      nodesValidation?.nodes?.['embedded-entry-block']?.reduce<LinkedType[]>(
+  let supportedEmbeddedBlockTypes: LinkedType[] | undefined
+  if (canEmbedEntries) {
+    if (nodesValidation?.nodes) {
+      supportedEmbeddedBlockTypes = nodesValidation?.nodes?.['embedded-entry-block']?.reduce<
+        LinkedType[]
+      >(
         (acc: any, value: any) =>
           value.linkContentType
             ? [
@@ -140,11 +143,13 @@ export function extractContentfulRichTextFieldParameters(
             : acc,
         [],
       )
-    : []
+    } else {
+      supportedEmbeddedBlockTypes = [...availableTypeIds].map((type) => ({type}))
+    }
+  }
 
   const supportedEntryLinkTypes = canUseEntryLinks
-    ? // @ts-expect-error - check why validation.nodes complains `nodes` don't exist
-      nodesValidation?.nodes?.['entry-hyperlink']?.reduce<LinkedType[]>(
+    ? nodesValidation?.nodes?.['entry-hyperlink']?.reduce<LinkedType[]>(
         (acc: any, value: any) =>
           value.linkContentType
             ? [

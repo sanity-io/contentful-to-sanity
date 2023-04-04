@@ -225,10 +225,17 @@ export function contentfulFieldToSanityField(
         .validation(validationRules)
       factory.of([
         blockFactory.anonymous(),
-        ...(richTextOptions.canEmbedEntries && richTextOptions.supportedEmbeddedBlockTypes
-          ? richTextOptions.supportedEmbeddedBlockTypes.map((linkType) => ({
-              type: linkType.type,
-            }))
+        ...(richTextOptions.canEmbedEntries && richTextOptions.supportedEmbeddedBlockTypes?.length
+          ? [
+              {
+                type: 'reference',
+                // @ts-expect-error - the types for LinkedType are wrong in this
+                // project. It should have a `to` property
+                to: richTextOptions.supportedEmbeddedBlockTypes.map((linkType) => ({
+                  type: linkType.type,
+                })),
+              },
+            ]
           : []),
         ...(richTextOptions.canEmbedAssets ? [{type: 'image'}, {type: 'file'}] : []),
         ...(richTextOptions.canUseBreaks ? [{type: 'break'}] : []),
