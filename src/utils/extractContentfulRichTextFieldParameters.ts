@@ -155,8 +155,10 @@ export function extractContentfulRichTextFieldParameters(
     }
   }
 
-  const supportedEntryLinkTypes = canUseEntryLinks
-    ? nodesValidation?.nodes?.['entry-hyperlink']?.reduce<LinkedType[]>(
+  let supportedEntryLinkTypes: LinkedType[] | undefined
+  if (canUseEntryLinks) {
+    if (nodesValidation?.nodes) {
+      supportedEntryLinkTypes = nodesValidation?.nodes?.['entry-hyperlink']?.reduce<LinkedType[]>(
         (acc: any, value: any) =>
           value.linkContentType
             ? [
@@ -168,7 +170,10 @@ export function extractContentfulRichTextFieldParameters(
             : acc,
         [],
       )
-    : []
+    } else {
+      supportedEntryLinkTypes = [...availableTypeIds].map((type) => ({type}))
+    }
+  }
 
   return {
     canUseHyperLinks,
@@ -210,12 +215,17 @@ export function extractContentfulRichTextFieldParameters(
               },
             ],
           } as ObjectSanityFieldSchema),
-        ...(canUseEntryLinks && supportedEntryLinkTypes
-          ? supportedEntryLinkTypes.map((linkType: any) => ({
-              type: 'reference',
-              to: [{type: linkType.type}],
-            }))
-          : []),
+        canUseEntryLinks &&
+          supportedEntryLinkTypes?.length && {
+            type: 'object',
+            name: 'internalLink',
+            fields: [
+              {
+                type: 'reference',
+                to: supportedEntryLinkTypes.map((linkType: any) => ({type: linkType.type})),
+              },
+            ],
+          },
         ...(canUseAssetLinks ? [{type: 'image'}, {type: 'file'}] : []),
       ]),
     },
