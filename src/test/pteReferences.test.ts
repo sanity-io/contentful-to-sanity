@@ -1,5 +1,5 @@
 import {SanityDocument} from '@sanity/client'
-import {BlockDefinition, DocumentDefinition} from '@sanity/types'
+import {BlockDefinition, DocumentDefinition, SlugValue} from '@sanity/types'
 import type {ContentTypeProps} from 'contentful-management'
 import {beforeEach, describe, expect, test} from 'vitest'
 
@@ -115,39 +115,63 @@ describe('PTE block-level references', async () => {
 })
 
 describe('PTE inline embed references', async () => {
-  test('handles unrestricted inline level references', async ({schemas}) => {
-    const post = schemas.find((schema) => schema.name === 'post')
-    const pteField = post?.fields.find((field) => field.name === 'body') as ArraySanityFieldSchema
-    expect(pteField.of).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          type: 'block',
-          of: expect.arrayContaining([
-            expect.objectContaining({
-              type: 'reference',
-              to: expect.arrayContaining([
-                expect.objectContaining({type: 'author'}),
-                expect.objectContaining({type: 'post'}),
-              ]),
-            }),
-          ]),
-        }),
-      ]),
-    )
-  })
+  describe('schema', async () => {
+    test('handles unrestricted inline level references', async ({schemas}) => {
+      const post = schemas.find((schema) => schema.name === 'post')
+      const pteField = post?.fields.find((field) => field.name === 'body') as ArraySanityFieldSchema
+      expect(pteField.of).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            type: 'block',
+            of: expect.arrayContaining([
+              expect.objectContaining({
+                type: 'reference',
+                to: expect.arrayContaining([
+                  expect.objectContaining({type: 'author'}),
+                  expect.objectContaining({type: 'post'}),
+                ]),
+              }),
+            ]),
+          }),
+        ]),
+      )
+    })
 
-  test('handles type limited inline level references', async ({schemas}) => {
-    const post = schemas.find((schema) => schema.name === 'post')
-    const pteField = post?.fields.find((field) => field.name === 'intro') as ArraySanityFieldSchema
-    const block = pteField.of.find((field) => field.type === 'block') as BlockDefinition
-    expect(block).toBeDefined()
-    expect(block.of).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          type: 'reference',
-          to: [{type: 'author'}], // Just author
-        }),
-      ]),
-    )
+    test('handles type limited inline level references', async ({schemas}) => {
+      const post = schemas.find((schema) => schema.name === 'post')
+      const pteField = post?.fields.find(
+        (field) => field.name === 'intro',
+      ) as ArraySanityFieldSchema
+      const block = pteField.of.find((field) => field.type === 'block') as BlockDefinition
+      expect(block).toBeDefined()
+      expect(block.of).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            type: 'reference',
+            to: [{type: 'author'}], // Just author
+          }),
+        ]),
+      )
+    })
+  })
+  describe('dataset', async () => {
+    test('creates inline reference from inlined entry', async ({dataset}) => {
+      const post = dataset.find(
+        (doc) => doc._type === 'post' && doc._id === 'drafts.1B48wTtOpUhuuEoNkTDji2',
+      )
+      expect(post).toBeDefined()
+      if (!post) return
+
+      // Should link to a specific author in the middle of the block
+      const block = post.body[1]
+      expect(block.children).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            _type: 'reference',
+            _ref: '152iqA9FIQSu7kccv6uGcu',
+          }),
+        ]),
+      )
+    })
   })
 })
