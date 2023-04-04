@@ -123,6 +123,7 @@ describe('create schema for RichText type', () => {
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [{type: 'contentType'}],
         },
         {
