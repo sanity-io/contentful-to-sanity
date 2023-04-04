@@ -175,3 +175,47 @@ describe('PTE inline embed references', async () => {
     })
   })
 })
+
+describe('PTE annotation embed references', async () => {
+  test('unrestricted embeds to any type', async ({schemas}) => {
+    const post = schemas.find((schema) => schema.name === 'post')
+    const pteField = post?.fields.find((field) => field.name === 'body') as ArraySanityFieldSchema
+    const blockType = pteField.of.find((field) => field.type === 'block') as BlockDefinition
+
+    expect(blockType.marks?.annotations).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          type: 'object',
+          fields: expect.arrayContaining([
+            expect.objectContaining({
+              type: 'reference',
+              to: expect.arrayContaining([
+                expect.objectContaining({type: 'author'}),
+                expect.objectContaining({type: 'post'}),
+              ]),
+            }),
+          ]),
+        }),
+      ]),
+    )
+  })
+
+  test('limited to specfic content type', async ({schemas}) => {
+    const post = schemas.find((schema) => schema.name === 'post')
+    const pteField = post?.fields.find((field) => field.name === 'intro') as ArraySanityFieldSchema
+    const blockType = pteField.of.find((field) => field.type === 'block') as BlockDefinition
+    expect(blockType.marks?.annotations).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          type: 'object',
+          fields: expect.arrayContaining([
+            expect.objectContaining({
+              type: 'reference',
+              to: [{type: 'author'}],
+            }),
+          ]),
+        }),
+      ]),
+    )
+  })
+})
