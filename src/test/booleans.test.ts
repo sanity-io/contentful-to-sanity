@@ -24,7 +24,8 @@ describe('Boolean fields', async () => {
       type: 'boolean',
       description: 'Boolean help text',
     })
-    const isRequired = isGreat?.validation[0]
+    const validations = isGreat?.validation
+    const isRequired = Array.isArray(validations) && validations[0]
     expect(isRequired && isRequired).toMatchObject({
       constraint: 'required',
       flag: 'presence',
