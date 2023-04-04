@@ -157,8 +157,8 @@ export function extractContentfulRichTextFieldParameters(
 
   let supportedEntryLinkTypes: LinkedType[] | undefined
   if (canUseEntryLinks) {
-    if (nodesValidation?.nodes) {
-      supportedEntryLinkTypes = nodesValidation?.nodes?.['entry-hyperlink']?.reduce<LinkedType[]>(
+    if (nodesValidation?.nodes?.['entry-hyperlink']) {
+      supportedEntryLinkTypes = nodesValidation.nodes['entry-hyperlink']?.reduce<LinkedType[]>(
         (acc: any, value: any) =>
           value.linkContentType
             ? [

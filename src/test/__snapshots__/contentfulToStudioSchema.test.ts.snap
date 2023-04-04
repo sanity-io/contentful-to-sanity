@@ -248,6 +248,26 @@ export const bannerBlockType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'page'},
+                      {type: 'contentBlock'},
+                      {type: 'featuretteBlock'},
+                      {type: 'cardBlock'},
+                      {type: 'card'},
+                      {type: 'bannerBlock'},
+                      {type: 'footerBlock'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -255,6 +275,7 @@ export const bannerBlockType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'page'},
                 {type: 'contentBlock'},
@@ -269,6 +290,7 @@ export const bannerBlockType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'page'},
             {type: 'contentBlock'},
@@ -617,6 +639,26 @@ export const bannerBlockType = {
                   },
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'page'},
+                      {type: 'contentBlock'},
+                      {type: 'featuretteBlock'},
+                      {type: 'cardBlock'},
+                      {type: 'card'},
+                      {type: 'bannerBlock'},
+                      {type: 'footerBlock'},
+                    ],
+                  },
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -624,6 +666,7 @@ export const bannerBlockType = {
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'page'},
                 {type: 'contentBlock'},
@@ -638,6 +681,7 @@ export const bannerBlockType = {
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'page'},
             {type: 'contentBlock'},
@@ -987,6 +1031,26 @@ export const bannerBlockType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'page'},
+                      {type: 'contentBlock'},
+                      {type: 'featuretteBlock'},
+                      {type: 'cardBlock'},
+                      {type: 'card'},
+                      {type: 'bannerBlock'},
+                      {type: 'footerBlock'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -994,6 +1058,7 @@ export const bannerBlockType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'page'},
                 {type: 'contentBlock'},
@@ -1008,6 +1073,7 @@ export const bannerBlockType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'page'},
             {type: 'contentBlock'},
@@ -1357,6 +1423,26 @@ export const bannerBlockType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'page'},
+                      {type: 'contentBlock'},
+                      {type: 'featuretteBlock'},
+                      {type: 'cardBlock'},
+                      {type: 'card'},
+                      {type: 'bannerBlock'},
+                      {type: 'footerBlock'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -1364,6 +1450,7 @@ export const bannerBlockType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'page'},
                 {type: 'contentBlock'},
@@ -1378,6 +1465,7 @@ export const bannerBlockType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'page'},
             {type: 'contentBlock'},
@@ -1553,13 +1641,25 @@ export const blogType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'blog'}, {type: 'author'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'blog'}, {type: 'author'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'blog'}, {type: 'author'}]}],
         },
-        {type: 'reference', to: [{type: 'blog'}, {type: 'author'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'blog'}, {type: 'author'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -1728,13 +1828,21 @@ export const blogType = {
                   },
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {type: 'reference', name: 'reference', to: [{type: 'blog'}, {type: 'author'}]},
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'blog'}, {type: 'author'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'blog'}, {type: 'author'}]}],
         },
-        {type: 'reference', to: [{type: 'blog'}, {type: 'author'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'blog'}, {type: 'author'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -1892,13 +2000,25 @@ export const blogType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'blog'}, {type: 'author'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'blog'}, {type: 'author'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'blog'}, {type: 'author'}]}],
         },
-        {type: 'reference', to: [{type: 'blog'}, {type: 'author'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'blog'}, {type: 'author'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -2068,13 +2188,25 @@ export const blogType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'blog'}, {type: 'author'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'blog'}, {type: 'author'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'blog'}, {type: 'author'}]}],
         },
-        {type: 'reference', to: [{type: 'blog'}, {type: 'author'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'blog'}, {type: 'author'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -3289,7 +3421,20 @@ export const recipeType = defineType({
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
             ],
-            annotations: [],
+            annotations: [
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'ingredient'}, {type: 'recipe'}],
+                  }),
+                ],
+              },
+            ],
           },
           of: [{type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]}],
         },
@@ -3349,13 +3494,27 @@ export const recipeType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'ingredient'}, {type: 'recipe'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]}],
+          of: [
+            {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
+          ],
         },
-        {type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -3477,7 +3636,20 @@ export const recipeType = {
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
             ],
-            annotations: [],
+            annotations: [
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'ingredient'}, {type: 'recipe'}],
+                  },
+                ],
+              },
+            ],
           },
           of: [{type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]}],
         },
@@ -3537,13 +3709,27 @@ export const recipeType = {
                   },
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'ingredient'}, {type: 'recipe'}],
+                  },
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]}],
+          of: [
+            {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
+          ],
         },
-        {type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -3660,7 +3846,20 @@ export const recipeType = defineType({
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
             ],
-            annotations: [],
+            annotations: [
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'ingredient'}, {type: 'recipe'}],
+                  }),
+                ],
+              },
+            ],
           },
           of: [{type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]}],
         },
@@ -3720,13 +3919,27 @@ export const recipeType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'ingredient'}, {type: 'recipe'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]}],
+          of: [
+            {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
+          ],
         },
-        {type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -3849,7 +4062,20 @@ export const recipeType = defineType({
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
             ],
-            annotations: [],
+            annotations: [
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'ingredient'}, {type: 'recipe'}],
+                  }),
+                ],
+              },
+            ],
           },
           of: [{type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]}],
         },
@@ -3909,13 +4135,27 @@ export const recipeType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'ingredient'}, {type: 'recipe'}],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]}],
+          of: [
+            {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
+          ],
         },
-        {type: 'reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}, {type: 'recipe'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -7332,6 +7572,7 @@ export const kbAppArticleType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'kbAppArticle'},
                 {type: 'kbAppCategory'},
@@ -7344,6 +7585,7 @@ export const kbAppArticleType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'kbAppArticle'},
             {type: 'kbAppCategory'},
@@ -7668,6 +7910,7 @@ export const kbAppArticleType = {
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'kbAppArticle'},
                 {type: 'kbAppCategory'},
@@ -7680,6 +7923,7 @@ export const kbAppArticleType = {
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'kbAppArticle'},
             {type: 'kbAppCategory'},
@@ -8005,6 +8249,7 @@ export const kbAppArticleType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'kbAppArticle'},
                 {type: 'kbAppCategory'},
@@ -8017,6 +8262,7 @@ export const kbAppArticleType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'kbAppArticle'},
             {type: 'kbAppCategory'},
@@ -8342,6 +8588,7 @@ export const kbAppArticleType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'kbAppArticle'},
                 {type: 'kbAppCategory'},
@@ -8354,6 +8601,7 @@ export const kbAppArticleType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'kbAppArticle'},
             {type: 'kbAppCategory'},
@@ -13770,11 +14018,23 @@ export const personType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'person'}, {type: 'post'}],
+                  }),
+                ],
+              },
             ],
           },
-          of: [{type: 'reference', to: [{type: 'person'}, {type: 'post'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'person'}, {type: 'post'}]}],
         },
-        {type: 'reference', to: [{type: 'person'}, {type: 'post'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'person'}, {type: 'post'}]},
         {type: 'image'},
         {type: 'file'},
       ],
@@ -13921,11 +14181,19 @@ export const personType = {
                   },
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {type: 'reference', name: 'reference', to: [{type: 'person'}, {type: 'post'}]},
+                ],
+              },
             ],
           },
-          of: [{type: 'reference', to: [{type: 'person'}, {type: 'post'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'person'}, {type: 'post'}]}],
         },
-        {type: 'reference', to: [{type: 'person'}, {type: 'post'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'person'}, {type: 'post'}]},
         {type: 'image'},
         {type: 'file'},
       ],
@@ -14073,11 +14341,23 @@ export const personType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'person'}, {type: 'post'}],
+                  }),
+                ],
+              },
             ],
           },
-          of: [{type: 'reference', to: [{type: 'person'}, {type: 'post'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'person'}, {type: 'post'}]}],
         },
-        {type: 'reference', to: [{type: 'person'}, {type: 'post'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'person'}, {type: 'post'}]},
         {type: 'image'},
         {type: 'file'},
       ],
@@ -14225,11 +14505,23 @@ export const personType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [{type: 'person'}, {type: 'post'}],
+                  }),
+                ],
+              },
             ],
           },
-          of: [{type: 'reference', to: [{type: 'person'}, {type: 'post'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'person'}, {type: 'post'}]}],
         },
-        {type: 'reference', to: [{type: 'person'}, {type: 'post'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'person'}, {type: 'post'}]},
         {type: 'image'},
         {type: 'file'},
       ],
@@ -14397,6 +14689,26 @@ export const projectsType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -14404,6 +14716,7 @@ export const projectsType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -14418,6 +14731,7 @@ export const projectsType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -14525,6 +14839,26 @@ export const blogType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -14532,6 +14866,7 @@ export const blogType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -14546,6 +14881,7 @@ export const blogType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -14719,6 +15055,26 @@ export const pageType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -14726,6 +15082,7 @@ export const pageType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -14740,6 +15097,7 @@ export const pageType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -14840,6 +15198,26 @@ export const talksType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -14847,6 +15225,7 @@ export const talksType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -14861,6 +15240,7 @@ export const talksType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -15059,6 +15439,26 @@ export const projectsType = {
                   },
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  },
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -15066,6 +15466,7 @@ export const projectsType = {
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -15080,6 +15481,7 @@ export const projectsType = {
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -15187,6 +15589,26 @@ export const blogType = {
                   },
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  },
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -15194,6 +15616,7 @@ export const blogType = {
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -15208,6 +15631,7 @@ export const blogType = {
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -15375,6 +15799,26 @@ export const pageType = {
                   },
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  },
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -15382,6 +15826,7 @@ export const pageType = {
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -15396,6 +15841,7 @@ export const pageType = {
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -15496,6 +15942,26 @@ export const talksType = {
                   },
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  {
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  },
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -15503,6 +15969,7 @@ export const talksType = {
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -15517,6 +15984,7 @@ export const talksType = {
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -15716,6 +16184,26 @@ export const projectsType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -15723,6 +16211,7 @@ export const projectsType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -15737,6 +16226,7 @@ export const projectsType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -15844,6 +16334,26 @@ export const blogType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -15851,6 +16361,7 @@ export const blogType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -15865,6 +16376,7 @@ export const blogType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -16038,6 +16550,26 @@ export const pageType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -16045,6 +16577,7 @@ export const pageType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -16059,6 +16592,7 @@ export const pageType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -16159,6 +16693,26 @@ export const talksType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -16166,6 +16720,7 @@ export const talksType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -16180,6 +16735,7 @@ export const talksType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -16379,6 +16935,26 @@ export const projectsType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -16386,6 +16962,7 @@ export const projectsType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -16400,6 +16977,7 @@ export const projectsType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -16507,6 +17085,26 @@ export const blogType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -16514,6 +17112,7 @@ export const blogType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -16528,6 +17127,7 @@ export const blogType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -16701,6 +17301,26 @@ export const pageType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -16708,6 +17328,7 @@ export const pageType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -16722,6 +17343,7 @@ export const pageType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
@@ -16822,6 +17444,26 @@ export const talksType = defineType({
                   }),
                 ],
               },
+              {
+                type: 'object',
+                name: 'internalLink',
+                title: 'Internal link',
+                fields: [
+                  defineField({
+                    type: 'reference',
+                    name: 'reference',
+                    to: [
+                      {type: 'role'},
+                      {type: 'projects'},
+                      {type: 'blog'},
+                      {type: 'socialLink'},
+                      {type: 'page'},
+                      {type: 'talks'},
+                      {type: 'seoMetaData'},
+                    ],
+                  }),
+                ],
+              },
               {type: 'image'},
               {type: 'file'},
             ],
@@ -16829,6 +17471,7 @@ export const talksType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'role'},
                 {type: 'projects'},
@@ -16843,6 +17486,7 @@ export const talksType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'role'},
             {type: 'projects'},
