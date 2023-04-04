@@ -1,5 +1,10 @@
 import {SanityDocument} from '@sanity/client'
-import {BlockDefinition, DocumentDefinition} from '@sanity/types'
+import {
+  BlockDefinition,
+  DocumentDefinition,
+  PortableTextSpan,
+  PortableTextTextBlock,
+} from '@sanity/types'
 import type {ContentTypeProps} from 'contentful-management'
 import {beforeEach, describe, expect, test} from 'vitest'
 
@@ -12,6 +17,7 @@ declare module 'vitest' {
   export interface TestContext {
     schemas: DocumentDefinition[]
     dataset: SanityDocument[]
+    rawDataset: string[]
   }
 }
 
@@ -27,7 +33,7 @@ beforeEach(async (context) => {
     )
   }
   context.schemas = sanityContentTypes
-  context.dataset = (
+  context.rawDataset = (
     await contentfulToDataset(
       {
         drafts: drafts as any,
@@ -41,9 +47,8 @@ beforeEach(async (context) => {
         locale: undefined,
       },
     )
-  )
-    .split('\n')
-    .map(parse)
+  ).split('\n')
+  context.dataset = context.rawDataset.map(parse)
 })
 
 describe('PTE block-level references', async () => {
@@ -177,51 +182,87 @@ describe('PTE inline embed references', async () => {
 })
 
 describe('PTE annotation embed references', async () => {
-  test('unrestricted embeds to any type', async ({schemas}) => {
-    const post = schemas.find((schema) => schema.name === 'post')
-    const pteField = post?.fields.find((field) => field.name === 'body') as ArraySanityFieldSchema
-    const blockType = pteField.of.find((field) => field.type === 'block') as BlockDefinition
+  describe('schema', async () => {
+    test('unrestricted embeds to any type', async ({schemas}) => {
+      const post = schemas.find((schema) => schema.name === 'post')
+      const pteField = post?.fields.find((field) => field.name === 'body') as ArraySanityFieldSchema
+      const blockType = pteField.of.find((field) => field.type === 'block') as BlockDefinition
 
-    expect(blockType.marks?.annotations).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          type: 'object',
-          name: 'internalLink',
-          title: 'Internal link',
-          fields: expect.arrayContaining([
-            expect.objectContaining({
-              type: 'reference',
-              name: 'reference',
-              to: expect.arrayContaining([
-                expect.objectContaining({type: 'author'}),
-                expect.objectContaining({type: 'post'}),
-              ]),
-            }),
-          ]),
-        }),
-      ]),
-    )
+      expect(blockType.marks?.annotations).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            type: 'object',
+            name: 'internalLink',
+            title: 'Internal link',
+            fields: expect.arrayContaining([
+              expect.objectContaining({
+                type: 'reference',
+                name: 'reference',
+                to: expect.arrayContaining([
+                  expect.objectContaining({type: 'author'}),
+                  expect.objectContaining({type: 'post'}),
+                ]),
+              }),
+            ]),
+          }),
+        ]),
+      )
+    })
+
+    test('limited to specfic content type', async ({schemas}) => {
+      const post = schemas.find((schema) => schema.name === 'post')
+      const pteField = post?.fields.find(
+        (field) => field.name === 'intro',
+      ) as ArraySanityFieldSchema
+      const blockType = pteField.of.find((field) => field.type === 'block') as BlockDefinition
+      expect(blockType.marks?.annotations).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            type: 'object',
+            name: 'internalLink',
+            title: 'Internal link',
+            fields: expect.arrayContaining([
+              expect.objectContaining({
+                type: 'reference',
+                name: 'reference',
+                to: [{type: 'author'}],
+              }),
+            ]),
+          }),
+        ]),
+      )
+    })
   })
+  describe('dataset', async () => {
+    test('creates annotation reference from linked entry', async ({rawDataset}) => {
+      // We need to test this with the raw dataset as the dataset has stable, mutated _key values
+      const docs = rawDataset.map((json) => JSON.parse(json))
+      const post = docs.find(
+        (doc) => doc._type === 'post' && doc._id === 'drafts.1B48wTtOpUhuuEoNkTDji2',
+      )
+      expect(post).toBeDefined()
+      if (!post) return
 
-  test('limited to specfic content type', async ({schemas}) => {
-    const post = schemas.find((schema) => schema.name === 'post')
-    const pteField = post?.fields.find((field) => field.name === 'intro') as ArraySanityFieldSchema
-    const blockType = pteField.of.find((field) => field.type === 'block') as BlockDefinition
-    expect(blockType.marks?.annotations).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          type: 'object',
-          name: 'internalLink',
-          title: 'Internal link',
-          fields: expect.arrayContaining([
-            expect.objectContaining({
-              type: 'reference',
-              name: 'reference',
-              to: [{type: 'author'}],
-            }),
-          ]),
-        }),
-      ]),
-    )
+      // Should link to a specific author in the middle of the block
+      const block = post.body[0] as PortableTextTextBlock<PortableTextSpan>
+
+      // The annotated bit of text
+      const annotatedChild = block.children.find((child) => child.text === 'this')
+      expect(annotatedChild).toBeDefined()
+      expect(annotatedChild).toHaveProperty('marks')
+      if (!annotatedChild?.marks) return
+      const mark = annotatedChild?.marks[0]
+      expect(mark).toBeDefined()
+
+      expect(block.markDefs).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            _type: 'reference',
+            _ref: '5JpJ63LfU5itcEFXvgpA4Z',
+            _key: mark, // The _key is a reference to the markDef
+          }),
+        ]),
+      )
+    })
   })
 })
