@@ -2,6 +2,7 @@ import {toPortableText} from '@portabletext/contentful-rich-text-to-portable-tex
 import type {SanityDocument} from '@sanity/client'
 import type {EntryProps} from 'contentful-management'
 import compact from 'just-compact'
+import objectHash from 'object-hash'
 
 import type {ContentfulExport} from '../types'
 import {contentfulLinkToSanityReference} from './contentfulLinkToSanityReference'
@@ -82,8 +83,9 @@ export function contentfulEntryToSanityObject(
       const referenceResolver: ReferenceResolver = (node) =>
         contentfulLinkToSanityReference(id, node.data.target, locale, data, options)
 
+
       doc[key] = toPortableText(value, {
-        generateKey: () => generateKey(),
+        generateKey: (node) => `k${objectHash(node).slice(0, 7)}`,
         referenceResolver,
         transformers: {
           hr: () => [

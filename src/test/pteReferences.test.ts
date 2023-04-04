@@ -259,7 +259,7 @@ describe('PTE annotation embed references', async () => {
           expect.objectContaining({
             _type: 'reference',
             _ref: '5JpJ63LfU5itcEFXvgpA4Z',
-            _key: mark, // The _key is a reference to the markDef
+            _key: mark, // The _key is a reference to the mark
           }),
         ]),
       )
