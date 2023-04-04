@@ -1589,8 +1589,8 @@ export const blogType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -1770,8 +1770,8 @@ export const blogType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -1940,8 +1940,8 @@ export const blogType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -2122,8 +2122,8 @@ export const blogType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -3416,8 +3416,8 @@ export const recipeType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -3619,8 +3619,8 @@ export const recipeType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -3817,8 +3817,8 @@ export const recipeType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -4021,8 +4021,8 @@ export const recipeType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -6384,8 +6384,8 @@ export const productType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -6639,8 +6639,8 @@ export const productType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -6890,8 +6890,8 @@ export const productType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -7146,8 +7146,8 @@ export const productType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -7409,8 +7409,8 @@ export const kbAppArticleType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -7741,8 +7741,8 @@ export const kbAppArticleType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -8074,8 +8074,8 @@ export const kbAppArticleType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -8407,8 +8407,8 @@ export const kbAppArticleType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -11763,8 +11763,8 @@ export const postType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -11933,8 +11933,8 @@ export const postType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -12104,8 +12104,8 @@ export const postType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -12275,8 +12275,8 @@ export const postType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -14501,8 +14501,8 @@ export const projectsType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -14645,8 +14645,8 @@ export const blogType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -14855,8 +14855,8 @@ export const pageType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -14992,8 +14992,8 @@ export const talksType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -15227,8 +15227,8 @@ export const projectsType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -15371,8 +15371,8 @@ export const blogType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -15575,8 +15575,8 @@ export const pageType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -15712,8 +15712,8 @@ export const talksType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -15948,8 +15948,8 @@ export const projectsType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -16092,8 +16092,8 @@ export const blogType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -16302,8 +16302,8 @@ export const pageType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -16439,8 +16439,8 @@ export const talksType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -16675,8 +16675,8 @@ export const projectsType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -16819,8 +16819,8 @@ export const blogType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -17029,8 +17029,8 @@ export const pageType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -17166,8 +17166,8 @@ export const talksType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -17408,8 +17408,8 @@ export const officeType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -17554,8 +17554,8 @@ export const officeType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -17707,8 +17707,8 @@ export const officeType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -17860,8 +17860,8 @@ export const officeType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {

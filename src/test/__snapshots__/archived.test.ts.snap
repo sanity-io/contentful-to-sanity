@@ -146,8 +146,8 @@ export const postType = {
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
@@ -375,8 +375,8 @@ export const postType = defineType({
             decorators: [
               {title: 'Strong', value: 'strong'},
               {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
               {title: 'Underline', value: 'underline'},
-              {title: 'Code', value: 'pre'},
             ],
             annotations: [
               {
