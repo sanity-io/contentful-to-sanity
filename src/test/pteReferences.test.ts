@@ -190,6 +190,7 @@ describe('PTE annotation embed references', async () => {
           fields: expect.arrayContaining([
             expect.objectContaining({
               type: 'reference',
+              name: 'reference',
               to: expect.arrayContaining([
                 expect.objectContaining({type: 'author'}),
                 expect.objectContaining({type: 'post'}),
@@ -213,6 +214,7 @@ describe('PTE annotation embed references', async () => {
           fields: expect.arrayContaining([
             expect.objectContaining({
               type: 'reference',
+              name: 'reference',
               to: [{type: 'author'}],
             }),
           ]),

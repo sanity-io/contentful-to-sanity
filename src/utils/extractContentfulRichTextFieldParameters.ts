@@ -222,6 +222,7 @@ export function extractContentfulRichTextFieldParameters(
             fields: [
               {
                 type: 'reference',
+                name: 'reference',
                 to: supportedEntryLinkTypes.map((linkType: any) => ({type: linkType.type})),
               },
             ],
