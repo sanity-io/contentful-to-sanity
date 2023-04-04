@@ -94,7 +94,7 @@
     "just-safe-set": "4.2.1",
     "markdown-it": "13.0.1",
     "mkdirp": "2.1.6",
-    "node-fetch": "^2.6.9",
+    "node-fetch": "^2.6.7",
     "prettier": "2.8.7",
     "sharp": "^0.32.0",
     "svgo": "^3.0.2",
