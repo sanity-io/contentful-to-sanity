@@ -3291,9 +3291,9 @@ export const recipeType = defineType({
             ],
             annotations: [],
           },
-          of: [{type: 'reference', to: [{type: 'ingredient'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]}],
         },
-        {type: 'reference', to: [{type: 'ingredient'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]},
       ],
       title: 'Ingredients',
       hidden: false,
@@ -3479,9 +3479,9 @@ export const recipeType = {
             ],
             annotations: [],
           },
-          of: [{type: 'reference', to: [{type: 'ingredient'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]}],
         },
-        {type: 'reference', to: [{type: 'ingredient'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]},
       ],
       title: 'Ingredients',
       hidden: false,
@@ -3662,9 +3662,9 @@ export const recipeType = defineType({
             ],
             annotations: [],
           },
-          of: [{type: 'reference', to: [{type: 'ingredient'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]}],
         },
-        {type: 'reference', to: [{type: 'ingredient'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]},
       ],
       title: 'Ingredients',
       hidden: false,
@@ -3851,9 +3851,9 @@ export const recipeType = defineType({
             ],
             annotations: [],
           },
-          of: [{type: 'reference', to: [{type: 'ingredient'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]}],
         },
-        {type: 'reference', to: [{type: 'ingredient'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'ingredient'}]},
       ],
       title: 'Ingredients',
       hidden: false,
@@ -6288,6 +6288,7 @@ export const productType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'product'},
                 {type: 'productSection'},
@@ -6299,6 +6300,7 @@ export const productType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'product'},
             {type: 'productSection'},
@@ -6547,6 +6549,7 @@ export const productType = {
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'product'},
                 {type: 'productSection'},
@@ -6558,6 +6561,7 @@ export const productType = {
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'product'},
             {type: 'productSection'},
@@ -6802,6 +6806,7 @@ export const productType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'product'},
                 {type: 'productSection'},
@@ -6813,6 +6818,7 @@ export const productType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'product'},
             {type: 'productSection'},
@@ -7062,6 +7068,7 @@ export const productType = defineType({
           of: [
             {
               type: 'reference',
+              title: 'Reference',
               to: [
                 {type: 'product'},
                 {type: 'productSection'},
@@ -7073,6 +7080,7 @@ export const productType = defineType({
         },
         {
           type: 'reference',
+          title: 'Reference',
           to: [
             {type: 'product'},
             {type: 'productSection'},
@@ -8855,7 +8863,7 @@ export const headlineType = defineType({
               },
             ],
           },
-          of: [{type: 'reference', to: [{type: 'link'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'link'}]}],
         },
       ],
       title: 'Body',
@@ -9575,7 +9583,7 @@ export const headlineType = {
               },
             ],
           },
-          of: [{type: 'reference', to: [{type: 'link'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'link'}]}],
         },
       ],
       title: 'Body',
@@ -10329,7 +10337,7 @@ export const headlineType = defineType({
               },
             ],
           },
-          of: [{type: 'reference', to: [{type: 'link'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'link'}]}],
         },
       ],
       title: 'Body',
@@ -11095,7 +11103,7 @@ export const headlineType = defineType({
               },
             ],
           },
-          of: [{type: 'reference', to: [{type: 'link'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'link'}]}],
         },
       ],
       title: 'Body',
@@ -17056,9 +17064,9 @@ export const officeType = defineType({
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'employee'}, {type: 'office'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'employee'}, {type: 'office'}]}],
         },
-        {type: 'reference', to: [{type: 'employee'}, {type: 'office'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'employee'}, {type: 'office'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -17208,9 +17216,9 @@ export const officeType = {
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'employee'}, {type: 'office'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'employee'}, {type: 'office'}]}],
         },
-        {type: 'reference', to: [{type: 'employee'}, {type: 'office'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'employee'}, {type: 'office'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -17367,9 +17375,9 @@ export const officeType = defineType({
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'employee'}, {type: 'office'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'employee'}, {type: 'office'}]}],
         },
-        {type: 'reference', to: [{type: 'employee'}, {type: 'office'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'employee'}, {type: 'office'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},
@@ -17526,9 +17534,9 @@ export const officeType = defineType({
               {type: 'file'},
             ],
           },
-          of: [{type: 'reference', to: [{type: 'employee'}, {type: 'office'}]}],
+          of: [{type: 'reference', title: 'Reference', to: [{type: 'employee'}, {type: 'office'}]}],
         },
-        {type: 'reference', to: [{type: 'employee'}, {type: 'office'}]},
+        {type: 'reference', title: 'Reference', to: [{type: 'employee'}, {type: 'office'}]},
         {type: 'image'},
         {type: 'file'},
         {type: 'break'},

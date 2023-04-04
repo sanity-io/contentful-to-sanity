@@ -216,6 +216,7 @@ export function contentfulFieldToSanityField(
         blockFactory.of([
           {
             type: 'reference',
+            title: 'Reference',
             // @ts-expect-error - the types for LinkedType are wrong in this
             // project. It should have a `to` property
             to: richTextOptions.supportedEmbeddedInlineTypes.map((linkType) => ({
@@ -237,6 +238,7 @@ export function contentfulFieldToSanityField(
           ? [
               {
                 type: 'reference',
+                title: 'Reference',
                 // @ts-expect-error - the types for LinkedType are wrong in this
                 // project. It should have a `to` property
                 to: richTextOptions.supportedEmbeddedBlockTypes.map((linkType) => ({
