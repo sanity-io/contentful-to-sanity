@@ -113,8 +113,8 @@ export function extractContentfulRichTextFieldParameters(
   // @README limiting number of links is not supported
   let supportedEmbeddedInlineTypes: LinkedType[] | undefined
   if (canEmbedEntriesInline) {
-    if (nodesValidation?.nodes) {
-      supportedEmbeddedInlineTypes = nodesValidation?.nodes?.['embedded-entry-inline']?.reduce<
+    if (nodesValidation?.nodes?.['embedded-entry-inline']) {
+      supportedEmbeddedInlineTypes = nodesValidation.nodes['embedded-entry-inline']?.reduce<
         LinkedType[]
       >(
         (acc: any, value: any) =>
