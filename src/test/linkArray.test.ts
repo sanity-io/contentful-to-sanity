@@ -1,5 +1,5 @@
-import {SanityDocument, SanityReference} from '@sanity/client'
-import {DocumentDefinition, SanityDocumentLike} from '@sanity/types'
+import {SanityDocument} from '@sanity/client'
+import {DocumentDefinition} from '@sanity/types'
 import type {ContentTypeProps} from 'contentful-management'
 import {beforeEach, describe, expect, test} from 'vitest'
 
