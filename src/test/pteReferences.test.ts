@@ -1,5 +1,5 @@
 import {SanityDocument} from '@sanity/client'
-import {BlockDefinition, DocumentDefinition, SlugValue} from '@sanity/types'
+import {BlockDefinition, DocumentDefinition} from '@sanity/types'
 import type {ContentTypeProps} from 'contentful-management'
 import {beforeEach, describe, expect, test} from 'vitest'
 
