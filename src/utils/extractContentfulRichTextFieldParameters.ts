@@ -217,16 +217,10 @@ export function extractContentfulRichTextFieldParameters(
           } as ObjectSanityFieldSchema),
         canUseEntryLinks &&
           supportedEntryLinkTypes?.length && {
-            type: 'object',
-            name: 'internalLink',
-            title: 'Internal link',
-            fields: [
-              {
-                type: 'reference',
-                name: 'reference',
-                to: supportedEntryLinkTypes.map((linkType: any) => ({type: linkType.type})),
-              },
-            ],
+            type: 'reference',
+            name: 'reference',
+            title: 'Reference',
+            to: supportedEntryLinkTypes.map((linkType: any) => ({type: linkType.type})),
           },
         ...(canUseAssetLinks ? [{type: 'image'}, {type: 'file'}] : []),
       ]),
