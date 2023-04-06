@@ -80,9 +80,8 @@ export function contentfulEntryToSanityObject(
         lng: value.lon,
       }
     } else if (objectIsContentfulRichText(value)) {
-      const referenceResolver: ReferenceResolver = (node) =>
+      const referenceResolver: ReferenceResolver = (node) => 
         contentfulLinkToSanityReference(id, node.data.target, locale, data, options)
-
 
       doc[key] = toPortableText(value, {
         generateKey: (node) => `k${objectHash(node).slice(0, 7)}`,

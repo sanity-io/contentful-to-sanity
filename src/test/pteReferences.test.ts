@@ -159,6 +159,7 @@ describe('PTE inline embed references', async () => {
       )
     })
   })
+
   describe('dataset', async () => {
     test('creates inline reference from inlined entry', async ({dataset}) => {
       const post = dataset.find(
@@ -191,18 +192,12 @@ describe('PTE annotation embed references', async () => {
       expect(blockType.marks?.annotations).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
-            type: 'object',
-            name: 'internalLink',
-            title: 'Internal link',
-            fields: expect.arrayContaining([
-              expect.objectContaining({
-                type: 'reference',
-                name: 'reference',
-                to: expect.arrayContaining([
-                  expect.objectContaining({type: 'author'}),
-                  expect.objectContaining({type: 'post'}),
-                ]),
-              }),
+            type: 'reference',
+            name: 'reference',
+            title: 'Reference',
+            to: expect.arrayContaining([
+              expect.objectContaining({type: 'author'}),
+              expect.objectContaining({type: 'post'}),
             ]),
           }),
         ]),
@@ -218,21 +213,16 @@ describe('PTE annotation embed references', async () => {
       expect(blockType.marks?.annotations).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
-            type: 'object',
-            name: 'internalLink',
-            title: 'Internal link',
-            fields: expect.arrayContaining([
-              expect.objectContaining({
-                type: 'reference',
-                name: 'reference',
-                to: [{type: 'author'}],
-              }),
-            ]),
+            type: 'reference',
+            name: 'reference',
+            title: 'Reference',
+            to: [{type: 'author'}],
           }),
         ]),
       )
     })
   })
+
   describe('dataset', async () => {
     test('creates annotation reference from linked entry', async ({rawDataset}) => {
       // We need to test this with the raw dataset as the dataset has stable, mutated _key values
@@ -257,12 +247,9 @@ describe('PTE annotation embed references', async () => {
       expect(block.markDefs).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
-            _type: 'object',
+            _type: 'reference',
             _key: mark, // The _key is a reference to the mark
-            reference: expect.objectContaining({
-              _type: 'reference',
-              _ref: '5JpJ63LfU5itcEFXvgpA4Z',
-            }),
+            _ref: '5JpJ63LfU5itcEFXvgpA4Z',
           }),
         ]),
       )
