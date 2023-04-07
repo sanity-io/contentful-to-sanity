@@ -25,10 +25,10 @@ export async function optimizeSVG(dataset: string, exportDir: string) {
 
   const out: string[] = []
   for await (const line of rl) {
+    let newLine = line
     try {
       const regex = /image@(https?:\/\/[^\s"]+\.svg)/g
       let match
-      let newLine = line
       while ((match = regex.exec(line)) !== null) {
         const svgUrl = match[1]
         const response = await fetch(svgUrl)
@@ -51,12 +51,11 @@ export async function optimizeSVG(dataset: string, exportDir: string) {
           console.error(`Error fetching ${svgUrl}`, response.status)
         }
       }
-
-      out.push(newLine)
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error(err)
     }
+    out.push(newLine)
   }
 
   return out.join('\n')
