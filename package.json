@@ -131,7 +131,7 @@
     "vitest-github-actions-reporter": "^0.10.0"
   },
   "engines": {
-    "node": ">=14.18"
+    "node": ">=16"
   },
   "publishConfig": {
     "access": "public"
