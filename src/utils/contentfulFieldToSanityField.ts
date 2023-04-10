@@ -16,7 +16,7 @@ import {
   textFieldSchemaFactory,
   urlFieldSchemaFactory,
 } from '../helpers/sanity/fieldSchemaFactories'
-import type {ContentfulExport} from '../types'
+import type {ContentfulExport, SlugSanityFieldSchemaOptions} from '../types'
 import {AnySanityFieldSchema, StringSanityFieldSchema} from '../types'
 import {contentfulFieldItemToSanityOfType} from './contentfulFieldItemToSanityOfType'
 import {extractContentfulRichTextFieldParameters} from './extractContentfulRichTextFieldParameters'
@@ -82,10 +82,21 @@ export function contentfulFieldToSanityField(
           .hidden(field.disabled)
           .description(helpText)
           .initialValue(defaultValue)
-          .validation(validationRules.filter((rule) => rule.flag !== 'unique'))
-        factory.options({
+
+        const options: SlugSanityFieldSchemaOptions = {
           source: sourceField,
-        })
+        }
+
+        let slugValidation = validationRules.filter((rule) => rule.flag !== 'unique')
+
+        const size = field.validations?.find((validation) => Boolean(validation.size))?.size
+        if (size?.max) {
+          options.maxLength = size.max
+          slugValidation = slugValidation.filter((rule) => rule.flag !== 'max')
+        }
+
+        factory.validation(slugValidation)
+        factory.options(options)
         return factory.build()
       }
 

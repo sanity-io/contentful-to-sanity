@@ -156,15 +156,17 @@ export type ReferenceSanityFieldSchema = BaseSanityFieldSchema<
   }
 >
 
+export type SlugSanityFieldSchemaOptions = {
+  source?: string
+  maxLength?: number
+  slugify?: (value: any) => string
+  isUnique?: (slug: Slug) => boolean | Promise<boolean>
+}
+
 export type SlugSanityFieldSchema = BaseSanityFieldSchema<
   'slug',
   Slug,
-  {
-    source?: string
-    maxLength?: number
-    slugify?: (value: any) => string
-    isUnique?: (slug: Slug) => boolean | Promise<boolean>
-  }
+  SlugSanityFieldSchemaOptions
 >
 
 export type StringSanityFieldSchema = BaseSanityFieldSchema<

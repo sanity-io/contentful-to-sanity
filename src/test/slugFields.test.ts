@@ -99,6 +99,6 @@ describe('Slug fields', async () => {
     if (!slugField) return
 
     expect(slugField.options?.maxLength).toEqual(25)
-    expect(slugField.validation?.length).toEqual(0)
+    expect(slugField.validation).toBeUndefined()
   })
 })
