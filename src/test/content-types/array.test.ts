@@ -46,7 +46,7 @@ describe('create schema for Array type', () => {
         },
       ],
       options: {
-        layout: 'tag',
+        layout: 'tags',
       },
     })
   })

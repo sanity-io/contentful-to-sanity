@@ -313,7 +313,7 @@ export function contentfulFieldToSanityField(
       }
 
       if (widgetId === 'tagEditor') {
-        factory.options({layout: 'tag'})
+        factory.options({layout: 'tags'})
       }
 
       if (field.items) {
