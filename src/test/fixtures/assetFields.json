@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -70,9 +69,7 @@
           "required": false,
           "validations": [
             {
-              "linkMimetypeGroup": [
-                "image"
-              ]
+              "linkMimetypeGroup": ["image"]
             }
           ],
           "disabled": false,
@@ -105,9 +102,7 @@
           "required": false,
           "validations": [
             {
-              "linkMimetypeGroup": [
-                "pdfdocument"
-              ]
+              "linkMimetypeGroup": ["pdfdocument"]
             }
           ],
           "disabled": false,
@@ -117,8 +112,7 @@
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -187,14 +181,12 @@
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "66frtrAqmWSowDJzQNDiD",
           "widgetNamespace": "app"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "703nAvCC2nuDjQCiI5P8e2",
           "widgetNamespace": "app"
         }
@@ -223,13 +215,11 @@
       ]
     }
   ],
-  "entries": [
-  ],
+  "entries": [],
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {

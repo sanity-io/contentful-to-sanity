@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -68,17 +67,14 @@
           "type": "Array",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "author"
-                ]
+                "linkContentType": ["author"]
               }
             ],
             "linkType": "Entry"
@@ -113,14 +109,7 @@
               ]
             },
             {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript"
-              ]
+              "enabledMarks": ["bold", "italic", "underline", "code", "superscript", "subscript"]
             }
           ],
           "disabled": false,
@@ -134,14 +123,7 @@
           "required": false,
           "validations": [
             {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript"
-              ],
+              "enabledMarks": ["bold", "italic", "underline", "code", "superscript", "subscript"],
               "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
             },
             {
@@ -167,25 +149,19 @@
               "nodes": {
                 "embedded-entry-block": [
                   {
-                    "linkContentType": [
-                      "author"
-                    ],
+                    "linkContentType": ["author"],
                     "message": null
                   }
                 ],
                 "embedded-entry-inline": [
                   {
-                    "linkContentType": [
-                      "author"
-                    ],
+                    "linkContentType": ["author"],
                     "message": null
                   }
                 ],
                 "entry-hyperlink": [
                   {
-                    "linkContentType": [
-                      "author"
-                    ],
+                    "linkContentType": ["author"],
                     "message": null
                   }
                 ]
@@ -254,16 +230,14 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -332,14 +306,12 @@
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "66frtrAqmWSowDJzQNDiD",
           "widgetNamespace": "app"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "703nAvCC2nuDjQCiI5P8e2",
           "widgetNamespace": "app"
         }
@@ -454,8 +426,7 @@
   "entries": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -502,8 +473,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -537,21 +507,17 @@
         "body": {
           "en-US": {
             "nodeType": "document",
-            "data": {
-            },
+            "data": {},
             "content": [
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "First author as annotation on ",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   },
                   {
                     "nodeType": "entry-hyperlink",
@@ -568,35 +534,28 @@
                       {
                         "nodeType": "text",
                         "value": "this",
-                        "marks": [
-                        ],
-                        "data": {
-                        }
+                        "marks": [],
+                        "data": {}
                       }
                     ]
                   },
                   {
                     "nodeType": "text",
                     "value": " text",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               },
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "The second author is inlined here ",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   },
                   {
                     "nodeType": "embedded-entry-inline",
@@ -609,31 +568,25 @@
                         }
                       }
                     },
-                    "content": [
-                    ]
+                    "content": []
                   },
                   {
                     "nodeType": "text",
                     "value": " in the middle of this paragraph",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               },
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "Next paragraph is an embedded link to First author",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               },
@@ -648,21 +601,17 @@
                     }
                   }
                 },
-                "content": [
-                ]
+                "content": []
               },
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "Next is a reference block to a draft author",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               },
@@ -677,21 +626,17 @@
                     }
                   }
                 },
-                "content": [
-                ]
+                "content": []
               },
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               }
@@ -702,8 +647,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -750,8 +694,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -768,8 +711,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -816,8 +758,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -834,8 +775,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -872,8 +812,7 @@
         },
         "publishedCounter": 0,
         "version": 2,
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -892,8 +831,7 @@
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {

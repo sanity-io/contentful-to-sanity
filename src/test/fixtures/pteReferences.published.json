@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -68,17 +67,14 @@
           "type": "Array",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "author"
-                ]
+                "linkContentType": ["author"]
               }
             ],
             "linkType": "Entry"
@@ -113,14 +109,7 @@
               ]
             },
             {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript"
-              ]
+              "enabledMarks": ["bold", "italic", "underline", "code", "superscript", "subscript"]
             }
           ],
           "disabled": false,
@@ -134,14 +123,7 @@
           "required": false,
           "validations": [
             {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript"
-              ],
+              "enabledMarks": ["bold", "italic", "underline", "code", "superscript", "subscript"],
               "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
             },
             {
@@ -167,25 +149,19 @@
               "nodes": {
                 "embedded-entry-block": [
                   {
-                    "linkContentType": [
-                      "author"
-                    ],
+                    "linkContentType": ["author"],
                     "message": null
                   }
                 ],
                 "embedded-entry-inline": [
                   {
-                    "linkContentType": [
-                      "author"
-                    ],
+                    "linkContentType": ["author"],
                     "message": null
                   }
                 ],
                 "entry-hyperlink": [
                   {
-                    "linkContentType": [
-                      "author"
-                    ],
+                    "linkContentType": ["author"],
                     "message": null
                   }
                 ]
@@ -254,16 +230,14 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -332,14 +306,12 @@
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "66frtrAqmWSowDJzQNDiD",
           "widgetNamespace": "app"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "703nAvCC2nuDjQCiI5P8e2",
           "widgetNamespace": "app"
         }
@@ -454,8 +426,7 @@
   "entries": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -493,8 +464,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -532,8 +502,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -591,8 +560,7 @@
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
