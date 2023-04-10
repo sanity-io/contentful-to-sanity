@@ -197,7 +197,6 @@ describe('Validations', () => {
     ])
   })
 
-  /*
   test('value needs to be in set', () => {
     const field = {
       id: 'dec',
@@ -215,9 +214,10 @@ describe('Validations', () => {
     }
     const validations = extractValidationRulesFromContentfulField(field)
 
-    expect(validations).to.deep.equal([{flag: 'custom', constraint: 'validateIn([10,29,50])'}])
+    expect(validations).to.deep.equal([
+      {flag: 'custom', constraint: '(value) => validateIn([10,29,50], value)'},
+    ])
   })
-  */
 
   test('Does not add unique() validations', () => {
     const field = {

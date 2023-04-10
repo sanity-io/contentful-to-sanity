@@ -48,7 +48,7 @@ export function contentfulFieldToSanityField(
     const defaultValue = field.defaultValue
     const helpText = control.settings?.helpText as string | undefined
     let onlyAllowValues = field.validations?.find((validation) => Boolean(validation.in))?.in
-    const validationRules = extractValidationRulesFromContentfulField(field)
+    const validationRules = extractValidationRulesFromContentfulField(field, widgetId)
 
     if (field.type === 'Symbol') {
       if (widgetId === 'urlEditor') {

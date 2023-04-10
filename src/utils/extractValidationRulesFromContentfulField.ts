@@ -4,7 +4,7 @@ import moment from 'moment'
 
 export function extractValidationRulesFromContentfulField(
   field: ContentFields | Exclude<ContentFields['items'], undefined>,
-  widgetId: string,
+  widgetId?: string,
 ): RuleSpec[] {
   const validations = field.validations ?? []
   const rules: RuleSpec[] = []
@@ -19,9 +19,10 @@ export function extractValidationRulesFromContentfulField(
 
   for (const validation of validations) {
     if (validation.unique) {
-      if (widgetId !== 'slugEditor') {
-        console.log(
-          "Unique validation supported on slug fields. Consider adding custom validation for other fields, or changing field to 'slug'",
+      if (widgetId && widgetId !== 'slugEditor') {
+        // eslint-disable-next-line no-console
+        console.warn(
+          "Unique validation only supported on slug fields by default. Consider adding custom validation for other unique fields or changing field to 'slug'",
         )
       }
     } else if (validation.regexp?.pattern) {
@@ -60,6 +61,13 @@ export function extractValidationRulesFromContentfulField(
           moment(value as string).isBefore(max)
             ? true
             : `Value should be no later than ${max.toLocaleString()}`,
+      })
+    } else if (Array.isArray(validation.in)) {
+      const values = validation.in
+      rules.push({
+        flag: 'custom',
+        // @ts-expect-error We want full contol over the validation function string
+        constraint: `(value) => validateIn(${JSON.stringify(values)}, value)`,
       })
     }
   }
