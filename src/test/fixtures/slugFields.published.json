@@ -12,7 +12,7 @@
         "id": "author",
         "type": "ContentType",
         "createdAt": "2023-04-04T01:43:32.668Z",
-        "updatedAt": "2023-04-10T18:34:29.016Z",
+        "updatedAt": "2023-04-10T19:10:50.395Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2023-04-10T18:34:29.016Z",
+        "publishedVersion": 7,
+        "publishedAt": "2023-04-10T19:10:50.395Z",
         "firstPublishedAt": "2023-04-04T01:43:33.419Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -100,6 +100,24 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "number",
+          "name": "number",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "range": {
+                "min": 1,
+                "max": 10
+              },
+              "message": "Needs that special range"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
         }
       ]
     }
@@ -117,7 +135,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 8,
         "createdAt": "2023-04-04T01:43:33.713Z",
         "createdBy": {
           "sys": {
@@ -126,7 +144,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-04-10T18:34:29.679Z",
+        "updatedAt": "2023-04-10T19:10:51.058Z",
         "updatedBy": {
           "sys": {
             "id": "2jYeCfa60UhCFs76N2hp6o",
@@ -210,6 +228,11 @@
             "trackingFieldId": "position"
           },
           "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "number",
+          "widgetId": "numberEditor",
           "widgetNamespace": "builtin"
         }
       ]
