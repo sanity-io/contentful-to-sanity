@@ -2272,7 +2272,6 @@ export const categoriesType = defineType({
       type: 'string',
       title: 'Category',
       hidden: false,
-      validation: (Rule) => Rule.unique(),
       options: {
         list: ['prospective student', 'student', 'faculty', 'employee', 'alumni'],
         layout: 'radio',
@@ -2400,7 +2399,6 @@ export const categoriesType = {
       type: 'string',
       title: 'Category',
       hidden: false,
-      validation: (Rule) => Rule.unique(),
       options: {
         list: ['prospective student', 'student', 'faculty', 'employee', 'alumni'],
         layout: 'radio',
@@ -2518,7 +2516,6 @@ export const categoriesType = defineType({
       type: 'string',
       title: 'Category',
       hidden: false,
-      validation: (Rule) => Rule.unique(),
       options: {
         list: ['prospective student', 'student', 'faculty', 'employee', 'alumni'],
         layout: 'radio',
@@ -2647,7 +2644,6 @@ export const categoriesType = defineType({
       type: 'string',
       title: 'Category',
       hidden: false,
-      validation: (Rule) => Rule.unique(),
       options: {
         list: ['prospective student', 'student', 'faculty', 'employee', 'alumni'],
         layout: 'radio',
@@ -7369,7 +7365,7 @@ export const kbAppArticleType = defineType({
       type: 'string',
       title: 'Title',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -7511,17 +7507,14 @@ export const kbAppCategoryType = defineType({
       type: 'string',
       title: 'Name',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
       type: 'string',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) =>
-        Rule.required()
-          .unique()
-          .regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
     }),
     defineField({
       name: 'previewDescription',
@@ -7585,7 +7578,7 @@ export const kbAppSiteSettingsType = defineType({
       type: 'string',
       title: 'Site name (SEO)',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'siteDescription',
@@ -7701,7 +7694,7 @@ export const kbAppArticleType = {
       type: 'string',
       title: 'Title',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -7843,17 +7836,14 @@ export const kbAppCategoryType = {
       type: 'string',
       title: 'Name',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
       type: 'string',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) =>
-        Rule.required()
-          .unique()
-          .regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
     },
     {
       name: 'previewDescription',
@@ -7917,7 +7907,7 @@ export const kbAppSiteSettingsType = {
       type: 'string',
       title: 'Site name (SEO)',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'siteDescription',
@@ -8034,7 +8024,7 @@ export const kbAppArticleType = defineType({
       type: 'string',
       title: 'Title',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -8176,17 +8166,14 @@ export const kbAppCategoryType = defineType({
       type: 'string',
       title: 'Name',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
       type: 'string',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) =>
-        Rule.required()
-          .unique()
-          .regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
     }),
     defineField({
       name: 'previewDescription',
@@ -8250,7 +8237,7 @@ export const kbAppSiteSettingsType = defineType({
       type: 'string',
       title: 'Site name (SEO)',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'siteDescription',
@@ -8367,7 +8354,7 @@ export const kbAppArticleType = defineType({
       type: 'string',
       title: 'Title',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -8509,17 +8496,14 @@ export const kbAppCategoryType = defineType({
       type: 'string',
       title: 'Name',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
       type: 'string',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) =>
-        Rule.required()
-          .unique()
-          .regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
     }),
     defineField({
       name: 'previewDescription',
@@ -8583,7 +8567,7 @@ export const kbAppSiteSettingsType = defineType({
       type: 'string',
       title: 'Site name (SEO)',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'siteDescription',
@@ -9116,7 +9100,7 @@ export const categoriesType = defineType({
       type: 'string',
       title: 'Category',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       type: 'boolean',
@@ -9836,7 +9820,7 @@ export const categoriesType = {
       type: 'string',
       title: 'Category',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     },
     {
       type: 'boolean',
@@ -10590,7 +10574,7 @@ export const categoriesType = defineType({
       type: 'string',
       title: 'Category',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       type: 'boolean',
@@ -11356,7 +11340,7 @@ export const categoriesType = defineType({
       type: 'string',
       title: 'Category',
       hidden: false,
-      validation: (Rule) => Rule.required().unique(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       type: 'boolean',
