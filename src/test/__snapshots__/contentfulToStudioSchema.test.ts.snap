@@ -2883,7 +2883,7 @@ export const blogPostType = defineType({
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -3016,7 +3016,7 @@ export const blogPostType = {
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     },
     {
       type: 'boolean',
@@ -3156,7 +3156,7 @@ export const blogPostType = defineType({
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -3293,7 +3293,7 @@ export const blogPostType = defineType({
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -4663,7 +4663,7 @@ export const blogPostType = defineType({
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -4814,7 +4814,7 @@ export const blogPostType = {
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     },
     {
       type: 'boolean',
@@ -4972,7 +4972,7 @@ export const blogPostType = defineType({
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -5130,7 +5130,7 @@ export const blogPostType = defineType({
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -5280,7 +5280,7 @@ export const blogPostType = defineType({
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -5423,7 +5423,7 @@ export const blogPostType = {
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     },
     {
       type: 'boolean',
@@ -5573,7 +5573,7 @@ export const blogPostType = defineType({
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -5723,7 +5723,7 @@ export const blogPostType = defineType({
       of: [{type: 'string', options: {list: ['general', 'javascript', 'static-sites']}}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -5842,7 +5842,7 @@ export const productType = defineType({
       of: [{type: 'string'}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       name: 'recommendations',
@@ -5978,7 +5978,7 @@ export const productType = {
       of: [{type: 'string'}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     },
     {
       name: 'recommendations',
@@ -6127,7 +6127,7 @@ export const productType = defineType({
       of: [{type: 'string'}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       name: 'recommendations',
@@ -6270,7 +6270,7 @@ export const productType = defineType({
       of: [{type: 'string'}],
       title: 'Tags',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       name: 'recommendations',
@@ -7601,7 +7601,7 @@ export const kbAppSiteSettingsType = defineType({
       title: 'Site keywords (SEO)',
       hidden: false,
       validation: (Rule) => Rule.required(),
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -7933,7 +7933,7 @@ export const kbAppSiteSettingsType = {
       title: 'Site keywords (SEO)',
       hidden: false,
       validation: (Rule) => Rule.required(),
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     },
     {
       type: 'boolean',
@@ -8266,7 +8266,7 @@ export const kbAppSiteSettingsType = defineType({
       title: 'Site keywords (SEO)',
       hidden: false,
       validation: (Rule) => Rule.required(),
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -8599,7 +8599,7 @@ export const kbAppSiteSettingsType = defineType({
       title: 'Site keywords (SEO)',
       hidden: false,
       validation: (Rule) => Rule.required(),
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -9091,7 +9091,7 @@ export const navigationSectionType = defineType({
       ],
       title: 'Links',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -9811,7 +9811,7 @@ export const navigationSectionType = {
       ],
       title: 'Links',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     },
     {
       type: 'boolean',
@@ -10565,7 +10565,7 @@ export const navigationSectionType = defineType({
       ],
       title: 'Links',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -11331,7 +11331,7 @@ export const navigationSectionType = defineType({
       ],
       title: 'Links',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({
       type: 'boolean',
@@ -13149,7 +13149,7 @@ export const seoMetadataType = defineType({
       of: [{type: 'string'}],
       title: 'Keywords',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({name: 'author', type: 'string', title: 'Author', hidden: false}),
     defineField({
@@ -13328,7 +13328,7 @@ export const seoMetadataType = {
       of: [{type: 'string'}],
       title: 'Keywords',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     },
     {name: 'author', type: 'string', title: 'Author', hidden: false},
     {
@@ -13502,7 +13502,7 @@ export const seoMetadataType = defineType({
       of: [{type: 'string'}],
       title: 'Keywords',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({name: 'author', type: 'string', title: 'Author', hidden: false}),
     defineField({
@@ -13676,7 +13676,7 @@ export const seoMetadataType = defineType({
       of: [{type: 'string'}],
       title: 'Keywords',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({name: 'author', type: 'string', title: 'Author', hidden: false}),
     defineField({
@@ -20193,7 +20193,7 @@ export const seoMetadataType = defineType({
       of: [{type: 'string'}],
       title: 'Keywords',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({name: 'author', type: 'string', title: 'Author', hidden: false}),
     defineField({
@@ -20372,7 +20372,7 @@ export const seoMetadataType = {
       of: [{type: 'string'}],
       title: 'Keywords',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     },
     {name: 'author', type: 'string', title: 'Author', hidden: false},
     {
@@ -20546,7 +20546,7 @@ export const seoMetadataType = defineType({
       of: [{type: 'string'}],
       title: 'Keywords',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({name: 'author', type: 'string', title: 'Author', hidden: false}),
     defineField({
@@ -20720,7 +20720,7 @@ export const seoMetadataType = defineType({
       of: [{type: 'string'}],
       title: 'Keywords',
       hidden: false,
-      options: {layout: 'tag'},
+      options: {layout: 'tags'},
     }),
     defineField({name: 'author', type: 'string', title: 'Author', hidden: false}),
     defineField({

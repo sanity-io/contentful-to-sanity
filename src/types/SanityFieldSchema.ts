@@ -37,7 +37,7 @@ export type ArraySanityFieldSchema = BaseSanityFieldSchema<
   any[],
   {
     sortable?: boolean
-    layout?: 'tag' | 'grid'
+    layout?: 'tags' | 'grid'
     list?: {value: string; title: string}[]
     editModal?: 'dialog' | 'fullscreen' | 'popover'
   },
