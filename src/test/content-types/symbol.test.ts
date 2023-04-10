@@ -115,6 +115,7 @@ describe('create schema for Symbol type', () => {
         list: ['foo', 'bar'],
         layout: 'dropdown',
       },
+      validation: [{flag: 'custom', constraint: `(value) => validateIn(["foo","bar"], value)`}],
     })
   })
 })
