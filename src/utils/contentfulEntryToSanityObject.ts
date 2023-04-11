@@ -62,7 +62,10 @@ export function contentfulEntryToSanityObject(
 
     const value = values[locale]
     const canCopyValueAsIs =
-      typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean'
+      typeof value === 'string' ||
+      typeof value === 'number' ||
+      typeof value === 'boolean' ||
+      (typeof value === 'object' && widgetId === 'objectEditor')
     if (canCopyValueAsIs) {
       if (widgetId === 'slugEditor') {
         doc[key] = {current: value}
