@@ -93,7 +93,7 @@
     "just-safe-get": "4.2.0",
     "just-safe-set": "4.2.1",
     "markdown-it": "13.0.1",
-    "mkdirp": "2.1.6",
+    "mkdirp": "3.0.0",
     "node-fetch": "^2.6.7",
     "object-hash": "^3.0.0",
     "prettier": "2.8.7",
