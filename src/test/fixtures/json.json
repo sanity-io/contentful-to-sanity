@@ -1,0 +1,376 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "6cvippge3sd1"
+          }
+        },
+        "id": "film",
+        "type": "ContentType",
+        "createdAt": "2023-04-10T23:23:43.651Z",
+        "updatedAt": "2023-04-10T23:30:17.391Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-04-10T23:30:17.391Z",
+        "firstPublishedAt": "2023-04-10T23:23:43.894Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Film",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "json",
+          "name": "json",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "max": 12
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "6cvippge3sd1",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2023-04-10T23:23:44.001Z",
+        "createdBy": {
+          "sys": {
+            "id": "2jYeCfa60UhCFs76N2hp6o",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-04-10T23:30:18.042Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2jYeCfa60UhCFs76N2hp6o",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "film",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "editors": [
+        {
+          "widgetId": "default-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "tags-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "69mKkEFmMO9ue4lwWfto2C",
+          "widgetNamespace": "app"
+        }
+      ],
+      "sidebar": [
+        {
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "703nAvCC2nuDjQCiI5P8e2",
+          "widgetNamespace": "app"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "json",
+          "widgetId": "objectEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "6cvippge3sd1"
+          }
+        },
+        "id": "77UFBoGGWC89hSAKaxD0Fm",
+        "type": "Entry",
+        "createdAt": "2023-04-10T23:30:20.802Z",
+        "updatedAt": "2023-04-10T23:30:42.564Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-04-10T23:30:42.564Z",
+        "firstPublishedAt": "2023-04-10T23:30:42.564Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "film"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Test json"
+        },
+        "json": {
+          "en-US": {
+            "raw": true
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "6cvippge3sd1"
+          }
+        },
+        "id": "4S9vZQAr0k7gS37zi7iNDG",
+        "type": "Asset",
+        "createdAt": "2023-02-28T20:29:09.498Z",
+        "updatedAt": "2023-02-28T20:32:04.972Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-02-28T20:32:04.972Z",
+        "firstPublishedAt": "2023-02-28T20:32:04.972Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Norway"
+        },
+        "description": {
+          "en-US": "A fjord in Norway"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/6cvippge3sd1/4S9vZQAr0k7gS37zi7iNDG/c3c715c652fd3a26f94a032e1a06cf9a/image.png",
+            "details": {
+              "size": 1311262,
+              "image": {
+                "width": 1109,
+                "height": 750
+              }
+            },
+            "fileName": "image.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "2nEMtGrzor8718dMRdtm5D",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "6cvippge3sd1"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "f338763c-b95e-483e-bebb-ca6351c96fff"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "createdAt": "2023-02-23T20:12:22Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2jYeCfa60UhCFs76N2hp6o"
+          }
+        },
+        "updatedAt": "2023-02-23T20:12:22Z"
+      }
+    }
+  ]
+}

@@ -2567,6 +2567,9 @@ exports[`contentfulToDataset > blog.json 1`] = `
     "_updatedAt": "2023-03-09T06:09:17.829Z",
     "email": "freddy@johansen.net",
     "name": "Freddy Johansen",
+    "seo": {
+      "foo": "bar",
+    },
   },
   {
     "_createdAt": "2023-03-09T06:09:28.207Z",
@@ -2746,6 +2749,9 @@ exports[`contentfulToDataset > blog.json 2`] = `
     "_updatedAt": "2023-03-09T06:09:17.829Z",
     "email": "freddy@johansen.net",
     "name": "Freddy Johansen",
+    "seo": {
+      "foo": "bar",
+    },
   },
   {
     "__i18n_lang": "en-US",
@@ -2923,6 +2929,9 @@ exports[`contentfulToDataset > blog.json 3`] = `
     "_updatedAt": "2023-03-09T06:09:17.829Z",
     "email": "freddy@johansen.net",
     "name": "Freddy Johansen",
+    "seo": {
+      "foo": "bar",
+    },
   },
   {
     "_createdAt": "2023-03-09T06:09:28.207Z",
@@ -3096,6 +3105,9 @@ exports[`contentfulToDataset > blog.json 4`] = `
     "_updatedAt": "2023-03-09T06:09:17.829Z",
     "email": "freddy@johansen.net",
     "name": "Freddy Johansen",
+    "seo": {
+      "foo": "bar",
+    },
   },
   {
     "_createdAt": "2023-03-09T06:09:28.207Z",
@@ -3269,6 +3281,9 @@ exports[`contentfulToDataset > blog.json 5`] = `
     "_updatedAt": "2023-03-09T06:09:17.829Z",
     "email": "freddy@johansen.net",
     "name": "Freddy Johansen",
+    "seo": {
+      "foo": "bar",
+    },
   },
   {
     "_createdAt": "2023-03-09T06:09:28.207Z",
