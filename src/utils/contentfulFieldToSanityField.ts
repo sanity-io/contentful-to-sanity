@@ -190,6 +190,16 @@ export function contentfulFieldToSanityField(
     }
 
     if (field.type === 'Text') {
+      if (widgetId === 'singleLine') {
+        return stringFieldSchemaFactory(field.id)
+          .title(field.name)
+          .hidden(field.disabled)
+          .description(helpText)
+          .initialValue(defaultValue)
+          .validation(validationRules)
+          .build()
+      }
+
       if (widgetId === 'multipleLine' || (widgetId === 'markdown' && flags.keepMarkdown)) {
         return textFieldSchemaFactory(field.id)
           .title(field.name)

@@ -4299,8 +4299,7 @@ export const photoGalleryType = defineType({
   fields: [
     defineField({
       name: 'title',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Title',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -4411,8 +4410,7 @@ export const photoGalleryType = {
   fields: [
     {
       name: 'title',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Title',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -4512,8 +4510,7 @@ export const photoGalleryType = defineType({
   fields: [
     defineField({
       name: 'title',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Title',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -4625,8 +4622,7 @@ export const photoGalleryType = defineType({
   fields: [
     defineField({
       name: 'title',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Title',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -6038,8 +6034,7 @@ export const productType = defineType({
   fields: [
     defineField({
       name: 'productName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Product name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -6183,8 +6178,7 @@ export const productType = {
   fields: [
     {
       name: 'productName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Product name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -6329,8 +6323,7 @@ export const productType = defineType({
   fields: [
     defineField({
       name: 'productName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Product name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -6481,8 +6474,7 @@ export const productType = defineType({
   fields: [
     defineField({
       name: 'productName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Product name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -12680,8 +12672,7 @@ export const productType = defineType({
   fields: [
     defineField({
       name: 'productName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Product name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -12783,8 +12774,7 @@ export const brandType = defineType({
   fields: [
     defineField({
       name: 'companyName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Company name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -12871,8 +12861,7 @@ export const productType = {
   fields: [
     {
       name: 'productName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Product name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -12968,8 +12957,7 @@ export const brandType = {
   fields: [
     {
       name: 'companyName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Company name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -13051,8 +13039,7 @@ export const productType = defineType({
   fields: [
     defineField({
       name: 'productName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Product name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -13154,8 +13141,7 @@ export const brandType = defineType({
   fields: [
     defineField({
       name: 'companyName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Company name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -13243,8 +13229,7 @@ export const productType = defineType({
   fields: [
     defineField({
       name: 'productName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Product name',
       hidden: false,
       validation: (Rule) => Rule.required(),
@@ -13340,8 +13325,7 @@ export const brandType = defineType({
   fields: [
     defineField({
       name: 'companyName',
-      type: 'array',
-      of: [{type: 'block'}, {type: 'image'}],
+      type: 'string',
       title: 'Company name',
       hidden: false,
       validation: (Rule) => Rule.required(),
