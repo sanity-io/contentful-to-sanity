@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -81,8 +80,7 @@
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -151,14 +149,12 @@
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "66frtrAqmWSowDJzQNDiD",
           "widgetNamespace": "app"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "703nAvCC2nuDjQCiI5P8e2",
           "widgetNamespace": "app"
         }
@@ -180,8 +176,7 @@
   "entries": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -228,8 +223,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -253,8 +247,7 @@
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
