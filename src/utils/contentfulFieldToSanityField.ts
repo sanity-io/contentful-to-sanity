@@ -352,6 +352,7 @@ export function contentfulFieldToSanityField(
     }
 
     if (field.type === 'Object') {
+      // eslint-disable-next-line no-console
       console.warn(
         'Found unstructured JSON field, suggest you add a schema for it later',
         `${contentType.name}.${field.name}`,
