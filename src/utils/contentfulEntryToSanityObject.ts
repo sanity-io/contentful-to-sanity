@@ -62,10 +62,7 @@ export function contentfulEntryToSanityObject(
 
     const value = values[locale]
     const canCopyValueAsIs =
-      typeof value === 'string' ||
-      typeof value === 'number' ||
-      typeof value === 'boolean' ||
-      (typeof value === 'object' && widgetId === 'objectEditor')
+      typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean'
     if (canCopyValueAsIs) {
       if (widgetId === 'slugEditor') {
         doc[key] = {current: value}
@@ -74,6 +71,8 @@ export function contentfulEntryToSanityObject(
       } else {
         doc[key] = value
       }
+    } else if (widgetId === 'objectEditor' && typeof value === 'object') {
+      doc[key] = JSON.stringify(value)
     } else if (objectIsContentfulLink(value)) {
       doc[key] = contentfulLinkToSanityReference(id, value, locale, data, options)
     } else if (objectIsContentfulLocation(value)) {

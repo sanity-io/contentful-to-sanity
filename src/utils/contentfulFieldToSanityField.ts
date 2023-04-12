@@ -350,6 +350,13 @@ export function contentfulFieldToSanityField(
 
       return factory.build()
     }
+
+    if (field.type === 'Object') {
+      console.warn(
+        'Found unstructured JSON field, suggest you add a schema for it later',
+        `${contentType.name}.${field.name}`,
+      )
+    }
   }
 
   return null

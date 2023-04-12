@@ -63,9 +63,7 @@ describe('Object', () => {
       expect(doc).toMatchObject(
         expect.objectContaining({
           title: 'Test json',
-          json: {
-            raw: true,
-          },
+          json: `{"raw":true}`,
         }),
       )
     })
