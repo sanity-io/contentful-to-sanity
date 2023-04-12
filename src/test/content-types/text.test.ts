@@ -1,3 +1,4 @@
+import {StringDefinition} from 'sanity'
 import {describe, expect, test} from 'vitest'
 
 import type {ContentfulExport} from '../../types'
@@ -40,6 +41,27 @@ describe('create schema for Text type', () => {
       type: 'text',
       title: 'field',
     })
+  })
+
+  test('should create a Sanity schema for singleLine', () => {
+    const data: ContentfulExport = {
+      editorInterfaces: [
+        contentfulEditorInterfaceFactory('contentType', [
+          contentfulEditorControlFactory('field', 'singleLine'),
+        ]),
+      ],
+      contentTypes: [contentType],
+    }
+
+    const expected: StringDefinition = {
+      name: 'field',
+      type: 'string',
+      title: 'field',
+    }
+
+    expect(
+      contentfulTypeToSanitySchema(contentType, data, {keepMarkdown: false}).fields[0],
+    ).to.deep.equal(expected)
   })
 
   test('should create a Sanity schema for markdown (keeping markdown)', () => {
