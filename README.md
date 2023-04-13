@@ -93,13 +93,6 @@ You don't have to wait for the `npx sanity dataset import ./migrate/dataset.ndjs
 
 For more information on the available commands and their options, run `contentful-to-sanity --help`.
 
-## Release new version
-
-Run ["CI & Release" workflow](https://github.com/sanity-io/contentful-to-sanity/actions/workflows/main.yml).
-Make sure to select the main branch and check "Release new version".
-
-Semantic release will only release on configured branches, so it is safe to run release on any branch.
-
 ## License
 
 MIT © [Sanity.io](https://www.sanity.io/)
