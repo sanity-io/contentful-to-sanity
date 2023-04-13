@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -70,9 +69,7 @@
           "required": false,
           "validations": [
             {
-              "linkContentType": [
-                "image"
-              ]
+              "linkContentType": ["image"]
             }
           ],
           "disabled": false,
@@ -85,17 +82,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "image"
-                ]
+                "linkContentType": ["image"]
               }
             ],
             "linkType": "Entry"
@@ -107,8 +101,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
@@ -119,14 +112,12 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
-            "validations": [
-            ],
+            "validations": [],
             "linkType": "Entry"
           }
         },
@@ -138,14 +129,7 @@
           "required": false,
           "validations": [
             {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript"
-              ],
+              "enabledMarks": ["bold", "italic", "underline", "code", "superscript", "subscript"],
               "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
             },
             {
@@ -171,8 +155,7 @@
               "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
             },
             {
-              "nodes": {
-              }
+              "nodes": {}
             }
           ],
           "disabled": false,
@@ -237,8 +220,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
@@ -301,16 +283,14 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -365,8 +345,7 @@
           "widgetNamespace": "editor-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "69mKkEFmMO9ue4lwWfto2C",
           "widgetNamespace": "app"
         }
@@ -381,14 +360,12 @@
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "66frtrAqmWSowDJzQNDiD",
           "widgetNamespace": "app"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "703nAvCC2nuDjQCiI5P8e2",
           "widgetNamespace": "app"
         }
@@ -596,8 +573,7 @@
   "entries": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -635,8 +611,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -674,8 +649,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -713,8 +687,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -754,8 +727,7 @@
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {

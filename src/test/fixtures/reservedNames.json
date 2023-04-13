@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -70,9 +69,7 @@
           "required": false,
           "validations": [
             {
-              "linkContentType": [
-                "image"
-              ]
+              "linkContentType": ["image"]
             }
           ],
           "disabled": false,
@@ -85,17 +82,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "image"
-                ]
+                "linkContentType": ["image"]
               }
             ],
             "linkType": "Entry"
@@ -107,8 +101,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
@@ -119,14 +112,12 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
-            "validations": [
-            ],
+            "validations": [],
             "linkType": "Entry"
           }
         },
@@ -138,14 +129,7 @@
           "required": false,
           "validations": [
             {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript"
-              ],
+              "enabledMarks": ["bold", "italic", "underline", "code", "superscript", "subscript"],
               "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
             },
             {
@@ -171,8 +155,7 @@
               "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
             },
             {
-              "nodes": {
-              }
+              "nodes": {}
             }
           ],
           "disabled": false,
@@ -237,8 +220,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
@@ -301,16 +283,14 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -365,8 +345,7 @@
           "widgetNamespace": "editor-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "69mKkEFmMO9ue4lwWfto2C",
           "widgetNamespace": "app"
         }
@@ -381,14 +360,12 @@
           "widgetNamespace": "sidebar-builtin"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "66frtrAqmWSowDJzQNDiD",
           "widgetNamespace": "app"
         },
         {
-          "settings": {
-          },
+          "settings": {},
           "widgetId": "703nAvCC2nuDjQCiI5P8e2",
           "widgetNamespace": "app"
         }
@@ -596,8 +573,7 @@
   "entries": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -634,8 +610,7 @@
         },
         "publishedCounter": 0,
         "version": 16,
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -712,21 +687,17 @@
         "richText": {
           "en-US": {
             "nodeType": "document",
-            "data": {
-            },
+            "data": {},
             "content": [
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "Text with ",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   },
                   {
                     "nodeType": "entry-hyperlink",
@@ -743,35 +714,28 @@
                       {
                         "nodeType": "text",
                         "value": "link to image",
-                        "marks": [
-                        ],
-                        "data": {
-                        }
+                        "marks": [],
+                        "data": {}
                       }
                     ]
                   },
                   {
                     "nodeType": "text",
                     "value": "",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               },
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "An embedded Object: ",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   },
                   {
                     "nodeType": "embedded-entry-inline",
@@ -784,31 +748,25 @@
                         }
                       }
                     },
-                    "content": [
-                    ]
+                    "content": []
                   },
                   {
                     "nodeType": "text",
                     "value": "",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               },
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "Block level",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               },
@@ -823,21 +781,17 @@
                     }
                   }
                 },
-                "content": [
-                ]
+                "content": []
               },
               {
                 "nodeType": "paragraph",
-                "data": {
-                },
+                "data": {},
                 "content": [
                   {
                     "nodeType": "text",
                     "value": "",
-                    "marks": [
-                    ],
-                    "data": {
-                    }
+                    "marks": [],
+                    "data": {}
                   }
                 ]
               }
@@ -848,8 +802,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -896,8 +849,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -914,8 +866,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -962,8 +913,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -980,8 +930,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1018,8 +967,7 @@
         },
         "publishedCounter": 0,
         "version": 1,
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1028,13 +976,11 @@
           }
         }
       },
-      "fields": {
-      }
+      "fields": {}
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1081,8 +1027,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1099,8 +1044,7 @@
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1137,8 +1081,7 @@
         },
         "publishedCounter": 0,
         "version": 1,
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1147,13 +1090,11 @@
           }
         }
       },
-      "fields": {
-      }
+      "fields": {}
     },
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
@@ -1200,8 +1141,7 @@
             "id": "2jYeCfa60UhCFs76N2hp6o"
           }
         },
-        "automationTags": [
-        ],
+        "automationTags": [],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1220,8 +1160,7 @@
   "assets": [
     {
       "metadata": {
-        "tags": [
-        ]
+        "tags": []
       },
       "sys": {
         "space": {
