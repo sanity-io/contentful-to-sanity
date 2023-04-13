@@ -1,10 +1,10 @@
 import type {ContentTypeProps} from 'contentful-management'
 import compact from 'just-compact'
 
-import {isReservedName} from '../helpers/sanity/reservedNames'
 import type {ContentfulExport} from '../types'
 import {SanityDocumentSchema} from '../types'
 import {contentfulFieldToSanityField} from './contentfulFieldToSanityField'
+import {contentfulTypeNameToSanityTypeName} from './contentfulTypeNameToSanityTypeName'
 import {findEditorControlForField} from './findEditorControlForField'
 
 type Flags = {
@@ -16,8 +16,8 @@ export function contentfulTypeToSanitySchema(
   data: ContentfulExport,
   flags: Flags,
 ): SanityDocumentSchema {
-  const nameCollision = isReservedName(contentType.sys.id)
-  if (nameCollision) {
+  const {isCollision, name} = contentfulTypeNameToSanityTypeName(contentType.sys.id)
+  if (isCollision) {
     // eslint-disable-next-line no-console
     console.warn(
       `The Contentful content type "${contentType.sys.id}" is a reserved name in Sanity. Renaming to "contentful_${contentType.sys.id}"`,
@@ -26,7 +26,7 @@ export function contentfulTypeToSanitySchema(
 
   const schemaType: SanityDocumentSchema = {
     type: 'document',
-    name: nameCollision ? `contentful_${contentType.sys.id}` : contentType.sys.id,
+    name,
     title: contentType.name,
     description: contentType.description,
     fields: [],
