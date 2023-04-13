@@ -1,6 +1,7 @@
 import type {ContentTypeProps} from 'contentful-management'
 import compact from 'just-compact'
 
+import {isReservedName} from '../helpers/sanity/reservedNames'
 import type {ContentfulExport} from '../types'
 import {SanityDocumentSchema} from '../types'
 import {contentfulFieldToSanityField} from './contentfulFieldToSanityField'
@@ -17,7 +18,9 @@ export function contentfulTypeToSanitySchema(
 ): SanityDocumentSchema {
   const schemaType: SanityDocumentSchema = {
     type: 'document',
-    name: contentType.sys.id,
+    name: isReservedName(contentType.sys.id)
+      ? `contentful_${contentType.sys.id}`
+      : contentType.sys.id,
     title: contentType.name,
     description: contentType.description,
     fields: [],

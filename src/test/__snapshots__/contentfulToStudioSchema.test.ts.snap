@@ -4273,9 +4273,9 @@ export const authorType = defineType({
   readOnly: ({document}) => document?.contentfulArchived === true,
 })
 
-export const imageType = defineType({
+export const contentful_imageType = defineType({
   type: 'document',
-  name: 'image',
+  name: 'contentful_image',
   title: 'Image',
   description: 'This content type defines the structure of an image entry',
   fields: [
@@ -4356,7 +4356,11 @@ export const photoGalleryType = defineType({
   readOnly: ({document}) => document?.contentfulArchived === true,
 })
 
-export const types = [authorType, imageType, photoGalleryType] satisfies SchemaTypeDefinition[]
+export const types = [
+  authorType,
+  contentfulImageType,
+  photoGalleryType,
+] satisfies SchemaTypeDefinition[]
 "
 `;
 
@@ -4384,9 +4388,9 @@ export const authorType = {
   readOnly: ({document}) => document?.contentfulArchived === true,
 }
 
-export const imageType = {
+export const contentful_imageType = {
   type: 'document',
-  name: 'image',
+  name: 'contentful_image',
   title: 'Image',
   description: 'This content type defines the structure of an image entry',
   fields: [
@@ -4455,7 +4459,7 @@ export const photoGalleryType = {
   readOnly: ({document}) => document?.contentfulArchived === true,
 }
 
-export const types = [authorType, imageType, photoGalleryType]
+export const types = [authorType, contentfulImageType, photoGalleryType]
 "
 `;
 
@@ -4484,9 +4488,9 @@ export const authorType = defineType({
   readOnly: ({document}) => document?.contentfulArchived === true,
 })
 
-export const imageType = defineType({
+export const contentful_imageType = defineType({
   type: 'document',
-  name: 'image',
+  name: 'contentful_image',
   title: 'Image',
   description: 'This content type defines the structure of an image entry',
   fields: [
@@ -4567,7 +4571,11 @@ export const photoGalleryType = defineType({
   readOnly: ({document}) => document?.contentfulArchived === true,
 })
 
-export const types = [authorType, imageType, photoGalleryType] satisfies SchemaTypeDefinition[]
+export const types = [
+  authorType,
+  contentfulImageType,
+  photoGalleryType,
+] satisfies SchemaTypeDefinition[]
 "
 `;
 
@@ -4596,9 +4604,9 @@ export const authorType = defineType({
   readOnly: ({document}) => document?.contentfulArchived === true,
 })
 
-export const imageType = defineType({
+export const contentful_imageType = defineType({
   type: 'document',
-  name: 'image',
+  name: 'contentful_image',
   title: 'Image',
   description: 'This content type defines the structure of an image entry',
   fields: [
@@ -4673,7 +4681,11 @@ export const photoGalleryType = defineType({
   readOnly: ({document}) => document?.contentfulArchived === true,
 })
 
-export const types = [authorType, imageType, photoGalleryType] satisfies SchemaTypeDefinition[]
+export const types = [
+  authorType,
+  contentfulImageType,
+  photoGalleryType,
+] satisfies SchemaTypeDefinition[]
 "
 `;
 
