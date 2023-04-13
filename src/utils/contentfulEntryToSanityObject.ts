@@ -6,6 +6,7 @@ import objectHash from 'object-hash'
 
 import type {ContentfulExport} from '../types'
 import {contentfulLinkToSanityReference} from './contentfulLinkToSanityReference'
+import {contentfulTypeNameToSanityTypeName} from './contentfulTypeNameToSanityTypeName'
 import {createIntlFields} from './createIntlFields'
 import {findEditorControlForField} from './findEditorControlForField'
 import {generateKey} from './generateKey'
@@ -14,7 +15,6 @@ import type {SysLink} from './objectIsContentfulLink'
 import {objectIsContentfulLink} from './objectIsContentfulLink'
 import {objectIsContentfulLocation} from './objectIsContentfulLocation'
 import {objectIsContentfulRichText} from './objectIsContentfulRichText'
-import { contentfulTypeNameToSanityTypeName } from './contentfulTypeNameToSanityTypeName'
 
 type ReferenceResolver = (
   node: {data: {target: SysLink}},

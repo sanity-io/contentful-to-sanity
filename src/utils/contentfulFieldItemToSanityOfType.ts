@@ -8,8 +8,8 @@ import {
 } from '../helpers/sanity/fieldSchemaFactories'
 import {ContentfulExport} from '../types'
 import {LinkedType} from '../types'
-import {extractValidationRulesFromContentfulField} from './extractValidationRulesFromContentfulField'
 import {contentfulTypeNameToSanityTypeName} from './contentfulTypeNameToSanityTypeName'
+import {extractValidationRulesFromContentfulField} from './extractValidationRulesFromContentfulField'
 
 export function contentfulFieldItemToSanityOfType(
   field: Exclude<ContentFields['items'], undefined>,
