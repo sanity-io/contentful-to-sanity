@@ -190,15 +190,13 @@ describe('Reserved schema type names', () => {
 
   describe('dataset', () => {
     test('reserved names are rewritten in documents', ({dataset}) => {
-      const article = dataset.find((document) => document._id === 'drafts.nOwGeT32cZPDXIv0ZUFxH')
-      expect(article).toBeDefined()
-      if (!article) return
-
-      expect(article).toHaveProperty('imageRef')
-
-      const image = dataset.find((document) => document._id === article.imageRef._ref)
+      const image = dataset.find((document) => document._id === 'bDU8kBl0185ZBJaDA1ZVb')
       expect(image).toBeDefined()
-      expect(image).toHaveProperty('_type', 'contentful_image')
+      expect(image?._type).toBe('contentful_image')
+
+      const object = dataset.find((document) => document._id === '1Kxbt7Dl0M1BUm66eg2tw2')
+      expect(object).toBeDefined()
+      expect(object?._type).toBe('contentful_object')
     })
   })
 })

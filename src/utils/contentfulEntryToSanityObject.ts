@@ -14,6 +14,7 @@ import type {SysLink} from './objectIsContentfulLink'
 import {objectIsContentfulLink} from './objectIsContentfulLink'
 import {objectIsContentfulLocation} from './objectIsContentfulLocation'
 import {objectIsContentfulRichText} from './objectIsContentfulRichText'
+import { contentfulTypeNameToSanityTypeName } from './contentfulTypeNameToSanityTypeName'
 
 type ReferenceResolver = (
   node: {data: {target: SysLink}},
@@ -39,7 +40,7 @@ export function contentfulEntryToSanityObject(
   let doc: SanityDocument = {
     _id: id,
     _rev: entry.sys.id,
-    _type: entry.sys.contentType.sys.id,
+    _type: contentfulTypeNameToSanityTypeName(entry.sys.contentType.sys.id).name,
     _createdAt: entry.sys.createdAt,
     _updatedAt: entry.sys.updatedAt,
   }
