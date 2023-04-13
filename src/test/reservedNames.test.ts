@@ -100,7 +100,7 @@ describe('Reserved schema type names', () => {
       })
     })
 
-    test('reserved names are rewritten in reference', ({schemas}) => {
+    test<LocalTestContext>('reserved names are rewritten in reference', ({schemas}) => {
       const articleSchema = schemas.find((schema) => schema.name === 'article')
       expect(articleSchema).toBeDefined()
       if (!articleSchema) return
@@ -114,7 +114,7 @@ describe('Reserved schema type names', () => {
       expect(imageRef.to).toEqual([{type: 'contentful_image'}])
     })
 
-    test('reserved names are rewritten in arrays of references', ({schemas}) => {
+    test<LocalTestContext>('reserved names are rewritten in arrays of references', ({schemas}) => {
       const articleSchema = schemas.find((schema) => schema.name === 'article')
       expect(articleSchema).toBeDefined()
       if (!articleSchema) return
@@ -138,7 +138,7 @@ describe('Reserved schema type names', () => {
       )
     })
 
-    test('reserved names are rewritten in portable text schema', ({schemas}) => {
+    test<LocalTestContext>('reserved names are rewritten in portable text schema', ({schemas}) => {
       const articleSchema = schemas.find((schema) => schema.name === 'article')
       expect(articleSchema).toBeDefined()
       if (!articleSchema) return
@@ -189,7 +189,7 @@ describe('Reserved schema type names', () => {
   })
 
   describe('dataset', () => {
-    test('reserved names are rewritten in documents', ({dataset}) => {
+    test<LocalTestContext>('reserved names are rewritten in documents', ({dataset}) => {
       const image = dataset.find((document) => document._id === 'bDU8kBl0185ZBJaDA1ZVb')
       expect(image).toBeDefined()
       expect(image?._type).toBe('contentful_image')

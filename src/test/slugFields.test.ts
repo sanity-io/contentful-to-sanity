@@ -8,14 +8,12 @@ import {contentfulToDataset} from '../helpers/contentfulToDataset'
 import {contentfulTypeToSanitySchema} from '../utils'
 import {parse} from './helpers'
 
-declare module 'vitest' {
-  export interface TestContext {
-    schemas: DocumentDefinition[]
-    dataset: SanityDocument[]
-  }
+interface LocalTestContext {
+  schemas: DocumentDefinition[]
+  dataset: SanityDocument[]
 }
 
-beforeEach(async (context) => {
+beforeEach<LocalTestContext>(async (context) => {
   const {default: drafts} = await import('./fixtures/slugFields.json')
   const {default: published} = await import('./fixtures/slugFields.published.json')
   const sanityContentTypes = []
@@ -47,7 +45,7 @@ beforeEach(async (context) => {
 })
 
 describe('Slug fields', async () => {
-  test('it preserves source', async ({schemas}) => {
+  test<LocalTestContext>('it preserves source', async ({schemas}) => {
     const doc = schemas[0]
     const map = {
       nameSlug: 'name',
@@ -62,7 +60,7 @@ describe('Slug fields', async () => {
     }
   })
 
-  test('it preserves required()', async ({schemas}) => {
+  test<LocalTestContext>('it preserves required()', async ({schemas}) => {
     const doc = schemas[0]
 
     const nameSlugField = doc.fields.find((field) => field.name === 'nameSlug') as SlugDefinition
@@ -92,7 +90,7 @@ describe('Slug fields', async () => {
     )
   })
 
-  test('it preserves maxLength', async ({schemas}) => {
+  test<LocalTestContext>('it preserves maxLength', async ({schemas}) => {
     const doc = schemas[0]
     const slugField = doc.fields.find((field) => field.name === 'slug') as SlugDefinition
     expect(slugField).toBeDefined()

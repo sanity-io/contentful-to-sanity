@@ -13,15 +13,13 @@ import {ArraySanityFieldSchema} from '../types'
 import {contentfulTypeToSanitySchema} from '../utils'
 import {parse} from './helpers'
 
-declare module 'vitest' {
-  export interface TestContext {
-    schemas: DocumentDefinition[]
-    dataset: SanityDocument[]
-    rawDataset: string[]
-  }
+interface LocalTestContext {
+  schemas: DocumentDefinition[]
+  dataset: SanityDocument[]
+  rawDataset: string[]
 }
 
-beforeEach(async (context) => {
+beforeEach<LocalTestContext>(async (context) => {
   const {default: drafts} = await import('./fixtures/pteReferences.json')
   const {default: published} = await import('./fixtures/pteReferences.published.json')
   const sanityContentTypes = []
@@ -53,7 +51,7 @@ beforeEach(async (context) => {
 
 describe('PTE block-level references', async () => {
   describe('schema', async () => {
-    test('handles unrestricted links', async ({schemas}) => {
+    test<LocalTestContext>('handles unrestricted links', async ({schemas}) => {
       const post = schemas.find((schema) => schema.name === 'post')
       expect(post).toBeDefined()
       const pteField = post?.fields.find((field) => field.name === 'body') as ArraySanityFieldSchema
@@ -72,7 +70,7 @@ describe('PTE block-level references', async () => {
       )
     })
 
-    test('handles links limited to a type', async ({schemas}) => {
+    test<LocalTestContext>('handles links limited to a type', async ({schemas}) => {
       const post = schemas.find((schema) => schema.name === 'post')
       expect(post).toBeDefined()
       const pteField = post?.fields.find(
@@ -100,7 +98,7 @@ describe('PTE block-level references', async () => {
   })
 
   describe('dataset', async () => {
-    test('creates reference from embedded entries', async ({dataset}) => {
+    test<LocalTestContext>('creates reference from embedded entries', async ({dataset}) => {
       const post = dataset.find(
         (doc) => doc._type === 'post' && doc._id === 'drafts.1B48wTtOpUhuuEoNkTDji2',
       )
@@ -121,7 +119,7 @@ describe('PTE block-level references', async () => {
 
 describe('PTE inline embed references', async () => {
   describe('schema', async () => {
-    test('handles unrestricted inline level references', async ({schemas}) => {
+    test<LocalTestContext>('handles unrestricted inline level references', async ({schemas}) => {
       const post = schemas.find((schema) => schema.name === 'post')
       const pteField = post?.fields.find((field) => field.name === 'body') as ArraySanityFieldSchema
       expect(pteField.of).toEqual(
@@ -142,7 +140,7 @@ describe('PTE inline embed references', async () => {
       )
     })
 
-    test('handles type limited inline level references', async ({schemas}) => {
+    test<LocalTestContext>('handles type limited inline level references', async ({schemas}) => {
       const post = schemas.find((schema) => schema.name === 'post')
       const pteField = post?.fields.find(
         (field) => field.name === 'intro',
@@ -161,7 +159,7 @@ describe('PTE inline embed references', async () => {
   })
 
   describe('dataset', async () => {
-    test('creates inline reference from inlined entry', async ({dataset}) => {
+    test<LocalTestContext>('creates inline reference from inlined entry', async ({dataset}) => {
       const post = dataset.find(
         (doc) => doc._type === 'post' && doc._id === 'drafts.1B48wTtOpUhuuEoNkTDji2',
       )
@@ -184,7 +182,7 @@ describe('PTE inline embed references', async () => {
 
 describe('PTE annotation embed references', async () => {
   describe('schema', async () => {
-    test('unrestricted embeds to any type', async ({schemas}) => {
+    test<LocalTestContext>('unrestricted embeds to any type', async ({schemas}) => {
       const post = schemas.find((schema) => schema.name === 'post')
       const pteField = post?.fields.find((field) => field.name === 'body') as ArraySanityFieldSchema
       const blockType = pteField.of.find((field) => field.type === 'block') as BlockDefinition
@@ -204,7 +202,7 @@ describe('PTE annotation embed references', async () => {
       )
     })
 
-    test('limited to specfic content type', async ({schemas}) => {
+    test<LocalTestContext>('limited to specfic content type', async ({schemas}) => {
       const post = schemas.find((schema) => schema.name === 'post')
       const pteField = post?.fields.find(
         (field) => field.name === 'intro',
@@ -224,7 +222,9 @@ describe('PTE annotation embed references', async () => {
   })
 
   describe('dataset', async () => {
-    test('creates annotation reference from linked entry', async ({rawDataset}) => {
+    test<LocalTestContext>('creates annotation reference from linked entry', async ({
+      rawDataset,
+    }) => {
       // We need to test this with the raw dataset as the dataset has stable, mutated _key values
       const docs = rawDataset.map((json) => JSON.parse(json))
       const post = docs.find(
