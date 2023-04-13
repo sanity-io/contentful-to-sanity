@@ -5,6 +5,7 @@ import type {
   SanityDocument,
 } from '@sanity/types'
 import type {ContentTypeProps} from 'contentful-management'
+import {BlockDefinition} from 'sanity'
 import {beforeEach, describe, expect, test} from 'vitest'
 
 import {contentfulToDataset} from '../helpers/contentfulToDataset'
@@ -17,7 +18,6 @@ import {
   contentfulEditorInterfaceFactory,
   parse,
 } from './helpers'
-import {BlockDefinition, PortableTextBlock, PortableTextObject} from 'sanity'
 
 interface LocalTestContext {
   schemas: DocumentDefinition[]
