@@ -4,6 +4,7 @@ import compact from 'just-compact'
 
 import {ContentfulExport} from '../types'
 import {BlockSanityFieldSchema, LinkedType, ObjectSanityFieldSchema} from '../types'
+import {contentfulTypeNameToSanityTypeName} from './contentfulTypeNameToSanityTypeName'
 
 const allStyles = [
   {title: 'Normal text', value: 'normal'},
@@ -221,7 +222,9 @@ export function extractContentfulRichTextFieldParameters(
             type: 'reference',
             name: 'reference',
             title: 'Reference',
-            to: supportedEntryLinkTypes.map((linkType: any) => ({type: linkType.type})),
+            to: supportedEntryLinkTypes.map((linkType: any) => ({
+              type: contentfulTypeNameToSanityTypeName(linkType.type).name,
+            })),
           },
         ...(canUseAssetLinks ? [{type: 'image'}, {type: 'file'}] : []),
       ]),

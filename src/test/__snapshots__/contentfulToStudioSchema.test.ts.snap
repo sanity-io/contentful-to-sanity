@@ -4330,7 +4330,7 @@ export const photoGalleryType = defineType({
     defineField({
       name: 'images',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'image'}]}],
+      of: [{type: 'reference', to: [{type: 'contentful_image'}]}],
       title: 'Images',
       hidden: false,
       options: {layout: 'grid'},
@@ -4439,7 +4439,7 @@ export const photoGalleryType = {
     {
       name: 'images',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'image'}]}],
+      of: [{type: 'reference', to: [{type: 'contentful_image'}]}],
       title: 'Images',
       hidden: false,
       options: {layout: 'grid'},
@@ -4545,7 +4545,7 @@ export const photoGalleryType = defineType({
     defineField({
       name: 'images',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'image'}]}],
+      of: [{type: 'reference', to: [{type: 'contentful_image'}]}],
       title: 'Images',
       hidden: false,
       options: {layout: 'grid'},
@@ -4655,7 +4655,7 @@ export const photoGalleryType = defineType({
     defineField({
       name: 'images',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'image'}]}],
+      of: [{type: 'reference', to: [{type: 'contentful_image'}]}],
       title: 'Images',
       hidden: false,
       options: {layout: 'grid'},

@@ -9,6 +9,7 @@ import {
 import {ContentfulExport} from '../types'
 import {LinkedType} from '../types'
 import {extractValidationRulesFromContentfulField} from './extractValidationRulesFromContentfulField'
+import {contentfulTypeNameToSanityTypeName} from './contentfulTypeNameToSanityTypeName'
 
 export function contentfulFieldItemToSanityOfType(
   field: Exclude<ContentFields['items'], undefined>,
@@ -49,10 +50,16 @@ export function contentfulFieldItemToSanityOfType(
       factory.to(
         linkContentTypeValidation.linkContentType
           .filter((type) => availableTypeIds.has(type))
-          .map((type) => ({type})),
+          .map((type) => ({
+            type: contentfulTypeNameToSanityTypeName(type).name,
+          })),
       )
     } else if (data.contentTypes) {
-      factory.to(data.contentTypes.map((type) => ({type: type.sys.id})))
+      factory.to(
+        data.contentTypes.map((type) => ({
+          type: contentfulTypeNameToSanityTypeName(type.sys.id).name,
+        })),
+      )
     }
 
     return factory.anonymous()
