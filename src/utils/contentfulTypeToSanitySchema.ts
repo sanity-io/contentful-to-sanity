@@ -16,11 +16,17 @@ export function contentfulTypeToSanitySchema(
   data: ContentfulExport,
   flags: Flags,
 ): SanityDocumentSchema {
+  const nameCollision = isReservedName(contentType.sys.id)
+  if (nameCollision) {
+    // eslint-disable-next-line no-console
+    console.warn(
+      `The Contentful content type "${contentType.sys.id}" is a reserved name in Sanity. Renaming to "contentful_${contentType.sys.id}"`,
+    )
+  }
+
   const schemaType: SanityDocumentSchema = {
     type: 'document',
-    name: isReservedName(contentType.sys.id)
-      ? `contentful_${contentType.sys.id}`
-      : contentType.sys.id,
+    name: nameCollision ? `contentful_${contentType.sys.id}` : contentType.sys.id,
     title: contentType.name,
     description: contentType.description,
     fields: [],
