@@ -5,6 +5,55 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.0](https://github.com/sanity-io/contentful-to-sanity/compare/v3.0.4...v4.0.0) (2023-04-13)
+
+### ⚠ BREAKING CHANGES
+
+- this drops support for Node v14
+
+### Features
+
+- add console warning when encountering reserved names ([d3ad45d](https://github.com/sanity-io/contentful-to-sanity/commit/d3ad45df3b34cac43ab21c93bf95db3c8b787e85))
+- add protection against name collisions with built-in types. Fixes [#1](https://github.com/sanity-io/contentful-to-sanity/issues/1) ([33fa60e](https://github.com/sanity-io/contentful-to-sanity/commit/33fa60eaef3d9bf2c87c3c5a97f48ade3097a2f4))
+- add validateIn ([b8960d8](https://github.com/sanity-io/contentful-to-sanity/commit/b8960d8a1931677577a6d1164e52502e85d14eb8))
+- preserve JSON data without adding field definition ([b5c26dd](https://github.com/sanity-io/contentful-to-sanity/commit/b5c26dddb005c7ce3740bfafe852bbadc150714f))
+- support archived content ([#64](https://github.com/sanity-io/contentful-to-sanity/issues/64)) ([29c9558](https://github.com/sanity-io/contentful-to-sanity/commit/29c9558a089900c5097fb9bfa7f3b4c91094c95a))
+
+### Bug Fixes
+
+- add test and fix handling booleans from export ([#70](https://github.com/sanity-io/contentful-to-sanity/issues/70)) ([95996b0](https://github.com/sanity-io/contentful-to-sanity/commit/95996b02d3d59d5a75ff192bb38791f6ef93b5b3))
+- array option should be tags, not tag ([c85dff0](https://github.com/sanity-io/contentful-to-sanity/commit/c85dff0b3cd4ce465bae3f5042396a63b6f7da18))
+- correct logic bug in determining valid inline entry types ([c6e4b9b](https://github.com/sanity-io/contentful-to-sanity/commit/c6e4b9b84624e38c224ddcf8364a3bd9ae4779a7))
+- correctly determine valid annotation types ([8b6adac](https://github.com/sanity-io/contentful-to-sanity/commit/8b6adac6edb00f07cdc43a73fe6e2ec4e56cf20a))
+- correctly handle long text single line by mapping to string ([ab234e5](https://github.com/sanity-io/contentful-to-sanity/commit/ab234e54411ab45aa7f1c2e0676314630e5218e0))
+- **deps:** roll back dependency node-fetch to ^2.6.7 ([#71](https://github.com/sanity-io/contentful-to-sanity/issues/71)) ([7a0542b](https://github.com/sanity-io/contentful-to-sanity/commit/7a0542b79f9a948f8dac0a4aad1779002a1c3daa))
+- **deps:** update dependencies (non-major) ([#68](https://github.com/sanity-io/contentful-to-sanity/issues/68)) ([9b90b01](https://github.com/sanity-io/contentful-to-sanity/commit/9b90b0134999e93174844f0e8780bd48152c03d5))
+- **deps:** update dependencies (non-major) ([#80](https://github.com/sanity-io/contentful-to-sanity/issues/80)) ([bf05716](https://github.com/sanity-io/contentful-to-sanity/commit/bf057163ef958db677459151f2e440c0a6c75f94))
+- **deps:** update dependency @sanity/client to v5.4.0 ([#63](https://github.com/sanity-io/contentful-to-sanity/issues/63)) ([d185468](https://github.com/sanity-io/contentful-to-sanity/commit/d18546850071b094f1cb2fce5fbc84fd9d546290))
+- **deps:** update dependency mkdirp to v3 ([#79](https://github.com/sanity-io/contentful-to-sanity/issues/79)) ([6b250e4](https://github.com/sanity-io/contentful-to-sanity/commit/6b250e46bf3a52ed54a09db1763c893875a7a286))
+- **deps:** update dependency zod-validation-error to v1.3.0 ([446aff8](https://github.com/sanity-io/contentful-to-sanity/commit/446aff804383af9a5246a4f92866eb3bb562844c))
+- **deps:** update sanity monorepo to v3.8.3 ([#65](https://github.com/sanity-io/contentful-to-sanity/issues/65)) ([4ca7f94](https://github.com/sanity-io/contentful-to-sanity/commit/4ca7f9431e7ddc3aff38a73684818b9f9ba15fc0))
+- ensure we have a nice title for the PTE reference field ([28bc5af](https://github.com/sanity-io/contentful-to-sanity/commit/28bc5af7310817013807393c7a9605bef842db2c))
+- handle block-level PTE references ([cb0a94f](https://github.com/sanity-io/contentful-to-sanity/commit/cb0a94f1e8aa2582c5e445bc4309e235a42eb0ee))
+- handle changed schema names in references, arrays of references and PT ([d50c1d9](https://github.com/sanity-io/contentful-to-sanity/commit/d50c1d9ee5680d7b5a45cd3923d0493dd6d18b3f))
+- handle entity links in PTE ([b1037a3](https://github.com/sanity-io/contentful-to-sanity/commit/b1037a3014e585ea25ce51ccfa2114816cbbd4d2))
+- handle rewritten type names in documents ([35df9bc](https://github.com/sanity-io/contentful-to-sanity/commit/35df9bc1dac732c33ac93b32c000a5d29c44b0d5))
+- implement PTE inline embeds ([1caea66](https://github.com/sanity-io/contentful-to-sanity/commit/1caea66345af028c9dd53a4a836c59a085e37f23))
+- implement stable \_key generation for PT generation to fix a bug with markDefs ([3345b97](https://github.com/sanity-io/contentful-to-sanity/commit/3345b97c12d4a26f0dd17cdf94a04e173759799e))
+- logic flow bug determining valid embedded entry types in PTE ([79af917](https://github.com/sanity-io/contentful-to-sanity/commit/79af917932ced6c1b5112ea0c866e6785650a247))
+- make sure an exception in SVG fetching does not exclude the document from the dataset file ([#77](https://github.com/sanity-io/contentful-to-sanity/issues/77)) ([15021ae](https://github.com/sanity-io/contentful-to-sanity/commit/15021ae197e5779c9b27acee2e134ee9b324f226))
+- make sure we have a name for the internal link object and update tests ([058e4bd](https://github.com/sanity-io/contentful-to-sanity/commit/058e4bd65a57317c52c55dadccbea8b28b353d7b))
+- maxLength on slug fields ([9d9a6b6](https://github.com/sanity-io/contentful-to-sanity/commit/9d9a6b6d703facd2506987b7e90cf544ec177ab3))
+- preserve object fields as stringified JSON ([7080f3d](https://github.com/sanity-io/contentful-to-sanity/commit/7080f3db216a72b294062e804ecceac89af69b32))
+- reference needs a name ([7907e6e](https://github.com/sanity-io/contentful-to-sanity/commit/7907e6e12e386f9e54085f50a21d739bbef86e79))
+- remove unique() validation. Handle range. ([f2aec0b](https://github.com/sanity-io/contentful-to-sanity/commit/f2aec0b8acc10bf0c1d017c74001668a16a2c99e))
+- remove unneeded wrapping of PTE reference fields ([857b748](https://github.com/sanity-io/contentful-to-sanity/commit/857b74858dca231d31a170e4ef7416cfa5a45101))
+- use 'code' for code, not 'pre' ([38b541b](https://github.com/sanity-io/contentful-to-sanity/commit/38b541b2ea8b671649b58ea8f49e4da561ffb93b))
+
+### Miscellaneous Chores
+
+- bump `engines.node` to match `zod-validation-error` ([a9b9967](https://github.com/sanity-io/contentful-to-sanity/commit/a9b9967a2ba1058fc47b6b3e3d62127e2000aeec))
+
 ## [3.0.4](https://github.com/sanity-io/contentful-to-sanity/compare/v3.0.3...v3.0.4) (2023-03-29)
 
 ### Bug Fixes
