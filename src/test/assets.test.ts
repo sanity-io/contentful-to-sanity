@@ -4,13 +4,11 @@ import {beforeEach, describe, expect, test} from 'vitest'
 
 import {contentfulTypeToSanitySchema} from '../utils'
 
-declare module 'vitest' {
-  export interface TestContext {
-    schemas: DocumentDefinition[]
-  }
+interface LocalTestContext {
+  schemas: DocumentDefinition[]
 }
 
-beforeEach(async (context) => {
+beforeEach<LocalTestContext>(async (context) => {
   const {default: data} = await import('./fixtures/assetFields.json')
   const sanityContentTypes = []
   for (const contentType of data.contentTypes || []) {
@@ -24,19 +22,21 @@ beforeEach(async (context) => {
 })
 
 describe('Asset fields', async () => {
-  test('image field', async ({schemas}) => {
+  test<LocalTestContext>('image field', async ({schemas}) => {
     const doc = schemas[0]
     const imageField = doc.fields.find((field) => field.name === 'image')
     expect(imageField).toBeDefined()
     expect(imageField?.type).toEqual('image')
   })
-  test('asset field', async ({schemas}) => {
+
+  test<LocalTestContext>('asset field', async ({schemas}) => {
     const doc = schemas[0]
     const assetField = doc.fields.find((field) => field.name === 'asset')
     expect(assetField).toBeDefined()
     expect(assetField?.type).toEqual('file')
   })
-  test('pdf field', async ({schemas}) => {
+
+  test<LocalTestContext>('pdf field', async ({schemas}) => {
     const doc = schemas[0]
     const pdfField = doc.fields.find((field) => field.name === 'pdf')
     expect(pdfField).toBeDefined()

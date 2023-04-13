@@ -4,13 +4,11 @@ import {beforeEach, describe, expect, test} from 'vitest'
 import {contentfulToDataset} from '../helpers/contentfulToDataset'
 import {parse} from './helpers'
 
-declare module 'vitest' {
-  export interface TestContext {
-    docs: SanityDocument[]
-  }
+interface LocalTestContext {
+  docs: SanityDocument[]
 }
 
-beforeEach(async (context) => {
+beforeEach<LocalTestContext>(async (context) => {
   const {default: drafts} = await import('./fixtures/drafts.json')
   const {default: published} = await import('./fixtures/drafts.published.json')
   const options = {
@@ -32,7 +30,7 @@ beforeEach(async (context) => {
 })
 
 describe('Drafts', async () => {
-  test('Draft doc with a draft reference', async ({docs}) => {
+  test<LocalTestContext>('Draft doc with a draft reference', async ({docs}) => {
     const post = docs.find((doc) => doc._id === 'drafts.4RIfygf1stLd0J1gycYXlu')
     expect(post).toBeDefined()
     const person = docs.find((doc) => doc._id === 'drafts.6PRft3TsWQAf2Fkeb6ZKhb')
@@ -51,7 +49,8 @@ describe('Drafts', async () => {
       },
     })
   })
-  test('Published post with a broken ref to a draft', async ({docs}) => {
+
+  test<LocalTestContext>('Published post with a broken ref to a draft', async ({docs}) => {
     const post = docs.find((doc) => doc._id === '5675910SUMh7sD0qbhvdp2')
     expect(post).toBeDefined()
     expect(post?.author).toBeNull()

@@ -8,14 +8,12 @@ import {ArraySanityFieldSchema, ReferenceSanityFieldSchema} from '../types'
 import {contentfulTypeToSanitySchema} from '../utils'
 import {parse} from './helpers'
 
-declare module 'vitest' {
-  export interface TestContext {
-    schemas: DocumentDefinition[]
-    dataset: SanityDocument[]
-  }
+interface LocalTestContext {
+  schemas: DocumentDefinition[]
+  dataset: SanityDocument[]
 }
 
-beforeEach(async (context) => {
+beforeEach<LocalTestContext>(async (context) => {
   const {default: drafts} = await import('./fixtures/linkArray.json')
   const {default: published} = await import('./fixtures/linkArray.published.json')
   const sanityContentTypes = []
@@ -47,7 +45,7 @@ beforeEach(async (context) => {
 })
 
 describe('Array of links', async () => {
-  test('it declares array of references to only author', async ({schemas}) => {
+  test<LocalTestContext>('it declares array of references to only author', async ({schemas}) => {
     const doc = schemas[0]
     const authorsField = doc.fields.find((field) => field.name === 'authors')
     expect(authorsField).toBeDefined()
@@ -60,7 +58,7 @@ describe('Array of links', async () => {
     expect((authorField as ReferenceSanityFieldSchema)?.to).toEqual([{type: 'author'}])
   })
 
-  test('it creates strong references to author', async ({dataset}) => {
+  test<LocalTestContext>('it creates strong references to author', async ({dataset}) => {
     const post = dataset.find((doc) => doc._type === 'post')
     expect(post).toBeDefined()
     if (!post) return
