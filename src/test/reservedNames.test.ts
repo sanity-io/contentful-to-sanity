@@ -126,7 +126,15 @@ describe('Reserved schema type names', () => {
       if (!refs) return
 
       expect(refs.of).toEqual(
-        expect.arrayContaining([{type: 'contentful_image'}, {type: 'contentful_object'}]),
+        expect.arrayContaining([
+          expect.objectContaining({
+            type: 'reference',
+            to: expect.arrayContaining([
+              expect.objectContaining({type: 'contentful_image'}),
+              expect.objectContaining({type: 'contentful_object'}),
+            ]),
+          }),
+        ]),
       )
     })
 
@@ -144,15 +152,38 @@ describe('Reserved schema type names', () => {
       if (!blockRef) return
 
       expect(blockRef.to).toEqual(
-        expect.arrayContaining([{type: 'contentful_image'}, {type: 'contentful_object'}]),
+        expect.arrayContaining([
+          expect.objectContaining({type: 'contentful_image'}),
+          expect.objectContaining({type: 'contentful_object'}),
+        ]),
       )
 
       const blockDef = pt.of.find((field) => field.type === 'block') as BlockDefinition
       expect(blockDef).toBeDefined()
       if (!blockDef) return
 
+      expect(blockDef.of).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            type: 'reference',
+            to: expect.arrayContaining([
+              expect.objectContaining({type: 'contentful_image'}),
+              expect.objectContaining({type: 'contentful_object'}),
+            ]),
+          }),
+        ]),
+      )
+
       expect(blockDef.marks?.annotations).toEqual(
-        expect.arrayContaining([{type: 'contentful_image'}, {type: 'contentful_object'}]),
+        expect.arrayContaining([
+          expect.objectContaining({
+            type: 'reference',
+            to: expect.arrayContaining([
+              expect.objectContaining({type: 'contentful_image'}),
+              expect.objectContaining({type: 'contentful_object'}),
+            ]),
+          }),
+        ]),
       )
     })
   })

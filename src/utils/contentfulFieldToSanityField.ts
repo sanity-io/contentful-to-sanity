@@ -19,6 +19,7 @@ import {
 import type {ContentfulExport, SlugSanityFieldSchemaOptions} from '../types'
 import {AnySanityFieldSchema, StringSanityFieldSchema} from '../types'
 import {contentfulFieldItemToSanityOfType} from './contentfulFieldItemToSanityOfType'
+import {contentfulTypeNameToSanityTypeName} from './contentfulTypeNameToSanityTypeName'
 import {extractContentfulRichTextFieldParameters} from './extractContentfulRichTextFieldParameters'
 import {extractValidationRulesFromContentfulField} from './extractValidationRulesFromContentfulField'
 import {findEditorControlForField} from './findEditorControlForField'
@@ -241,7 +242,7 @@ export function contentfulFieldToSanityField(
             // @ts-expect-error - the types for LinkedType are wrong in this
             // project. It should have a `to` property
             to: richTextOptions.supportedEmbeddedInlineTypes.map((linkType) => ({
-              type: linkType.type,
+              type: contentfulTypeNameToSanityTypeName(linkType.type).name,
             })),
           },
         ])
@@ -263,7 +264,7 @@ export function contentfulFieldToSanityField(
                 // @ts-expect-error - the types for LinkedType are wrong in this
                 // project. It should have a `to` property
                 to: richTextOptions.supportedEmbeddedBlockTypes.map((linkType) => ({
-                  type: linkType.type,
+                  type: contentfulTypeNameToSanityTypeName(linkType.type).name,
                 })),
               },
             ]
@@ -309,14 +310,21 @@ export function contentfulFieldToSanityField(
         .hidden(field.disabled)
         .description(helpText)
         .validation(validationRules)
+
       if (linkContentTypeValidation?.linkContentType?.length) {
         factory.to(
           linkContentTypeValidation.linkContentType
             .filter((type) => availableTypeIds.has(type))
-            .map((type) => ({type})),
+            .map((type) => ({
+              type: contentfulTypeNameToSanityTypeName(type).name,
+            })),
         )
       } else if (data.contentTypes) {
-        factory.to(data.contentTypes.map((type) => ({type: type.sys.id})))
+        factory.to(
+          data.contentTypes.map((type) => ({
+            type: contentfulTypeNameToSanityTypeName(type.sys.id).name,
+          })),
+        )
       }
 
       return factory.build()
