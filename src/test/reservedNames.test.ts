@@ -9,7 +9,7 @@ import {BlockDefinition} from 'sanity'
 import {beforeEach, describe, expect, test} from 'vitest'
 
 import {contentfulToDataset} from '../helpers/contentfulToDataset'
-import {coreTypes} from '../helpers/sanity/reservedNames'
+import {coreTypes, isReservedName} from '../helpers/sanity/reservedNames'
 import type {ContentfulExport} from '../types'
 import {contentfulTypeToSanitySchema} from '../utils'
 import {
@@ -80,6 +80,34 @@ beforeEach<LocalTestContext>(async (context) => {
     )
   ).split('\n')
   context.dataset = context.rawDataset.map(parse)
+})
+
+describe('isReservedName', () => {
+  test('returns true for core types', () => {
+    coreTypes.forEach((type) => {
+      expect(isReservedName(type.name)).toBe(true)
+    })
+  })
+
+  test('returns true for sanity and system prefixed types', () => {
+    const systemTypes = [
+      'system.group',
+      'sanity.imageAsset',
+      'sanity.fileAsset',
+      'sanity.arbitrary',
+      'system.something',
+    ]
+    systemTypes.forEach((typeName) => {
+      expect(isReservedName(typeName)).toBe(true)
+    })
+  })
+
+  test('returns true for other reserved names', () => {
+    const reservedNames = ['type', 'any', 'time', 'date']
+    reservedNames.forEach((typeName) => {
+      expect(isReservedName(typeName)).toBe(true)
+    })
+  })
 })
 
 describe('Reserved schema type names', () => {

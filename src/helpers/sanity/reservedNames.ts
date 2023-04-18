@@ -21,6 +21,11 @@ export const coreTypes = [
   {name: 'url', jsonType: 'string', type: 'type'},
 ]
 
+// and https://github.com/sanity-io/sanity/blob/df16d464cf9ae6ebabdbc5883f60c5e036e13d98/packages/@sanity/schema/src/core/traverseSchema.ts#L70-L72
+const FUTURE_RESERVED = ['any', 'time', 'date']
+
 export const isReservedName = (name: string): boolean => {
-  return coreTypes.map((type) => type.name).includes(name) || !!name.match(/^sanity|system\./)
+  const coreTypeNames = coreTypes.map((typeDef) => typeDef.name)
+  const reservedTypeNames = FUTURE_RESERVED.concat(coreTypeNames)
+  return name === 'type' || reservedTypeNames.includes(name) || !!name.match(/^sanity|system\./)
 }
