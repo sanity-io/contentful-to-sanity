@@ -5,6 +5,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.0](https://github.com/sanity-io/contentful-to-sanity/compare/v4.0.0...v4.1.0) (2023-04-19)
+
+### Features
+
+- add more reserved type name validation ([f760768](https://github.com/sanity-io/contentful-to-sanity/commit/f760768d4ecf6b63eea087d639d4e05fdd86994f))
+
+### Bug Fixes
+
+- **deps:** update dependency commander to v10.0.1 ([#92](https://github.com/sanity-io/contentful-to-sanity/issues/92)) ([e966f83](https://github.com/sanity-io/contentful-to-sanity/commit/e966f83b63d5885d66c94ac3ae6fff2eb6d66802))
+- **deps:** update dependency contentful-export to v7.19.47 ([#90](https://github.com/sanity-io/contentful-to-sanity/issues/90)) ([7b93bd7](https://github.com/sanity-io/contentful-to-sanity/commit/7b93bd71e1823ef3d6bc25cdaef46062e4c87cfb))
+- **deps:** update sanity monorepo to v3.9.0 ([#93](https://github.com/sanity-io/contentful-to-sanity/issues/93)) ([bbb8ae3](https://github.com/sanity-io/contentful-to-sanity/commit/bbb8ae3e411f6db6f8bbdfcbaeca2973146f7057))
+
 ## [4.0.0](https://github.com/sanity-io/contentful-to-sanity/compare/v3.0.4...v4.0.0) (2023-04-13)
 
 ### ⚠ BREAKING CHANGES
