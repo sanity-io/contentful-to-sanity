@@ -5,6 +5,17 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.0](https://github.com/sanity-io/contentful-to-sanity/compare/v4.1.0...v4.2.0) (2023-04-26)
+
+### Features
+
+- add stats doc on migration ([#95](https://github.com/sanity-io/contentful-to-sanity/issues/95)) ([b97b35a](https://github.com/sanity-io/contentful-to-sanity/commit/b97b35aaeb0d9247d178fabe41f4cf4228b9320e))
+
+### Bug Fixes
+
+- **deps:** update dependency mkdirp to v3.0.1 ([#96](https://github.com/sanity-io/contentful-to-sanity/issues/96)) ([ec48fdb](https://github.com/sanity-io/contentful-to-sanity/commit/ec48fdbb9e062aefd101fd3964f0f2ecdd9584bd))
+- **deps:** update dependency prettier to v2.8.8 ([#97](https://github.com/sanity-io/contentful-to-sanity/issues/97)) ([847d4cf](https://github.com/sanity-io/contentful-to-sanity/commit/847d4cf37bf1a6ad8622b61e52770411bb26356f))
+
 ## [4.1.0](https://github.com/sanity-io/contentful-to-sanity/compare/v4.0.0...v4.1.0) (2023-04-19)
 
 ### Features
