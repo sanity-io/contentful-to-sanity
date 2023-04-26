@@ -104,8 +104,10 @@ export async function contentfulToDataset(
     {
       _id: 'contentful.migration',
       _type: 'contentful.migration',
-      migratedAt: new Date()
+      migratedAt: new Date(),
     },
-    ...importableEntries
-  ].map((entry) => JSON.stringify(entry)).join('\n')
+    ...importableEntries,
+  ]
+    .map((entry) => JSON.stringify(entry))
+    .join('\n')
 }
