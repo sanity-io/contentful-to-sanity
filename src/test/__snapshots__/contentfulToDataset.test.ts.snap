@@ -3,6 +3,11 @@
 exports[`contentfulToDataset > 11ty.json 1`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.418Z",
+  },
+  {
     "_createdAt": "2020-05-21T16:59:17.807Z",
     "_id": "vWtnV1d7HCSXe2se74GaS",
     "_rev": "vWtnV1d7HCSXe2se74GaS",
@@ -502,6 +507,11 @@ exports[`contentfulToDataset > 11ty.json 1`] = `
 
 exports[`contentfulToDataset > 11ty.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.467Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -1031,6 +1041,11 @@ exports[`contentfulToDataset > 11ty.json 2`] = `
 exports[`contentfulToDataset > 11ty.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.489Z",
+  },
+  {
     "_createdAt": "2020-05-21T16:59:17.807Z",
     "_id": "vWtnV1d7HCSXe2se74GaS",
     "_rev": "vWtnV1d7HCSXe2se74GaS",
@@ -1530,6 +1545,11 @@ exports[`contentfulToDataset > 11ty.json 3`] = `
 
 exports[`contentfulToDataset > 11ty.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.510Z",
+  },
   {
     "_createdAt": "2020-05-21T16:59:17.807Z",
     "_id": "vWtnV1d7HCSXe2se74GaS",
@@ -2031,6 +2051,11 @@ exports[`contentfulToDataset > 11ty.json 4`] = `
 exports[`contentfulToDataset > 11ty.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.518Z",
+  },
+  {
     "_createdAt": "2020-05-21T16:59:17.807Z",
     "_id": "vWtnV1d7HCSXe2se74GaS",
     "_rev": "vWtnV1d7HCSXe2se74GaS",
@@ -2501,6 +2526,11 @@ exports[`contentfulToDataset > 11ty.json 5`] = `
 exports[`contentfulToDataset > blog.json 1`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.264Z",
+  },
+  {
     "_createdAt": "2023-03-06T15:55:13.260Z",
     "_id": "5fwuiE6dWicZi3kJMa8ujZ",
     "_rev": "5fwuiE6dWicZi3kJMa8ujZ",
@@ -2674,6 +2704,11 @@ exports[`contentfulToDataset > blog.json 1`] = `
 
 exports[`contentfulToDataset > blog.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.271Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -2859,6 +2894,11 @@ exports[`contentfulToDataset > blog.json 2`] = `
 exports[`contentfulToDataset > blog.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.274Z",
+  },
+  {
     "_createdAt": "2023-03-06T15:55:13.260Z",
     "_id": "5fwuiE6dWicZi3kJMa8ujZ",
     "_rev": "5fwuiE6dWicZi3kJMa8ujZ",
@@ -3032,6 +3072,11 @@ exports[`contentfulToDataset > blog.json 3`] = `
 
 exports[`contentfulToDataset > blog.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.277Z",
+  },
   {
     "_createdAt": "2023-03-06T15:55:13.260Z",
     "_id": "5fwuiE6dWicZi3kJMa8ujZ",
@@ -3207,6 +3252,11 @@ exports[`contentfulToDataset > blog.json 4`] = `
 exports[`contentfulToDataset > blog.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.280Z",
+  },
+  {
     "_createdAt": "2023-03-06T15:55:13.260Z",
     "_id": "5fwuiE6dWicZi3kJMa8ujZ",
     "_rev": "5fwuiE6dWicZi3kJMa8ujZ",
@@ -3380,6 +3430,11 @@ exports[`contentfulToDataset > blog.json 5`] = `
 
 exports[`contentfulToDataset > categories-demo-export.json 1`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:31.982Z",
+  },
   {
     "_createdAt": "2019-11-08T15:20:00.470Z",
     "_id": "4rDewT5QebgiZoDqLM7tPg",
@@ -4561,6 +4616,11 @@ Columbus, OH 43210
 
 exports[`contentfulToDataset > categories-demo-export.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:31.998Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -5759,6 +5819,11 @@ Columbus, OH 43210
 exports[`contentfulToDataset > categories-demo-export.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.014Z",
+  },
+  {
     "_createdAt": "2019-11-08T15:20:00.470Z",
     "_id": "4rDewT5QebgiZoDqLM7tPg",
     "_rev": "4rDewT5QebgiZoDqLM7tPg",
@@ -6939,6 +7004,11 @@ Columbus, OH 43210
 
 exports[`contentfulToDataset > categories-demo-export.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.024Z",
+  },
   {
     "_createdAt": "2019-11-08T15:20:00.470Z",
     "_id": "4rDewT5QebgiZoDqLM7tPg",
@@ -8121,6 +8191,11 @@ Columbus, OH 43210
 exports[`contentfulToDataset > categories-demo-export.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.034Z",
+  },
+  {
     "_createdAt": "2019-11-08T15:20:00.470Z",
     "_id": "4rDewT5QebgiZoDqLM7tPg",
     "_rev": "4rDewT5QebgiZoDqLM7tPg",
@@ -9302,6 +9377,11 @@ Columbus, OH 43210
 exports[`contentfulToDataset > complex-blog.json 1`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.691Z",
+  },
+  {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
     "_rev": "15jwOBqpxqSAOy2eOO4S0m",
@@ -10295,6 +10375,11 @@ exports[`contentfulToDataset > complex-blog.json 1`] = `
 
 exports[`contentfulToDataset > complex-blog.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.789Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -11298,6 +11383,11 @@ exports[`contentfulToDataset > complex-blog.json 2`] = `
 exports[`contentfulToDataset > complex-blog.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.869Z",
+  },
+  {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
     "_rev": "15jwOBqpxqSAOy2eOO4S0m",
@@ -12291,6 +12381,11 @@ exports[`contentfulToDataset > complex-blog.json 3`] = `
 
 exports[`contentfulToDataset > complex-blog.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.952Z",
+  },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
@@ -13286,6 +13381,11 @@ exports[`contentfulToDataset > complex-blog.json 4`] = `
 exports[`contentfulToDataset > complex-blog.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.954Z",
+  },
+  {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
     "_rev": "15jwOBqpxqSAOy2eOO4S0m",
@@ -13444,6 +13544,11 @@ Extracted from the article [CMS-functionality for static site generators](https:
 
 exports[`contentfulToDataset > cookbook.json 1`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.381Z",
+  },
   {
     "_createdAt": "2022-06-22T12:20:47.152Z",
     "_id": "1iSACx8nnyontA2ZUDusFn",
@@ -14928,6 +15033,11 @@ exports[`contentfulToDataset > cookbook.json 1`] = `
 
 exports[`contentfulToDataset > cookbook.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.400Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -16481,6 +16591,11 @@ exports[`contentfulToDataset > cookbook.json 2`] = `
 exports[`contentfulToDataset > cookbook.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.419Z",
+  },
+  {
     "_createdAt": "2022-06-22T12:20:47.152Z",
     "_id": "1iSACx8nnyontA2ZUDusFn",
     "_rev": "1iSACx8nnyontA2ZUDusFn",
@@ -17964,6 +18079,11 @@ exports[`contentfulToDataset > cookbook.json 3`] = `
 
 exports[`contentfulToDataset > cookbook.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.429Z",
+  },
   {
     "_createdAt": "2022-06-22T12:20:47.152Z",
     "_id": "1iSACx8nnyontA2ZUDusFn",
@@ -19449,6 +19569,11 @@ exports[`contentfulToDataset > cookbook.json 4`] = `
 exports[`contentfulToDataset > cookbook.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.438Z",
+  },
+  {
     "_createdAt": "2022-06-22T12:20:47.152Z",
     "_id": "1iSACx8nnyontA2ZUDusFn",
     "_rev": "1iSACx8nnyontA2ZUDusFn",
@@ -20933,6 +21058,11 @@ exports[`contentfulToDataset > cookbook.json 5`] = `
 exports[`contentfulToDataset > drafts.json 1`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.785Z",
+  },
+  {
     "_createdAt": "2023-03-24T20:35:35.264Z",
     "_id": "drafts.4RIfygf1stLd0J1gycYXlu",
     "_rev": "4RIfygf1stLd0J1gycYXlu",
@@ -20974,6 +21104,11 @@ exports[`contentfulToDataset > drafts.json 1`] = `
 
 exports[`contentfulToDataset > gallery.json 1`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.971Z",
+  },
   {
     "_createdAt": "2015-01-12T16:37:02.159Z",
     "_id": "4DyrC6MPp6Ws8UmQEQIGUc",
@@ -21196,6 +21331,11 @@ exports[`contentfulToDataset > gallery.json 1`] = `
 
 exports[`contentfulToDataset > gallery.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.983Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -21437,6 +21577,11 @@ exports[`contentfulToDataset > gallery.json 2`] = `
 exports[`contentfulToDataset > gallery.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:28.991Z",
+  },
+  {
     "_createdAt": "2015-01-12T16:37:02.159Z",
     "_id": "4DyrC6MPp6Ws8UmQEQIGUc",
     "_rev": "4DyrC6MPp6Ws8UmQEQIGUc",
@@ -21658,6 +21803,11 @@ exports[`contentfulToDataset > gallery.json 3`] = `
 
 exports[`contentfulToDataset > gallery.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:29.012Z",
+  },
   {
     "_createdAt": "2015-01-12T16:37:02.159Z",
     "_id": "4DyrC6MPp6Ws8UmQEQIGUc",
@@ -21881,6 +22031,11 @@ exports[`contentfulToDataset > gallery.json 4`] = `
 exports[`contentfulToDataset > gallery.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:29.013Z",
+  },
+  {
     "_createdAt": "2015-01-12T16:37:02.159Z",
     "_id": "4DyrC6MPp6Ws8UmQEQIGUc",
     "_rev": "4DyrC6MPp6Ws8UmQEQIGUc",
@@ -22067,6 +22222,11 @@ exports[`contentfulToDataset > gallery.json 5`] = `
 
 exports[`contentfulToDataset > gatsby-blog.json 1`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.143Z",
+  },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
@@ -23075,6 +23235,11 @@ exports[`contentfulToDataset > gatsby-blog.json 1`] = `
 
 exports[`contentfulToDataset > gatsby-blog.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.151Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -24092,6 +24257,11 @@ exports[`contentfulToDataset > gatsby-blog.json 2`] = `
 exports[`contentfulToDataset > gatsby-blog.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.172Z",
+  },
+  {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
     "_rev": "15jwOBqpxqSAOy2eOO4S0m",
@@ -25099,6 +25269,11 @@ exports[`contentfulToDataset > gatsby-blog.json 3`] = `
 
 exports[`contentfulToDataset > gatsby-blog.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.194Z",
+  },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
@@ -26108,6 +26283,11 @@ exports[`contentfulToDataset > gatsby-blog.json 4`] = `
 exports[`contentfulToDataset > gatsby-blog.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.210Z",
+  },
+  {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
     "_rev": "15jwOBqpxqSAOy2eOO4S0m",
@@ -27116,6 +27296,11 @@ exports[`contentfulToDataset > gatsby-blog.json 5`] = `
 exports[`contentfulToDataset > gatsby-blog2.json 1`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.590Z",
+  },
+  {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
     "_rev": "15jwOBqpxqSAOy2eOO4S0m",
@@ -28107,6 +28292,11 @@ exports[`contentfulToDataset > gatsby-blog2.json 1`] = `
 
 exports[`contentfulToDataset > gatsby-blog2.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.597Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -29108,6 +29298,11 @@ exports[`contentfulToDataset > gatsby-blog2.json 2`] = `
 exports[`contentfulToDataset > gatsby-blog2.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.606Z",
+  },
+  {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
     "_rev": "15jwOBqpxqSAOy2eOO4S0m",
@@ -30099,6 +30294,11 @@ exports[`contentfulToDataset > gatsby-blog2.json 3`] = `
 
 exports[`contentfulToDataset > gatsby-blog2.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.613Z",
+  },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
@@ -31092,6 +31292,11 @@ exports[`contentfulToDataset > gatsby-blog2.json 4`] = `
 exports[`contentfulToDataset > gatsby-blog2.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.620Z",
+  },
+  {
     "_createdAt": "2017-05-11T12:04:29.532Z",
     "_id": "15jwOBqpxqSAOy2eOO4S0m",
     "_rev": "15jwOBqpxqSAOy2eOO4S0m",
@@ -32084,6 +32289,11 @@ exports[`contentfulToDataset > gatsby-blog2.json 5`] = `
 exports[`contentfulToDataset > hydrogen-store.json 1`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.233Z",
+  },
+  {
     "_createdAt": "2022-06-12T22:48:44.562Z",
     "_id": "6eiN0tXaFLPwwpDRLho2lk",
     "_rev": "6eiN0tXaFLPwwpDRLho2lk",
@@ -32200,6 +32410,11 @@ exports[`contentfulToDataset > hydrogen-store.json 1`] = `
 
 exports[`contentfulToDataset > hydrogen-store.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.254Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -32324,6 +32539,11 @@ exports[`contentfulToDataset > hydrogen-store.json 2`] = `
 exports[`contentfulToDataset > hydrogen-store.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.277Z",
+  },
+  {
     "_createdAt": "2022-06-12T22:48:44.562Z",
     "_id": "6eiN0tXaFLPwwpDRLho2lk",
     "_rev": "6eiN0tXaFLPwwpDRLho2lk",
@@ -32440,6 +32660,11 @@ exports[`contentfulToDataset > hydrogen-store.json 3`] = `
 
 exports[`contentfulToDataset > hydrogen-store.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.342Z",
+  },
   {
     "_createdAt": "2022-06-12T22:48:44.562Z",
     "_id": "6eiN0tXaFLPwwpDRLho2lk",
@@ -32558,6 +32783,11 @@ exports[`contentfulToDataset > hydrogen-store.json 4`] = `
 exports[`contentfulToDataset > hydrogen-store.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.344Z",
+  },
+  {
     "_createdAt": "2022-06-12T22:48:44.562Z",
     "_id": "6eiN0tXaFLPwwpDRLho2lk",
     "_rev": "6eiN0tXaFLPwwpDRLho2lk",
@@ -32626,6 +32856,11 @@ Is someone who works with the Back End — or server side — of the application
 
 exports[`contentfulToDataset > jumpstart-shop.json 1`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.041Z",
+  },
   {
     "_createdAt": "2022-02-07T10:43:25.373Z",
     "_id": "590aUv4nfxndZlavSpU4rP",
@@ -32835,6 +33070,11 @@ exports[`contentfulToDataset > jumpstart-shop.json 1`] = `
 
 exports[`contentfulToDataset > jumpstart-shop.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.042Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -33061,6 +33301,11 @@ exports[`contentfulToDataset > jumpstart-shop.json 2`] = `
 exports[`contentfulToDataset > jumpstart-shop.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.043Z",
+  },
+  {
     "_createdAt": "2022-02-07T10:43:25.373Z",
     "_id": "590aUv4nfxndZlavSpU4rP",
     "_rev": "590aUv4nfxndZlavSpU4rP",
@@ -33269,6 +33514,11 @@ exports[`contentfulToDataset > jumpstart-shop.json 3`] = `
 
 exports[`contentfulToDataset > jumpstart-shop.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.044Z",
+  },
   {
     "_createdAt": "2022-02-07T10:43:25.373Z",
     "_id": "590aUv4nfxndZlavSpU4rP",
@@ -33479,6 +33729,11 @@ exports[`contentfulToDataset > jumpstart-shop.json 4`] = `
 exports[`contentfulToDataset > jumpstart-shop.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.045Z",
+  },
+  {
     "_createdAt": "2022-02-07T10:43:25.373Z",
     "_id": "590aUv4nfxndZlavSpU4rP",
     "_rev": "590aUv4nfxndZlavSpU4rP",
@@ -33687,6 +33942,11 @@ exports[`contentfulToDataset > jumpstart-shop.json 5`] = `
 
 exports[`contentfulToDataset > knowledge-base.json 1`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.652Z",
+  },
   {
     "_createdAt": "2022-06-10T10:34:25.774Z",
     "_id": "14VV8DioigjGqfMXo5x55f",
@@ -36104,6 +36364,11 @@ Images are added to articles by uploading them as assets to Contentful, and then
 
 exports[`contentfulToDataset > knowledge-base.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.680Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -38546,6 +38811,11 @@ Images are added to articles by uploading them as assets to Contentful, and then
 exports[`contentfulToDataset > knowledge-base.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.707Z",
+  },
+  {
     "_createdAt": "2022-06-10T10:34:25.774Z",
     "_id": "14VV8DioigjGqfMXo5x55f",
     "_rev": "14VV8DioigjGqfMXo5x55f",
@@ -40962,6 +41232,11 @@ Images are added to articles by uploading them as assets to Contentful, and then
 
 exports[`contentfulToDataset > knowledge-base.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.741Z",
+  },
   {
     "_createdAt": "2022-06-10T10:34:25.774Z",
     "_id": "14VV8DioigjGqfMXo5x55f",
@@ -43380,6 +43655,11 @@ Images are added to articles by uploading them as assets to Contentful, and then
 exports[`contentfulToDataset > knowledge-base.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.763Z",
+  },
+  {
     "_createdAt": "2022-06-10T10:34:25.774Z",
     "_id": "14VV8DioigjGqfMXo5x55f",
     "_rev": "14VV8DioigjGqfMXo5x55f",
@@ -45720,6 +46000,11 @@ const YourComponent = () => (
 exports[`contentfulToDataset > ls-cma-1.json 1`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:31.937Z",
+  },
+  {
     "_createdAt": "2020-09-24T16:55:44.299Z",
     "_id": "2dtVvU0qmduJ2jT2Ki0ZKC",
     "_rev": "2dtVvU0qmduJ2jT2Ki0ZKC",
@@ -46736,6 +47021,11 @@ Call ",
 
 exports[`contentfulToDataset > ls-cma-1.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:31.948Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -47866,6 +48156,11 @@ Call ",
 exports[`contentfulToDataset > ls-cma-1.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:31.952Z",
+  },
+  {
     "_createdAt": "2020-09-24T16:55:44.299Z",
     "_id": "2dtVvU0qmduJ2jT2Ki0ZKC",
     "_rev": "2dtVvU0qmduJ2jT2Ki0ZKC",
@@ -48882,6 +49177,11 @@ Call ",
 
 exports[`contentfulToDataset > ls-cma-1.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:31.955Z",
+  },
   {
     "_createdAt": "2020-09-24T16:55:44.299Z",
     "_id": "2dtVvU0qmduJ2jT2Ki0ZKC",
@@ -49900,6 +50200,11 @@ Call ",
 exports[`contentfulToDataset > ls-cma-1.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:31.957Z",
+  },
+  {
     "_createdAt": "2020-09-24T16:55:44.299Z",
     "_id": "2dtVvU0qmduJ2jT2Ki0ZKC",
     "_rev": "2dtVvU0qmduJ2jT2Ki0ZKC",
@@ -50917,6 +51222,11 @@ Call ",
 exports[`contentfulToDataset > nextjs.json 1`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.771Z",
+  },
+  {
     "_createdAt": "2022-05-02T10:07:03.112Z",
     "_id": "2lSWbthuzQ4nXr95YdMQpP",
     "_rev": "2lSWbthuzQ4nXr95YdMQpP",
@@ -50976,6 +51286,11 @@ massa, consequat malesuada justo libero eu nulla.",
 
 exports[`contentfulToDataset > nextjs.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.771Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -51041,6 +51356,11 @@ massa, consequat malesuada justo libero eu nulla.",
 exports[`contentfulToDataset > nextjs.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.772Z",
+  },
+  {
     "_createdAt": "2022-05-02T10:07:03.112Z",
     "_id": "2lSWbthuzQ4nXr95YdMQpP",
     "_rev": "2lSWbthuzQ4nXr95YdMQpP",
@@ -51100,6 +51420,11 @@ massa, consequat malesuada justo libero eu nulla.",
 
 exports[`contentfulToDataset > nextjs.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.772Z",
+  },
   {
     "_createdAt": "2022-05-02T10:07:03.112Z",
     "_id": "2lSWbthuzQ4nXr95YdMQpP",
@@ -51161,6 +51486,11 @@ massa, consequat malesuada justo libero eu nulla.",
 exports[`contentfulToDataset > nextjs.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.772Z",
+  },
+  {
     "_createdAt": "2022-05-02T10:07:03.112Z",
     "_id": "2lSWbthuzQ4nXr95YdMQpP",
     "_rev": "2lSWbthuzQ4nXr95YdMQpP",
@@ -51220,6 +51550,11 @@ massa, consequat malesuada justo libero eu nulla.",
 
 exports[`contentfulToDataset > product-catalogue.json 1`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:29.069Z",
+  },
   {
     "_createdAt": "2014-12-10T14:46:56.092Z",
     "_id": "4BqrajvA8E6qwgkieoqmqO",
@@ -51643,6 +51978,11 @@ exports[`contentfulToDataset > product-catalogue.json 1`] = `
 
 exports[`contentfulToDataset > product-catalogue.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:29.169Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -52085,6 +52425,11 @@ exports[`contentfulToDataset > product-catalogue.json 2`] = `
 exports[`contentfulToDataset > product-catalogue.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:29.250Z",
+  },
+  {
     "_createdAt": "2014-12-10T14:46:56.092Z",
     "_id": "4BqrajvA8E6qwgkieoqmqO",
     "_rev": "4BqrajvA8E6qwgkieoqmqO",
@@ -52507,6 +52852,11 @@ exports[`contentfulToDataset > product-catalogue.json 3`] = `
 
 exports[`contentfulToDataset > product-catalogue.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:29.301Z",
+  },
   {
     "_createdAt": "2014-12-10T14:46:56.092Z",
     "_id": "4BqrajvA8E6qwgkieoqmqO",
@@ -52931,6 +53281,11 @@ exports[`contentfulToDataset > product-catalogue.json 4`] = `
 exports[`contentfulToDataset > product-catalogue.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:29.302Z",
+  },
+  {
     "_createdAt": "2014-12-10T14:46:56.092Z",
     "_id": "4BqrajvA8E6qwgkieoqmqO",
     "_rev": "4BqrajvA8E6qwgkieoqmqO",
@@ -53188,6 +53543,11 @@ Our Lemnos products are made carefully by our craftsmen finely honed skillful te
 
 exports[`contentfulToDataset > react-starter.json 1`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.100Z",
+  },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
     "_id": "2IOql3FHSGN8QTsXrrnV8C",
@@ -53482,6 +53842,11 @@ exports[`contentfulToDataset > react-starter.json 1`] = `
 
 exports[`contentfulToDataset > react-starter.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.107Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [
@@ -53877,6 +54242,11 @@ exports[`contentfulToDataset > react-starter.json 2`] = `
 exports[`contentfulToDataset > react-starter.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.118Z",
+  },
+  {
     "_createdAt": "2019-04-25T21:12:25.777Z",
     "_id": "2IOql3FHSGN8QTsXrrnV8C",
     "_rev": "2IOql3FHSGN8QTsXrrnV8C",
@@ -54170,6 +54540,11 @@ exports[`contentfulToDataset > react-starter.json 3`] = `
 
 exports[`contentfulToDataset > react-starter.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.126Z",
+  },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
     "_id": "2IOql3FHSGN8QTsXrrnV8C",
@@ -54465,6 +54840,11 @@ exports[`contentfulToDataset > react-starter.json 4`] = `
 exports[`contentfulToDataset > react-starter.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.128Z",
+  },
+  {
     "_createdAt": "2019-04-25T21:12:25.777Z",
     "_id": "2IOql3FHSGN8QTsXrrnV8C",
     "_rev": "2IOql3FHSGN8QTsXrrnV8C",
@@ -54743,6 +55123,11 @@ exports[`contentfulToDataset > react-starter.json 5`] = `
 
 exports[`contentfulToDataset > remix.json 1`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.481Z",
+  },
   {
     "_createdAt": "2022-08-17T13:54:01.478Z",
     "_id": "6ccoWgWnvDMuMh50irtWxB",
@@ -55530,6 +55915,11 @@ in a single request",
 
 exports[`contentfulToDataset > remix.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.513Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -56370,6 +56760,11 @@ in a single request",
 exports[`contentfulToDataset > remix.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.545Z",
+  },
+  {
     "_createdAt": "2022-08-17T13:54:01.478Z",
     "_id": "6ccoWgWnvDMuMh50irtWxB",
     "_rev": "6ccoWgWnvDMuMh50irtWxB",
@@ -57156,6 +57551,11 @@ in a single request",
 
 exports[`contentfulToDataset > remix.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.576Z",
+  },
   {
     "_createdAt": "2022-08-17T13:54:01.478Z",
     "_id": "6ccoWgWnvDMuMh50irtWxB",
@@ -57944,6 +58344,11 @@ in a single request",
 exports[`contentfulToDataset > remix.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.580Z",
+  },
+  {
     "_createdAt": "2022-08-17T13:54:01.478Z",
     "_id": "6ccoWgWnvDMuMh50irtWxB",
     "_rev": "6ccoWgWnvDMuMh50irtWxB",
@@ -58656,6 +59061,11 @@ in a single request",
 exports[`contentfulToDataset > sveltekit.json 1`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.778Z",
+  },
+  {
     "_createdAt": "2022-12-05T16:49:08.501Z",
     "_id": "2wk8NeR1SIM0sph5FgLHYd",
     "_rev": "2wk8NeR1SIM0sph5FgLHYd",
@@ -58882,6 +59292,11 @@ exports[`contentfulToDataset > sveltekit.json 1`] = `
 
 exports[`contentfulToDataset > sveltekit.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.779Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [],
@@ -59132,6 +59547,11 @@ exports[`contentfulToDataset > sveltekit.json 2`] = `
 exports[`contentfulToDataset > sveltekit.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.780Z",
+  },
+  {
     "_createdAt": "2022-12-05T16:49:08.501Z",
     "_id": "2wk8NeR1SIM0sph5FgLHYd",
     "_rev": "2wk8NeR1SIM0sph5FgLHYd",
@@ -59358,6 +59778,11 @@ exports[`contentfulToDataset > sveltekit.json 3`] = `
 
 exports[`contentfulToDataset > sveltekit.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.781Z",
+  },
   {
     "_createdAt": "2022-12-05T16:49:08.501Z",
     "_id": "2wk8NeR1SIM0sph5FgLHYd",
@@ -59586,6 +60011,11 @@ exports[`contentfulToDataset > sveltekit.json 4`] = `
 exports[`contentfulToDataset > sveltekit.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.781Z",
+  },
+  {
     "_createdAt": "2022-12-05T16:49:08.501Z",
     "_id": "2wk8NeR1SIM0sph5FgLHYd",
     "_rev": "2wk8NeR1SIM0sph5FgLHYd",
@@ -59812,6 +60242,11 @@ exports[`contentfulToDataset > sveltekit.json 5`] = `
 
 exports[`contentfulToDataset > the-example-app.json 1`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:29.907Z",
+  },
   {
     "_createdAt": "2017-11-08T16:06:59.430Z",
     "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
@@ -63014,6 +63449,11 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
 
 exports[`contentfulToDataset > the-example-app.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:30.713Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [
@@ -68825,6 +69265,11 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
 exports[`contentfulToDataset > the-example-app.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:31.205Z",
+  },
+  {
     "_createdAt": "2017-11-08T16:06:59.430Z",
     "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
     "_rev": "4ZQtjYftNKaoKWuksM0sS0",
@@ -72026,6 +72471,11 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
 
 exports[`contentfulToDataset > the-example-app.json 4`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:31.883Z",
+  },
   {
     "_createdAt": "2017-11-08T16:06:59.430Z",
     "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
@@ -75229,6 +75679,11 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
 exports[`contentfulToDataset > the-example-app.json 5`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:31.897Z",
+  },
+  {
     "_createdAt": "2017-11-08T16:06:59.430Z",
     "_id": "drafts.4ZQtjYftNKaoKWuksM0sS0",
     "_rev": "4ZQtjYftNKaoKWuksM0sS0",
@@ -76211,6 +76666,11 @@ The Hello Contentful course covers the following topics:
 exports[`contentfulToDataset > workflow.json 1`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.059Z",
+  },
+  {
     "_createdAt": "2019-04-25T21:12:25.777Z",
     "_id": "2IOql3FHSGN8QTsXrrnV8C",
     "_rev": "2IOql3FHSGN8QTsXrrnV8C",
@@ -76504,6 +76964,11 @@ exports[`contentfulToDataset > workflow.json 1`] = `
 
 exports[`contentfulToDataset > workflow.json 2`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.068Z",
+  },
   {
     "__i18n_lang": "en-US",
     "__i18n_refs": [
@@ -76899,6 +77364,11 @@ exports[`contentfulToDataset > workflow.json 2`] = `
 exports[`contentfulToDataset > workflow.json 3`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.077Z",
+  },
+  {
     "_createdAt": "2019-04-25T21:12:25.777Z",
     "_id": "2IOql3FHSGN8QTsXrrnV8C",
     "_rev": "2IOql3FHSGN8QTsXrrnV8C",
@@ -77193,6 +77663,11 @@ exports[`contentfulToDataset > workflow.json 3`] = `
 exports[`contentfulToDataset > workflow.json 4`] = `
 [
   {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.086Z",
+  },
+  {
     "_createdAt": "2019-04-25T21:12:25.777Z",
     "_id": "2IOql3FHSGN8QTsXrrnV8C",
     "_rev": "2IOql3FHSGN8QTsXrrnV8C",
@@ -77486,6 +77961,11 @@ exports[`contentfulToDataset > workflow.json 4`] = `
 
 exports[`contentfulToDataset > workflow.json 5`] = `
 [
+  {
+    "_id": "contentful.migration",
+    "_type": "contentful.migration",
+    "migratedAt": "2023-04-26T22:23:32.089Z",
+  },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
     "_id": "2IOql3FHSGN8QTsXrrnV8C",

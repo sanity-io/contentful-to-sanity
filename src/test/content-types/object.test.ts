@@ -58,7 +58,8 @@ describe('Object', () => {
         },
         options,
       )
-      const [doc] = ndjson.split('\n').map(parse)
+      const docs = ndjson.split('\n').map(parse)
+      const doc = docs.find(d => d._type == 'film')
 
       expect(doc).toMatchObject(
         expect.objectContaining({

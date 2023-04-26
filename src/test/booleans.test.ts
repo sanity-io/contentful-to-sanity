@@ -50,7 +50,7 @@ describe('Boolean fields', async () => {
       .split('\n')
       .map(parse)
 
-    const person = docs[0]
+    const person = docs.find(doc => doc._type == 'person')
     expect(person).toBeDefined()
     expect(person).toHaveProperty('isGreat', true)
   })
