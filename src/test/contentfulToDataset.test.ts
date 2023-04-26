@@ -1,4 +1,8 @@
-import {describe, expect, test} from 'vitest'
+import {describe, expect, test, vi} from 'vitest'
+
+const date = new Date(1998, 11, 19)
+vi.useFakeTimers()
+vi.setSystemTime(date)
 
 import {contentfulToDataset} from '../helpers/contentfulToDataset'
 import {parse} from './helpers'
