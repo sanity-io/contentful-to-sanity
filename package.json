@@ -60,7 +60,7 @@
     "lint": "TIMING=1 eslint . --cache",
     "lint:fix": "npm run lint -- --fix",
     "prepublishOnly": "rm -rf dist && pkg build --strict",
-    "test": "vitest",
+    "test": "TZ=UTC vitest",
     "typecheck": "tsc --noEmit"
   },
   "browserslist": [

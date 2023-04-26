@@ -5,7 +5,7 @@ exports[`contentfulToDataset > 11ty.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2020-05-21T16:59:17.807Z",
@@ -510,7 +510,7 @@ exports[`contentfulToDataset > 11ty.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -1043,7 +1043,7 @@ exports[`contentfulToDataset > 11ty.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2020-05-21T16:59:17.807Z",
@@ -1548,7 +1548,7 @@ exports[`contentfulToDataset > 11ty.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2020-05-21T16:59:17.807Z",
@@ -2053,7 +2053,7 @@ exports[`contentfulToDataset > 11ty.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2020-05-21T16:59:17.807Z",
@@ -2528,7 +2528,7 @@ exports[`contentfulToDataset > blog.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2023-03-06T15:55:13.260Z",
@@ -2707,7 +2707,7 @@ exports[`contentfulToDataset > blog.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -2896,7 +2896,7 @@ exports[`contentfulToDataset > blog.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2023-03-06T15:55:13.260Z",
@@ -3075,7 +3075,7 @@ exports[`contentfulToDataset > blog.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2023-03-06T15:55:13.260Z",
@@ -3254,7 +3254,7 @@ exports[`contentfulToDataset > blog.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2023-03-06T15:55:13.260Z",
@@ -3433,7 +3433,7 @@ exports[`contentfulToDataset > categories-demo-export.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-11-08T15:20:00.470Z",
@@ -4619,7 +4619,7 @@ exports[`contentfulToDataset > categories-demo-export.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -5821,7 +5821,7 @@ exports[`contentfulToDataset > categories-demo-export.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-11-08T15:20:00.470Z",
@@ -7007,7 +7007,7 @@ exports[`contentfulToDataset > categories-demo-export.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-11-08T15:20:00.470Z",
@@ -8193,7 +8193,7 @@ exports[`contentfulToDataset > categories-demo-export.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-11-08T15:20:00.470Z",
@@ -9379,7 +9379,7 @@ exports[`contentfulToDataset > complex-blog.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -10378,7 +10378,7 @@ exports[`contentfulToDataset > complex-blog.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -11385,7 +11385,7 @@ exports[`contentfulToDataset > complex-blog.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -12384,7 +12384,7 @@ exports[`contentfulToDataset > complex-blog.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -13383,7 +13383,7 @@ exports[`contentfulToDataset > complex-blog.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -13547,7 +13547,7 @@ exports[`contentfulToDataset > cookbook.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-22T12:20:47.152Z",
@@ -15036,7 +15036,7 @@ exports[`contentfulToDataset > cookbook.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -16593,7 +16593,7 @@ exports[`contentfulToDataset > cookbook.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-22T12:20:47.152Z",
@@ -18082,7 +18082,7 @@ exports[`contentfulToDataset > cookbook.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-22T12:20:47.152Z",
@@ -19571,7 +19571,7 @@ exports[`contentfulToDataset > cookbook.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-22T12:20:47.152Z",
@@ -21060,7 +21060,7 @@ exports[`contentfulToDataset > drafts.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2023-03-24T20:35:35.264Z",
@@ -21107,7 +21107,7 @@ exports[`contentfulToDataset > gallery.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2015-01-12T16:37:02.159Z",
@@ -21334,7 +21334,7 @@ exports[`contentfulToDataset > gallery.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -21579,7 +21579,7 @@ exports[`contentfulToDataset > gallery.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2015-01-12T16:37:02.159Z",
@@ -21806,7 +21806,7 @@ exports[`contentfulToDataset > gallery.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2015-01-12T16:37:02.159Z",
@@ -22033,7 +22033,7 @@ exports[`contentfulToDataset > gallery.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2015-01-12T16:37:02.159Z",
@@ -22225,7 +22225,7 @@ exports[`contentfulToDataset > gatsby-blog.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -23238,7 +23238,7 @@ exports[`contentfulToDataset > gatsby-blog.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -24259,7 +24259,7 @@ exports[`contentfulToDataset > gatsby-blog.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -25272,7 +25272,7 @@ exports[`contentfulToDataset > gatsby-blog.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -26285,7 +26285,7 @@ exports[`contentfulToDataset > gatsby-blog.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -27298,7 +27298,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -28295,7 +28295,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -29300,7 +29300,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -30297,7 +30297,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -31294,7 +31294,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-05-11T12:04:29.532Z",
@@ -32291,7 +32291,7 @@ exports[`contentfulToDataset > hydrogen-store.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-12T22:48:44.562Z",
@@ -32413,7 +32413,7 @@ exports[`contentfulToDataset > hydrogen-store.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -32541,7 +32541,7 @@ exports[`contentfulToDataset > hydrogen-store.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-12T22:48:44.562Z",
@@ -32663,7 +32663,7 @@ exports[`contentfulToDataset > hydrogen-store.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-12T22:48:44.562Z",
@@ -32785,7 +32785,7 @@ exports[`contentfulToDataset > hydrogen-store.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-12T22:48:44.562Z",
@@ -32859,7 +32859,7 @@ exports[`contentfulToDataset > jumpstart-shop.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-02-07T10:43:25.373Z",
@@ -33073,7 +33073,7 @@ exports[`contentfulToDataset > jumpstart-shop.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -33303,7 +33303,7 @@ exports[`contentfulToDataset > jumpstart-shop.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-02-07T10:43:25.373Z",
@@ -33517,7 +33517,7 @@ exports[`contentfulToDataset > jumpstart-shop.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-02-07T10:43:25.373Z",
@@ -33731,7 +33731,7 @@ exports[`contentfulToDataset > jumpstart-shop.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-02-07T10:43:25.373Z",
@@ -33945,7 +33945,7 @@ exports[`contentfulToDataset > knowledge-base.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-10T10:34:25.774Z",
@@ -36367,7 +36367,7 @@ exports[`contentfulToDataset > knowledge-base.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -38813,7 +38813,7 @@ exports[`contentfulToDataset > knowledge-base.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-10T10:34:25.774Z",
@@ -41235,7 +41235,7 @@ exports[`contentfulToDataset > knowledge-base.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-10T10:34:25.774Z",
@@ -43657,7 +43657,7 @@ exports[`contentfulToDataset > knowledge-base.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-06-10T10:34:25.774Z",
@@ -46002,7 +46002,7 @@ exports[`contentfulToDataset > ls-cma-1.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2020-09-24T16:55:44.299Z",
@@ -47024,7 +47024,7 @@ exports[`contentfulToDataset > ls-cma-1.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -48158,7 +48158,7 @@ exports[`contentfulToDataset > ls-cma-1.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2020-09-24T16:55:44.299Z",
@@ -49180,7 +49180,7 @@ exports[`contentfulToDataset > ls-cma-1.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2020-09-24T16:55:44.299Z",
@@ -50202,7 +50202,7 @@ exports[`contentfulToDataset > ls-cma-1.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2020-09-24T16:55:44.299Z",
@@ -51224,7 +51224,7 @@ exports[`contentfulToDataset > nextjs.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-05-02T10:07:03.112Z",
@@ -51289,7 +51289,7 @@ exports[`contentfulToDataset > nextjs.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -51358,7 +51358,7 @@ exports[`contentfulToDataset > nextjs.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-05-02T10:07:03.112Z",
@@ -51423,7 +51423,7 @@ exports[`contentfulToDataset > nextjs.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-05-02T10:07:03.112Z",
@@ -51488,7 +51488,7 @@ exports[`contentfulToDataset > nextjs.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-05-02T10:07:03.112Z",
@@ -51553,7 +51553,7 @@ exports[`contentfulToDataset > product-catalogue.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2014-12-10T14:46:56.092Z",
@@ -51981,7 +51981,7 @@ exports[`contentfulToDataset > product-catalogue.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -52427,7 +52427,7 @@ exports[`contentfulToDataset > product-catalogue.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2014-12-10T14:46:56.092Z",
@@ -52855,7 +52855,7 @@ exports[`contentfulToDataset > product-catalogue.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2014-12-10T14:46:56.092Z",
@@ -53283,7 +53283,7 @@ exports[`contentfulToDataset > product-catalogue.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2014-12-10T14:46:56.092Z",
@@ -53546,7 +53546,7 @@ exports[`contentfulToDataset > react-starter.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
@@ -53845,7 +53845,7 @@ exports[`contentfulToDataset > react-starter.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -54244,7 +54244,7 @@ exports[`contentfulToDataset > react-starter.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
@@ -54543,7 +54543,7 @@ exports[`contentfulToDataset > react-starter.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
@@ -54842,7 +54842,7 @@ exports[`contentfulToDataset > react-starter.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
@@ -55126,7 +55126,7 @@ exports[`contentfulToDataset > remix.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-08-17T13:54:01.478Z",
@@ -55918,7 +55918,7 @@ exports[`contentfulToDataset > remix.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -56762,7 +56762,7 @@ exports[`contentfulToDataset > remix.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-08-17T13:54:01.478Z",
@@ -57554,7 +57554,7 @@ exports[`contentfulToDataset > remix.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-08-17T13:54:01.478Z",
@@ -58346,7 +58346,7 @@ exports[`contentfulToDataset > remix.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-08-17T13:54:01.478Z",
@@ -59063,7 +59063,7 @@ exports[`contentfulToDataset > sveltekit.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-12-05T16:49:08.501Z",
@@ -59295,7 +59295,7 @@ exports[`contentfulToDataset > sveltekit.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -59549,7 +59549,7 @@ exports[`contentfulToDataset > sveltekit.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-12-05T16:49:08.501Z",
@@ -59781,7 +59781,7 @@ exports[`contentfulToDataset > sveltekit.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-12-05T16:49:08.501Z",
@@ -60013,7 +60013,7 @@ exports[`contentfulToDataset > sveltekit.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2022-12-05T16:49:08.501Z",
@@ -60245,7 +60245,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-11-08T16:06:59.430Z",
@@ -63452,7 +63452,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -69267,7 +69267,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-11-08T16:06:59.430Z",
@@ -72474,7 +72474,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-11-08T16:06:59.430Z",
@@ -75681,7 +75681,7 @@ exports[`contentfulToDataset > the-example-app.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2017-11-08T16:06:59.430Z",
@@ -76668,7 +76668,7 @@ exports[`contentfulToDataset > workflow.json 1`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
@@ -76967,7 +76967,7 @@ exports[`contentfulToDataset > workflow.json 2`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "__i18n_lang": "en-US",
@@ -77366,7 +77366,7 @@ exports[`contentfulToDataset > workflow.json 3`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
@@ -77665,7 +77665,7 @@ exports[`contentfulToDataset > workflow.json 4`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
@@ -77964,7 +77964,7 @@ exports[`contentfulToDataset > workflow.json 5`] = `
   {
     "_id": "contentful.migration",
     "_type": "contentful.migration",
-    "migratedAt": "1998-12-19T08:00:00.000Z",
+    "migratedAt": "1998-12-19T00:00:00.000Z",
   },
   {
     "_createdAt": "2019-04-25T21:12:25.777Z",
