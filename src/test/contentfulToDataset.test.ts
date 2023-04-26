@@ -1,4 +1,8 @@
-import {describe, expect, test} from 'vitest'
+import {describe, expect, test, vi} from 'vitest'
+
+const date = new Date(1998, 11, 19)
+vi.useFakeTimers()
+vi.setSystemTime(date)
 
 import {contentfulToDataset} from '../helpers/contentfulToDataset'
 import {parse} from './helpers'
@@ -606,5 +610,24 @@ describe('contentfulToDataset', () => {
         .split('\n')
         .map(parse),
     ).toMatchSnapshot()
+  })
+
+  test('it adds statistics doc on migration', async () => {
+    const {default: drafts} = await import('./fixtures/drafts.json')
+    const {default: published} = await import('./fixtures/drafts.published.json')
+    const dataset = (
+      await contentfulToDataset(
+        {drafts: drafts as any, published: published as any},
+        {
+          ...smOptions,
+        },
+      )
+    )
+      .split('\n')
+      .map(parse)
+
+    const stats = dataset.find((doc) => doc._id == 'contentful.migration')
+    expect(stats).toBeTruthy()
+    expect(stats).toHaveProperty('migratedAt')
   })
 })
