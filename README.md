@@ -21,19 +21,20 @@ npx contentful-to-sanity@latest --help
 
 ### 1. Open Contentful and navigate to your space: https://app.contentful.com/
 
-Find the contentful space ID of your project (under _Space settings_ → _General_).
-Create a content management token (under _Space settings_ → _API keys_ → _Content management tokens_ → _Generate personal token_).
+- Find your contentful space ID of your project (under _Space settings_ → _General_)
+- Create an API Key and get the Content Delivery API - **access token** (under _Settings_ → _API keys_ → _Content delivery / preview tokens_ → _add api key_)
+- Create a content **management token** (under _Settings_ → _API keys_ → _Content management tokens_ → _Generate personal token_)
 
 ### 2. Setup a clean Sanity v3 Studio and connect it to, or create, the Sanity project and dataset you want as your destination:
 
 ```bash
-npx sanity@latest init --template clean --output-path ./migrate
+npm create sanity@latest -- --template clean --create-project "Your Project Name" --dataset production --output-path ./migrate
 ```
 
 ### 3. Run the migration, which prepares a `dataset.ndjson` file for the later import step:
 
 ```bash
-npx contentful-to-sanity@latest -s <space-id> -t <management-token> ./migrate
+npx contentful-to-sanity@latest -s <space-id> -t <management-token> -a <access-token> ./migrate
 ```
 
 ### 4. Start the dataset import process, which will finish in the background:
@@ -84,7 +85,7 @@ export default defineConfig({
 ### 6. Try the Studio 🎉
 
 ```bash
-npx sanity dev
+npm dev
 ```
 
 You don't have to wait for the `npx sanity dataset import ./migrate/dataset.ndjson` job to finish before the Studio is ready for use. The Studio will keep up to speed with the progress of the import job in real-time.
