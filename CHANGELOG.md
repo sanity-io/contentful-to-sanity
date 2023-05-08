@@ -5,6 +5,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.0...v4.2.1) (2023-05-08)
+
+### Bug Fixes
+
+- **deps:** update dependencies (non-major) ([#99](https://github.com/sanity-io/contentful-to-sanity/issues/99)) ([9398371](https://github.com/sanity-io/contentful-to-sanity/commit/939837129f7d239b069432d5fc6e65038e06f38b))
+- **deps:** update dependency @sanity/client to v6 ([#102](https://github.com/sanity-io/contentful-to-sanity/issues/102)) ([1496ec5](https://github.com/sanity-io/contentful-to-sanity/commit/1496ec513ae4263caad1923a1fa0959a52afa0d4))
+- **deps:** update sanity monorepo to v3.10.0 ([#100](https://github.com/sanity-io/contentful-to-sanity/issues/100)) ([8e1c9c3](https://github.com/sanity-io/contentful-to-sanity/commit/8e1c9c3b0e305ba134eb20a6390ee2782c693515))
+
 ## [4.2.0](https://github.com/sanity-io/contentful-to-sanity/compare/v4.1.0...v4.2.0) (2023-04-26)
 
 ### Features
