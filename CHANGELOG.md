@@ -5,6 +5,19 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.2](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.1...v4.2.2) (2023-06-12)
+
+### Bug Fixes
+
+- **deps:** update dependencies (non-major) ([#106](https://github.com/sanity-io/contentful-to-sanity/issues/106)) ([45fcffd](https://github.com/sanity-io/contentful-to-sanity/commit/45fcffdfad1739264cf36db055ace0b5ca7748bb))
+- **deps:** update dependencies (non-major) ([#112](https://github.com/sanity-io/contentful-to-sanity/issues/112)) ([8dff1a2](https://github.com/sanity-io/contentful-to-sanity/commit/8dff1a2412a4f08ba6da25ad60332c649c4c7ed7))
+- **deps:** update dependency @sanity/client to v6.1.0 ([#108](https://github.com/sanity-io/contentful-to-sanity/issues/108)) ([dd92244](https://github.com/sanity-io/contentful-to-sanity/commit/dd92244935915a6eca7e5a463f5f3630d53415ea))
+- **deps:** update dependency jsdom to v22 ([#103](https://github.com/sanity-io/contentful-to-sanity/issues/103)) ([0f5cae5](https://github.com/sanity-io/contentful-to-sanity/commit/0f5cae5ad72481395158e38faab3b6dd93f7a8fb))
+- **deps:** update non-major ([#117](https://github.com/sanity-io/contentful-to-sanity/issues/117)) ([4633a94](https://github.com/sanity-io/contentful-to-sanity/commit/4633a94b0d0c9ce29e5a8d0864ff4bc8e381f151))
+- **deps:** update sanity monorepo to v3.10.3 ([#107](https://github.com/sanity-io/contentful-to-sanity/issues/107)) ([09036f2](https://github.com/sanity-io/contentful-to-sanity/commit/09036f23366c33ae4b12b8549561dea6ec5c312b))
+- **deps:** update sanity monorepo to v3.11.0 ([#109](https://github.com/sanity-io/contentful-to-sanity/issues/109)) ([ff08317](https://github.com/sanity-io/contentful-to-sanity/commit/ff08317a63e269f6076c1d3979f7da2191a3faa5))
+- **deps:** update sanity monorepo to v3.11.1 ([#113](https://github.com/sanity-io/contentful-to-sanity/issues/113)) ([4d14268](https://github.com/sanity-io/contentful-to-sanity/commit/4d14268c587634a2b9eae28efff0f18ea8784f70))
+
 ## [4.2.1](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.0...v4.2.1) (2023-05-08)
 
 ### Bug Fixes
