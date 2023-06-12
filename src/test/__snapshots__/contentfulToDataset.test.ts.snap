@@ -61925,10 +61925,28 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
           {
             "_key": "bb463b8b",
             "_type": "span",
-            "marks": [
-              "a27218b8",
-            ],
-            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(result.toString()) .show(); } @Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(\\"An error occurred: \\" + e.toString()) .show(); } @Override public void onNext(CDAArray array) { // Array received, maybe more to come. result = entry; } }",
+            "marks": [],
+            "text": "@Override public void onComplete() {
+        new AlertDialog.Builder(context)
+            .setTitle(\\"Contentful\\")
+            .setMessage(result.toString())
+            .show();
+      }
+
+      @Override public void onError(Throwable e) {
+        // Handle error case.
+        new AlertDialog.Builder(context)
+            .setTitle(\\"Contentful\\")
+            .setMessage(\\"An error occurred: \\" + e.toString())
+            .show();
+      }
+
+      @Override public void onNext(CDAArray array) {
+        // Array received, maybe more to come.
+        result = entry;
+      }
+    }
+",
           },
         ],
         "markDefs": [],
@@ -66669,10 +66687,28 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
           {
             "_key": "bb463b8b",
             "_type": "span",
-            "marks": [
-              "a27218b8",
-            ],
-            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(result.toString()) .show(); } @Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(\\"An error occurred: \\" + e.toString()) .show(); } @Override public void onNext(CDAArray array) { // Array received, maybe more to come. result = entry; } }",
+            "marks": [],
+            "text": "@Override public void onComplete() {
+        new AlertDialog.Builder(context)
+            .setTitle(\\"Contentful\\")
+            .setMessage(result.toString())
+            .show();
+      }
+
+      @Override public void onError(Throwable e) {
+        // Handle error case.
+        new AlertDialog.Builder(context)
+            .setTitle(\\"Contentful\\")
+            .setMessage(\\"An error occurred: \\" + e.toString())
+            .show();
+      }
+
+      @Override public void onNext(CDAArray array) {
+        // Array received, maybe more to come.
+        result = entry;
+      }
+    }
+",
           },
         ],
         "markDefs": [],
@@ -70947,10 +70983,28 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
           {
             "_key": "bb463b8b",
             "_type": "span",
-            "marks": [
-              "a27218b8",
-            ],
-            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(result.toString()) .show(); } @Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(\\"An error occurred: \\" + e.toString()) .show(); } @Override public void onNext(CDAArray array) { // Array received, maybe more to come. result = entry; } }",
+            "marks": [],
+            "text": "@Override public void onComplete() {
+        new AlertDialog.Builder(context)
+            .setTitle(\\"Contentful\\")
+            .setMessage(result.toString())
+            .show();
+      }
+
+      @Override public void onError(Throwable e) {
+        // Handle error case.
+        new AlertDialog.Builder(context)
+            .setTitle(\\"Contentful\\")
+            .setMessage(\\"An error occurred: \\" + e.toString())
+            .show();
+      }
+
+      @Override public void onNext(CDAArray array) {
+        // Array received, maybe more to come.
+        result = entry;
+      }
+    }
+",
           },
         ],
         "markDefs": [],
@@ -74154,10 +74208,28 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
           {
             "_key": "bb463b8b",
             "_type": "span",
-            "marks": [
-              "a27218b8",
-            ],
-            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(result.toString()) .show(); } @Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(\\"An error occurred: \\" + e.toString()) .show(); } @Override public void onNext(CDAArray array) { // Array received, maybe more to come. result = entry; } }",
+            "marks": [],
+            "text": "@Override public void onComplete() {
+        new AlertDialog.Builder(context)
+            .setTitle(\\"Contentful\\")
+            .setMessage(result.toString())
+            .show();
+      }
+
+      @Override public void onError(Throwable e) {
+        // Handle error case.
+        new AlertDialog.Builder(context)
+            .setTitle(\\"Contentful\\")
+            .setMessage(\\"An error occurred: \\" + e.toString())
+            .show();
+      }
+
+      @Override public void onNext(CDAArray array) {
+        // Array received, maybe more to come.
+        result = entry;
+      }
+    }
+",
           },
         ],
         "markDefs": [],
