@@ -28,7 +28,7 @@ npx contentful-to-sanity@latest --help
 ### 2. Setup a clean Sanity v3 Studio and connect it to, or create, the Sanity project and dataset you want as your destination:
 
 ```bash
-npm create sanity@latest -- --template clean --create-project "Your Project Name" --dataset production --output-path ./migrate
+npm create sanity@latest --template clean --create-project "Your Project Name" --dataset production --output-path ./migrate
 ```
 
 ### 3. Run the migration, which prepares a `dataset.ndjson` file for the later import step:
