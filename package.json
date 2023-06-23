@@ -83,7 +83,7 @@
     "@stdlib/assert-is-absolute-path": "0.0.8",
     "@stdlib/assert-is-relative-path": "0.0.8",
     "case": "1.6.3",
-    "commander": "10.0.1",
+    "commander": "11.0.0",
     "contentful-export": "7.19.59",
     "contentful-management": "10.37.0",
     "javascript-stringify": "2.1.0",
