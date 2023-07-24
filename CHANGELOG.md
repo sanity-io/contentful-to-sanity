@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.4](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.3...v4.2.4) (2023-07-24)
+
+### Bug Fixes
+
+- **deps:** bump prettier to v3 ([7e66755](https://github.com/sanity-io/contentful-to-sanity/commit/7e66755ad50ae7fc44912b41bfae97ef1908eed0))
+
 ## [4.2.3](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.2...v4.2.3) (2023-07-24)
 
 ### Bug Fixes
