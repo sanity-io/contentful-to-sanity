@@ -25,8 +25,8 @@ export async function contentfulToStudioSchema(
 
   // add object break schema
   if (
-    data.editorInterfaces?.some((editor) =>
-      editor.controls?.some((ctrl) => ctrl.widgetId === 'richTextEditor'),
+    data.editorInterfaces?.some(
+      (editor) => editor.controls?.some((ctrl) => ctrl.widgetId === 'richTextEditor'),
     )
   ) {
     const alreadyHasBreakSchema = schemas.some(({name}) => name === 'break')
