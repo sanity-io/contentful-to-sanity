@@ -5,6 +5,16 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.3](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.2...v4.2.3) (2023-07-24)
+
+### Bug Fixes
+
+- **deps:** update dependency commander to v11 ([#120](https://github.com/sanity-io/contentful-to-sanity/issues/120)) ([8bf4b33](https://github.com/sanity-io/contentful-to-sanity/commit/8bf4b336ff17033497db513a009c26607606e55d))
+- **deps:** update non-major ([#119](https://github.com/sanity-io/contentful-to-sanity/issues/119)) ([37f7933](https://github.com/sanity-io/contentful-to-sanity/commit/37f79339eb2ef4c4cdcdbddb32ef520278e409d4))
+- **deps:** update non-major ([#121](https://github.com/sanity-io/contentful-to-sanity/issues/121)) ([5b8a0ef](https://github.com/sanity-io/contentful-to-sanity/commit/5b8a0ef0cd73b7359ad310895e88899e22a1faef))
+- **deps:** update non-major ([#122](https://github.com/sanity-io/contentful-to-sanity/issues/122)) ([a66e441](https://github.com/sanity-io/contentful-to-sanity/commit/a66e441fae346ad51d93dce9da7d2c8daa7e8024))
+- **docs:** Quick fix of the `create` command ([a3353f6](https://github.com/sanity-io/contentful-to-sanity/commit/a3353f65af966f18b7953f44194ab91907352146))
+
 ## [4.2.2](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.1...v4.2.2) (2023-06-12)
 
 ### Bug Fixes
