@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.5](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.4...v4.2.5) (2023-07-26)
+
+### Bug Fixes
+
+- **deps:** update non-major ([#125](https://github.com/sanity-io/contentful-to-sanity/issues/125)) ([a27dbaf](https://github.com/sanity-io/contentful-to-sanity/commit/a27dbaf70075aa9cf2d0c0cf9b0c5021e2af8291))
+
 ## [4.2.4](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.3...v4.2.4) (2023-07-24)
 
 ### Bug Fixes
