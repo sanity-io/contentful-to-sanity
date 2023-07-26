@@ -106,9 +106,7 @@ export function makeProgram(opts: ProgramOptions = {}): Command {
   }
   if (opts.suppressOutput) {
     program.configureOutput({
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
       writeOut: () => {},
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
       writeErr: () => {},
     })
   }
