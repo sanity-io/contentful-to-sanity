@@ -19,7 +19,6 @@ export async function contentfulToStudioSchema(
   },
 ): Promise<string> {
   const schemas: (SanityDocumentSchema | SanityObjectSchema)[] = compact(
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     data.contentTypes!.map((type) => data && contentfulTypeToSanitySchema(type, data, opts)),
   )
 
