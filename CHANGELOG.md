@@ -5,6 +5,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.7](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.6...v4.2.7) (2023-10-10)
+
+### Bug Fixes
+
+- bump to LTS of node ([3b5fe7e](https://github.com/sanity-io/contentful-to-sanity/commit/3b5fe7e1e2ad19caf5e965de0cc214f02c27da73))
+- **deps:** Update dependency contentful-management to v11 ([#133](https://github.com/sanity-io/contentful-to-sanity/issues/133)) ([2b37368](https://github.com/sanity-io/contentful-to-sanity/commit/2b37368806af06670c6b81ac8318154b2ea33c53))
+
 ## [4.2.6](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.5...v4.2.6) (2023-08-21)
 
 ### Bug Fixes
