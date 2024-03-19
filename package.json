@@ -92,7 +92,7 @@
     "just-omit": "2.2.0",
     "just-safe-get": "4.2.0",
     "just-safe-set": "4.2.1",
-    "markdown-it": "13.0.2",
+    "markdown-it": "14.1.0",
     "mkdirp": "3.0.1",
     "node-fetch": "^2.6.7",
     "object-hash": "^3.0.0",
