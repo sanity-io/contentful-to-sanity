@@ -80,7 +80,7 @@
     "@sanity/block-tools": "3.36.4",
     "@sanity/client": "6.15.11",
     "@sanity/schema": "3.36.4",
-    "@stdlib/assert-is-absolute-path": "0.1.1",
+    "@stdlib/assert-is-absolute-path": "0.2.1",
     "@stdlib/assert-is-relative-path": "0.2.1",
     "case": "1.6.3",
     "commander": "12.0.0",
