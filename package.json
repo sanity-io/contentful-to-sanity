@@ -105,7 +105,7 @@
     "zod-validation-error": "3.1.0"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.1.0",
+    "@faker-js/faker": "^8.4.1",
     "@sanity/pkg-utils": "^4.4.4",
     "@sanity/semantic-release-preset": "^4.1.4",
     "@sanity/types": "^3.36.4",
