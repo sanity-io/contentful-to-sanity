@@ -40,7 +40,7 @@
   "typesVersions": {
     "*": {
       "cli": [
-        "./dist/cli.d.ts"
+        "./dist/cli.d.cts"
       ]
     }
   },
