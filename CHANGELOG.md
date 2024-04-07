@@ -5,6 +5,20 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.8](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.7...v4.2.8) (2024-04-07)
+
+### Bug Fixes
+
+- **deps:** Update dependency @sanity/client to v6.15.11 ([#170](https://github.com/sanity-io/contentful-to-sanity/issues/170)) ([b325acd](https://github.com/sanity-io/contentful-to-sanity/commit/b325acdf0d669d0dc5a99111d5f61f509974c90b))
+- **deps:** Update dependency @stdlib/assert-is-absolute-path to v0.2.1 ([#171](https://github.com/sanity-io/contentful-to-sanity/issues/171)) ([7cc3208](https://github.com/sanity-io/contentful-to-sanity/commit/7cc320833e0c0827f8b8b2ec87413791dae3c564))
+- **deps:** Update dependency @stdlib/assert-is-relative-path to v0.2.1 ([#172](https://github.com/sanity-io/contentful-to-sanity/issues/172)) ([c5ced48](https://github.com/sanity-io/contentful-to-sanity/commit/c5ced488c5e23559f4a2eb36d7af5bcbddc666a2))
+- **deps:** Update dependency commander to v12 ([#149](https://github.com/sanity-io/contentful-to-sanity/issues/149)) ([6936a36](https://github.com/sanity-io/contentful-to-sanity/commit/6936a364893a5e5af9e32d9e6437be63024cb4db))
+- **deps:** Update dependency contentful-management to v11.24.3 ([#173](https://github.com/sanity-io/contentful-to-sanity/issues/173)) ([49f4877](https://github.com/sanity-io/contentful-to-sanity/commit/49f48772b62a28daff6a12304e5fa3665491bf5c))
+- **deps:** Update dependency markdown-it to v14 ([#141](https://github.com/sanity-io/contentful-to-sanity/issues/141)) ([f8557bc](https://github.com/sanity-io/contentful-to-sanity/commit/f8557bc9d1abf920f0720bca749c6e3b3b971f7d))
+- **deps:** Update dependency tiny-invariant to v1.3.3 ([#165](https://github.com/sanity-io/contentful-to-sanity/issues/165)) ([47020f6](https://github.com/sanity-io/contentful-to-sanity/commit/47020f6d24e0490755fdcaa331916d5b610b15f1))
+- **deps:** Update dependency zod-validation-error to v3 ([#147](https://github.com/sanity-io/contentful-to-sanity/issues/147)) ([f48ac68](https://github.com/sanity-io/contentful-to-sanity/commit/f48ac68f716a30bf7e78e205f1b9a49d6f8760c2))
+- **deps:** Update sanity monorepo to v3.36.4 ([#175](https://github.com/sanity-io/contentful-to-sanity/issues/175)) ([7757fed](https://github.com/sanity-io/contentful-to-sanity/commit/7757fedfef68f2b7a073608da4b6d7489be45f3f))
+
 ## [4.2.7](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.6...v4.2.7) (2023-10-10)
 
 ### Bug Fixes
