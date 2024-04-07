@@ -45,7 +45,9 @@ describe('contentful-to-sanity [command] <outdir>', () => {
     test('<outdir>', () => {
       expect(() =>
         fab(['export', ...mockData.spaceId, ...mockData.mgmtToken, ...mockData.accessToken]),
-      ).toThrowErrorMatchingInlineSnapshot(`[CommanderError: error: missing required argument 'outdir']`)
+      ).toThrowErrorMatchingInlineSnapshot(
+        `[CommanderError: error: missing required argument 'outdir']`,
+      )
       expect(defaultActions.exportAction).not.toHaveBeenCalled()
 
       fab([
@@ -189,7 +191,9 @@ describe('contentful-to-sanity [command] <outdir>', () => {
     test('<outdir>', () => {
       expect(() =>
         fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken, ...mockData.accessToken]),
-      ).toThrowErrorMatchingInlineSnapshot(`[CommanderError: error: missing required argument 'outdir']`)
+      ).toThrowErrorMatchingInlineSnapshot(
+        `[CommanderError: error: missing required argument 'outdir']`,
+      )
       expect(defaultActions.batchAction).not.toHaveBeenCalled()
 
       fab([

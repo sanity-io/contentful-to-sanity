@@ -24,8 +24,8 @@ export function localeDataFromExport(
     useMultiLocale
       ? (data.locales ?? []).map(({code}) => code)
       : opts.locale
-      ? [opts.locale]
-      : compact([defaultLocale?.code])
+        ? [opts.locale]
+        : compact([defaultLocale?.code])
   ).filter((code) => data?.locales?.some((locale) => locale.code === code))
 
   if (!defaultLocale) {
