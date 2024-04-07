@@ -106,7 +106,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.1.0",
-    "@sanity/pkg-utils": "^4.4.2",
+    "@sanity/pkg-utils": "^4.4.4",
     "@sanity/semantic-release-preset": "^4.1.4",
     "@sanity/types": "^3.17.0",
     "@types/fs-extra": "^11.0.2",
