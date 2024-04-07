@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.9](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.8...v4.2.9) (2024-04-07)
+
+### Bug Fixes
+
+- use the right `typesVersions` export ([9d54c21](https://github.com/sanity-io/contentful-to-sanity/commit/9d54c21ecfb0fd9b7e1535b27b89d367c493f2d7))
+
 ## [4.2.8](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.7...v4.2.8) (2024-04-07)
 
 ### Bug Fixes
