@@ -1703,7 +1703,7 @@ export const authorType = defineType({
       type: 'string',
       title: 'Email',
       hidden: false,
-      validation: (Rule) => Rule.regex(/^\\\\w[\\\\w.-]*@([\\\\w-]+\\\\.)+[\\\\w-]+$/, {invert: false}),
+      validation: (Rule) => Rule.regex(/^\\w[\\w.-]*@([\\w-]+\\.)+[\\w-]+$/, {invert: false}),
     }),
     defineField({
       type: 'boolean',
@@ -1875,7 +1875,7 @@ export const authorType = {
       type: 'string',
       title: 'Email',
       hidden: false,
-      validation: (Rule) => Rule.regex(/^\\\\w[\\\\w.-]*@([\\\\w-]+\\\\.)+[\\\\w-]+$/, {invert: false}),
+      validation: (Rule) => Rule.regex(/^\\w[\\w.-]*@([\\w-]+\\.)+[\\w-]+$/, {invert: false}),
     },
     {
       type: 'boolean',
@@ -2060,7 +2060,7 @@ export const authorType = defineType({
       type: 'string',
       title: 'Email',
       hidden: false,
-      validation: (Rule) => Rule.regex(/^\\\\w[\\\\w.-]*@([\\\\w-]+\\\\.)+[\\\\w-]+$/, {invert: false}),
+      validation: (Rule) => Rule.regex(/^\\w[\\w.-]*@([\\w-]+\\.)+[\\w-]+$/, {invert: false}),
     }),
     defineField({
       type: 'boolean',
@@ -2245,7 +2245,7 @@ export const authorType = defineType({
       type: 'string',
       title: 'Email',
       hidden: false,
-      validation: (Rule) => Rule.regex(/^\\\\w[\\\\w.-]*@([\\\\w-]+\\\\.)+[\\\\w-]+$/, {invert: false}),
+      validation: (Rule) => Rule.regex(/^\\w[\\w.-]*@([\\w-]+\\.)+[\\w-]+$/, {invert: false}),
     }),
     defineField({
       type: 'boolean',
@@ -7627,7 +7627,7 @@ export const kbAppArticleType = defineType({
       type: 'slug',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\/\\-]+$/, {invert: false}),
       options: {source: 'title'},
     }),
     defineField({
@@ -7769,7 +7769,7 @@ export const kbAppCategoryType = defineType({
       type: 'string',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\/\\-]+$/, {invert: false}),
     }),
     defineField({
       name: 'previewDescription',
@@ -7963,7 +7963,7 @@ export const kbAppArticleType = {
       type: 'slug',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\/\\-]+$/, {invert: false}),
       options: {source: 'title'},
     },
     {
@@ -8105,7 +8105,7 @@ export const kbAppCategoryType = {
       type: 'string',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\/\\-]+$/, {invert: false}),
     },
     {
       name: 'previewDescription',
@@ -8300,7 +8300,7 @@ export const kbAppArticleType = defineType({
       type: 'slug',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\/\\-]+$/, {invert: false}),
       options: {source: 'title'},
     }),
     defineField({
@@ -8442,7 +8442,7 @@ export const kbAppCategoryType = defineType({
       type: 'string',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\/\\-]+$/, {invert: false}),
     }),
     defineField({
       name: 'previewDescription',
@@ -8637,7 +8637,7 @@ export const kbAppArticleType = defineType({
       type: 'slug',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\/\\-]+$/, {invert: false}),
       options: {source: 'title'},
     }),
     defineField({
@@ -8779,7 +8779,7 @@ export const kbAppCategoryType = defineType({
       type: 'string',
       title: 'Slug',
       hidden: false,
-      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\\\/\\\\-]+$/, {invert: false}),
+      validation: (Rule) => Rule.required().regex(/^[a-z0-9_\\/\\-]+$/, {invert: false}),
     }),
     defineField({
       name: 'previewDescription',
@@ -9042,7 +9042,7 @@ export const seoMetadataType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -9159,7 +9159,7 @@ export const productTileType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -9353,7 +9353,7 @@ export const navigationSectionType = defineType({
           type: 'string',
           validation: (Rule) =>
             Rule.regex(
-              /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+              /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
               {invert: false},
             ),
         },
@@ -9550,7 +9550,7 @@ export const navigationLinkType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -9797,7 +9797,7 @@ export const seoMetadataType = {
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     },
@@ -9896,7 +9896,7 @@ export const productTileType = {
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     },
@@ -10078,7 +10078,7 @@ export const navigationSectionType = {
           type: 'string',
           validation: (Rule) =>
             Rule.regex(
-              /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+              /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
               {invert: false},
             ),
         },
@@ -10269,7 +10269,7 @@ export const navigationLinkType = {
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     },
@@ -10526,7 +10526,7 @@ export const seoMetadataType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -10643,7 +10643,7 @@ export const productTileType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -10837,7 +10837,7 @@ export const navigationSectionType = defineType({
           type: 'string',
           validation: (Rule) =>
             Rule.regex(
-              /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+              /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
               {invert: false},
             ),
         },
@@ -11034,7 +11034,7 @@ export const navigationLinkType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -11297,7 +11297,7 @@ export const seoMetadataType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -11414,7 +11414,7 @@ export const productTileType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -11608,7 +11608,7 @@ export const navigationSectionType = defineType({
           type: 'string',
           validation: (Rule) =>
             Rule.regex(
-              /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+              /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
               {invert: false},
             ),
         },
@@ -11805,7 +11805,7 @@ export const navigationLinkType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -12762,7 +12762,7 @@ export const productType = defineType({
       description: 'Add a link to the website where a product is sold',
       validation: (Rule) =>
         Rule.regex(
-          /\\\\b((?:[a-z][\\\\w-]+:(?:\\\\/{1,3}|[a-z0-9%])|www\\\\d{0,3}[.]|[a-z0-9.\\\\-]+[.][a-z]{2,4}\\\\/)(?:[^\\\\s()<>]+|\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\))+(?:\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\)|[^\\\\s\`!()\\\\[\\\\]{};:'\\".,<>?«»“”‘’]))/,
+          /\\b((?:[a-z][\\w-]+:(?:\\/{1,3}|[a-z0-9%])|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}\\/)(?:[^\\s()<>]+|\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\))+(?:\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\)|[^\\s\`!()\\[\\]{};:'".,<>?«»“”‘’]))/,
           {invert: false},
         ),
     }),
@@ -12806,7 +12806,7 @@ export const brandType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /\\\\b((?:[a-z][\\\\w-]+:(?:\\\\/{1,3}|[a-z0-9%])|www\\\\d{0,3}[.]|[a-z0-9.\\\\-]+[.][a-z]{2,4}\\\\/)(?:[^\\\\s()<>]+|\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\))+(?:\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\)|[^\\\\s\`!()\\\\[\\\\]{};:'\\".,<>?«»“”‘’]))/,
+          /\\b((?:[a-z][\\w-]+:(?:\\/{1,3}|[a-z0-9%])|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}\\/)(?:[^\\s()<>]+|\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\))+(?:\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\)|[^\\s\`!()\\[\\]{};:'".,<>?«»“”‘’]))/,
           {invert: false},
         ),
     }),
@@ -12816,7 +12816,7 @@ export const brandType = defineType({
       type: 'string',
       title: 'Email',
       hidden: false,
-      validation: (Rule) => Rule.regex(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,4}$/, {invert: false}),
+      validation: (Rule) => Rule.regex(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/, {invert: false}),
     }),
     defineField({
       name: 'phone',
@@ -12945,7 +12945,7 @@ export const productType = {
       description: 'Add a link to the website where a product is sold',
       validation: (Rule) =>
         Rule.regex(
-          /\\\\b((?:[a-z][\\\\w-]+:(?:\\\\/{1,3}|[a-z0-9%])|www\\\\d{0,3}[.]|[a-z0-9.\\\\-]+[.][a-z]{2,4}\\\\/)(?:[^\\\\s()<>]+|\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\))+(?:\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\)|[^\\\\s\`!()\\\\[\\\\]{};:'\\".,<>?«»“”‘’]))/,
+          /\\b((?:[a-z][\\w-]+:(?:\\/{1,3}|[a-z0-9%])|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}\\/)(?:[^\\s()<>]+|\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\))+(?:\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\)|[^\\s\`!()\\[\\]{};:'".,<>?«»“”‘’]))/,
           {invert: false},
         ),
     },
@@ -12989,7 +12989,7 @@ export const brandType = {
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /\\\\b((?:[a-z][\\\\w-]+:(?:\\\\/{1,3}|[a-z0-9%])|www\\\\d{0,3}[.]|[a-z0-9.\\\\-]+[.][a-z]{2,4}\\\\/)(?:[^\\\\s()<>]+|\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\))+(?:\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\)|[^\\\\s\`!()\\\\[\\\\]{};:'\\".,<>?«»“”‘’]))/,
+          /\\b((?:[a-z][\\w-]+:(?:\\/{1,3}|[a-z0-9%])|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}\\/)(?:[^\\s()<>]+|\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\))+(?:\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\)|[^\\s\`!()\\[\\]{};:'".,<>?«»“”‘’]))/,
           {invert: false},
         ),
     },
@@ -12999,7 +12999,7 @@ export const brandType = {
       type: 'string',
       title: 'Email',
       hidden: false,
-      validation: (Rule) => Rule.regex(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,4}$/, {invert: false}),
+      validation: (Rule) => Rule.regex(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/, {invert: false}),
     },
     {name: 'phone', type: 'array', of: [{type: 'string'}], title: 'Phone #', hidden: false},
     {
@@ -13129,7 +13129,7 @@ export const productType = defineType({
       description: 'Add a link to the website where a product is sold',
       validation: (Rule) =>
         Rule.regex(
-          /\\\\b((?:[a-z][\\\\w-]+:(?:\\\\/{1,3}|[a-z0-9%])|www\\\\d{0,3}[.]|[a-z0-9.\\\\-]+[.][a-z]{2,4}\\\\/)(?:[^\\\\s()<>]+|\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\))+(?:\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\)|[^\\\\s\`!()\\\\[\\\\]{};:'\\".,<>?«»“”‘’]))/,
+          /\\b((?:[a-z][\\w-]+:(?:\\/{1,3}|[a-z0-9%])|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}\\/)(?:[^\\s()<>]+|\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\))+(?:\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\)|[^\\s\`!()\\[\\]{};:'".,<>?«»“”‘’]))/,
           {invert: false},
         ),
     }),
@@ -13173,7 +13173,7 @@ export const brandType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /\\\\b((?:[a-z][\\\\w-]+:(?:\\\\/{1,3}|[a-z0-9%])|www\\\\d{0,3}[.]|[a-z0-9.\\\\-]+[.][a-z]{2,4}\\\\/)(?:[^\\\\s()<>]+|\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\))+(?:\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\)|[^\\\\s\`!()\\\\[\\\\]{};:'\\".,<>?«»“”‘’]))/,
+          /\\b((?:[a-z][\\w-]+:(?:\\/{1,3}|[a-z0-9%])|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}\\/)(?:[^\\s()<>]+|\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\))+(?:\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\)|[^\\s\`!()\\[\\]{};:'".,<>?«»“”‘’]))/,
           {invert: false},
         ),
     }),
@@ -13183,7 +13183,7 @@ export const brandType = defineType({
       type: 'string',
       title: 'Email',
       hidden: false,
-      validation: (Rule) => Rule.regex(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,4}$/, {invert: false}),
+      validation: (Rule) => Rule.regex(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/, {invert: false}),
     }),
     defineField({
       name: 'phone',
@@ -13313,7 +13313,7 @@ export const productType = defineType({
       description: 'Add a link to the website where a product is sold',
       validation: (Rule) =>
         Rule.regex(
-          /\\\\b((?:[a-z][\\\\w-]+:(?:\\\\/{1,3}|[a-z0-9%])|www\\\\d{0,3}[.]|[a-z0-9.\\\\-]+[.][a-z]{2,4}\\\\/)(?:[^\\\\s()<>]+|\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\))+(?:\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\)|[^\\\\s\`!()\\\\[\\\\]{};:'\\".,<>?«»“”‘’]))/,
+          /\\b((?:[a-z][\\w-]+:(?:\\/{1,3}|[a-z0-9%])|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}\\/)(?:[^\\s()<>]+|\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\))+(?:\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\)|[^\\s\`!()\\[\\]{};:'".,<>?«»“”‘’]))/,
           {invert: false},
         ),
     }),
@@ -13351,7 +13351,7 @@ export const brandType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /\\\\b((?:[a-z][\\\\w-]+:(?:\\\\/{1,3}|[a-z0-9%])|www\\\\d{0,3}[.]|[a-z0-9.\\\\-]+[.][a-z]{2,4}\\\\/)(?:[^\\\\s()<>]+|\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\))+(?:\\\\(([^\\\\s()<>]+|(\\\\([^\\\\s()<>]+\\\\)))*\\\\)|[^\\\\s\`!()\\\\[\\\\]{};:'\\".,<>?«»“”‘’]))/,
+          /\\b((?:[a-z][\\w-]+:(?:\\/{1,3}|[a-z0-9%])|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}\\/)(?:[^\\s()<>]+|\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\))+(?:\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\)|[^\\s\`!()\\[\\]{};:'".,<>?«»“”‘’]))/,
           {invert: false},
         ),
     }),
@@ -13361,7 +13361,7 @@ export const brandType = defineType({
       type: 'string',
       title: 'Email',
       hidden: false,
-      validation: (Rule) => Rule.regex(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,4}$/, {invert: false}),
+      validation: (Rule) => Rule.regex(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/, {invert: false}),
     }),
     defineField({
       name: 'phone',
@@ -14952,7 +14952,7 @@ export const projectsType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -15121,7 +15121,7 @@ export const blogType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -15152,7 +15152,7 @@ export const socialLinkType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -15445,7 +15445,7 @@ export const talksType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.required().regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -15692,7 +15692,7 @@ export const projectsType = {
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     },
@@ -15855,7 +15855,7 @@ export const blogType = {
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     },
@@ -15886,7 +15886,7 @@ export const socialLinkType = {
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     },
@@ -16179,7 +16179,7 @@ export const talksType = {
       hidden: false,
       validation: (Rule) =>
         Rule.required().regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     },
@@ -16427,7 +16427,7 @@ export const projectsType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -16596,7 +16596,7 @@ export const blogType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -16627,7 +16627,7 @@ export const socialLinkType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -16920,7 +16920,7 @@ export const talksType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.required().regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -17168,7 +17168,7 @@ export const projectsType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -17337,7 +17337,7 @@ export const blogType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -17368,7 +17368,7 @@ export const socialLinkType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -17661,7 +17661,7 @@ export const talksType = defineType({
       hidden: false,
       validation: (Rule) =>
         Rule.required().regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$/,
           {invert: false},
         ),
     }),
@@ -18728,7 +18728,7 @@ export const courseType = defineType({
       title: 'Skill Level',
       hidden: false,
       description:
-        \\"The target audiences' level in the learning journey that this course is designed for.\\",
+        "The target audiences' level in the learning journey that this course is designed for.",
       validation: (Rule) =>
         Rule.required().custom((value) =>
           validateIn(['beginner', 'intermediate', 'advanced'], value),
@@ -18813,7 +18813,7 @@ export const layoutCopyType = defineType({
       description: 'The link which the call to action directs your user to.',
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-\\\\/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-\\/]))?$/,
           {invert: false},
         ).uri({
           allowCredentials: true,
@@ -19300,7 +19300,7 @@ export const courseType = {
       title: 'Skill Level',
       hidden: false,
       description:
-        \\"The target audiences' level in the learning journey that this course is designed for.\\",
+        "The target audiences' level in the learning journey that this course is designed for.",
       validation: (Rule) =>
         Rule.required().custom((value) =>
           validateIn(['beginner', 'intermediate', 'advanced'], value),
@@ -19385,7 +19385,7 @@ export const layoutCopyType = {
       description: 'The link which the call to action directs your user to.',
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-\\\\/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-\\/]))?$/,
           {invert: false},
         ).uri({
           allowCredentials: true,
@@ -19873,7 +19873,7 @@ export const courseType = defineType({
       title: 'Skill Level',
       hidden: false,
       description:
-        \\"The target audiences' level in the learning journey that this course is designed for.\\",
+        "The target audiences' level in the learning journey that this course is designed for.",
       validation: (Rule) =>
         Rule.required().custom((value) =>
           validateIn(['beginner', 'intermediate', 'advanced'], value),
@@ -19958,7 +19958,7 @@ export const layoutCopyType = defineType({
       description: 'The link which the call to action directs your user to.',
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-\\\\/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-\\/]))?$/,
           {invert: false},
         ).uri({
           allowCredentials: true,
@@ -20390,7 +20390,7 @@ export const courseType = defineType({
       title: 'Skill Level',
       hidden: false,
       description:
-        \\"The target audiences' level in the learning journey that this course is designed for.\\",
+        "The target audiences' level in the learning journey that this course is designed for.",
       validation: (Rule) =>
         Rule.required().custom((value) =>
           validateIn(['beginner', 'intermediate', 'advanced'], value),
@@ -20474,7 +20474,7 @@ export const layoutCopyType = defineType({
       description: 'The link which the call to action directs your user to.',
       validation: (Rule) =>
         Rule.regex(
-          /^(ftp|http|https):\\\\/\\\\/(\\\\w+:{0,1}\\\\w*@)?(\\\\S+)(:[0-9]+)?(\\\\/|\\\\/([\\\\w#!:.?+=&%@!\\\\-\\\\/]))?$/,
+          /^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-\\/]))?$/,
           {invert: false},
         ).uri({
           allowCredentials: true,

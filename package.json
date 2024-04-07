@@ -21,14 +21,12 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
       "source": "./src/index.ts",
-      "require": "./dist/index.cjs",
       "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     },
     "./cli": {
-      "types": "./dist/cli.d.ts",
       "source": "./src/cli/index.ts",
       "require": "./dist/cli.cjs",
       "default": "./dist/cli.cjs"
@@ -63,10 +61,7 @@
     "test": "npx cross-env TZ=UTC vitest",
     "typecheck": "tsc --noEmit"
   },
-  "browserslist": [
-    "> 0.2% and supports es6-module and supports es6-module-dynamic-import and not dead and not IE 11",
-    "maintained node versions"
-  ],
+  "browserslist": "extends @sanity/browserslist-config",
   "prettier": {
     "arrowParens": "always",
     "bracketSpacing": false,
@@ -106,6 +101,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
+    "@sanity/browserslist-config": "^1.0.3",
     "@sanity/pkg-utils": "^5.1.11",
     "@sanity/semantic-release-preset": "^4.1.7",
     "@sanity/types": "^3.36.4",
