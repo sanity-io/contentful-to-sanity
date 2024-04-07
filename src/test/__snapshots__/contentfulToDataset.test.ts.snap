@@ -2597,7 +2597,7 @@ exports[`contentfulToDataset > blog.json 1`] = `
     "_updatedAt": "2023-03-09T06:09:17.829Z",
     "email": "freddy@johansen.net",
     "name": "Freddy Johansen",
-    "seo": "{\\"foo\\":\\"bar\\"}",
+    "seo": "{"foo":"bar"}",
   },
   {
     "_createdAt": "2023-03-09T06:09:28.207Z",
@@ -2782,7 +2782,7 @@ exports[`contentfulToDataset > blog.json 2`] = `
     "_updatedAt": "2023-03-09T06:09:17.829Z",
     "email": "freddy@johansen.net",
     "name": "Freddy Johansen",
-    "seo": "{\\"foo\\":\\"bar\\"}",
+    "seo": "{"foo":"bar"}",
   },
   {
     "__i18n_lang": "en-US",
@@ -2965,7 +2965,7 @@ exports[`contentfulToDataset > blog.json 3`] = `
     "_updatedAt": "2023-03-09T06:09:17.829Z",
     "email": "freddy@johansen.net",
     "name": "Freddy Johansen",
-    "seo": "{\\"foo\\":\\"bar\\"}",
+    "seo": "{"foo":"bar"}",
   },
   {
     "_createdAt": "2023-03-09T06:09:28.207Z",
@@ -3144,7 +3144,7 @@ exports[`contentfulToDataset > blog.json 4`] = `
     "_updatedAt": "2023-03-09T06:09:17.829Z",
     "email": "freddy@johansen.net",
     "name": "Freddy Johansen",
-    "seo": "{\\"foo\\":\\"bar\\"}",
+    "seo": "{"foo":"bar"}",
   },
   {
     "_createdAt": "2023-03-09T06:09:28.207Z",
@@ -3323,7 +3323,7 @@ exports[`contentfulToDataset > blog.json 5`] = `
     "_updatedAt": "2023-03-09T06:09:17.829Z",
     "email": "freddy@johansen.net",
     "name": "Freddy Johansen",
-    "seo": "{\\"foo\\":\\"bar\\"}",
+    "seo": "{"foo":"bar"}",
   },
   {
     "_createdAt": "2023-03-09T06:09:28.207Z",
@@ -9969,7 +9969,7 @@ exports[`contentfulToDataset > complex-blog.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -10107,7 +10107,7 @@ exports[`contentfulToDataset > complex-blog.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -10262,7 +10262,7 @@ exports[`contentfulToDataset > complex-blog.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -10974,7 +10974,7 @@ exports[`contentfulToDataset > complex-blog.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -11114,7 +11114,7 @@ exports[`contentfulToDataset > complex-blog.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -11269,7 +11269,7 @@ exports[`contentfulToDataset > complex-blog.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -11975,7 +11975,7 @@ exports[`contentfulToDataset > complex-blog.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -12113,7 +12113,7 @@ exports[`contentfulToDataset > complex-blog.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -12268,7 +12268,7 @@ exports[`contentfulToDataset > complex-blog.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -12974,7 +12974,7 @@ exports[`contentfulToDataset > complex-blog.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -13112,7 +13112,7 @@ exports[`contentfulToDataset > complex-blog.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -13267,7 +13267,7 @@ exports[`contentfulToDataset > complex-blog.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -13428,7 +13428,7 @@ Go to Settings → Webhooks from the navigation bar at the top. From there, hit 
 
 As the delivery API is powered by a CDN network consisting of hundreds of servers distributed across continents, it takes some time (up to a few minutes) to reflect the changes to the published content. This must be taken into consideration when reacting to webhooks. In normal conditions, there could be a reasonable delay of 2 to 5 minutes.
 
-Extracted from the [Webhooks FAQ](https://www.contentful.com/faq/webhooks/ \\"Webhooks FAQ\\").",
+Extracted from the [Webhooks FAQ](https://www.contentful.com/faq/webhooks/ "Webhooks FAQ").",
     "description": "Webhooks notify you, another person or system when resources have changed by calling a given HTTP endpoint.",
     "heroImage": {
       "_sanityAsset": "image@https://images.contentful.com/28p9vvm1oxuw/4shwYI3POEGkw0Eg6kcyaQ/eeaa6df85fb4452ea69ad18c98ffc015/felix-russell-saw-112140.jpg",
@@ -13454,31 +13454,31 @@ Extracted from the [Webhooks FAQ](https://www.contentful.com/faq/webhooks/ \\"We
       "_type": "reference",
       "_weak": false,
     },
-    "body": "These is your very first content with Contentful, pulled in JSON format using the [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/ \\"Content Delivery API\\"). Content and presentation are now decoupled, allowing you to focus your efforts in building the perfect app.
+    "body": "These is your very first content with Contentful, pulled in JSON format using the [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/ "Content Delivery API"). Content and presentation are now decoupled, allowing you to focus your efforts in building the perfect app.
 
 ## Your first steps
 
-Building with Contentful is easy. First take a moment to get [the basics of content modelling](https://www.contentful.com/r/knowledgebase/content-modelling-basics/ \\"the basics of content modelling\\"), which you can set up in the [Contentful Web app](https://app.contentful.com/ \\"Contentful Web app\\"). Once you get that, feel free to drop by the [Documentation](https://www.contentful.com/developers/docs/ \\"Documentation\\") to learn a bit more about how to build your app with Contentful, in particular the [API basics](https://www.contentful.com/developers/docs/concepts/apis/ \\"API basics\\") and each one of our four APIs, as shown below.
+Building with Contentful is easy. First take a moment to get [the basics of content modelling](https://www.contentful.com/r/knowledgebase/content-modelling-basics/ "the basics of content modelling"), which you can set up in the [Contentful Web app](https://app.contentful.com/ "Contentful Web app"). Once you get that, feel free to drop by the [Documentation](https://www.contentful.com/developers/docs/ "Documentation") to learn a bit more about how to build your app with Contentful, in particular the [API basics](https://www.contentful.com/developers/docs/concepts/apis/ "API basics") and each one of our four APIs, as shown below.
 
 ### Content Delivery API
 
-The [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/ \\"Content Delivery API\\") (CDA), available at \`cdn.contentful.com\`, is a read-only API for delivering content from Contentful to apps, websites and other media. Content is delivered as JSON data, and images, videos and other media as files.
+The [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/ "Content Delivery API") (CDA), available at \`cdn.contentful.com\`, is a read-only API for delivering content from Contentful to apps, websites and other media. Content is delivered as JSON data, and images, videos and other media as files.
 The API is available via a globally distributed content delivery network. The server closest to the user serves all content, both JSON and binary. This minimizes latency, which especially benefits mobile apps. Hosting content in multiple global data centers also greatly improves the availability of content.
 
 ### Content Management API
 
-The [Content Management API](https://www.contentful.com/developers/docs/references/content-management-api/ \\"Content Management API\\") (CMA), available at \`api.contentful.com\`, is a read-write API for managing content. Unlike the Content Delivery API, the management API requires you to authenticate as a Contentful user. You could use the CMA for several use cases, such as:
+The [Content Management API](https://www.contentful.com/developers/docs/references/content-management-api/ "Content Management API") (CMA), available at \`api.contentful.com\`, is a read-write API for managing content. Unlike the Content Delivery API, the management API requires you to authenticate as a Contentful user. You could use the CMA for several use cases, such as:
 * Automatic imports from different CMSes like WordPress or Drupal.
 * Integration with other backend systems, such as an e-commerce shop.
-* Building custom editing experiences. We built the [Contentful Web app](https://app.contentful.com/ \\"Contentful Web app\\") on top of this API.
+* Building custom editing experiences. We built the [Contentful Web app](https://app.contentful.com/ "Contentful Web app") on top of this API.
 
 ### Preview API
 
-The [Content Preview API](https://www.contentful.com/developers/docs/concepts/apis/#content-preview-api \\"Content Preview API\\"), available at \`preview.contentful.com\`, is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.
+The [Content Preview API](https://www.contentful.com/developers/docs/concepts/apis/#content-preview-api "Content Preview API"), available at \`preview.contentful.com\`, is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.
 
 ### Images API
 
-The [Images API](https://www.contentful.com/developers/docs/concepts/apis/#images-api \\"Images API\\"), available at \`images.contentful.com\`, allows you to resize and crop images, change their background color and convert them to different formats. Using our API for these transformations lets you upload high-quality assets, deliver exactly what your app needs, and still get all the benefits of our caching CDN.",
+The [Images API](https://www.contentful.com/developers/docs/concepts/apis/#images-api "Images API"), available at \`images.contentful.com\`, allows you to resize and crop images, change their background color and convert them to different formats. Using our API for these transformations lets you upload high-quality assets, deliver exactly what your app needs, and still get all the benefits of our caching CDN.",
     "description": "Your very first content with Contentful, pulled in JSON format using the Content Delivery API.",
     "heroImage": {
       "_sanityAsset": "image@https://images.contentful.com/28p9vvm1oxuw/6Od9v3wzLOysiMum0Wkmme/95675d379a1284015a8210ca66cc53a5/cameron-kirby-88711.jpg",
@@ -13506,7 +13506,7 @@ The [Images API](https://www.contentful.com/developers/docs/concepts/apis/#image
     },
     "body": "## The case for the static site generator
 
-More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.
+More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.
 
 It just so happens that static site generators are mostly loved by developers, but not by the average Joe. They do not offer WYSIWYG, previewing on demo sites may take an update cycle, they are often based on markdown text files, and they require some knowledge of modern day repositories.
 
@@ -13514,16 +13514,16 @@ Moreover, when teams are collaborating, it can get complicated quickly. Has this
 
 ## Content APIs to the rescue
 
-An alternative is decoupling the content management aspect from the system. And then replacing the maintenance prone server with a cloud based web service offering. Effectively, instead of your CMS of old, you move to a [Content Management as a Service (CMaaS)](https://www.contentful.com/r/knowledgebase/content-as-a-service/ \\"Content Management as a Service (CMaaS)\\") world, with a content API to deliver all your content. That way, you get the all the [benefits of content management features](http://www.digett.com/blog/01/16/2014/pairing-static-websites-cms \\"benefits of content management features\\") while still being able to embrace the static site generator mantra.
+An alternative is decoupling the content management aspect from the system. And then replacing the maintenance prone server with a cloud based web service offering. Effectively, instead of your CMS of old, you move to a [Content Management as a Service (CMaaS)](https://www.contentful.com/r/knowledgebase/content-as-a-service/ "Content Management as a Service (CMaaS)") world, with a content API to deliver all your content. That way, you get the all the [benefits of content management features](http://www.digett.com/blog/01/16/2014/pairing-static-websites-cms "benefits of content management features") while still being able to embrace the static site generator mantra.
 
 It so happens that Contentful is offering just that kind of content API. A service that
 
 * from the ground up has been designed to be fast, scalable, secure, and offer high uptime, so that you don’t have to worry about maintenance ever again.
 * offers a powerful editor and lots of flexibility in creating templates for your documents that your editors can reuse and combine, so that no developers resources are required in everyday writing and updating tasks.
-* separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").
+* separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").
 * offers webhooks that you can use to rebuild your static site in a fully automated fashion every time your content is modified.
 
-Extracted from the article [CMS-functionality for static site generators](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/ \\"CMS-functionality for static site generators\\"). Read more about the [static site generators supported by Contentful](https://www.contentful.com/developers/docs/tools/staticsitegenerators/ \\"static site generators supported by Contentful\\").",
+Extracted from the article [CMS-functionality for static site generators](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/ "CMS-functionality for static site generators"). Read more about the [static site generators supported by Contentful](https://www.contentful.com/developers/docs/tools/staticsitegenerators/ "static site generators supported by Contentful").",
     "description": "Worry less about security, caching, and talking to the server. Static sites are the new thing.",
     "heroImage": {
       "_sanityAsset": "image@https://images.contentful.com/28p9vvm1oxuw/4NzwDSDlGECGIiokKomsyI/d04a5154fa2e2ab02857950639325684/denys-nevozhai-100695.jpg",
@@ -22829,7 +22829,7 @@ exports[`contentfulToDataset > gatsby-blog.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -22967,7 +22967,7 @@ exports[`contentfulToDataset > gatsby-blog.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -23122,7 +23122,7 @@ exports[`contentfulToDataset > gatsby-blog.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -23848,7 +23848,7 @@ exports[`contentfulToDataset > gatsby-blog.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -23988,7 +23988,7 @@ exports[`contentfulToDataset > gatsby-blog.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -24143,7 +24143,7 @@ exports[`contentfulToDataset > gatsby-blog.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -24863,7 +24863,7 @@ exports[`contentfulToDataset > gatsby-blog.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -25001,7 +25001,7 @@ exports[`contentfulToDataset > gatsby-blog.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -25156,7 +25156,7 @@ exports[`contentfulToDataset > gatsby-blog.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -25876,7 +25876,7 @@ exports[`contentfulToDataset > gatsby-blog.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -26014,7 +26014,7 @@ exports[`contentfulToDataset > gatsby-blog.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -26169,7 +26169,7 @@ exports[`contentfulToDataset > gatsby-blog.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -26889,7 +26889,7 @@ exports[`contentfulToDataset > gatsby-blog.json 5`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -27027,7 +27027,7 @@ exports[`contentfulToDataset > gatsby-blog.json 5`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -27182,7 +27182,7 @@ exports[`contentfulToDataset > gatsby-blog.json 5`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -27894,7 +27894,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -28028,7 +28028,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -28183,7 +28183,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -28897,7 +28897,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -29033,7 +29033,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -29188,7 +29188,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -29896,7 +29896,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -30030,7 +30030,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -30185,7 +30185,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -30893,7 +30893,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -31027,7 +31027,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -31182,7 +31182,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -31890,7 +31890,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 5`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \\"preview\\" deployment of your website (or a \\"preview\\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \\"preview\\" access token as though it were delivered by the CDA.",
+            "text": ", is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a "preview" deployment of your website (or a "preview" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a "preview" access token as though it were delivered by the CDA.",
           },
         ],
         "markDefs": [
@@ -32024,7 +32024,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 5`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "More and more developers are jumping on the \\"go static train\\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
+            "text": "More and more developers are jumping on the "go static train", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.",
           },
         ],
         "markDefs": [],
@@ -32179,7 +32179,7 @@ exports[`contentfulToDataset > gatsby-blog2.json 5`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\\"create once, publish everywhere\\").",
+            "text": "separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE ("create once, publish everywhere").",
           },
         ],
         "level": 1,
@@ -34592,7 +34592,7 @@ exports[`contentfulToDataset > knowledge-base.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and \\"Content Model Overview\\". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.",
+            "text": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and "Content Model Overview". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.",
           },
         ],
         "markDefs": [],
@@ -37026,7 +37026,7 @@ exports[`contentfulToDataset > knowledge-base.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and \\"Content Model Overview\\". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.",
+            "text": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and "Content Model Overview". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.",
           },
         ],
         "markDefs": [],
@@ -39460,7 +39460,7 @@ exports[`contentfulToDataset > knowledge-base.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and \\"Content Model Overview\\". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.",
+            "text": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and "Content Model Overview". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.",
           },
         ],
         "markDefs": [],
@@ -41882,7 +41882,7 @@ exports[`contentfulToDataset > knowledge-base.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and \\"Content Model Overview\\". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.",
+            "text": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and "Content Model Overview". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.",
           },
         ],
         "markDefs": [],
@@ -44304,7 +44304,7 @@ exports[`contentfulToDataset > knowledge-base.json 5`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and \\"Content Model Overview\\". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.",
+            "text": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and "Content Model Overview". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.",
           },
         ],
         "markDefs": [],
@@ -45630,7 +45630,7 @@ import { Button } from '@contentful/f36-components';
 
 const YourComponent = () => (
   <>
-    <Button variant=\\"primary\\">Your button</Button>
+    <Button variant="primary">Your button</Button>
   </>
 );",
     "language": "go",
@@ -51598,7 +51598,7 @@ exports[`contentfulToDataset > product-catalogue.json 1`] = `
     ],
     "productName": "SoSo Wall Clock",
     "quantity": 3,
-    "sizetypecolor": "10\\" x 2.2\\"",
+    "sizetypecolor": "10" x 2.2"",
     "sku": "B00MG4ULK2",
     "slug": {
       "current": "soso-wall-clock",
@@ -51654,7 +51654,7 @@ exports[`contentfulToDataset > product-catalogue.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "We entered into the development for the original planning from late 1980 and \\"Lemnos Brand\\" recognized as the global design clock by a masterpiece \\"HOLA\\" designed by Kazuo KAWASAKI which released in 1989.",
+            "text": "We entered into the development for the original planning from late 1980 and "Lemnos Brand" recognized as the global design clock by a masterpiece "HOLA" designed by Kazuo KAWASAKI which released in 1989.",
           },
         ],
         "markDefs": [],
@@ -52028,7 +52028,7 @@ exports[`contentfulToDataset > product-catalogue.json 2`] = `
     ],
     "productName": "SoSo Wall Clock",
     "quantity": 3,
-    "sizetypecolor": "10\\" x 2.2\\"",
+    "sizetypecolor": "10" x 2.2"",
     "sku": "B00MG4ULK2",
     "slug": {
       "current": "soso-wall-clock",
@@ -52088,7 +52088,7 @@ exports[`contentfulToDataset > product-catalogue.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "We entered into the development for the original planning from late 1980 and \\"Lemnos Brand\\" recognized as the global design clock by a masterpiece \\"HOLA\\" designed by Kazuo KAWASAKI which released in 1989.",
+            "text": "We entered into the development for the original planning from late 1980 and "Lemnos Brand" recognized as the global design clock by a masterpiece "HOLA" designed by Kazuo KAWASAKI which released in 1989.",
           },
         ],
         "markDefs": [],
@@ -52472,7 +52472,7 @@ exports[`contentfulToDataset > product-catalogue.json 3`] = `
     ],
     "productName": "SoSo Wall Clock",
     "quantity": 3,
-    "sizetypecolor": "10\\" x 2.2\\"",
+    "sizetypecolor": "10" x 2.2"",
     "sku": "B00MG4ULK2",
     "slug": {
       "current": "soso-wall-clock",
@@ -52528,7 +52528,7 @@ exports[`contentfulToDataset > product-catalogue.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "We entered into the development for the original planning from late 1980 and \\"Lemnos Brand\\" recognized as the global design clock by a masterpiece \\"HOLA\\" designed by Kazuo KAWASAKI which released in 1989.",
+            "text": "We entered into the development for the original planning from late 1980 and "Lemnos Brand" recognized as the global design clock by a masterpiece "HOLA" designed by Kazuo KAWASAKI which released in 1989.",
           },
         ],
         "markDefs": [],
@@ -52900,7 +52900,7 @@ exports[`contentfulToDataset > product-catalogue.json 4`] = `
     ],
     "productName": "SoSo Wall Clock",
     "quantity": 3,
-    "sizetypecolor": "10\\" x 2.2\\"",
+    "sizetypecolor": "10" x 2.2"",
     "sku": "B00MG4ULK2",
     "slug": {
       "current": "soso-wall-clock",
@@ -52956,7 +52956,7 @@ exports[`contentfulToDataset > product-catalogue.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "We entered into the development for the original planning from late 1980 and \\"Lemnos Brand\\" recognized as the global design clock by a masterpiece \\"HOLA\\" designed by Kazuo KAWASAKI which released in 1989.",
+            "text": "We entered into the development for the original planning from late 1980 and "Lemnos Brand" recognized as the global design clock by a masterpiece "HOLA" designed by Kazuo KAWASAKI which released in 1989.",
           },
         ],
         "markDefs": [],
@@ -53313,7 +53313,7 @@ exports[`contentfulToDataset > product-catalogue.json 5`] = `
     "productDescription": "The newly released SoSo Clock from Lemnos marries simple, clean design and bold, striking features. Its saturated marigold face is a lively pop of color to white or grey walls, but would also pair nicely with navy and maroon. Where most clocks feature numbers at the border of the clock, the SoSo brings them in tight to the middle, leaving a wide space between the numbers and the slight frame. The hour hand provides a nice interruption to the black and yellow of the clock - it is featured in a brilliant white. Despite its bold color and contrast, the SoSo maintains a clean, pure aesthetic that is suitable to a variety of contemporary interiors.",
     "productName": "SoSo Wall Clock",
     "quantity": 3,
-    "sizetypecolor": "10\\" x 2.2\\"",
+    "sizetypecolor": "10" x 2.2"",
     "sku": "B00MG4ULK2",
     "slug": {
       "current": "soso-wall-clock",
@@ -53348,7 +53348,7 @@ exports[`contentfulToDataset > product-catalogue.json 5`] = `
     "_updatedAt": "2014-12-10T15:04:59.456Z",
     "companyDescription": "TAKATA Lemnos Inc. was founded in 1947 as a brass casting manufacturing industry in Takaoka-city, Toyama Prefecture, Japan and we launched out into the full-scale business trade with Seiko Clock Co., Ltd. since 1966.
 
-We entered into the development for the original planning from late 1980 and \\"Lemnos Brand\\" recognized as the global design clock by a masterpiece \\"HOLA\\" designed by Kazuo KAWASAKI which released in 1989.
+We entered into the development for the original planning from late 1980 and "Lemnos Brand" recognized as the global design clock by a masterpiece "HOLA" designed by Kazuo KAWASAKI which released in 1989.
 
 Afterwards, we made a lot of projects with well-known designers who took in active in Japan and overseas such as Riki WATANABE, Kazuo KAWASAKI, Shin AZUMI, Tomoko AZUMI, Kanae TSUKAMOTO etc. and we made announcement of their fine works abounding in artistry and prominent designs. In addition, we realized to make a special project by the collaboration with Andrea Branzi, a well-known architect in the world.
 
@@ -61538,7 +61538,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "// Then execute \\"pod install\\" in your projects directory",
+            "text": "// Then execute "pod install" in your projects directory",
           },
         ],
         "markDefs": [],
@@ -61578,7 +61578,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, \\"<access_token>\\", \\"\\", \\"<space_id>\\");",
+            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, "<access_token>", "", "<space_id>");",
           },
         ],
         "markDefs": [],
@@ -61594,7 +61594,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<access_token>\\") .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<access_token>") .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -61610,7 +61610,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<access_token>\\") .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<access_token>") .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -61642,7 +61642,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$client = new \\\\Contentful\\\\Delivery\\\\Client( '<access_token>', '<space_id>' );",
+            "text": "$client = new \\Contentful\\Delivery\\Client( '<access_token>', '<space_id>' );",
           },
         ],
         "markDefs": [],
@@ -61732,7 +61732,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "let client = Client(spaceId: \\"<space_id>\\", accessToken: \\"<access_token>\\")",
+            "text": "let client = Client(spaceId: "<space_id>", accessToken: "<access_token>")",
           },
         ],
         "markDefs": [],
@@ -61928,7 +61928,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "marks": [],
             "text": "@Override public void onComplete() {
         new AlertDialog.Builder(context)
-            .setTitle(\\"Contentful\\")
+            .setTitle("Contentful")
             .setMessage(result.toString())
             .show();
       }
@@ -61936,8 +61936,8 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
       @Override public void onError(Throwable e) {
         // Handle error case.
         new AlertDialog.Builder(context)
-            .setTitle(\\"Contentful\\")
-            .setMessage(\\"An error occurred: \\" + e.toString())
+            .setTitle("Contentful")
+            .setMessage("An error occurred: " + e.toString())
             .show();
       }
 
@@ -62040,7 +62040,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "client.fetchEntries() { (result: Result<ArrayResponse>) in switch result { case .success(arrayResponse): let entries = arrayResponse.items print(entries) case .error(let error): print(\\"Error (error)!\\") } }",
+            "text": "client.fetchEntries() { (result: Result<ArrayResponse>) in switch result { case .success(arrayResponse): let entries = arrayResponse.items print(entries) case .error(let error): print("Error (error)!") } }",
           },
         ],
         "markDefs": [],
@@ -62118,7 +62118,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, \\"\\", \\"<cpa_token>\\", \\"<space_id>\\", usePreviewApi: true);",
+            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, "", "<cpa_token>", "<space_id>", usePreviewApi: true);",
           },
         ],
         "markDefs": [],
@@ -62134,7 +62134,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<cpa_token>\\") .preview() .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<cpa_token>") .preview() .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -62150,7 +62150,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<cpa_token>\\") .preview() .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<cpa_token>") .preview() .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -62182,7 +62182,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$client = new \\\\Contentful\\\\Delivery\\\\Client( '<cpa_token>', '<space_id>', true );",
+            "text": "$client = new \\Contentful\\Delivery\\Client( '<cpa_token>', '<space_id>', true );",
           },
         ],
         "markDefs": [],
@@ -62272,7 +62272,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "// Retain the client as a property on a type you define so that // the client's asynchronous network callbacks are executed. let client = Client(spaceId: \\"<space_id>\\", accessToken: \\"<cpa_token>\\")",
+            "text": "// Retain the client as a property on a type you define so that // the client's asynchronous network callbacks are executed. let client = Client(spaceId: "<space_id>", accessToken: "<cpa_token>")",
           },
         ],
         "markDefs": [],
@@ -62406,7 +62406,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var queryBuilder = QueryBuilder.New.LocaleIs(\\"de-DE\\"); var entries = await client.GetEntriesAsync(queryBuilder); Console.WriteLine(entries.ToString());",
+            "text": "var queryBuilder = QueryBuilder.New.LocaleIs("de-DE"); var entries = await client.GetEntriesAsync(queryBuilder); Console.WriteLine(entries.ToString());",
           },
         ],
         "markDefs": [],
@@ -62422,7 +62422,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAArray all = client .fetch(CDAEntry.class) .where(\\"locale\\", \\"de-DE\\") .all();",
+            "text": "final CDAArray all = client .fetch(CDAEntry.class) .where("locale", "de-DE") .all();",
           },
         ],
         "markDefs": [],
@@ -62452,7 +62452,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "client .observe(CDAEntry.class) .where(\\"locale\\", \\"de-DE\\") .all() .observeOn(AndroidSchedulers.mainThread()) .subscribeOn(io.reactivex.schedulers.Schedulers.io()) .subscribe( new DisposableSubscriber() { CDAArray result;",
+            "text": "client .observe(CDAEntry.class) .where("locale", "de-DE") .all() .observeOn(AndroidSchedulers.mainThread()) .subscribeOn(io.reactivex.schedulers.Schedulers.io()) .subscribe( new DisposableSubscriber() { CDAArray result;",
           },
         ],
         "markDefs": [],
@@ -62466,7 +62466,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(result.toString()) .show(); }",
+            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle("Contentful") .setMessage(result.toString()) .show(); }",
           },
         ],
         "markDefs": [],
@@ -62480,7 +62480,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "@Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(\\"An error occurred: \\" + e.toString()) .show(); }",
+            "text": "@Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle("Contentful") .setMessage("An error occurred: " + e.toString()) .show(); }",
           },
         ],
         "markDefs": [],
@@ -62526,7 +62526,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$query = (new Contentful\\\\Delivery\\\\Query()) ->setLocale('de-DE');",
+            "text": "$query = (new Contentful\\Delivery\\Query()) ->setLocale('de-DE');",
           },
         ],
         "markDefs": [],
@@ -62602,7 +62602,7 @@ exports[`contentfulToDataset > the-example-app.json 1`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "let query = Query(where: \\"locale\\", .equals(\\"de-DE\\"))",
+            "text": "let query = Query(where: "locale", .equals("de-DE"))",
           },
         ],
         "markDefs": [],
@@ -66086,7 +66086,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "// Then execute \\"pod install\\" in your projects directory",
+            "text": "// Then execute "pod install" in your projects directory",
           },
         ],
         "markDefs": [],
@@ -66146,7 +66146,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, \\"<access_token>\\", \\"\\", \\"<space_id>\\");",
+            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, "<access_token>", "", "<space_id>");",
           },
         ],
         "markDefs": [],
@@ -66162,7 +66162,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<access_token>\\") .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<access_token>") .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -66178,7 +66178,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<access_token>\\") .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<access_token>") .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -66210,7 +66210,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$client = new \\\\Contentful\\\\Delivery\\\\Client( '<access_token>', '<space_id>' );",
+            "text": "$client = new \\Contentful\\Delivery\\Client( '<access_token>', '<space_id>' );",
           },
         ],
         "markDefs": [],
@@ -66300,7 +66300,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "let client = Client(spaceId: \\"<space_id>\\", accessToken: \\"<access_token>\\")",
+            "text": "let client = Client(spaceId: "<space_id>", accessToken: "<access_token>")",
           },
         ],
         "markDefs": [],
@@ -66690,7 +66690,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "marks": [],
             "text": "@Override public void onComplete() {
         new AlertDialog.Builder(context)
-            .setTitle(\\"Contentful\\")
+            .setTitle("Contentful")
             .setMessage(result.toString())
             .show();
       }
@@ -66698,8 +66698,8 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
       @Override public void onError(Throwable e) {
         // Handle error case.
         new AlertDialog.Builder(context)
-            .setTitle(\\"Contentful\\")
-            .setMessage(\\"An error occurred: \\" + e.toString())
+            .setTitle("Contentful")
+            .setMessage("An error occurred: " + e.toString())
             .show();
       }
 
@@ -66802,7 +66802,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "client.fetchEntries() { (result: Result<ArrayResponse>) in switch result { case .success(arrayResponse): let entries = arrayResponse.items print(entries) case .error(let error): print(\\"Error (error)!\\") } }",
+            "text": "client.fetchEntries() { (result: Result<ArrayResponse>) in switch result { case .success(arrayResponse): let entries = arrayResponse.items print(entries) case .error(let error): print("Error (error)!") } }",
           },
         ],
         "markDefs": [],
@@ -66978,7 +66978,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, \\"\\", \\"<cpa_token>\\", \\"<space_id>\\", usePreviewApi: true);",
+            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, "", "<cpa_token>", "<space_id>", usePreviewApi: true);",
           },
         ],
         "markDefs": [],
@@ -66994,7 +66994,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<cpa_token>\\") .preview() .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<cpa_token>") .preview() .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -67010,7 +67010,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<cpa_token>\\") .preview() .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<cpa_token>") .preview() .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -67042,7 +67042,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$client = new \\\\Contentful\\\\Delivery\\\\Client( '<cpa_token>', '<space_id>', true );",
+            "text": "$client = new \\Contentful\\Delivery\\Client( '<cpa_token>', '<space_id>', true );",
           },
         ],
         "markDefs": [],
@@ -67132,7 +67132,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "// Retain the client as a property on a type you define so that // the client's asynchronous network callbacks are executed. let client = Client(spaceId: \\"<space_id>\\", accessToken: \\"<cpa_token>\\")",
+            "text": "// Retain the client as a property on a type you define so that // the client's asynchronous network callbacks are executed. let client = Client(spaceId: "<space_id>", accessToken: "<cpa_token>")",
           },
         ],
         "markDefs": [],
@@ -67392,7 +67392,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var queryBuilder = QueryBuilder.New.LocaleIs(\\"de-DE\\"); var entries = await client.GetEntriesAsync(queryBuilder); Console.WriteLine(entries.ToString());",
+            "text": "var queryBuilder = QueryBuilder.New.LocaleIs("de-DE"); var entries = await client.GetEntriesAsync(queryBuilder); Console.WriteLine(entries.ToString());",
           },
         ],
         "markDefs": [],
@@ -67408,7 +67408,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAArray all = client .fetch(CDAEntry.class) .where(\\"locale\\", \\"de-DE\\") .all();",
+            "text": "final CDAArray all = client .fetch(CDAEntry.class) .where("locale", "de-DE") .all();",
           },
         ],
         "markDefs": [],
@@ -67438,7 +67438,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "client .observe(CDAEntry.class) .where(\\"locale\\", \\"de-DE\\") .all() .observeOn(AndroidSchedulers.mainThread()) .subscribeOn(io.reactivex.schedulers.Schedulers.io()) .subscribe( new DisposableSubscriber() { CDAArray result;",
+            "text": "client .observe(CDAEntry.class) .where("locale", "de-DE") .all() .observeOn(AndroidSchedulers.mainThread()) .subscribeOn(io.reactivex.schedulers.Schedulers.io()) .subscribe( new DisposableSubscriber() { CDAArray result;",
           },
         ],
         "markDefs": [],
@@ -67452,7 +67452,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(result.toString()) .show(); }",
+            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle("Contentful") .setMessage(result.toString()) .show(); }",
           },
         ],
         "markDefs": [],
@@ -67466,7 +67466,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "@Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(\\"An error occurred: \\" + e.toString()) .show(); }",
+            "text": "@Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle("Contentful") .setMessage("An error occurred: " + e.toString()) .show(); }",
           },
         ],
         "markDefs": [],
@@ -67512,7 +67512,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$query = (new Contentful\\\\Delivery\\\\Query()) ->setLocale('de-DE');",
+            "text": "$query = (new Contentful\\Delivery\\Query()) ->setLocale('de-DE');",
           },
         ],
         "markDefs": [],
@@ -67588,7 +67588,7 @@ exports[`contentfulToDataset > the-example-app.json 2`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "let query = Query(where: \\"locale\\", .equals(\\"de-DE\\"))",
+            "text": "let query = Query(where: "locale", .equals("de-DE"))",
           },
         ],
         "markDefs": [],
@@ -70596,7 +70596,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "// Then execute \\"pod install\\" in your projects directory",
+            "text": "// Then execute "pod install" in your projects directory",
           },
         ],
         "markDefs": [],
@@ -70636,7 +70636,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, \\"<access_token>\\", \\"\\", \\"<space_id>\\");",
+            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, "<access_token>", "", "<space_id>");",
           },
         ],
         "markDefs": [],
@@ -70652,7 +70652,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<access_token>\\") .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<access_token>") .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -70668,7 +70668,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<access_token>\\") .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<access_token>") .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -70700,7 +70700,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$client = new \\\\Contentful\\\\Delivery\\\\Client( '<access_token>', '<space_id>' );",
+            "text": "$client = new \\Contentful\\Delivery\\Client( '<access_token>', '<space_id>' );",
           },
         ],
         "markDefs": [],
@@ -70790,7 +70790,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "let client = Client(spaceId: \\"<space_id>\\", accessToken: \\"<access_token>\\")",
+            "text": "let client = Client(spaceId: "<space_id>", accessToken: "<access_token>")",
           },
         ],
         "markDefs": [],
@@ -70986,7 +70986,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "marks": [],
             "text": "@Override public void onComplete() {
         new AlertDialog.Builder(context)
-            .setTitle(\\"Contentful\\")
+            .setTitle("Contentful")
             .setMessage(result.toString())
             .show();
       }
@@ -70994,8 +70994,8 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
       @Override public void onError(Throwable e) {
         // Handle error case.
         new AlertDialog.Builder(context)
-            .setTitle(\\"Contentful\\")
-            .setMessage(\\"An error occurred: \\" + e.toString())
+            .setTitle("Contentful")
+            .setMessage("An error occurred: " + e.toString())
             .show();
       }
 
@@ -71098,7 +71098,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "client.fetchEntries() { (result: Result<ArrayResponse>) in switch result { case .success(arrayResponse): let entries = arrayResponse.items print(entries) case .error(let error): print(\\"Error (error)!\\") } }",
+            "text": "client.fetchEntries() { (result: Result<ArrayResponse>) in switch result { case .success(arrayResponse): let entries = arrayResponse.items print(entries) case .error(let error): print("Error (error)!") } }",
           },
         ],
         "markDefs": [],
@@ -71176,7 +71176,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, \\"\\", \\"<cpa_token>\\", \\"<space_id>\\", usePreviewApi: true);",
+            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, "", "<cpa_token>", "<space_id>", usePreviewApi: true);",
           },
         ],
         "markDefs": [],
@@ -71192,7 +71192,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<cpa_token>\\") .preview() .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<cpa_token>") .preview() .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -71208,7 +71208,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<cpa_token>\\") .preview() .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<cpa_token>") .preview() .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -71240,7 +71240,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$client = new \\\\Contentful\\\\Delivery\\\\Client( '<cpa_token>', '<space_id>', true );",
+            "text": "$client = new \\Contentful\\Delivery\\Client( '<cpa_token>', '<space_id>', true );",
           },
         ],
         "markDefs": [],
@@ -71330,7 +71330,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "// Retain the client as a property on a type you define so that // the client's asynchronous network callbacks are executed. let client = Client(spaceId: \\"<space_id>\\", accessToken: \\"<cpa_token>\\")",
+            "text": "// Retain the client as a property on a type you define so that // the client's asynchronous network callbacks are executed. let client = Client(spaceId: "<space_id>", accessToken: "<cpa_token>")",
           },
         ],
         "markDefs": [],
@@ -71464,7 +71464,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var queryBuilder = QueryBuilder.New.LocaleIs(\\"de-DE\\"); var entries = await client.GetEntriesAsync(queryBuilder); Console.WriteLine(entries.ToString());",
+            "text": "var queryBuilder = QueryBuilder.New.LocaleIs("de-DE"); var entries = await client.GetEntriesAsync(queryBuilder); Console.WriteLine(entries.ToString());",
           },
         ],
         "markDefs": [],
@@ -71480,7 +71480,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAArray all = client .fetch(CDAEntry.class) .where(\\"locale\\", \\"de-DE\\") .all();",
+            "text": "final CDAArray all = client .fetch(CDAEntry.class) .where("locale", "de-DE") .all();",
           },
         ],
         "markDefs": [],
@@ -71510,7 +71510,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "client .observe(CDAEntry.class) .where(\\"locale\\", \\"de-DE\\") .all() .observeOn(AndroidSchedulers.mainThread()) .subscribeOn(io.reactivex.schedulers.Schedulers.io()) .subscribe( new DisposableSubscriber() { CDAArray result;",
+            "text": "client .observe(CDAEntry.class) .where("locale", "de-DE") .all() .observeOn(AndroidSchedulers.mainThread()) .subscribeOn(io.reactivex.schedulers.Schedulers.io()) .subscribe( new DisposableSubscriber() { CDAArray result;",
           },
         ],
         "markDefs": [],
@@ -71524,7 +71524,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(result.toString()) .show(); }",
+            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle("Contentful") .setMessage(result.toString()) .show(); }",
           },
         ],
         "markDefs": [],
@@ -71538,7 +71538,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "@Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(\\"An error occurred: \\" + e.toString()) .show(); }",
+            "text": "@Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle("Contentful") .setMessage("An error occurred: " + e.toString()) .show(); }",
           },
         ],
         "markDefs": [],
@@ -71584,7 +71584,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$query = (new Contentful\\\\Delivery\\\\Query()) ->setLocale('de-DE');",
+            "text": "$query = (new Contentful\\Delivery\\Query()) ->setLocale('de-DE');",
           },
         ],
         "markDefs": [],
@@ -71660,7 +71660,7 @@ exports[`contentfulToDataset > the-example-app.json 3`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "let query = Query(where: \\"locale\\", .equals(\\"de-DE\\"))",
+            "text": "let query = Query(where: "locale", .equals("de-DE"))",
           },
         ],
         "markDefs": [],
@@ -73821,7 +73821,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "// Then execute \\"pod install\\" in your projects directory",
+            "text": "// Then execute "pod install" in your projects directory",
           },
         ],
         "markDefs": [],
@@ -73861,7 +73861,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, \\"<access_token>\\", \\"\\", \\"<space_id>\\");",
+            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, "<access_token>", "", "<space_id>");",
           },
         ],
         "markDefs": [],
@@ -73877,7 +73877,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<access_token>\\") .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<access_token>") .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -73893,7 +73893,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<access_token>\\") .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<access_token>") .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -73925,7 +73925,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$client = new \\\\Contentful\\\\Delivery\\\\Client( '<access_token>', '<space_id>' );",
+            "text": "$client = new \\Contentful\\Delivery\\Client( '<access_token>', '<space_id>' );",
           },
         ],
         "markDefs": [],
@@ -74015,7 +74015,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "let client = Client(spaceId: \\"<space_id>\\", accessToken: \\"<access_token>\\")",
+            "text": "let client = Client(spaceId: "<space_id>", accessToken: "<access_token>")",
           },
         ],
         "markDefs": [],
@@ -74211,7 +74211,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "marks": [],
             "text": "@Override public void onComplete() {
         new AlertDialog.Builder(context)
-            .setTitle(\\"Contentful\\")
+            .setTitle("Contentful")
             .setMessage(result.toString())
             .show();
       }
@@ -74219,8 +74219,8 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
       @Override public void onError(Throwable e) {
         // Handle error case.
         new AlertDialog.Builder(context)
-            .setTitle(\\"Contentful\\")
-            .setMessage(\\"An error occurred: \\" + e.toString())
+            .setTitle("Contentful")
+            .setMessage("An error occurred: " + e.toString())
             .show();
       }
 
@@ -74323,7 +74323,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "client.fetchEntries() { (result: Result<ArrayResponse>) in switch result { case .success(arrayResponse): let entries = arrayResponse.items print(entries) case .error(let error): print(\\"Error (error)!\\") } }",
+            "text": "client.fetchEntries() { (result: Result<ArrayResponse>) in switch result { case .success(arrayResponse): let entries = arrayResponse.items print(entries) case .error(let error): print("Error (error)!") } }",
           },
         ],
         "markDefs": [],
@@ -74401,7 +74401,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, \\"\\", \\"<cpa_token>\\", \\"<space_id>\\", usePreviewApi: true);",
+            "text": "var httpClient = new HttpClient(); var client = new ContentfulClient(httpClient, "", "<cpa_token>", "<space_id>", usePreviewApi: true);",
           },
         ],
         "markDefs": [],
@@ -74417,7 +74417,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<cpa_token>\\") .preview() .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<cpa_token>") .preview() .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -74433,7 +74433,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAClient client = CDAClient .builder() .setToken(\\"<cpa_token>\\") .preview() .setSpace(\\"<space_id>\\") .build();",
+            "text": "final CDAClient client = CDAClient .builder() .setToken("<cpa_token>") .preview() .setSpace("<space_id>") .build();",
           },
         ],
         "markDefs": [],
@@ -74465,7 +74465,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$client = new \\\\Contentful\\\\Delivery\\\\Client( '<cpa_token>', '<space_id>', true );",
+            "text": "$client = new \\Contentful\\Delivery\\Client( '<cpa_token>', '<space_id>', true );",
           },
         ],
         "markDefs": [],
@@ -74555,7 +74555,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "// Retain the client as a property on a type you define so that // the client's asynchronous network callbacks are executed. let client = Client(spaceId: \\"<space_id>\\", accessToken: \\"<cpa_token>\\")",
+            "text": "// Retain the client as a property on a type you define so that // the client's asynchronous network callbacks are executed. let client = Client(spaceId: "<space_id>", accessToken: "<cpa_token>")",
           },
         ],
         "markDefs": [],
@@ -74689,7 +74689,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "var queryBuilder = QueryBuilder.New.LocaleIs(\\"de-DE\\"); var entries = await client.GetEntriesAsync(queryBuilder); Console.WriteLine(entries.ToString());",
+            "text": "var queryBuilder = QueryBuilder.New.LocaleIs("de-DE"); var entries = await client.GetEntriesAsync(queryBuilder); Console.WriteLine(entries.ToString());",
           },
         ],
         "markDefs": [],
@@ -74705,7 +74705,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "final CDAArray all = client .fetch(CDAEntry.class) .where(\\"locale\\", \\"de-DE\\") .all();",
+            "text": "final CDAArray all = client .fetch(CDAEntry.class) .where("locale", "de-DE") .all();",
           },
         ],
         "markDefs": [],
@@ -74735,7 +74735,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "client .observe(CDAEntry.class) .where(\\"locale\\", \\"de-DE\\") .all() .observeOn(AndroidSchedulers.mainThread()) .subscribeOn(io.reactivex.schedulers.Schedulers.io()) .subscribe( new DisposableSubscriber() { CDAArray result;",
+            "text": "client .observe(CDAEntry.class) .where("locale", "de-DE") .all() .observeOn(AndroidSchedulers.mainThread()) .subscribeOn(io.reactivex.schedulers.Schedulers.io()) .subscribe( new DisposableSubscriber() { CDAArray result;",
           },
         ],
         "markDefs": [],
@@ -74749,7 +74749,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(result.toString()) .show(); }",
+            "text": "@Override public void onComplete() { new AlertDialog.Builder(context) .setTitle("Contentful") .setMessage(result.toString()) .show(); }",
           },
         ],
         "markDefs": [],
@@ -74763,7 +74763,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "@Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle(\\"Contentful\\") .setMessage(\\"An error occurred: \\" + e.toString()) .show(); }",
+            "text": "@Override public void onError(Throwable e) { // Handle error case. new AlertDialog.Builder(context) .setTitle("Contentful") .setMessage("An error occurred: " + e.toString()) .show(); }",
           },
         ],
         "markDefs": [],
@@ -74809,7 +74809,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "$query = (new Contentful\\\\Delivery\\\\Query()) ->setLocale('de-DE');",
+            "text": "$query = (new Contentful\\Delivery\\Query()) ->setLocale('de-DE');",
           },
         ],
         "markDefs": [],
@@ -74885,7 +74885,7 @@ exports[`contentfulToDataset > the-example-app.json 4`] = `
             "_key": "bb463b8b",
             "_type": "span",
             "marks": [],
-            "text": "let query = Query(where: \\"locale\\", .equals(\\"de-DE\\"))",
+            "text": "let query = Query(where: "locale", .equals("de-DE"))",
           },
         ],
         "markDefs": [],
@@ -76011,7 +76011,7 @@ Install an SDK:",
 
 pod 'Contentful', '~> 0.10.1'
 
-// Then execute \\"pod install\\" in your projects directory",
+// Then execute "pod install" in your projects directory",
     "title": "SDK basics > installation - code",
   },
   {
@@ -76023,19 +76023,19 @@ pod 'Contentful', '~> 0.10.1'
     "curl": "export CDA_TOKEN='<access_token>';
 export SPACE_ID='<space_id>';",
     "dotNet": "var httpClient = new HttpClient();
-var client = new ContentfulClient(httpClient, \\"<access_token>\\", \\"\\", \\"<space_id>\\");",
+var client = new ContentfulClient(httpClient, "<access_token>", "", "<space_id>");",
     "java": "final CDAClient client =
     CDAClient
         .builder()
-        .setToken(\\"<access_token>\\")
-        .setSpace(\\"<space_id>\\")
+        .setToken("<access_token>")
+        .setSpace("<space_id>")
         .build();
 ",
     "javaAndroid": "final CDAClient client =
     CDAClient
         .builder()
-        .setToken(\\"<access_token>\\")
-        .setSpace(\\"<space_id>\\")
+        .setToken("<access_token>")
+        .setSpace("<space_id>")
         .build();
 ",
     "javascript": "const contentful = require('contentful')
@@ -76044,7 +76044,7 @@ const client = contentful.createClient({
   accessToken: '<access_token>'
 })
 ",
-    "php": "$client = new \\\\Contentful\\\\Delivery\\\\Client(
+    "php": "$client = new \\Contentful\\Delivery\\Client(
     '<access_token>',
     '<space_id>'
 );",
@@ -76062,8 +76062,8 @@ client = Contentful::Client.new(
 )",
     "swift": "import Contentful
 
-let client = Client(spaceId: \\"<space_id>\\", 
-                    accessToken: \\"<access_token>\\")",
+let client = Client(spaceId: "<space_id>", 
+                    accessToken: "<access_token>")",
     "title": "SDK basics > SDK initialization - code",
   },
   {
@@ -76115,7 +76115,7 @@ System.out.println(all);
 
           @Override public void onComplete() {
             new AlertDialog.Builder(context)
-                .setTitle(\\"Contentful\\")
+                .setTitle("Contentful")
                 .setMessage(result.toString())
                 .show();
           }
@@ -76123,8 +76123,8 @@ System.out.println(all);
           @Override public void onError(Throwable e) {
             // Handle error case.
             new AlertDialog.Builder(context)
-                .setTitle(\\"Contentful\\")
-                .setMessage(\\"An error occurred: \\" + e.toString())
+                .setTitle("Contentful")
+                .setMessage("An error occurred: " + e.toString())
                 .show();
           }
 
@@ -76148,7 +76148,7 @@ puts(entries)",
             let entries = arrayResponse.items
             print(entries)
         case .error(let error):
-            print(\\"Error \\\\(error)!\\")
+            print("Error \\(error)!")
     }
 }",
     "title": "Fetch all entries > code",
@@ -76173,20 +76173,20 @@ To fetch preview content, change the configuration of the client to use the Prev
     "curl": "export CPA_TOKEN='<cpa_token>';
 export SPACE_ID='<space_id>';",
     "dotNet": "var httpClient = new HttpClient();
-var client = new ContentfulClient(httpClient, \\"\\", \\"<cpa_token>\\", \\"<space_id>\\", usePreviewApi: true);",
+var client = new ContentfulClient(httpClient, "", "<cpa_token>", "<space_id>", usePreviewApi: true);",
     "java": "final CDAClient client =
     CDAClient
         .builder()
-        .setToken(\\"<cpa_token>\\")
+        .setToken("<cpa_token>")
         .preview()
-        .setSpace(\\"<space_id>\\")
+        .setSpace("<space_id>")
         .build();",
     "javaAndroid": "final CDAClient client =
     CDAClient
         .builder()
-        .setToken(\\"<cpa_token>\\")
+        .setToken("<cpa_token>")
         .preview()
-        .setSpace(\\"<space_id>\\")
+        .setSpace("<space_id>")
         .build();",
     "javascript": "const contentful = require('contentful')
 const client = contentful.createClient({
@@ -76194,7 +76194,7 @@ const client = contentful.createClient({
   accessToken: '<cpa_token>',
   host: 'preview.contentful.com'
 })",
-    "php": "$client = new \\\\Contentful\\\\Delivery\\\\Client(
+    "php": "$client = new \\Contentful\\Delivery\\Client(
     '<cpa_token>',
     '<space_id>',
     true
@@ -76216,7 +76216,7 @@ configuration.previewMode = true
 
 // Retain the client as a property on a type you define so that 
 // the client's asynchronous network callbacks are executed.
-let client = Client(spaceId: \\"<space_id>\\", accessToken: \\"<cpa_token>\\")",
+let client = Client(spaceId: "<space_id>", accessToken: "<cpa_token>")",
     "title": "Fetch draft content > code",
   },
   {
@@ -76240,19 +76240,19 @@ For fun, change the formatting of **pizza** by going to \`API: Content Delivery 
     "_updatedAt": "2018-01-22T12:43:45.902Z",
     "curl": "entry = client.entry('2uNOpLMJioKeoMq8W44uYc', locale: 'de-DE')
 puts(entry.fields)",
-    "dotNet": "var queryBuilder = QueryBuilder<dynamic>.New.LocaleIs(\\"de-DE\\");
+    "dotNet": "var queryBuilder = QueryBuilder<dynamic>.New.LocaleIs("de-DE");
 var entries = await client.GetEntriesAsync(queryBuilder);
 Console.WriteLine(entries.ToString());",
     "java": "final CDAArray all =
     client
         .fetch(CDAEntry.class)
-        .where(\\"locale\\", \\"de-DE\\")
+        .where("locale", "de-DE")
         .all();
 
 System.out.println(all.toString());",
     "javaAndroid": "client
     .observe(CDAEntry.class)
-    .where(\\"locale\\", \\"de-DE\\")
+    .where("locale", "de-DE")
     .all()
     .observeOn(AndroidSchedulers.mainThread())
     .subscribeOn(io.reactivex.schedulers.Schedulers.io())
@@ -76262,7 +76262,7 @@ System.out.println(all.toString());",
 
           @Override public void onComplete() {
             new AlertDialog.Builder(context)
-                .setTitle(\\"Contentful\\")
+                .setTitle("Contentful")
                 .setMessage(result.toString())
                 .show();
           }
@@ -76270,8 +76270,8 @@ System.out.println(all.toString());",
           @Override public void onError(Throwable e) {
             // Handle error case.
             new AlertDialog.Builder(context)
-                .setTitle(\\"Contentful\\")
-                .setMessage(\\"An error occurred: \\" + e.toString())
+                .setTitle("Contentful")
+                .setMessage("An error occurred: " + e.toString())
                 .show();
           }
 
@@ -76283,7 +76283,7 @@ System.out.println(all.toString());",
     "javascript": "client.getEntries({'locale': 'de-DE'}).then((response) => {
   console.log(response)
 })",
-    "php": "$query = (new Contentful\\\\Delivery\\\\Query())
+    "php": "$query = (new Contentful\\Delivery\\Query())
     ->setLocale('de-DE');
 
 $entries = $client->getEntries($query);
@@ -76293,7 +76293,7 @@ var_dump($entries);",
 print(entry.fields())",
     "ruby": "entry = client.entry('2uNOpLMJioKeoMq8W44uYc', locale: 'de-DE')
 puts(entry.fields)",
-    "swift": "let query = Query(where: \\"locale\\", .equals(\\"de-DE\\"))
+    "swift": "let query = Query(where: "locale", .equals("de-DE"))
 
 client.fetchEntries(with: query) { (result: Result<ArrayResponse<Entry>>) in
   switch result {

@@ -45,7 +45,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
     test('<outdir>', () => {
       expect(() =>
         fab(['export', ...mockData.spaceId, ...mockData.mgmtToken, ...mockData.accessToken]),
-      ).toThrowErrorMatchingInlineSnapshot('"error: missing required argument \'outdir\'"')
+      ).toThrowErrorMatchingInlineSnapshot(`[CommanderError: error: missing required argument 'outdir']`)
       expect(defaultActions.exportAction).not.toHaveBeenCalled()
 
       fab([
@@ -75,7 +75,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
       expect(() =>
         fab(['export', ...mockData.mgmtToken, ...mockData.accessToken, mockData.outdir]),
       ).toThrowErrorMatchingInlineSnapshot(
-        '"error: required option \'-s, --space-id <space-id>\' not specified"',
+        `[CommanderError: error: required option '-s, --space-id <space-id>' not specified]`,
       )
       expect(defaultActions.exportAction).not.toHaveBeenCalled()
 
@@ -105,7 +105,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
       expect(() =>
         fab(['export', ...mockData.spaceId, ...mockData.accessToken, mockData.outdir]),
       ).toThrowErrorMatchingInlineSnapshot(
-        '"error: required option \'-t, --management-token <management-token>\' not specified"',
+        `[CommanderError: error: required option '-t, --management-token <management-token>' not specified]`,
       )
       expect(defaultActions.exportAction).not.toHaveBeenCalled()
 
@@ -136,7 +136,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
   describe('schema [options] <outdir>', () => {
     test('<outdir>', () => {
       expect(() => fab(['schema'])).toThrowErrorMatchingInlineSnapshot(
-        '"error: missing required argument \'outdir\'"',
+        `[CommanderError: error: missing required argument 'outdir']`,
       )
       expect(defaultActions.schemaAction).not.toHaveBeenCalled()
 
@@ -160,7 +160,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
   describe('dataset [options] <outdir>', () => {
     test('<outdir>', () => {
       expect(() => fab(['dataset'])).toThrowErrorMatchingInlineSnapshot(
-        '"error: missing required argument \'outdir\'"',
+        `[CommanderError: error: missing required argument 'outdir']`,
       )
       expect(defaultActions.datasetAction).not.toHaveBeenCalled()
 
@@ -189,7 +189,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
     test('<outdir>', () => {
       expect(() =>
         fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken, ...mockData.accessToken]),
-      ).toThrowErrorMatchingInlineSnapshot('"error: missing required argument \'outdir\'"')
+      ).toThrowErrorMatchingInlineSnapshot(`[CommanderError: error: missing required argument 'outdir']`)
       expect(defaultActions.batchAction).not.toHaveBeenCalled()
 
       fab([
@@ -227,7 +227,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
       expect(() =>
         fab(['batch', ...mockData.mgmtToken, ...mockData.accessToken, mockData.outdir]),
       ).toThrowErrorMatchingInlineSnapshot(
-        '"error: required option \'-s, --space-id <space-id>\' not specified"',
+        `[CommanderError: error: required option '-s, --space-id <space-id>' not specified]`,
       )
       expect(defaultActions.batchAction).not.toHaveBeenCalled()
 
@@ -265,14 +265,14 @@ describe('contentful-to-sanity [command] <outdir>', () => {
       expect(() =>
         fab(['batch', ...mockData.spaceId, ...mockData.accessToken, mockData.outdir]),
       ).toThrowErrorMatchingInlineSnapshot(
-        '"error: required option \'-t, --management-token <management-token>\' not specified"',
+        `[CommanderError: error: required option '-t, --management-token <management-token>' not specified]`,
       )
       expect(defaultActions.batchAction).not.toHaveBeenCalled()
 
       expect(() =>
         fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken, mockData.outdir]),
       ).toThrowErrorMatchingInlineSnapshot(
-        '"error: required option \'-a, --access-token <access-token>\' not specified"',
+        `[CommanderError: error: required option '-a, --access-token <access-token>' not specified]`,
       )
       expect(defaultActions.batchAction).not.toHaveBeenCalled()
 
@@ -310,7 +310,7 @@ describe('contentful-to-sanity [command] <outdir>', () => {
       expect(() =>
         fab(['batch', ...mockData.spaceId, ...mockData.mgmtToken, mockData.outdir]),
       ).toThrowErrorMatchingInlineSnapshot(
-        '"error: required option \'-a, --access-token <access-token>\' not specified"',
+        `[CommanderError: error: required option '-a, --access-token <access-token>' not specified]`,
       )
       expect(defaultActions.batchAction).not.toHaveBeenCalled()
 
@@ -382,8 +382,8 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             -s, --space-id <space-id>                  The Contentful space ID
             -t, --management-token <management-token>  Contentful Management API token
             -a, --access-token <access-token>          Contentful Content Delivery API access token
-            -e, --environment-id [environment-id[      Contentful environment (default: \\"master\\")
-            --export-file [name]                       The filename for the exported JSON document that holds your Contentful data. (default: \\"contentful.json\\")
+            -e, --environment-id [environment-id[      Contentful environment (default: "master")
+            --export-file [name]                       The filename for the exported JSON document that holds your Contentful data. (default: "contentful.json")
             -h, --help                                 display help for command
           "
         `)
@@ -396,15 +396,15 @@ describe('contentful-to-sanity [command] <outdir>', () => {
 
           Options:
             --export-file [name]  The filename for the exported JSON document that holds
-                                  your Contentful data. (default: \\"contentful.json\\")
+                                  your Contentful data. (default: "contentful.json")
             --schema-file [name]  The filename for the generated Sanity Studio schema
                                   definitions file. Use \`.js\` file endings to strip
-                                  TypeScript syntax. (default: \\"schema.ts\\")
+                                  TypeScript syntax. (default: "schema.ts")
             --keep-markdown       Whether to keep markdown as-is or convert it to
                                   portable text (default: false)
             --intl [mode]         Define the intl behavior. This is disabled by default
                                   and only one locale will be considered. (choices:
-                                  \\"single\\", \\"multiple\\", default: \\"single\\")
+                                  "single", "multiple", default: "single")
             -h, --help            display help for command
           "
         `)
@@ -418,10 +418,10 @@ describe('contentful-to-sanity [command] <outdir>', () => {
           Options:
             --export-file [name]        The filename for the exported JSON document that
                                         holds your Contentful data. (default:
-                                        \\"contentful.json\\")
+                                        "contentful.json")
             --dataset-file [name]       The filename for the generated NDJSON document
                                         that can be used with the Sanity CLI \`import\`
-                                        command (default: \\"dataset.ndjson\\")
+                                        command (default: "dataset.ndjson")
             --keep-markdown             Whether to keep markdown as-is or convert it to
                                         portable text (default: false)
             --optimize-svgs             Whether to optimize SVGs before importing them
@@ -430,14 +430,14 @@ describe('contentful-to-sanity [command] <outdir>', () => {
                                         before importing them (default: false)
             --intl [mode]               Define the intl behavior. This is disabled by
                                         default and only one locale will be considered.
-                                        (choices: \\"single\\", \\"multiple\\", default:
-                                        \\"single\\")
+                                        (choices: "single", "multiple", default:
+                                        "single")
             --weak-refs                 Use weak refs instead of strong ones (default:
                                         false)
             --intl-id-structure [type]  Defines the ID behavior for i18n. See
                                         @sanity/document-internationalization for more
-                                        info (choices: \\"subpath\\", \\"delimiter\\", default:
-                                        \\"delimiter\\")
+                                        info (choices: "subpath", "delimiter", default:
+                                        "delimiter")
             --locale [id]               The locale to import. This should be used when
                                         using the intl single mode
             -h, --help                  display help for command
@@ -456,15 +456,15 @@ describe('contentful-to-sanity [command] <outdir>', () => {
             -s, --space-id <space-id>                  The Contentful space ID
             -t, --management-token <management-token>  Contentful Management API token
             -a, --access-token <access-token>          Contentful Content Delivery API access token
-            -e, --environment-id [environment-id[      Contentful environment (default: \\"master\\")
-            --export-file [name]                       The filename for the exported JSON document that holds your Contentful data. (default: \\"contentful.json\\")
-            --schema-file [name]                       The filename for the generated Sanity Studio schema definitions file. Use \`.js\` file endings to strip TypeScript syntax. (default: \\"schema.ts\\")
-            --dataset-file [name]                      The filename for the generated NDJSON document that can be used with the Sanity CLI \`import\` command (default: \\"dataset.ndjson\\")
+            -e, --environment-id [environment-id[      Contentful environment (default: "master")
+            --export-file [name]                       The filename for the exported JSON document that holds your Contentful data. (default: "contentful.json")
+            --schema-file [name]                       The filename for the generated Sanity Studio schema definitions file. Use \`.js\` file endings to strip TypeScript syntax. (default: "schema.ts")
+            --dataset-file [name]                      The filename for the generated NDJSON document that can be used with the Sanity CLI \`import\` command (default: "dataset.ndjson")
             --keep-markdown                            Whether to keep markdown as-is or convert it to portable text (default: false)
             --optimize-svgs                            Whether to optimize SVGs before importing them (default: false)
             --convert-images                           Whether to convert unsupported image formats before importing them (default: false)
             --weak-refs                                Use weak refs instead of strong ones (default: false)
-            --intl-id-structure [type]                 Defines the ID behavior for i18n. See @sanity/document-internationalization for more info (choices: \\"subpath\\", \\"delimiter\\", default: \\"delimiter\\")
+            --intl-id-structure [type]                 Defines the ID behavior for i18n. See @sanity/document-internationalization for more info (choices: "subpath", "delimiter", default: "delimiter")
             --locale [id]                              The locale to import. This should be used when using the intl single mode
             -h, --help                                 display help for command
           "
