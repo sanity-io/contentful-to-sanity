@@ -92,7 +92,7 @@
     "node-fetch": "^2.6.7",
     "object-hash": "^3.0.0",
     "prettier": "3.2.5",
-    "sharp": "^0.32.0",
+    "sharp": "^0.33.0",
     "svgo": "^3.0.2",
     "tiny-invariant": "1.3.3",
     "valid-filename": "4.0.0",
