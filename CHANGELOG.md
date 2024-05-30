@@ -5,6 +5,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.10](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.9...v4.2.10) (2024-05-30)
+
+### Bug Fixes
+
+- bump node engines req ([f9b12ec](https://github.com/sanity-io/contentful-to-sanity/commit/f9b12ec354396570bb1bc40efdcd649d10c6ac67))
+- **deps:** Update dependency @sanity/client to v6.19.1 ([#183](https://github.com/sanity-io/contentful-to-sanity/issues/183)) ([e1d32cc](https://github.com/sanity-io/contentful-to-sanity/commit/e1d32cc7aadff1bae1013f7156c165b102a7cd0d))
+- **deps:** Update dependency contentful-management to v11.26.2 ([#184](https://github.com/sanity-io/contentful-to-sanity/issues/184)) ([3306349](https://github.com/sanity-io/contentful-to-sanity/commit/33063496106fa0fcb2c9962887b7df7739cfad35))
+- **deps:** Update sanity monorepo to v3.44.0 ([#190](https://github.com/sanity-io/contentful-to-sanity/issues/190)) ([887d485](https://github.com/sanity-io/contentful-to-sanity/commit/887d48509867fc71061a0020ee09f2852cceb0eb))
+
 ## [4.2.9](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.8...v4.2.9) (2024-04-07)
 
 ### Bug Fixes
