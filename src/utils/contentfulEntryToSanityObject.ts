@@ -1,4 +1,4 @@
-import {toPortableText} from '@portabletext/contentful-rich-text-to-portable-text'
+import {toPortableText, type TransformOptions} from '@portabletext/contentful-rich-text-to-portable-text'
 import type {SanityDocument} from '@sanity/client'
 import type {EntryProps} from 'contentful-management'
 import compact from 'just-compact'
@@ -86,18 +86,36 @@ export function contentfulEntryToSanityObject(
       const referenceResolver: ReferenceResolver = (node) =>
         contentfulLinkToSanityReference(id, node.data.target, locale, data, options)
 
+      // The library's TransformOptions type only lists known Contentful node types,
+      // but Contentful rich text can contain additional nodes (e.g. tables) that need
+      // custom transformers to avoid a fatal "No transformer found for node type" error.
+      const transformers: TransformOptions['transformers'] & Record<string, () => unknown[]> = {
+        hr: () => [
+          {
+            _type: 'break',
+            _key: generateKey(),
+            style: 'lineBreak',
+          },
+        ],
+        // Table nodes have no portable text equivalent — skip them gracefully.
+        table: () => {
+          console.warn(
+            `Table content in rich text is not supported and will be skipped during migration.\n` +
+              `  Entry ID: ${entry.sys.id}\n` +
+              `  Content type: ${entry.sys.contentType.sys.id}\n` +
+              `  Field: ${key}`,
+          )
+          return []
+        },
+        'table-row': () => [],
+        'table-header-cell': () => [],
+        'table-cell': () => [],
+      }
+
       doc[key] = toPortableText(value, {
         generateKey: (node) => `k${objectHash(node).slice(0, 7)}`,
         referenceResolver,
-        transformers: {
-          hr: () => [
-            {
-              _type: 'break',
-              _key: generateKey(),
-              style: 'lineBreak',
-            },
-          ],
-        },
+        transformers,
       })
     } else if (Array.isArray(value)) {
       doc[key] = compact(
