@@ -1,8 +1,6 @@
 import {htmlToBlocks} from '@sanity/block-tools'
 import {Schema} from '@sanity/schema'
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-import {Block} from '@sanity/types'
+import {type PortableTextBlock} from '@sanity/types'
 import {JSDOM} from 'jsdom'
 import md from 'markdown-it'
 
@@ -55,7 +53,7 @@ export function markdownToBlocks(input: string) {
       },
     ],
   })
-  return blocks as Block[]
+  return blocks as PortableTextBlock[]
 }
 
 function isElement(node: Node): node is Element {

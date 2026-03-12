@@ -1,0 +1,112 @@
+{
+  "contentTypes": [],
+  "tags": [],
+  "editorInterfaces": [],
+  "entries": [
+    {
+      "metadata": {"tags": []},
+      "sys": {
+        "space": {"sys": {"type": "Link", "linkType": "Space", "id": "testspace"}},
+        "id": "entry1",
+        "type": "Entry",
+        "createdAt": "2023-01-01T00:00:00.000Z",
+        "updatedAt": "2023-01-01T00:00:00.000Z",
+        "environment": {"sys": {"id": "master", "type": "Link", "linkType": "Environment"}},
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-01T00:00:00.000Z",
+        "firstPublishedAt": "2023-01-01T00:00:00.000Z",
+        "createdBy": {"sys": {"type": "Link", "linkType": "User", "id": "user1"}},
+        "updatedBy": {"sys": {"type": "Link", "linkType": "User", "id": "user1"}},
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {"sys": {"type": "Link", "linkType": "User", "id": "user1"}},
+        "automationTags": [],
+        "contentType": {"sys": {"type": "Link", "linkType": "ContentType", "id": "post"}}
+      },
+      "fields": {
+        "title": {"en-US": "Post with table"},
+        "body": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {},
+                "content": [
+                  {"nodeType": "text", "value": "Before table", "marks": [], "data": {}}
+                ]
+              },
+              {
+                "nodeType": "table",
+                "data": {},
+                "content": [
+                  {
+                    "nodeType": "table-row",
+                    "data": {},
+                    "content": [
+                      {
+                        "nodeType": "table-header-cell",
+                        "data": {},
+                        "content": [
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {"nodeType": "text", "value": "Header", "marks": [], "data": {}}
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "table-row",
+                    "data": {},
+                    "content": [
+                      {
+                        "nodeType": "table-cell",
+                        "data": {},
+                        "content": [
+                          {
+                            "nodeType": "paragraph",
+                            "data": {},
+                            "content": [
+                              {"nodeType": "text", "value": "Cell", "marks": [], "data": {}}
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {},
+                "content": [
+                  {"nodeType": "text", "value": "After table", "marks": [], "data": {}}
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "assets": [],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "internal_code": "en-US",
+      "code": "en-US",
+      "default": true,
+      "fallbackCode": null,
+      "sys": {
+        "id": "locale1",
+        "type": "Locale",
+        "version": 1
+      }
+    }
+  ]
+}
