@@ -125,7 +125,7 @@
     "prettier-plugin-packagejson": "^2.5.0",
     "rimraf": "^5.0.0",
     "sanity": "^5.14.1",
-    "typescript": "5.4.2",
+    "typescript": "5.9.3",
     "vitest": "^1.4.0",
     "vitest-github-actions-reporter": "^0.11.1"
   },
