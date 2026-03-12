@@ -1,4 +1,7 @@
-import {toPortableText, type TransformOptions} from '@portabletext/contentful-rich-text-to-portable-text'
+import {
+  toPortableText,
+  type TransformOptions,
+} from '@portabletext/contentful-rich-text-to-portable-text'
 import type {SanityDocument} from '@sanity/client'
 import type {EntryProps} from 'contentful-management'
 import compact from 'just-compact'
@@ -99,8 +102,9 @@ export function contentfulEntryToSanityObject(
         ],
         // Table nodes have no portable text equivalent — skip them gracefully.
         table: () => {
+          // eslint-disable-next-line no-console
           console.warn(
-            `Table content in rich text is not supported and will be skipped during migration.\n` +
+            `Table content in portable text is not supported and will be skipped during migration.\n` +
               `  Entry ID: ${entry.sys.id}\n` +
               `  Content type: ${entry.sys.contentType.sys.id}\n` +
               `  Field: ${key}`,
