@@ -33,9 +33,7 @@
               {
                 "nodeType": "paragraph",
                 "data": {},
-                "content": [
-                  {"nodeType": "text", "value": "Before table", "marks": [], "data": {}}
-                ]
+                "content": [{"nodeType": "text", "value": "Before table", "marks": [], "data": {}}]
               },
               {
                 "nodeType": "table",
@@ -84,9 +82,7 @@
               {
                 "nodeType": "paragraph",
                 "data": {},
-                "content": [
-                  {"nodeType": "text", "value": "After table", "marks": [], "data": {}}
-                ]
+                "content": [{"nodeType": "text", "value": "After table", "marks": [], "data": {}}]
               }
             ]
           }
