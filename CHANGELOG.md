@@ -5,6 +5,16 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.0](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.10...v5.0.0) (2026-03-13)
+
+### ⚠ BREAKING CHANGES
+
+- update to Sanity v5 and resolve Github issue #123 (#202)
+
+### Bug Fixes
+
+- update to Sanity v5 and resolve Github issue [#123](https://github.com/sanity-io/contentful-to-sanity/issues/123) ([#202](https://github.com/sanity-io/contentful-to-sanity/issues/202)) ([592c164](https://github.com/sanity-io/contentful-to-sanity/commit/592c164b65f1308b7fabd7b453a7234bacd5efc4))
+
 ## [4.2.10](https://github.com/sanity-io/contentful-to-sanity/compare/v4.2.9...v4.2.10) (2024-05-30)
 
 ### Bug Fixes
