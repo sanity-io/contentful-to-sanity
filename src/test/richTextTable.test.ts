@@ -48,10 +48,7 @@ describe('Rich text table nodes', () => {
     const {default: published} = await import('./fixtures/richTextTable.published.json')
 
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {})
-    await contentfulToDataset(
-      {drafts: drafts as any, published: published as any},
-      datasetOptions,
-    )
+    await contentfulToDataset({drafts: drafts as any, published: published as any}, datasetOptions)
 
     expect(warn).toHaveBeenCalledWith(expect.stringContaining('entry1'))
     expect(warn).toHaveBeenCalledWith(expect.stringContaining('post'))
